@@ -13,6 +13,7 @@ namespace EasyService.Autos
     class Vehicle
     {
         #region Properties
+
         public string LicensePlate { get; set; }
         public int VIN { get; set; }
         public int ProductionYear { get; set; }
@@ -22,7 +23,8 @@ namespace EasyService.Autos
         public double CurrentKm { get; set; }
         public Company Company { get; set; }
         public PrivateClient Client { get; set; }
-
+        public List<Service> ServiceList { get; set; }
+        public bool IsSubscribed { get; set; }
 
         #endregion
     }

@@ -14,6 +14,7 @@ namespace EasyService.Service
         private static int _id=0;
 
         #endregion
+
         #region Properties
         public int Id { get; set; }
         public string Name { get; set; }
