@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EasyService.Company
+namespace EasyService.Companys
 {
     class Company
     {
@@ -14,6 +14,13 @@ namespace EasyService.Company
         public string Location { get; set; }
         public Contract Contract { get; set; }
         #endregion
+
+        #region Constructors
+        public Company()
+        {
+
+        }
+        #endregion  
 
         #region Methods
         //
