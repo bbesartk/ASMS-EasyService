@@ -17,6 +17,7 @@ namespace EasyService.Autos
         public int ProductionYear { get; set; }
         public string Type { get; set; }
         public string Model { get; set; }
+        public int CubicCentimeters { get; set; }
         public double CurrentKm { get; set; }
         public Company Company { get; set; }
         public PrivateClient Client { get; set; }
@@ -31,12 +32,13 @@ namespace EasyService.Autos
         {
 
         }
-        public Vehicle(string licensePlate,int productionYear,string type,string model,double currentKm,Company company,List<Service> serviceList,bool isSubscribed)
+        public Vehicle(string licensePlate,int productionYear,string type,string model,int cubicCm,double currentKm,Company company,List<Service> serviceList,bool isSubscribed)
         {
             LicensePlate = licensePlate;
             ProductionYear = productionYear;
             Type = type;
             Model = model;
+            CubicCentimeters = cubicCm;
             CurrentKm = currentKm;
             Company = company;
             ServiceList = serviceList;
@@ -50,6 +52,7 @@ namespace EasyService.Autos
             ProductionYear = productionYear;
             Type = type;
             Model = model;
+            CubicCentimeters = cubicCm;
             CurrentKm = currentKm;
             Client = client;
             ServiceList = serviceList;
