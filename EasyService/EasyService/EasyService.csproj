@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Companys\Company.cs" />
-    <Compile Include="Companys\Contract.cs" />
+    <Compile Include="Clients\Companys\Company.cs" />
+    <Compile Include="Clients\Companys\Contract.cs" />
     <Compile Include="Autos\Vehicle.cs" />
     <Compile Include="DataAccess\daEmployee.cs" />
     <Compile Include="Employee\Employee.cs" />
@@ -57,7 +57,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clients\Client.cs" />
+    <Compile Include="Clients\PrivateClients\Client.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
