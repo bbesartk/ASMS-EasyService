@@ -22,6 +22,7 @@ namespace EasyService.Autos
         public Company Company { get; set; }
         public Client Client { get; set; }
 
+
         #endregion
     }
 }
