@@ -9,7 +9,7 @@ namespace EasyService.Service
     class Inspection
     {
 
-        #region StaticMember
+        #region StaticMembers
 
         private static int _id=0;
 
@@ -36,7 +36,6 @@ namespace EasyService.Service
             Prise = prise;
 
         }
-
         #endregion
 
 
