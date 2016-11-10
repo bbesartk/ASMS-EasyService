@@ -46,7 +46,7 @@ namespace EasyService.Autos
 
         }
 
-        public Vehicle(string licensePlate, int productionYear, string type, string model, double currentKm, PrivateClient client, List<Service> serviceList, bool isSubscribed)
+        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, double currentKm, PrivateClient client, List<Service> serviceList, bool isSubscribed)
         {
             LicensePlate = licensePlate;
             ProductionYear = productionYear;
