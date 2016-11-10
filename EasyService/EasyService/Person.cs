@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace EasyService
 {
-    class Person
+    class Person:ContactInfo
     {
-
         #region Properties
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string Address { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
+        public bool IsMale { get; set; }
+        
         #endregion
 
         #region Constructors
@@ -22,14 +20,19 @@ namespace EasyService
         {
             //default constructor
         }
-        public Person(string name, string lastname, string address, string phonenumber, string email)
+        public Person(string name, string lastname, bool isMale)
         {
             Name = name;
             LastName = lastname;
-            Address = address;
-            PhoneNumber = phonenumber;
-            Email = email;
+            IsMale = isMale;
         }
+
+        public Person(string name, string lastname)
+        {
+            Name = name;
+            LastName = lastname;
+        }
+
         #endregion
 
         #region Methods

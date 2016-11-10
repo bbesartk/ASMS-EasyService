@@ -15,8 +15,8 @@ namespace EasyService.Employee
         #region Properties
 
         public string Id { get; private set; }
-        public bool IsMale { get; set; }
         public string Password { get; set; }
+        public ContactInfo ContactInfo { get; set; }
         public string Role { get; set; }
 
         #endregion
@@ -26,7 +26,7 @@ namespace EasyService.Employee
         {
             Id = ++_id + role;
         }
-        public Employee(string name, string lastname, bool isMale, string address, string phonenumber, string email, string password,string role) : base(name, lastname, address, phonenumber, email)
+        public Employee(string name, string lastname, bool isMale,ContactInfo contactInfo, string password,string role) : base(name, lastname, isMale)
         {
             Id = ++_id+role;
             IsMale = isMale;

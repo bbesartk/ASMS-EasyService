@@ -14,6 +14,7 @@ namespace EasyService.Clients
 
         #region Properties
         public int Id { get; private set; }
+        public ContactInfo ContactInfo { get; set; }
         #endregion
 
         #region Constructors
@@ -21,9 +22,10 @@ namespace EasyService.Clients
         {
             Id = ++_id;
         }
-        public PrivateClient(string name, string lastname, string address, string phonenumber, string email):base(name,lastname,address,phonenumber,email)
+        public PrivateClient(string name, string lastname, ContactInfo contactInfo, string email):base(name,lastname)
         {
             Id = ++_id;
+            ContactInfo = contactInfo;
         }
         #endregion
 

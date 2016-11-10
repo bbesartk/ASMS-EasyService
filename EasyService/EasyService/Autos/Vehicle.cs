@@ -33,7 +33,7 @@ namespace EasyService.Autos
         {
 
         }
-        public Vehicle(string licensePlate,int vin,int productionYear,string make,string model,int motorPower,double currentKm,Company company,PrivateClient client,List<Service> serviceList,bool isSubscribed)
+        public Vehicle(string licensePlate,int vin,int productionYear,string make,string model,int motorPower,double currentKm,Company company,List<Service> serviceList,bool isSubscribed)
         {
             LicensePlate = licensePlate;
             VIN = vin;
@@ -43,6 +43,20 @@ namespace EasyService.Autos
             MotorPower = motorPower;
             CurrentKm = currentKm;
             Company = company;
+            ServiceList = serviceList;
+            IsSubscribed = isSubscribed;
+
+        }
+
+        public Vehicle(string licensePlate, int vin, int productionYear, string make, string model, int motorPower, double currentKm, PrivateClient client, List<Service> serviceList, bool isSubscribed)
+        {
+            LicensePlate = licensePlate;
+            VIN = vin;
+            ProductionYear = productionYear;
+            Make = make;
+            Model = model;
+            MotorPower = motorPower;
+            CurrentKm = currentKm;
             Client = client;
             ServiceList = serviceList;
             IsSubscribed = isSubscribed;
