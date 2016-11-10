@@ -14,11 +14,9 @@ namespace EasyService.Autos
         #region Properties
 
         public string LicensePlate { get; set; }
-        public int VIN { get; set; }
         public int ProductionYear { get; set; }
-        public string Make { get; set; }
+        public string Type { get; set; }
         public string Model { get; set; }
-        public int MotorPower { get; set; }
         public double CurrentKm { get; set; }
         public Company Company { get; set; }
         public PrivateClient Client { get; set; }
@@ -33,14 +31,12 @@ namespace EasyService.Autos
         {
 
         }
-        public Vehicle(string licensePlate,int vin,int productionYear,string make,string model,int motorPower,double currentKm,Company company,List<Service> serviceList,bool isSubscribed)
+        public Vehicle(string licensePlate,int productionYear,string type,string model,double currentKm,Company company,List<Service> serviceList,bool isSubscribed)
         {
             LicensePlate = licensePlate;
-            VIN = vin;
             ProductionYear = productionYear;
-            Make = make;
+            Type = type;
             Model = model;
-            MotorPower = motorPower;
             CurrentKm = currentKm;
             Company = company;
             ServiceList = serviceList;
@@ -48,14 +44,12 @@ namespace EasyService.Autos
 
         }
 
-        public Vehicle(string licensePlate, int vin, int productionYear, string make, string model, int motorPower, double currentKm, PrivateClient client, List<Service> serviceList, bool isSubscribed)
+        public Vehicle(string licensePlate, int productionYear, string type, string model, double currentKm, PrivateClient client, List<Service> serviceList, bool isSubscribed)
         {
             LicensePlate = licensePlate;
-            VIN = vin;
             ProductionYear = productionYear;
-            Make = make;
+            Type = type;
             Model = model;
-            MotorPower = motorPower;
             CurrentKm = currentKm;
             Client = client;
             ServiceList = serviceList;
@@ -65,7 +59,7 @@ namespace EasyService.Autos
 
         #endregion
 
-        #region Metoda
+        #region Methods
 
 
 
