@@ -8,9 +8,15 @@ namespace EasyService.Clients
 {
     class Client:Person
     {
-        public int Id { get; private set; }
+        #region StaticMembers
         static int _id = 0;
+        #endregion
 
+        #region Properties
+        public int Id { get; private set; }
+        #endregion
+
+        #region Constructors
         public Client()
         {
             Id = ++_id;
@@ -19,6 +25,11 @@ namespace EasyService.Clients
         {
             Id = ++_id;
         }
+        #endregion
+
+        #region Methods
+        //Something to write
+        #endregion
 
     }
 }
