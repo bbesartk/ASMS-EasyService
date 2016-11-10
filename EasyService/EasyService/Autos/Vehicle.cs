@@ -26,5 +26,36 @@ namespace EasyService.Autos
         public bool IsSubscribed { get; set; }
 
         #endregion
+
+        #region Conctructors
+
+        public Vehicle()
+        {
+
+        }
+        public Vehicle(string licensePlate,int vin,int productionYear,string make,string model,int motorPower,double currentKm,Company company,PrivateClient client,List<Service> serviceList,bool isSubscribed)
+        {
+            LicensePlate = licensePlate;
+            VIN = vin;
+            ProductionYear = productionYear;
+            Make = make;
+            Model = model;
+            MotorPower = motorPower;
+            CurrentKm = currentKm;
+            Company = company;
+            Client = client;
+            ServiceList = serviceList;
+            IsSubscribed = isSubscribed;
+
+        }
+
+        #endregion
+
+        #region Metoda
+
+
+
+        #endregion
+
     }
 }

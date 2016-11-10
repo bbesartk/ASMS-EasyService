@@ -9,12 +9,26 @@ namespace EasyService.Autos
 {
     class Service
     {
+        #region StaticMember
+
+        #endregion
+
         #region Properties
-        public int Id { get; set; }
+        public int Id { get;private set; }
         public DateTime Date { get; set; }
         public double CurrentKm { get; set; }
         public List<Inspection> ListInspection { get; set; }
         public double Total { get; set; }
+
+        #endregion
+
+        #region Conctructors
+
+        public Service()
+        {
+
+        }
+
 
         #endregion
 
