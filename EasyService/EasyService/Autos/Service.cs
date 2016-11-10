@@ -50,15 +50,7 @@ namespace EasyService.Autos
         }
         #endregion
 
-        #region Conctructors
-
-        public Service()
-        {
-
-        }
-
-
-        #endregion
+ 
 
     }
 }
