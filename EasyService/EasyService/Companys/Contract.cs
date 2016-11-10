@@ -1,4 +1,6 @@
-﻿namespace EasyService.Companys
+﻿
+using System;
+namespace EasyService.Companys
 {
     public class Contract
     {

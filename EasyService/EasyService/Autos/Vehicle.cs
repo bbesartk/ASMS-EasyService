@@ -19,6 +19,8 @@ namespace EasyService.Autos
         public string Model { get; set; }
         public int MotorPower { get; set; }
         public double CurrentKm { get; set; }
+        public Company Company { get; set; }
+        public Client Client { get; set; }
 
         #endregion
     }
