@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyService.Clients
 {
-    class Client:Person
+    class PrivateClient:Person
     {
         #region StaticMembers
         static int _id = 0;
@@ -17,11 +17,11 @@ namespace EasyService.Clients
         #endregion
 
         #region Constructors
-        public Client()
+        public PrivateClient()
         {
             Id = ++_id;
         }
-        public Client(string name, string lastname, string address, string phonenumber, string email):base(name,lastname,address,phonenumber,email)
+        public PrivateClient(string name, string lastname, string address, string phonenumber, string email):base(name,lastname,address,phonenumber,email)
         {
             Id = ++_id;
         }
