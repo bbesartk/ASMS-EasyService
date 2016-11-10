@@ -22,7 +22,7 @@ namespace EasyService.Autos
         public double Prise { get; set; }
         #endregion
 
-        #region Conctrucion
+        #region Conctructors
 
         public Inspection()
         {
@@ -37,9 +37,6 @@ namespace EasyService.Autos
 
         }
         #endregion
-
-
-
 
     }
 }
