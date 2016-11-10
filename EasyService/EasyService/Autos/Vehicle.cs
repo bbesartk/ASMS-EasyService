@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EasyService.Company;
-using EasyService.Clients;
+
 
 namespace EasyService.Autos
 {
@@ -18,6 +17,14 @@ namespace EasyService.Autos
         public string Model { get; set; }
         public int MotorPower { get; set; }
         public double CurrentKm { get; set; }
+   
+
+        #endregion
+
+        #region Construction
+
+
+
         #endregion
     }
 }
