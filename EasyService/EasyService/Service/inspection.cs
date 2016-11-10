@@ -8,6 +8,12 @@ namespace EasyService.Service
 {
     class Inspection
     {
+
+        #region StaticMember
+
+        private static int _id=0;
+
+        #endregion
         #region Properties
         public int Id { get; set; }
         public string Name { get; set; }
@@ -19,10 +25,14 @@ namespace EasyService.Service
 
         public Inspection()
         {
-
+            Id = ++_id;
         }
         public Inspection(int id,string name,string description,double prise)
         {
+            Id = ++_id;
+            Name = name;
+            Description = description;
+            Prise = prise;
 
         }
 
