@@ -13,5 +13,18 @@ namespace EasyService
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+
+        public Person()
+        {
+
+        }
+        public Person(string name, string lastname, string address, string phonenumber, string email)
+        {
+            Name = name;
+            LastName = lastname;
+            Address = address;
+            PhoneNumber = phonenumber;
+            Email = email;
+        }
     }
 }
