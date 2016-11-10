@@ -7,6 +7,7 @@ using EasyService.Clients;
 using EasyService.Companys;
 using EasyService.DataAccess;
 
+
 namespace EasyService.Autos
 {
     class Vehicle
