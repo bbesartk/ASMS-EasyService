@@ -13,7 +13,8 @@ namespace EasyService.Autos
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public double CurrentKm { get; set; }
-        public int MyProperty { get; set; }
+        public List<Inspection> ListInspection { get; set; }
+        public double Total { get; set; }
 
         #endregion
 

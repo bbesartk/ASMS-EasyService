@@ -1,6 +1,6 @@
 ﻿
 using System;
-namespace EasyService.Companys
+namespace EasyService.Clients
 {
     public class Contract
     {
