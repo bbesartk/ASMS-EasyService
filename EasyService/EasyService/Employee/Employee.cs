@@ -30,6 +30,7 @@ namespace EasyService.Employee
         {
             Id = ++_id+role;
             IsMale = isMale;
+            ContactInfo = contactInfo;
             Password = password;
         }
 
