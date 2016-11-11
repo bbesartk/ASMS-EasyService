@@ -9,7 +9,7 @@ namespace EasyService.Employee
     class Employee:Person
     {
         #region StaticMembers
-        static int _id = 2016;
+        static int _id = DateTime.Now.Year;
         #endregion
 
         #region Properties

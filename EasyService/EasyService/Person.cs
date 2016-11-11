@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyService
 {
-    class Person:ContactInfo
+    class Person
     {
         #region Properties
         public string Name { get; set; }
