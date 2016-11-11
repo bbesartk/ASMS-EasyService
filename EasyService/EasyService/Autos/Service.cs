@@ -35,6 +35,7 @@ namespace EasyService.Autos
             Total = CalculateTotal(listInspection);
         }
 
+
         #endregion
 
         #region Methods
