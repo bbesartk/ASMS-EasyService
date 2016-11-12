@@ -18,5 +18,7 @@ namespace EasyService.Autos
                 return Quantity * Price;
             }
         }
+
+
     }
 }
