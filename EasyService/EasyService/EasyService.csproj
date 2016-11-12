@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Appointments\Appointment.cs" />
     <Compile Include="Autos\Service.cs" />
+    <Compile Include="Autos\ServiceDetail.cs" />
     <Compile Include="Clients\Company.cs" />
     <Compile Include="Clients\Contract.cs" />
     <Compile Include="Autos\Vehicle.cs" />
@@ -60,7 +61,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clients\PrivateClient.cs" />
+    <Compile Include="Clients\Client.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
