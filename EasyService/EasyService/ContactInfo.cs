@@ -56,6 +56,7 @@ namespace EasyService
                     throw new Exception("Shkruani numrin e telefonit");
                 }
             }
+        }
         public string Email { get; set; }
         
            
