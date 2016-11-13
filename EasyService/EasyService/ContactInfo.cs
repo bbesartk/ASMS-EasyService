@@ -22,7 +22,7 @@ namespace EasyService
             get { return _city; }
             set
             {
-                if (_city != String.Empty)
+                if (value != String.Empty)
                 {
                     _city = value;
                 }
@@ -37,7 +37,7 @@ namespace EasyService
             get { return _address; }
             set
             {
-                if (_address != String.Empty)
+                if (value != String.Empty)
                 {
                     _address = value;
                 }

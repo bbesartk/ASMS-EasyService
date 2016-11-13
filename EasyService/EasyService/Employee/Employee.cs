@@ -26,7 +26,7 @@ namespace EasyService.Employee
             get { return _password; }
             set
             {
-                if (_password.Length > 4)
+                if (value.Length > 4)
                 {
                     _password = value;
                 }
@@ -41,7 +41,7 @@ namespace EasyService.Employee
             get { return _contactInfo; }
             set
             {
-                if (_contactInfo != null)
+                if (value != null)
                 {
                     _contactInfo = value;
                 }
@@ -56,7 +56,7 @@ namespace EasyService.Employee
         public string Role { get { return _role; }
             set
             {
-                if (_role != String.Empty)
+                if (value != String.Empty)
                 {
                     _role = value;
                 }
