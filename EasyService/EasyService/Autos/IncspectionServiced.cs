@@ -8,10 +8,38 @@ namespace EasyService.Autos
 {
     public class IncspectionServiced
     {
+        #region PrivateMembers
+        private int _quantity;
+        private double _price;
+        #endregion
+
         #region Properties
         public string Description { get; set; }
-        public int Quantity { get; set; }
-        public double Price { get; set; }
+        public int Quantity
+        {
+            get { return _quantity; }
+            set
+            {
+                if (_quantity <= 0)
+                {
+                    throw new Exception("Sasia duhet pozitive");
+                }
+                else _quantity = value;
+            }
+        }
+
+        public double Price
+        {
+            get { return _price; }
+            set
+            {
+                if (_price <= 0)
+                {
+                    throw new Exception("Cmimi nuk guxon te jete negativ");
+                }
+                else _price = value;
+            }
+        }
         public double Total
         {
             get
@@ -22,11 +50,7 @@ namespace EasyService.Autos
         #endregion
 
         #region Constuctors
-        public IncspectionServiced()
-        {
-
-        }
-        public IncspectionServiced(string description,int quantity,double price)
+        public IncspectionServiced(string description, int quantity, double price)
         {
             Description = description;
             Quantity = quantity;

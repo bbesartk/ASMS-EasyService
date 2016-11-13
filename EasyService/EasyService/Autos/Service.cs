@@ -14,10 +14,10 @@ namespace EasyService.Autos
         #endregion
 
         #region Properties
-        public int Id { get;private set; }
+        public int Id { get; private set; }
         public DateTime InspectionDate { get; set; }
         public double CurrentKm { get; set; }
-        public List<Inspection> ListInspection { get; set; }  //nese ska service deatil qikjo jet null
+        public List<Inspection> ListInspection { get; set; }
         public double Total { get; private set; }
 
         #endregion
@@ -32,26 +32,22 @@ namespace EasyService.Autos
         public Service(DateTime serviceDate, double currentKm, List<Inspection> listInspection)
         {
             Id = ++_id;
-            Total = CalculateTotal(listInspection);
+            ListInspection = listInspection;
         }
 
 
         #endregion
 
         #region Methods
-        private double CalculateTotal(List<Inspection> listInspection)
-        {
-             //total=0;
-            //double total = listInspection.Sum(a => a.Prise);
-            //foreach (Inspection insp in listInspection)
-            //{
-            //    total += insp.Prise;
-            //}
-
-            return listInspection.Sum(a => a.Service.Total);
-        }
+        //public double CalculateTotal()
+        //{
+        //    foreach (Inspection item in ListInspection)
+        //    {
+        //        if(item.Service.Price)
+        //    }
+        //}
         #endregion
 
- 
+
     }
 }

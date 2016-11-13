@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Appointments\Appointment.cs" />
-    <Compile Include="Appointments\Notifications.cs" />
     <Compile Include="Autos\Service.cs" />
     <Compile Include="Autos\IncspectionServiced.cs" />
     <Compile Include="Clients\Company.cs" />

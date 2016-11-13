@@ -8,39 +8,40 @@ namespace EasyService.Autos
 {
     class Inspection
     {
-
-        #region StaticMembers
-
-        private static int _id=0;
-
+        #region PrivateMembers
+        private string _name;
         #endregion
 
         #region Properties
-        public int Id { get; private set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+
         public IncspectionServiced Service { get; set; }
+
+        public string Name
+        {
+            get{ return _name;}
+            set
+            {
+                if (_name != String.Empty)
+                {
+                    _name = value;
+                }
+                else throw new Exception("Emri s'duhet te jete i zbrazet!");
+            }
+        }
+
         #endregion
 
         #region Conctructors
 
-        public Inspection()
-        {
-            Id = ++_id;
-        }
-        public Inspection(int maxId,string name,string description,IncspectionServiced service)
-        {
-            Id = maxId + 1;
+        public Inspection(string name,IncspectionServiced service)
+        { 
             Name = name;
-            Description = description;
             this.Service = service;
         }
 
-        public Inspection(int maxId, string name, string description)
+        public Inspection(string name)
         {
-            Id = maxId + 1;
             Name = name;
-            Description = description;
             Service = null;
         }
 
