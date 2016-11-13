@@ -11,9 +11,12 @@ namespace EasyService.Autos
 {
     class Vehicle
     {
-        #region Properties
+        #region private variables
         private Company company;
         private Client client;
+        #endregion
+
+        #region Properties
         public string LicensePlate { get; set; }
         public int ProductionYear { get; set; }
         public string Type { get; set; }
@@ -29,7 +32,7 @@ namespace EasyService.Autos
             }
         }
         public Client Client { get; set; }
-        public List<Service> ServiceList { get; set; }
+        public List<Service> ServiceList { get; set; }//history of secices
         public bool IsSubscribed { get; set; }
 
         #endregion

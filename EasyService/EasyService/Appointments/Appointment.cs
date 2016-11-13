@@ -11,8 +11,7 @@ namespace EasyService.Appointments
     {
         #region Properties
         public DateTime DateOfMeeting { get; set; }
-        public  Vehicle Vehicle { get; set; }
-        public bool IsTreated { get; set; }
+        public Vehicle Vehicle { get; set; }
         #endregion
 
         #region Constructors
@@ -21,12 +20,13 @@ namespace EasyService.Appointments
         {
 
         }
-        public Appointment(DateTime dateOfMeeting,Vehicle vehicle,bool isTreated)
+        public Appointment(DateTime dateOfMeeting,Vehicle vehicle)
         {
             DateOfMeeting = dateOfMeeting;
             Vehicle = vehicle;
-            IsTreated = isTreated;
         }
         #endregion
+
+#
     }
 }

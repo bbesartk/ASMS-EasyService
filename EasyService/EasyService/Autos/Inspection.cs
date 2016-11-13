@@ -17,10 +17,9 @@ namespace EasyService.Autos
 
         #region Properties
         public int Id { get; private set; }
-        //public Guid IDD { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public ServiceDetail Service { get; set; }
+        public IncspectionServiced Service { get; set; }
         #endregion
 
         #region Conctructors
@@ -29,13 +28,23 @@ namespace EasyService.Autos
         {
             Id = ++_id;
         }
-        public Inspection(int maxId,string name,string description,ServiceDetail service)
+        public Inspection(int maxId,string name,string description,IncspectionServiced service)
         {
             Id = maxId + 1;
             Name = name;
             Description = description;
             this.Service = service;
         }
+
+        public Inspection(int maxId, string name, string description)
+        {
+            Id = maxId + 1;
+            Name = name;
+            Description = description;
+            Service = null;
+        }
+
+
         #endregion
 
     }

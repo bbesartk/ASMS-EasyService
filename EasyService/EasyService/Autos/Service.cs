@@ -15,7 +15,7 @@ namespace EasyService.Autos
 
         #region Properties
         public int Id { get;private set; }
-        public DateTime ServiceDate { get; set; }
+        public DateTime InspectionDate { get; set; }
         public double CurrentKm { get; set; }
         public List<Inspection> ListInspection { get; set; }  //nese ska service deatil qikjo jet null
         public double Total { get; private set; }

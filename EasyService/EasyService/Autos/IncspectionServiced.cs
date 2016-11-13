@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyService.Autos
 {
-    public class ServiceDetail
+    public class IncspectionServiced
     {
         #region Properties
         public string Description { get; set; }
@@ -22,11 +22,11 @@ namespace EasyService.Autos
         #endregion
 
         #region Constuctors
-        public ServiceDetail()
+        public IncspectionServiced()
         {
 
         }
-        public ServiceDetail(string description,int quantity,double price)
+        public IncspectionServiced(string description,int quantity,double price)
         {
             Description = description;
             Quantity = quantity;
