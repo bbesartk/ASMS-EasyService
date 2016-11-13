@@ -20,7 +20,7 @@ namespace EasyService.Autos
             get { return _quantity; }
             set
             {
-                if (_quantity <= 0)
+                if (value <= 0)
                 {
                     throw new Exception("Sasia duhet pozitive");
                 }
@@ -33,7 +33,7 @@ namespace EasyService.Autos
             get { return _price; }
             set
             {
-                if (_price <= 0)
+                if (value <= 0)
                 {
                     throw new Exception("Cmimi nuk guxon te jete negativ");
                 }

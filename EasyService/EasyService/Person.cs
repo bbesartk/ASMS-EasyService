@@ -11,7 +11,6 @@ namespace EasyService
         #region PrivateMembers
         private string _name;
         private string _lastName;
-        private bool _isMale;
 
         #endregion
 
@@ -19,46 +18,33 @@ namespace EasyService
         public string Name { get { return _name; }
             set
             {
-                if (_name != String.Empty)
+                if (value != String.Empty)
                 {
                     _name = value;
 
                 }
                 else
                 {
-                    throw new Exception("Shkruj Emrin");
+                    throw new Exception("Shkruaje Emrin");
                 }
             }
         }
         public string LastName { get { return _lastName; }
             set
             {
-                if (_lastName != String.Empty)
+                if (value != String.Empty)
                 {
                     _lastName = value;
 
                 }
                 else
                 {
-                    throw new Exception("Shkruj Mbiemrin");
+                    throw new Exception("Shkruaje Mbiemrin");
                 }
             }
         }
-        public bool IsMale { get { return _isMale; }
-            set
-            {
-                if (_isMale == (value))
-                {
-                    _isMale = value;
+        public bool IsMale { get; set; }
 
-                }
-                else
-                {
-                    throw new Exception("Shkruj Emrin");
-                }
-            }
-        }
-        
         #endregion
 
         #region Constructors

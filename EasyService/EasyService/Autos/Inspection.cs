@@ -21,7 +21,7 @@ namespace EasyService.Autos
             get{ return _name;}
             set
             {
-                if (_name != String.Empty)
+                if (value != String.Empty)
                 {
                     _name = value;
                 }
