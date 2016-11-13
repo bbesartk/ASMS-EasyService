@@ -14,7 +14,7 @@ namespace EasyService.Autos
 
         #region Properties
 
-        public IncspectionServiced Service { get; set; }
+        public InspectionServiced Service { get; set; }
 
         public string Name
         {
@@ -33,7 +33,7 @@ namespace EasyService.Autos
 
         #region Conctructors
 
-        public Inspection(string name,IncspectionServiced service)
+        public Inspection(string name,InspectionServiced service)
         { 
             Name = name;
             this.Service = service;

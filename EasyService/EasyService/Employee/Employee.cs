@@ -32,7 +32,7 @@ namespace EasyService.Employee
                 }
                 else
                 {
-                    throw new Exception("Gjasia e Passwordit duhet te jet mbi 4 karaktere");
+                    throw new Exception("Passwordi eshte i shkurte");
                 }
             }
         }
@@ -47,7 +47,7 @@ namespace EasyService.Employee
                 }
                 else
                 {
-                    throw new Exception("Kontakt info nuk duhet te jet i zbrazet");
+                    throw new Exception("Kontakt Info nuk duhet te jet i zbrazet");
                 }
             }
         }
