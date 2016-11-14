@@ -10,6 +10,7 @@ namespace EasyService.Autos
     {
         #region PrivateMembers
         private string _name;
+
         #endregion
 
         #region Properties
