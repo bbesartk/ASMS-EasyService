@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EasyService.Autos;
 
 namespace EasyService
 {
@@ -12,5 +13,7 @@ namespace EasyService
         {
             return char.ToUpper(value[0]) + value.Substring(1).ToLower();
         }
+
+ 
     }
 }

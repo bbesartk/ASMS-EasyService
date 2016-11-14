@@ -11,22 +11,35 @@ namespace EasyService.Autos
     {
         #region StaticMembers
         private static int _id = 0;
-        private double _currentKm;
+        private double _servicedKm;
+        private double _total;
         #endregion
 
         #region Properties
         public int Id { get; private set; }
-        public DateTime InspectionDate { get; set; }
-        public double CurrentKm
+        public DateTime ServiceDate { get; set; }
+        public double ServicedKm
         {
-            get { return _currentKm; }
+            get { return _servicedKm; }
             set
             {
-                if((value))
+                //if(value < _servicedKm)
             }
         }
         public List<Inspection> ListInspection { get; set; }
-        public double Total { get; private set; }
+        public double Total
+        {
+            get
+            {
+                return _total; 
+            }
+            set
+            {
+                if (CheckInspectionServiced() == true)
+                    _total = CalculateTotal();
+                else _total = 25;
+            }
+        }
 
         #endregion
 
@@ -37,30 +50,43 @@ namespace EasyService.Autos
             Id = ++_id;
         }
 
-        public Service(DateTime serviceDate, double currentKm, List<Inspection> listInspection)
+        public Service(DateTime serviceDate, double servicedKm, List<Inspection> listInspection)
         {
             Id = ++_id;
             ListInspection = listInspection;
+            ServicedKm = servicedKm;
+            ServiceDate = serviceDate;
         }
 
 
         #endregion
 
         #region Methods
-        public bool IsValidKm(double currentKM, List<Service> serviceList)
+        private bool CheckInspectionServiced()
         {
-            
-            foreach (Service item in serviceList)
+            bool value = false;
+            foreach (Inspection item in ListInspection)
             {
-                if (currentKM < item.CurrentKm)
-                {
-                    return false;
-                }
-                
+                if (item.IsService != null)
+                    value = true;
             }
-            return true;
+            return value;
         }
-        
+
+
+        private double CalculateTotal()
+        {
+            double total = 0;
+            foreach (Inspection item in ListInspection)
+            {
+                if(item.IsService!=null)
+                {
+                    total += Total;
+                }
+            }
+            return total;
+        }
+
         #endregion
 
 
