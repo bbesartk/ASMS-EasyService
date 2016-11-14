@@ -12,15 +12,74 @@ namespace EasyService.Autos
     class Vehicle
     {
         #region private variables
+        private string _licensePlate;
+        private int _productionYear;
+        private string _type;
+        private string _model;
+        private double _correntKm;
         private Company company;
         private Client client;
         #endregion
 
         #region Properties
-        public string LicensePlate { get; set; }
-        public int ProductionYear { get; set; }
-        public string Type { get; set; }
-        public string Model { get; set; }
+        public string LicensePlate { get { return _licensePlate; }
+            set
+            {
+                if (value != String.Empty)
+                {
+                    _licensePlate = value;
+                }
+                else
+                {
+                    throw new Exception("Ju Lutem mbush Targat e Vetures");
+                }
+            }
+        }
+        public int ProductionYear
+        {
+            get { return _productionYear; }
+            set
+            {
+                if (value >= 2000)
+                {
+                    _productionYear = value;
+                }
+                else
+                {
+                    throw new Exception("Regjistrohen vetem veturat qe jan mbi 2000");
+                }
+            }
+        }
+        public string Type
+        {
+            get { return _type; }
+            set
+            {
+                if (value != String.Empty)
+                {
+                    _type = value;
+                }
+                else
+                {
+                    throw new Exception("Ju Lutem shkruaj Tipin ");
+                }
+            }
+        }
+        public string Model
+        {
+            get { return _model; }
+            set
+            {
+                if (value != String.Empty)
+                {
+                    _model = value;
+                }
+                else
+                {
+                    throw new Exception("Ju Lutem shkruaj Modelin");
+                }
+            }
+        }
         public int CubicCentimeters { get; set; }
         public double CurrentKm { get; set; }
         public Company Company
