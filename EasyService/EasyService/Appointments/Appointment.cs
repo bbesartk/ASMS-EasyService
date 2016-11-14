@@ -4,22 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EasyService.Autos;
-
+using EasyService.DataAccess;
 namespace EasyService.Appointments
 {
     class Appointment
     {
         #region PrivateMembers
         private Vehicle _vehicle;
+        private DateTime _appointment;
         #endregion
 
         #region Properties
-        public DateTime DateOfMeeting { get; set; }
-
+        public DateTime DateOfMeeting
+        {
+            get
+            {
+                return _appointment;
+            }
+            set
+            {
+                if (IsValidAppointment(value)==true)
+                    _appointment = value;
+                else throw new Exception("Ky termin eshte i zene");
+            }
+        }
         public Vehicle Vehicle
         {
-            get {return _vehicle;}
-            set {if (IsPending == false)  _vehicle = value;}
+            get { return _vehicle; }
+            set
+            {
+                if (IsPending == false) _vehicle = value;
+                else
+                {
+                    throw new Exception("While pending you cant have an appointment!");
+                }
+            }
+
         }
 
         public bool IsPending { get; private set; }
@@ -44,11 +64,34 @@ namespace EasyService.Appointments
             IsPending = false;
         }
 
-        public Appointment(bool isPending, string description)
+        public Appointment(string description)
         {
-            IsPending = isPending;
-
+            IsPending = true;
+            Description = description;
         }
+        #endregion
+
+        #region Methods
+        private bool IsValidAppointment(DateTime appointment)
+        {
+            if ((appointment.Date==DateTime.Now.Date) &&(appointment.TimeOfDay < DateTime.Now.TimeOfDay))
+                throw new Exception("Kerkuat termin negativ!");
+            else if (appointment.Hour < 8 || appointment.Hour > 17)
+                throw new Exception("Jasht orarit te punes!");
+            else if ((appointment.DayOfWeek == DayOfWeek.Saturday) || (appointment.DayOfWeek == DayOfWeek.Sunday))
+                throw new Exception("Dite e vikendit!");
+            else
+            {
+                foreach (Appointment item in daAppointments.ListAppointments)
+                {
+                    if ((item.DateOfMeeting.TimeOfDay == appointment.TimeOfDay))
+                        return false;
+                }
+                return true;
+            }
+        }
+
+
         #endregion
     }
 }
