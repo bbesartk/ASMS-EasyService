@@ -26,13 +26,15 @@ namespace EasyService.Autos
         public Company Company
         {
             get { return company; }
-            set
-            {
-                if (client == null) company = value;
-            }
+            set {if (client == null) company = value;}
         }
-        public Client Client { get; set; }
-        public List<Service> ServiceList { get; set; }//history of secices
+
+        public Client Client
+        {
+            get { return client; }
+            set {if (company == null) client = value;}
+        }
+        public List<Service> ServiceList { get; set; }//history of services
         public bool IsSubscribed { get; set; }
 
         #endregion

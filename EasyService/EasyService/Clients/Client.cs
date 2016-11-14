@@ -10,11 +10,21 @@ namespace EasyService.Clients
     {
         #region StaticMembers
         static int _id = 0;
+        private ContactInfo _contactInfo;
         #endregion
 
         #region Properties
         public int Id { get; private set; }
-        public ContactInfo ContactInfo { get; set; }
+        public ContactInfo ContactInfo
+        {
+            get { return _contactInfo; }
+            set
+            {
+                if (_contactInfo == null)
+                    throw new ArgumentNullException("ContactInfo nuk duhet te jete negative");
+            }
+        }
+     
         #endregion
 
         #region Constructors

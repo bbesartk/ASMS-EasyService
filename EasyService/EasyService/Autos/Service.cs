@@ -11,12 +11,20 @@ namespace EasyService.Autos
     {
         #region StaticMembers
         private static int _id = 0;
+        private double _currentKm;
         #endregion
 
         #region Properties
         public int Id { get; private set; }
         public DateTime InspectionDate { get; set; }
-        public double CurrentKm { get; set; }
+        public double CurrentKm
+        {
+            get { return _currentKm; }
+            set
+            {
+                if((value))
+            }
+        }
         public List<Inspection> ListInspection { get; set; }
         public double Total { get; private set; }
 
@@ -39,9 +47,17 @@ namespace EasyService.Autos
         #endregion
 
         #region Methods
-        private bool IsValidKm(double currentKM, Vehicle vh)
+        public bool IsValidKm(double currentKM, List<Service> serviceList)
         {
-            if(currentKM>vh.ServiceList.)
+            
+            foreach (Service item in serviceList)
+            {
+                if (currentKM < item.CurrentKm)
+                {
+                    return false;
+                }
+                
+            }
             return true;
         }
         
