@@ -77,9 +77,9 @@ namespace EasyService.Employee
         public Employee(string name, string lastname, bool isMale, ContactInfo contactInfo, string password, string role) : base(name, lastname, isMale)
         {
             Id = ++_id + role;
-            IsMale = isMale;
             ContactInfo = contactInfo;
             Password = password;
+            Role = role;
         }
 
         #endregion

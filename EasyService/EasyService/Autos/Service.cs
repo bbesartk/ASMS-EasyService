@@ -39,13 +39,12 @@ namespace EasyService.Autos
         #endregion
 
         #region Methods
-        //public double CalculateTotal()
-        //{
-        //    foreach (Inspection item in ListInspection)
-        //    {
-        //        if(item.Service.Price)
-        //    }
-        //}
+        private bool IsValidKm(double currentKM, Vehicle vh)
+        {
+            if(currentKM>vh.ServiceList.)
+            return true;
+        }
+        
         #endregion
 
 

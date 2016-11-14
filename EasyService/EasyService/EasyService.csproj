@@ -53,6 +53,7 @@
     <Compile Include="Clients\Contract.cs" />
     <Compile Include="Autos\Vehicle.cs" />
     <Compile Include="ContactInfo.cs" />
+    <Compile Include="DataAccess\daAppointments.cs" />
     <Compile Include="DataAccess\daEmployee.cs" />
     <Compile Include="Employee\Employee.cs" />
     <Compile Include="Finance\Bill.cs" />

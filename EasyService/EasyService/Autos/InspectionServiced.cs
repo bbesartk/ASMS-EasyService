@@ -35,7 +35,7 @@ namespace EasyService.Autos
             get { return _quantity; }
             set
             {
-                if (value <= 0)
+                if (value < 1)
                 {
                     throw new Exception("Sasia duhet pozitive");
                 }
