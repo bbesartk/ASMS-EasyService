@@ -45,6 +45,11 @@ namespace EasyService
 
            
                 daAppointments.ListAppointments.Add(new Appointment(dateOfMeeting, selectedVehicle));
+            Clients.Client c1 = new Clients.Client();
+            List<Inspection> i1 = new List<Inspection>();
+            Vehicle v1 = new Vehicle();
+
+            int x = v1.ServiceList.Count();
             
                 
         }

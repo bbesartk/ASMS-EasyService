@@ -14,6 +14,15 @@ namespace EasyService
             return char.ToUpper(value[0]) + value.Substring(1).ToLower();
         }
 
- 
+        public static bool IsValidKm(List<Service> listservice, double km)
+        {
+            bool val = false;
+            foreach (Service item in listservice)
+            {
+                if (km > item.ServicedKm)
+                    val= true;
+            }
+            return val;
+        }
     }
 }

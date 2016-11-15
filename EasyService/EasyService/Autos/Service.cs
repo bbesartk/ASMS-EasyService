@@ -35,9 +35,8 @@ namespace EasyService.Autos
             }
             set
             {
-                if (CheckInspectionServiced() == true)
-                    _total = CalculateTotal();
-                else _total = 25;
+                if (value > 0)
+                    _total = value;
             }
         }
 
@@ -56,6 +55,10 @@ namespace EasyService.Autos
             ListInspection = listInspection;
             ServicedKm = servicedKm;
             ServiceDate = serviceDate;
+
+            if (CheckInspectionServiced() == true)
+                Total = CalculateTotal();
+            else Total = 25;
         }
 
 
@@ -86,6 +89,7 @@ namespace EasyService.Autos
             }
             return total;
         }
+
 
         #endregion
 

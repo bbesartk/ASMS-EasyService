@@ -86,21 +86,21 @@ namespace EasyService.Autos
         }
 
 
-        public double CurrentKM
-        {
-            get { return _currentKM; }
-            set{
-                if (HasService()==false && value>0)
-                {
-                    _currentKM = value;
-                }
-                else if(HasService() && IsValidKm(value))
-                {
-                    _currentKM = value;
-                } 
-                else throw new Exception("Kilometrat jan invalid");
-            }
-        }
+        //public double CurrentKM
+        //{
+        //    get { return _currentKM; }
+        //    set{
+        //        if (HasService()==false && value>0)
+        //        {
+        //            _currentKM = value;
+        //        }
+        //        else if(HasService() && IsValidKm(value))
+        //        {
+        //            _currentKM = value;
+        //        } 
+        //        else throw new Exception("Kilometrat jan invalid");
+        //    }
+        //}
 
 
         public Company Company
@@ -114,7 +114,7 @@ namespace EasyService.Autos
             get { return client; }
             set { if (company == null) client = value; }
         }
-        public List<Service> ServiceList { get; set; }//history of services
+        public List<Service> ServiceList { get; set; } = new List<Service>();//history of services
         public bool IsSubscribed { get; set; }
 
         #endregion
@@ -125,28 +125,28 @@ namespace EasyService.Autos
         {
 
         }
-        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, double currentKm, Company company, List<Service> serviceList)
+        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, Company company, List<Service> serviceList)
         {
             LicensePlate = licensePlate;
             ProductionYear = productionYear;
             Type = type;
             Model = model;
             CubicCentimeters = cubicCm;
-            CurrentKM = currentKm;
+           // CurrentKM = currentKm;
             Company = company;
             ServiceList = serviceList;
             IsSubscribed = true;
 
         }
 
-        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, double currentKm, Client client, List<Service> serviceList)
+        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, Client client, List<Service> serviceList)
         {
             LicensePlate = licensePlate;
             ProductionYear = productionYear;
             Type = type;
             Model = model;
             CubicCentimeters = cubicCm;
-            CurrentKM = currentKm;
+            //CurrentKM = currentKm;
             Client = client;
             ServiceList = serviceList;
             IsSubscribed = true;
@@ -177,7 +177,7 @@ namespace EasyService.Autos
         
         public void UpdateVehicleKm()
         {
-            CurrentKM = ServiceList[ServiceList.Count - 1].ServicedKm;
+            //CurrentKM = ServiceList[ServiceList.Count - 1].ServicedKm;
         }
 
         #endregion
