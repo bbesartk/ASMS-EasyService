@@ -49,6 +49,7 @@
     <Compile Include="Clients\Client.cs" />
     <Compile Include="Clients\Company.cs" />
     <Compile Include="DataAccess Layer\dalAppointments.cs" />
+    <Compile Include="DataAccess Layer\dalInspections.cs" />
     <Compile Include="DataAccess Layer\dalInvoice.cs" />
     <Compile Include="DataAccess Layer\dalClients.cs" />
     <Compile Include="DataAccess Layer\dalCompany.cs" />

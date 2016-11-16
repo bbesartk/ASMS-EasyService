@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ASMS_EasyService.DataAccess_Layer;
 
 namespace ASMS_EasyService.Vehicles
 {
@@ -26,7 +27,9 @@ namespace ASMS_EasyService.Vehicles
             {
                 if (String.IsNullOrEmpty(value))
                     throw new Exception("You must provide a name for inspection!");
-                else _name = value;
+                else if (IsUniqueName(value))
+                    _name = value;
+                else throw new Exception("You must provide a valid name for Inspection!");
             }
         }
         #endregion
@@ -48,7 +51,15 @@ namespace ASMS_EasyService.Vehicles
         #endregion
 
         #region Methods
-
+        private bool IsUniqueName(string name)
+        {
+            foreach (Inspection ins in dalInspections.GetAll())
+            {
+                if (ins.Name == name)
+                    return false;
+            }
+            return true;
+        }
         #endregion
     }
 }
