@@ -10,10 +10,6 @@ namespace ASMS_EasyService.General
     class ContactInfo
     {
 
-        #region StaticMembers
-
-        #endregion
-
         #region PrivateMembers
         private string _city;
         private string _email;

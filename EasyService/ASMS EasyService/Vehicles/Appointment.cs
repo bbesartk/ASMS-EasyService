@@ -68,12 +68,12 @@ namespace ASMS_EasyService.Vehicles
             if ((appointment.Date == DateTime.Now.Date) && (appointment.TimeOfDay < DateTime.Now.TimeOfDay))
                 throw new Exception("You have chosen a negative appointment!");
             else if (appointment.Hour < 8 || appointment.Hour > 17)
-                throw new Exception("Outside the working time!");
+                throw new Exception("Outside the working hours!");
             else if ((appointment.DayOfWeek == DayOfWeek.Saturday) || (appointment.DayOfWeek == DayOfWeek.Sunday))
                 throw new Exception("Weekend!");
             else
             {
-                foreach (Appointment appoointment in dalAppointments.ListOfAppointments)
+                foreach (Appointment appoointment in dalAppointments.GetAll())
                 {
                     if ((appoointment.DateOfAppointment.TimeOfDay == appointment.TimeOfDay))
                         return false;

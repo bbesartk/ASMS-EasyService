@@ -9,7 +9,7 @@ using ASMS_EasyService.Employees;
 
 namespace ASMS_EasyService.Finance
 {
-    class Bill
+    class Invoice
     {
         #region StaticMembers
         public readonly int Vat;
@@ -49,7 +49,7 @@ namespace ASMS_EasyService.Finance
         #endregion
 
         #region Constructors
-        public Bill(Vehicle servicedVehicle, Service service,Client client, Employee servicedBy,Employee issuedBy,int vat)
+        public Invoice(Vehicle servicedVehicle, Service service,Client client, Employee servicedBy,Employee issuedBy,int vat)
         {
             Id = ++_id;
             ServicedVehicle = servicedVehicle;
@@ -60,7 +60,7 @@ namespace ASMS_EasyService.Finance
             Vat = vat;
         }
 
-        public Bill(Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, Employee issuedBy, int vat)
+        public Invoice(Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, Employee issuedBy, int vat)
         {
             Id = ++_id;
             ServicedVehicle = servicedVehicle;
