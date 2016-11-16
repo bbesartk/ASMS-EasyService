@@ -25,7 +25,7 @@ namespace EasyService.Appointments
             {
                 if (IsValidAppointment(value)==true)
                     _appointment = value;
-                else throw new Exception("Ky termin eshte i zene");
+                else throw new Exception("This appointment is taken");
             }
         }
         public Vehicle Vehicle

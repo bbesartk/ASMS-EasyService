@@ -40,6 +40,7 @@ namespace EasyService.Autos
             IsService = isService;
         }
 
+        //If theres no 
         public Inspection(string name)
         {
             Name = name;
