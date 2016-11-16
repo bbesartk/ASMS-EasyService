@@ -23,7 +23,7 @@ namespace ASMS_EasyService.Clients
             {
                 if (String.IsNullOrEmpty(value))
                     throw new ArgumentNullException("Company must have a business number!");
-                else _companyName = value;
+                else _businessNumber = value;
             }
         }
 

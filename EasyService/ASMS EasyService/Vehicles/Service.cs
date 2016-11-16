@@ -13,7 +13,7 @@ namespace ASMS_EasyService.Vehicles
         private DateTime _dateOfService;
         private double _servicedKm;
         private List<Inspection> _listInspection;
-        private double _technicalWork;
+        private decimal _technicalWork;
         #endregion
 
         #region Properties
@@ -46,13 +46,13 @@ namespace ASMS_EasyService.Vehicles
             get
             {
                  if(HasServicedInspections())
-                    return (TechnicalWork+CalculateTotal());
-                else return TechnicalWork;
+                    return (TechnicalWorkPay+CalculateTotal());
+                else return TechnicalWorkPay;
             }
 
         }
 
-        public double TechnicalWork
+        public decimal TechnicalWorkPay
         {
             get{return _technicalWork;}
 
@@ -80,11 +80,11 @@ namespace ASMS_EasyService.Vehicles
         #endregion
 
         #region Constructors
-        public Service(DateTime dateOfService, double servicedKm,double technicalWork, List<Inspection> listOfInspection,Employee servicedBy)
+        public Service(DateTime dateOfService, double servicedKm,decimal technicalWork, List<Inspection> listOfInspection,Employee servicedBy)
         {
             DateOfService = dateOfService;
             ServicedKm = servicedKm;
-            TechnicalWork = technicalWork;
+            TechnicalWorkPay = technicalWork;
             ListInspection = listOfInspection;
             ServicedBy = servicedBy;
         }
@@ -92,9 +92,9 @@ namespace ASMS_EasyService.Vehicles
 
         #region Methods
         //Calculate total for all serviced Inspections
-        private double CalculateTotal()
+        private decimal CalculateTotal()
         {
-            double total = 0;
+            decimal total = 0;
             foreach (Inspection item in ListInspection)
             {
                 if (item.ServicedInspection != null)

@@ -57,7 +57,7 @@ namespace ASMS_EasyService.Vehicles
         {
             get
             {
-                return Quantity * Price;
+                return (decimal)(Quantity * Price);
             }
         }
         #endregion
