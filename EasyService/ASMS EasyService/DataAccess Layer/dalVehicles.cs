@@ -44,6 +44,13 @@ namespace ASMS_EasyService.DataAccess_Layer
             return subscribedVehicle;
         }
 
+        public static bool IsValidKm(List<Service> listservice, double km)
+        {
+            double servicedKm = listservice[listservice.Count - 1].ServicedKm;
+            if (km > servicedKm)
+                return true;
+            else return false;
+        }
 
         public static List<Vehicle> GeAllReadyForService()
         {
