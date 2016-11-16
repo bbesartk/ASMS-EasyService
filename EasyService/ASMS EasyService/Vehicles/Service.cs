@@ -17,7 +17,6 @@ namespace ASMS_EasyService.Vehicles
         #endregion
 
         #region Properties
-        public Employee ServicedBy { get; }
 
         public List<Inspection> ListInspection
         {
@@ -75,7 +74,7 @@ namespace ASMS_EasyService.Vehicles
             }
         }
 
-
+        public Employee ServicedBy { get; }
 
         #endregion
 

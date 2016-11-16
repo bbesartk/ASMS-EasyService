@@ -63,6 +63,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="General\ContactInfo.cs" />
+    <Compile Include="General\GeneralUse.cs" />
     <Compile Include="General\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

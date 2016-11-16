@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ASMS_EasyService.Clients;
+using ASMS_EasyService.DataAccess_Layer;
 
 namespace ASMS_EasyService.Vehicles
 {
@@ -34,7 +35,9 @@ namespace ASMS_EasyService.Vehicles
             {
                 if (String.IsNullOrEmpty(value))
                     throw new Exception("You must provide a license plate!");
-                else _licensePlate = value;
+                else if (IsUniquePlate(value))
+                    _licensePlate = value;
+                else throw new Exception("This plate is not unique!");
             }
         }
 
@@ -46,7 +49,9 @@ namespace ASMS_EasyService.Vehicles
             {
                 if (String.IsNullOrEmpty(value))
                     throw new Exception("You must provide a Vehicle Identification Number!");
-                else _vin = value;
+                else if (IsUniqueVIN(value))
+                    _vin = value;
+                else throw new Exception("This VIN isn't unique!");
             }
         }
 
@@ -140,7 +145,29 @@ namespace ASMS_EasyService.Vehicles
         #endregion
 
         #region Methods
+        private bool IsUniquePlate(string licensePlate)
+        {
+            List < Vehicle> allVehicle = dalVehicles.GetAll();
 
+            foreach (Vehicle vh in allVehicle)
+            {
+                if (licensePlate == vh.LicensePlate)
+                    return false; 
+            }
+            return true;
+        }
+
+        private bool IsUniqueVIN(string vin)
+        {
+            List<Vehicle> allVehicle = dalVehicles.GetAll();
+
+            foreach (Vehicle vh in allVehicle)
+            {
+                if (vin == vh.Vin)
+                    return false;
+            }
+            return true;
+        }
         #endregion
     }
 }
