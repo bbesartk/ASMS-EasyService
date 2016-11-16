@@ -26,7 +26,7 @@ namespace ASMS_EasyService.Vehicles
             set
             {
                 if (String.IsNullOrEmpty(value))
-                    throw new Exception("You must provide a name for inspection!");
+                    throw new Exception("You must provide a name for this inspection!");
                 else if (IsUniqueName(value))
                     _name = value;
                 else throw new Exception("You must provide a valid name for Inspection!");
