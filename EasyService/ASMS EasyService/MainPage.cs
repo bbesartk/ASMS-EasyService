@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ASMS_EasyService.DataAccess_Layer;
 
 namespace ASMS_EasyService
 {
@@ -15,11 +16,6 @@ namespace ASMS_EasyService
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void MainPage_Load(object sender, EventArgs e)
-        {
-            lblTime.Text += DateTime.Now.DayOfWeek;
         }
 
         private void txbKerko_MouseClick(object sender, MouseEventArgs e)
@@ -51,9 +47,17 @@ namespace ASMS_EasyService
             btn.BackColor = Color.FromArgb(r, g, b);
         }
 
-        private void MainPage_Load_1(object sender, EventArgs e)
+        private void MainPage_Load(object sender, EventArgs e)
         {
+            lblTime.Text += DateTime.Now.DayOfWeek;
+            dgNotifications.DataSource = null;
 
+            Vehicles.Vehicle v1 = new Vehicles.Vehicle("rsrsfsf", 1994, "HG", "dsadsa", 4232);
+            Vehicles.Vehicle v2 = new Vehicles.Vehicle("rsrsfsf", 24224, "aa", "dsadsa", 4232);
+            dalVehicles.Insert(v1);
+            dalVehicles.Insert(v2);
+            dgNotifications.DataSource = dalVehicles.GetAllSubscribed();
+            
         }
     }
 }

@@ -142,6 +142,16 @@ namespace ASMS_EasyService.Vehicles
             Client = client;
             IsSubscribed = true;
         }
+
+        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm)
+        {
+            LicensePlate = licensePlate;
+            ProductionYear = productionYear;
+            Type = type;
+            Model = model;
+            CubicC = cubicCm;
+            IsSubscribed = true;
+        }
         #endregion
 
         #region Methods
