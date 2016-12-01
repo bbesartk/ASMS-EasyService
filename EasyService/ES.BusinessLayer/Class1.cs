@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EasyService.Repository
+namespace ES.BusinessLayer
 {
     public class Class1
     {

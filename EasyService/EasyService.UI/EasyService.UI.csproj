@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82D5E2D8-B332-4411-94DB-0DFC7AC50685}</ProjectGuid>
+    <ProjectGuid>{8CD62CC4-95F6-4C0C-9BD1-4D8FBEF49FB2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EasyService.UI</RootNamespace>

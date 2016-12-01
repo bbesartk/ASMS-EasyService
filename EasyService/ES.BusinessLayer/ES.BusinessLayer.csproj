@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d4b9e996-1a8f-4c51-a0fc-20c3e7c3cd8f</ProjectGuid>
+    <ProjectGuid>f3f26b29-d503-45af-bafa-457b5acf7d53</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EasyService.Repository</RootNamespace>
-    <AssemblyName>EasyService.Repository</AssemblyName>
+    <RootNamespace>ES.BusinessLayer</RootNamespace>
+    <AssemblyName>ES.BusinessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
