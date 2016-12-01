@@ -8,5 +8,20 @@ namespace ES.EntityLayer.Clients
 {
     class Company
     {
+        #region PrivateMembers
+
+        #endregion
+
+        #region Properties
+
+        #endregion
+
+        #region Constructors
+
+        #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

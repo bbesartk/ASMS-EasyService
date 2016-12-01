@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ES.DataAccessLayer;
-using ES.EntityLayer;
 
-namespace ES.BusinessLayer
+namespace ES.EntityLayer.Vehicle
 {
-    class blVehicle
+    public class Car:Vehicle
     {
-        
     }
 }

@@ -50,6 +50,12 @@
     <Compile Include="dalVehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ES.EntityLayer\ES.EntityLayer.csproj">
+      <Project>{7b2b730c-3791-4f89-a215-1bfb0aa850bc}</Project>
+      <Name>ES.EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

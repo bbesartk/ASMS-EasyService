@@ -8,5 +8,20 @@ namespace ES.EntityLayer.Services
 {
     class Service
     {
+        #region PrivateMembers
+
+        #endregion
+
+        #region Properties
+
+        #endregion
+
+        #region Constructors
+
+        #endregion
+
+        #region Methods
+
+        #endregion
     }
 }
