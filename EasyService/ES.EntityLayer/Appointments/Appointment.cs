@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ES.BusinessLayer
+namespace ES.EntityLayer.Appointments
 {
-    public class Class1
+    class Appointment
     {
     }
 }

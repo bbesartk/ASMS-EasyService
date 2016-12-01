@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ES.EntityLayer
+namespace ES.EntityLayer.Employees
 {
-    public class Class1
+    class Employee
     {
     }
 }

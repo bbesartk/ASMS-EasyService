@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ES.DataAccessLayer
 {
-    public class Class1
+    class dalClients
     {
     }
 }
