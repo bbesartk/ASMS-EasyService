@@ -40,10 +40,7 @@ namespace ES.BusinessLayer
             return dalClients.GetSingleClient(id);
         }
 
-        public static Client GetClient(string name, string lastname)
-        {
-            return dalClients.GetSingleClient(name, lastname);
-        }
+       
 
         #endregion
 

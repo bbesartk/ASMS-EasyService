@@ -7,8 +7,8 @@ using ES.EntityLayer.Employees;
 
 namespace ES.DataAccessLayer
 {
-    class dalEmployees
-    {
+     public class dalEmployees
+      {
         private static List<Mechanic> _listOfMechanic = new List<Mechanic>();
 
         public static void Insert(Mechanic mechanic)
