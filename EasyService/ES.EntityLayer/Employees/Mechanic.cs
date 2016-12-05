@@ -7,7 +7,7 @@ using ES.EntityLayer.General;
 
 namespace ES.EntityLayer.Employees
 {
-    class Mechanic:Employee
+    public class Mechanic:Employee
     {
         #region PrivateMembers
         static int _id = DateTime.Now.Year;

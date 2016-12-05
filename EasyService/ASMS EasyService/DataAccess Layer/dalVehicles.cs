@@ -35,7 +35,8 @@ namespace ASMS_EasyService.DataAccess_Layer
         public static List<Vehicle> GetAllSubscribed()
         {
            List<Vehicle> subscribedVehicle = new List<Vehicle>();
-
+            var test = ListOfVehicles.Where(i => i.IsSubscribed==true);
+            var sum = ListOfVehicles.Sum(i => i.ProductionYear);
             foreach (Vehicle vh in ListOfVehicles)
             {
                 if (vh.IsSubscribed == true)

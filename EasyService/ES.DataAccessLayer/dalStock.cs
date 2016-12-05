@@ -8,5 +8,6 @@ namespace ES.DataAccessLayer
 {
     class dalStock
     {
+        
     }
 }

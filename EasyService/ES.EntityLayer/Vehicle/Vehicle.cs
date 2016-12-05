@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ES.EntityLayer.Clients;
+using ES.EntityLayer.Services;
 
 namespace ES.EntityLayer.Vehicle
 {
-   public class Vehicle
+    public class Vehicle
     {
+        #region DeclaredAndInitialized
+        public List<Service> ServiceList { get; set; } = new List<Service>();
+        #endregion
 
         #region PrivateMembers
         private string _licensePlate;
@@ -17,36 +21,35 @@ namespace ES.EntityLayer.Vehicle
         private string _type;
         private string _model;
         private int _cubicC;
+        private Company _company;
+        private Client _client;
         #endregion
 
         #region Properties
-        //public string LicensePlate
-        //{
-        //    get { return _licensePlate; }
+        public string LicensePlate
+        {
+            get { return _licensePlate; }
 
-        //    set
-        //    {
-        //        if (String.IsNullOrEmpty(value))
-        //            throw new Exception("You must provide a license plate!");
-        //        else if (IsUniquePlate(value))
-        //            _licensePlate = value;
-        //        else throw new Exception("This plate is not unique!");
-        //    }
-        //}
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                    throw new Exception("You must provide a license plate!");
+                else _licensePlate = value;
 
-        //public string Vin
-        //{
-        //    get { return _vin; }
+            }
+        }
 
-        //    set
-        //    {
-        //        if (String.IsNullOrEmpty(value))
-        //            throw new Exception("You must provide a Vehicle Identification Number!");
-        //        else if (IsUniqueVIN(value))
-        //            _vin = value;
-        //        else throw new Exception("This VIN isn't unique!");
-        //    }
-        //}
+        public string Vin
+        {
+            get { return _vin; }
+
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                    throw new Exception("You must provide a Vehicle Identification Number!");
+                else _vin = value;
+            }
+        }
 
         public int ProductionYear
         {
@@ -81,7 +84,7 @@ namespace ES.EntityLayer.Vehicle
             {
                 if (String.IsNullOrEmpty(value))
                     throw new Exception("You must provide a vehicle model!");
-                _model = value;
+                else _model = value;
             }
         }
 
@@ -90,42 +93,51 @@ namespace ES.EntityLayer.Vehicle
             get { return _cubicC; }
             set
             {
-                if (value >= 600 && value < 30000)
-                    _cubicC = value;
+                if (value >= 600 && value < 30000) _cubicC = value;
                 else throw new Exception("You must provide a valid Cubic Centimeter per Vehicle!");
             }
 
         }
+        public Company Company
+        {
+            get { return _company; }
+            set { if (_client == null) _company = value; }
+        }
+
+        public Client Client
+        {
+            get { return _client; }
+            set { if (_company == null) _client = value; }
+        }
+        public bool IsSubscribed { get; set; }
         #endregion
 
         #region Constructors
+        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm)
+        {
+            LicensePlate = licensePlate;
+            ProductionYear = productionYear;
+            Type = type;
+            Model = model;
+            CubicC = cubicCm;
+            IsSubscribed = true;
+        }
+
+        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, Company company) : this(licensePlate, productionYear, type, model, cubicCm)
+        {
+            Company = company;
+        }
+
+        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, Client client) : this(licensePlate, productionYear, type, model, cubicCm)
+        {
+            Client = client;
+        }
+
 
         #endregion
 
         #region Methods
-        //private bool IsUniquePlate(string licensePlate)
-        //{
-        //    List<Vehicle> allVehicle = dalVehicle.GetAll();
 
-        //    foreach (Vehicle vh in allVehicle)
-        //    {
-        //        if (licensePlate == vh.LicensePlate)
-        //            return false;
-        //    }
-        //    return true;
-        //}
-
-        //private bool IsUniqueVIN(string vin)
-        //{
-        //    List<Vehicle> allVehicle = dalVehicles.GetAll();
-
-        //    foreach (Vehicle vh in allVehicle)
-        //    {
-        //        if (vin == vh.Vin)
-        //            return false;
-        //    }
-        //    return true;
-        //}
         #endregion
     }
 }

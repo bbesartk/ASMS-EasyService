@@ -16,10 +16,6 @@ namespace ASMS_EasyService.Finance
         private static int _id;
         #endregion
 
-        #region PrivateMembers
-
-        #endregion
-
         #region Properties
         public int Id { get; private set; }
         public DateTime DateOfBill

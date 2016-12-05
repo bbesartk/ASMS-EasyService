@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace ES.EntityLayer.General
 {
-    class ContactInfo
+    public class ContactInfo
     {
         #region PrivateMembers
         private string _city;

@@ -7,9 +7,9 @@ using ES.EntityLayer.General;
 
 namespace ES.EntityLayer.Employees
 {
-    abstract class Employee:Person
+    public abstract class Employee : Person
     {
-        
+
         #region AbstractMember
         abstract public string Id { get; set; }
         private string _password;
@@ -50,8 +50,8 @@ namespace ES.EntityLayer.Employees
             Username = username;
             Password = password;
         }
-        
-        public Employee(string name, string lastname, bool isMale,string username, string password, ContactInfo contactInfo) : base(name, lastname, isMale)
+
+        public Employee(string name, string lastname, bool isMale, string username, string password, ContactInfo contactInfo) : base(name, lastname, isMale)
         {
             Username = username;
             Password = password;

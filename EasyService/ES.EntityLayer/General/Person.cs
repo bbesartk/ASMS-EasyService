@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ES.EntityLayer.General
 {
-    class Person
+    public class Person
     {
         #region PrivateMembers
         private string _name;
@@ -16,7 +16,7 @@ namespace ES.EntityLayer.General
         #region Properties
         protected bool IsMale { get; set; }
 
-        protected string Name
+        public string Name
         {
             get { return _name; }
             set
@@ -29,7 +29,7 @@ namespace ES.EntityLayer.General
             }
         }
 
-        protected string Lasname
+        public string Lastname
         {
             get { return _lastName; }
             set
@@ -53,7 +53,7 @@ namespace ES.EntityLayer.General
         public Person(string name, string lastname)
         {
             Name = name;
-            Lasname = lastname;
+            Lastname = lastname;
         }
 
         public Person(string name, string lastname, bool isMale) : this(name, lastname)
@@ -65,7 +65,7 @@ namespace ES.EntityLayer.General
         #region Methods
         public string GetFullName()
         {
-            return Name + " " + Lasname;
+            return Name + " " + Lastname;
         }
         #endregion
     }

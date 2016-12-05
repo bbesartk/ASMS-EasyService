@@ -76,6 +76,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ES.DataAccessLayer\ES.DataAccessLayer.csproj">
+      <Project>{cc599fc5-37d4-4f87-bcfb-86a4274d9e55}</Project>
+      <Name>ES.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ES.EntityLayer\ES.EntityLayer.csproj">
+      <Project>{7b2b730c-3791-4f89-a215-1bfb0aa850bc}</Project>
+      <Name>ES.EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,21 +9,26 @@ namespace ES.DataAccessLayer
 {
     public class dalVehicle
     {
-        private static List<Car> _listOfCars = new List<Car>();
+        private static List<Vehicle> _listOfVehicle = new List<Vehicle>();
 
-        public static void Insert(Car car)
+        public static void Insert(Vehicle vehicle)
         {
-            if (car != null)
+            if (vehicle != null)
             {
-                _listOfCars.Add(car);
+                _listOfVehicle.Add(vehicle);
             }
         }
 
-        public static Car GetSingleCar(string licensePlate)
+        public static List<Vehicle> GetAll()
         {
-            foreach (Car car in _listOfCars)
+            return _listOfVehicle;
+        }
+
+        public static Vehicle GetSingleVehicle(string licensePlate)
+        {
+            foreach (Vehicle vehicle in _listOfVehicle)
             {
-                return car;
+                return vehicle;
             }
             return null;
         }

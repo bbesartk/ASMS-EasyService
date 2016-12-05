@@ -10,7 +10,6 @@ namespace ASMS_EasyService.Vehicles
     class Service
     {
         #region PrivateMembers
-        private DateTime _dateOfService;
         private double _servicedKm;
         private List<Inspection> _listInspection;
         private decimal _technicalWork;
@@ -28,17 +27,10 @@ namespace ASMS_EasyService.Vehicles
                 else throw new ArgumentNullException("Every service must have a list of inspections or serviced inspection service");
             }
         }
-        public DateTime DateOfService
-        {
-            get {return _dateOfService;}
 
-            set
-            {
-                if (value != null)
-                    _dateOfService = value;
-                else throw new Exception("You must provide a valid date!");
-            }
-        }
+        public Employee ServicedBy { get; }
+
+        public DateTime DateOfService { get; set; }
 
         public decimal Total
         {
@@ -73,8 +65,6 @@ namespace ASMS_EasyService.Vehicles
                 _servicedKm = value;
             }
         }
-
-        public Employee ServicedBy { get; }
 
         #endregion
 
