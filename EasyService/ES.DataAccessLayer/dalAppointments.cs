@@ -9,6 +9,19 @@ namespace ES.DataAccessLayer
 {
     class dalAppointments
     {
-        public static List<Appointment> ListOfAppointmens = new List<Appointment>();
+        private static List<Appointment> _listOfAppointmens = new List<Appointment>();
+
+        public static void Insert(Appointment appointment)
+        {
+            _listOfAppointmens.Add(appointment);
+        }
+
+        //public static void Update(Appointment appointment)
+        //{
+        //    foreach (Appointment OldAppointment in _listOfAppointmens)
+        //    {
+                
+        //    }
+        //}
     }
 }
