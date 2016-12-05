@@ -52,6 +52,13 @@ namespace ES.DataAccessLayer
             }
         }
 
+        public static void Delete(string licensePlate)
+        {
+            var vehicle = GetSingleVehicle(licensePlate);
+
+            _listOfVehicle.Remove(vehicle);
+        }
+
 
     }
 }

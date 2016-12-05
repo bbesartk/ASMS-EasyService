@@ -10,15 +10,17 @@ namespace ES.EntityLayer.Stock
     {
         //emri nrPersonal qmimi sasiaStok
 
-        #region StatickMembers
+        #region Private Members
         private int _nrPersonal = 0;
         private string _name;
         private double _cmimi = 0;
-        private int _sasiaStok = 0;
+        private int _sasiaStock = 0;
         #endregion
 
         #region Properties
-        public string Name { get { return _name; }
+        public string Name
+        {
+            get { return _name; }
             set
             {
                 if (String.IsNullOrEmpty(value))
@@ -28,7 +30,10 @@ namespace ES.EntityLayer.Stock
                 else _name = value;
             }
         }
-        public double Cmimi { get { return _cmimi; } set
+        public double Cmimi
+        {
+            get { return _cmimi; }
+            set
             {
                 if (_cmimi != 0)
                 {
@@ -37,9 +42,12 @@ namespace ES.EntityLayer.Stock
                 else _cmimi = value;
             }
         }
-        public int SasiaStok { get { return _sasiaStok; } set
+        public int SasiaStok
+        {
+            get { return _sasiaStock; }
+            set
             {
-                if (_sasiaStok != 0)
+                if (_sasiaStock != 0)
                 {
                     throw new Exception("Nuk ka ne stok");
                 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ES.EntityLayer.Employees;
 using ES.DataAccessLayer;
+using ES.EntityLayer.Vehicle;
 
 namespace ES.BusinessLayer
 {
@@ -27,9 +28,9 @@ namespace ES.BusinessLayer
 
         public static void DeleteEmployees(string id)
         {
-            if (id != null)
-                dalEmployees.Remove(id);
-            else throw new Exception("Invalid Id!");
+            if (String.IsNullOrEmpty(id))
+                throw new Exception("Invalid Id!");
+            else dalEmployees.Remove(id);
         }
 
         public static Mechanic GetMechanic(string id)
