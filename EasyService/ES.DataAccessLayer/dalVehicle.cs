@@ -32,5 +32,26 @@ namespace ES.DataAccessLayer
             }
             return null;
         }
+
+        public static void Update(Vehicle vehicle)
+        {
+            foreach (Vehicle registerdVh in _listOfVehicle)
+            {
+                if(registerdVh.LicensePlate==vehicle.LicensePlate)
+                {
+                    registerdVh.LicensePlate = vehicle.LicensePlate;
+                    registerdVh.Vin = vehicle.Vin;
+                    registerdVh.Model = vehicle.Model;
+                    registerdVh.Type = vehicle.Type;
+                    registerdVh.ProductionYear = vehicle.ProductionYear;
+                    registerdVh.CubicC = vehicle.CubicC;
+                    registerdVh.Client = vehicle.Client;
+                    registerdVh.Company = vehicle.Company;
+                    registerdVh.IsSubscribed = vehicle.IsSubscribed;
+                }
+            }
+        }
+
+
     }
 }
