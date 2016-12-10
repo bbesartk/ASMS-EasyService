@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace ES.EntityLayer.Stock
 {
-    class Item
+    public enum Category
+    {
+        ServicePart,
+        Brakes,
+        EngineParts,
+        TRANSMISSION,
+        COOLandHeat,
+        Lubrificants
+    }
+    public class Item
     {
         //emri nrPersonal qmimi sasiaStok
 
         #region Private Members
-        private int _nrPersonal = 0;
+        private string _itemNumber;
         private string _name;
-        private double _cmimi = 0;
-        private int _sasiaStock = 0;
+        private double _price = 0;
+        private int _quantity = 0;
+
         #endregion
 
         #region Properties
@@ -30,29 +40,56 @@ namespace ES.EntityLayer.Stock
                 else _name = value;
             }
         }
-        public double Cmimi
+        public double Price
         {
-            get { return _cmimi; }
+            get { return _price; }
             set
             {
-                if (_cmimi != 0)
+                if (value < 0)
                 {
-                    throw new Exception("Cmimi nuk guxon te jet 0!");
+                    throw new Exception("Price must be positive number!");
                 }
-                else _cmimi = value;
+                else _price = value;
             }
         }
-        public int SasiaStok
+        public int Quantiy
         {
-            get { return _sasiaStock; }
+            get { return _quantity; }
             set
             {
-                if (_sasiaStock != 0)
+                if (value < 0)
                 {
-                    throw new Exception("Nuk ka ne stok");
+                    throw new Exception("Quantity must be positive");
                 }
-                else _cmimi = value;
+                else _quantity = value;
             }
+        }
+
+        public string ItemNumber
+        {
+            get
+            {
+                return _itemNumber;
+            }
+
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                    throw new Exception("You must provide a real item number!");
+                else _itemNumber = value;
+            }
+        }
+
+        public Category Category { get; set; }
+
+
+        public Item(string itemNumber, string itemName, double price, int quantity, Category category)
+        {
+            Name = itemName;
+            ItemNumber = itemNumber;
+            Price = price;
+            Quantiy = quantity;
+            Category = category;
         }
         #endregion
     }

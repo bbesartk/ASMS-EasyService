@@ -45,6 +45,7 @@
     <Compile Include="blEmployees.cs" />
     <Compile Include="blReports.cs" />
     <Compile Include="blServices.cs" />
+    <Compile Include="blStock.cs" />
     <Compile Include="blVehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

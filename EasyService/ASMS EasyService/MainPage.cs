@@ -59,5 +59,10 @@ namespace ASMS_EasyService
             dgNotifications.DataSource = dalVehicles.GetAllSubscribed();
             
         }
+
+        private void txbKerko_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

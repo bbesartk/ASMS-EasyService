@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace ES.EntityLayer.Services
+namespace ES.EntityLayer.Finance
 {
     public class Inspection
     {

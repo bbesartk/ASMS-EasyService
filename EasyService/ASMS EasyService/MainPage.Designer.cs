@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnAppointments = new System.Windows.Forms.Button();
@@ -49,6 +49,11 @@
             this.lblLogedIn = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.dgNotifications = new System.Windows.Forms.DataGridView();
+            this.lblNotificiations = new System.Windows.Forms.Label();
+            this.rbVIN = new System.Windows.Forms.RadioButton();
+            this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
             this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productionYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,16 +61,11 @@
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cubicCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblNotificiations = new System.Windows.Forms.Label();
-            this.rbVIN = new System.Windows.Forms.RadioButton();
-            this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgNotifications)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -190,6 +190,7 @@
             this.txbKerko.TabStop = false;
             this.txbKerko.Text = "search for a car...";
             this.txbKerko.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txbKerko_MouseClick);
+            this.txbKerko.TextChanged += new System.EventHandler(this.txbKerko_TextChanged);
             // 
             // btnKerko
             // 
@@ -268,28 +269,28 @@
             this.dgNotifications.AllowUserToDeleteRows = false;
             this.dgNotifications.AllowUserToResizeColumns = false;
             this.dgNotifications.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgNotifications.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgNotifications.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgNotifications.AutoGenerateColumns = false;
             this.dgNotifications.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.dgNotifications.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgNotifications.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgNotifications.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dgNotifications.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgNotifications.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgNotifications.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgNotifications.ColumnHeadersHeight = 30;
             this.dgNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgNotifications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -300,87 +301,41 @@
             this.modelDataGridViewTextBoxColumn,
             this.cubicCDataGridViewTextBoxColumn});
             this.dgNotifications.DataSource = this.vehicleBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgNotifications.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgNotifications.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgNotifications.EnableHeadersVisualStyles = false;
             this.dgNotifications.Location = new System.Drawing.Point(232, 243);
             this.dgNotifications.MultiSelect = false;
             this.dgNotifications.Name = "dgNotifications";
             this.dgNotifications.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgNotifications.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgNotifications.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgNotifications.RowHeadersWidth = 45;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgNotifications.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgNotifications.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgNotifications.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgNotifications.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgNotifications.Size = new System.Drawing.Size(645, 309);
             this.dgNotifications.TabIndex = 7;
             this.dgNotifications.TabStop = false;
-            // 
-            // licensePlateDataGridViewTextBoxColumn
-            // 
-            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
-            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "LicensePlate";
-            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
-            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vinDataGridViewTextBoxColumn
-            // 
-            this.vinDataGridViewTextBoxColumn.DataPropertyName = "Vin";
-            this.vinDataGridViewTextBoxColumn.HeaderText = "Vin";
-            this.vinDataGridViewTextBoxColumn.Name = "vinDataGridViewTextBoxColumn";
-            this.vinDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productionYearDataGridViewTextBoxColumn
-            // 
-            this.productionYearDataGridViewTextBoxColumn.DataPropertyName = "ProductionYear";
-            this.productionYearDataGridViewTextBoxColumn.HeaderText = "ProductionYear";
-            this.productionYearDataGridViewTextBoxColumn.Name = "productionYearDataGridViewTextBoxColumn";
-            this.productionYearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cubicCDataGridViewTextBoxColumn
-            // 
-            this.cubicCDataGridViewTextBoxColumn.DataPropertyName = "CubicC";
-            this.cubicCDataGridViewTextBoxColumn.HeaderText = "CubicC";
-            this.cubicCDataGridViewTextBoxColumn.Name = "cubicCDataGridViewTextBoxColumn";
-            this.cubicCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vehicleBindingSource
-            // 
-            this.vehicleBindingSource.DataSource = typeof(ASMS_EasyService.Vehicles.Vehicle);
             // 
             // lblNotificiations
             // 
@@ -439,6 +394,52 @@
             this.lblTime.TabIndex = 8;
             this.lblTime.Text = "Today is: ";
             // 
+            // licensePlateDataGridViewTextBoxColumn
+            // 
+            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
+            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "LicensePlate";
+            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
+            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vinDataGridViewTextBoxColumn
+            // 
+            this.vinDataGridViewTextBoxColumn.DataPropertyName = "Vin";
+            this.vinDataGridViewTextBoxColumn.HeaderText = "Vin";
+            this.vinDataGridViewTextBoxColumn.Name = "vinDataGridViewTextBoxColumn";
+            this.vinDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productionYearDataGridViewTextBoxColumn
+            // 
+            this.productionYearDataGridViewTextBoxColumn.DataPropertyName = "ProductionYear";
+            this.productionYearDataGridViewTextBoxColumn.HeaderText = "ProductionYear";
+            this.productionYearDataGridViewTextBoxColumn.Name = "productionYearDataGridViewTextBoxColumn";
+            this.productionYearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cubicCDataGridViewTextBoxColumn
+            // 
+            this.cubicCDataGridViewTextBoxColumn.DataPropertyName = "CubicC";
+            this.cubicCDataGridViewTextBoxColumn.HeaderText = "CubicC";
+            this.cubicCDataGridViewTextBoxColumn.Name = "cubicCDataGridViewTextBoxColumn";
+            this.cubicCDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vehicleBindingSource
+            // 
+            this.vehicleBindingSource.DataSource = typeof(ASMS_EasyService.Vehicles.Vehicle);
+            // 
             // MainPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -457,6 +458,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 700);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(900, 700);
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -467,9 +469,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgNotifications)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

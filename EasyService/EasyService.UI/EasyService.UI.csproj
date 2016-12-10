@@ -46,14 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Dashboard.Designer.cs">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Item.Designer.cs">
+      <DependentUpon>UC_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Stock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Stock.Designer.cs">
+      <DependentUpon>UC_Stock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +83,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_Dashboard.resx">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Item.resx">
+      <DependentUpon>UC_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Stock.resx">
+      <DependentUpon>UC_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\ES.EntityLayer.Stock.Item.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Vehicle.Vehicle.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,6 +110,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ES.BusinessLayer\ES.BusinessLayer.csproj">
+      <Project>{f3f26b29-d503-45af-bafa-457b5acf7d53}</Project>
+      <Name>ES.BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ES.DataAccessLayer\ES.DataAccessLayer.csproj">
       <Project>{cc599fc5-37d4-4f87-bcfb-86a4274d9e55}</Project>
       <Name>ES.DataAccessLayer</Name>
@@ -85,6 +122,36 @@
       <Project>{7b2b730c-3791-4f89-a215-1bfb0aa850bc}</Project>
       <Name>ES.EntityLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ukcp2_07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seat_Belt-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\services parts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brakes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DB2007AU00875_medium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brakes1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eco-Tech-Clutch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ukcp2_04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B1122577279.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

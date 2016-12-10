@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ES.EntityLayer.Services
+namespace ES.EntityLayer.Finance
 {
     public class ServicedInspection
     {
@@ -12,6 +12,7 @@ namespace ES.EntityLayer.Services
         private string _description;
         private int _quantity;
         private double _price;
+
         #endregion
 
         #region Properties
@@ -54,14 +55,18 @@ namespace ES.EntityLayer.Services
                 return (decimal)(Quantity * Price);
             }
         }
+
+        public string ImagePath { get; set; }
         #endregion
 
         #region Constructors
-        public ServicedInspection(string description, int quantity, double price)
+        public ServicedInspection(string description, int quantity, double price, string imgPath)
         {
             Description = description;
             Quantity = quantity;
             Price = price;
+            ImagePath = imgPath;
+            
         }
         #endregion
     }
