@@ -16,5 +16,14 @@ namespace EasyService.UI
         {
             InitializeComponent();
         }
+
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            UC_PrivateClient clients = new UC_PrivateClient();
+            this.Controls.Clear();
+            this.Controls.Add(clients);
+        }
+
+
     }
 }

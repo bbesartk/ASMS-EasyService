@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ES.DataAccessLayer;
 using ES.EntityLayer.Clients;
+using ES.EntityLayer.General;
 
 namespace ES.BusinessLayer
 {
@@ -19,14 +20,12 @@ namespace ES.BusinessLayer
             else throw new Exception("Invalid Client!");
         }
 
-
         public static void UpdateClient(Client client)
         {
-            if(client != null)
+            if( client != null)
             dalClients.Update(client);
             else throw new Exception("Invalid Client!");
         }
-
 
         public static void DeleteClient(int id)
         {
@@ -40,7 +39,12 @@ namespace ES.BusinessLayer
             return dalClients.GetSingleClient(id);
         }
 
-       
+        public static void LotOfClient()
+        {
+            ContactInfo c1 = new ContactInfo("Kosova", "Prishtina", "+37745463373", "bbesart-k@msn.com");
+            blClients.InsertClient(new Client("Besart", "Kuleta", c1));
+            blClients.InsertClient(new Client("AAA", "C@", c1));
+        }
 
         #endregion
 
@@ -49,6 +53,14 @@ namespace ES.BusinessLayer
         {
             return dalClients.GetAll();
         }
+
+        private static bool AreValid(string name, string lastname, string email, string phoneNumber, string city, string address)
+        {
+            if (name != "" && lastname !="" && email != "" && phoneNumber != "" && city != "" && address !="")
+                return true;
+            else return false;
+        }
+
         #endregion
 
     }

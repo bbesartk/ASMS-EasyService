@@ -10,11 +10,11 @@ namespace ES.EntityLayer.Clients
     public class Client:Person
     {
         #region StaticMembers
-        private int _id = 0;
+        private static int _id = 0;
         #endregion
 
         #region Properties
-        public int Id { get; private set; }
+        public int Id { get; set; }
 
         public ContactInfo ContactInfo { get; set; }
         #endregion

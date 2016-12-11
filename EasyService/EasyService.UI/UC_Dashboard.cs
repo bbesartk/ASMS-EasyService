@@ -15,6 +15,7 @@ namespace EasyService.UI
         public UC_Dashboard()
         {
             InitializeComponent();
+            
         }
 
         private void txbKerko_MouseClick(object sender, MouseEventArgs e)

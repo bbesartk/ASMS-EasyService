@@ -48,7 +48,7 @@ namespace ES.EntityLayer.General
                 if (String.IsNullOrEmpty(value))
                     throw new Exception("Email can't be empty!");
 
-                else if (IsPhoneNumber(value)) _email = value;
+                else if (IsEmail(value)) _email = value;
 
                 else throw new Exception("Invalid Email format!");
             }

@@ -24,15 +24,19 @@ namespace ES.DataAccessLayer
         /// Kjo metode ben perditesimin e te dhenave per klientin e caktuar
         /// </summary>
         /// <param name="client"></param>
+
         public static void Update(Client client)
         {
-            foreach (Client oldClient in ListOfClients)
+            foreach (Client dbClient in ListOfClients)
             {
-                if (client.Id == oldClient.Id)
+                if (dbClient.Id == client.Id)
                 {
-                    oldClient.Name = client.Name;
-                    oldClient.Lastname = client.Lastname;
-                    oldClient.ContactInfo = client.ContactInfo;
+                    dbClient.Name = client.Name;
+                    dbClient.Lastname = client.Lastname;
+                    dbClient.ContactInfo.City = client.ContactInfo.City;
+                    dbClient.ContactInfo.Email = client.ContactInfo.Email;
+                    dbClient.ContactInfo.PhoneNumber = client.ContactInfo.PhoneNumber;
+                    dbClient.ContactInfo.Address = client.ContactInfo.Address;
                 }
             }
         }
