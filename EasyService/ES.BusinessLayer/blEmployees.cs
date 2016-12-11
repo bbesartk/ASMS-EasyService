@@ -9,7 +9,7 @@ using ES.EntityLayer.Vehicle;
 
 namespace ES.BusinessLayer
 {
-    class blEmployees
+    public class blEmployees
     {
         #region CRUD
         public static void InsertEmployees(Mechanic mechanic)

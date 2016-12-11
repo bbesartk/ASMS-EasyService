@@ -11,7 +11,7 @@ using ES.EntityLayer.Employees;
 
 namespace ES.BusinessLayer
 {
-    class blVehicle
+    public class blVehicle
     {
         #region CRUD
 

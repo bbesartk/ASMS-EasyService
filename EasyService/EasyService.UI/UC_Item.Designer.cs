@@ -38,11 +38,13 @@
             this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
             this.btnKerko = new System.Windows.Forms.Button();
             this.txbKerko = new System.Windows.Forms.TextBox();
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnStats = new System.Windows.Forms.Button();
             this.itemNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantiyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -118,6 +120,7 @@
             this.dgItems.Size = new System.Drawing.Size(443, 309);
             this.dgItems.TabIndex = 13;
             this.dgItems.TabStop = false;
+            this.dgItems.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgItems_CellDoubleClick);
             // 
             // rbRegisterPlate
             // 
@@ -160,9 +163,34 @@
             this.txbKerko.Text = "search for an item...";
             this.txbKerko.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txbKerko_MouseClick);
             // 
-            // itemBindingSource
+            // btnBack
             // 
-            this.itemBindingSource.DataSource = typeof(ES.EntityLayer.Stock.Item);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.btnBack.Location = new System.Drawing.Point(15, 500);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(103, 42);
+            this.btnBack.TabIndex = 19;
+            this.btnBack.Text = "BACK";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnStats
+            // 
+            this.btnStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.btnStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStats.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.btnStats.Location = new System.Drawing.Point(323, 500);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(135, 42);
+            this.btnStats.TabIndex = 21;
+            this.btnStats.Text = "STATITSTICS";
+            this.btnStats.UseVisualStyleBackColor = false;
             // 
             // itemNumberDataGridViewTextBoxColumn
             // 
@@ -192,11 +220,17 @@
             this.quantiyDataGridViewTextBoxColumn.Name = "quantiyDataGridViewTextBoxColumn";
             this.quantiyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataSource = typeof(ES.EntityLayer.Stock.Item);
+            // 
             // UC_Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.Controls.Add(this.btnStats);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.rbRegisterPlate);
             this.Controls.Add(this.btnKerko);
             this.Controls.Add(this.txbKerko);
@@ -222,5 +256,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantiyDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource itemBindingSource;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnStats;
     }
 }

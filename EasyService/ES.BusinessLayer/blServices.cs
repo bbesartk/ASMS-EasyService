@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ES.BusinessLayer
 {
-    class blServices
+    public class blServices
     {
     }
 }

@@ -8,11 +8,11 @@ namespace ES.EntityLayer.Stock
 {
     public enum Category
     {
-        ServicePart,
+        ServiceParts,
         Brakes,
         EngineParts,
-        TRANSMISSION,
-        COOLandHeat,
+        Transmission,
+        CoolAndHeat,
         Lubrificants
     }
     public class Item

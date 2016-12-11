@@ -8,7 +8,7 @@ using ES.DataAccessLayer;
 
 namespace ES.BusinessLayer
 {
-    class blCompany
+    public class blCompany
     {
         #region CRUD
         public static void InserCompany(Company company)

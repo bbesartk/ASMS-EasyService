@@ -8,7 +8,7 @@ using ES.EntityLayer.Clients;
 
 namespace ES.BusinessLayer
 {
-    class blClients
+    public class blClients
     {
 
         #region CRUD
