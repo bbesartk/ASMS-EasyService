@@ -25,10 +25,12 @@ namespace ES.BusinessLayer
             else throw new Exception("Invalid insert attepmt!");
         }
         
-        public static void UpdateItem(string id, string name, double price, int quantity, Category cat)
+        public static void UpdateItem(Item item)
         {
-            if (AreValid(id, name, price, quantity))
-                dalStock.Update(id, name, price, quantity, cat);
+            if(item !=null)
+            {
+                dalStock.Update(item);
+            }
             else throw new Exception("Invalid update attempt!");
         }
 
@@ -103,15 +105,20 @@ namespace ES.BusinessLayer
             return listItems;
         }
 
-        public static void MakeReadOnly(TextBox txbId, TextBox itemName, TextBox itemPrice, ComboBox c1)
+        public static void FillText(TextBox txbId, TextBox itemName, TextBox itemPrice, ComboBox c1)
         {
-            txbId.ReadOnly = true;
             itemName.Text = GetItem(txbId.Text).Name;
-            itemName.ReadOnly = true;
+            
             itemPrice.Text = GetItem(txbId.Text).Price.ToString();
-            itemPrice.ReadOnly = true;
+            
             c1.SelectedItem = GetItem(txbId.Text).Category;
-            c1.Enabled = false;
+            
+        }
+        public static void MakeReadOnly( TextBox itemName, TextBox itemPrice, ComboBox c1, bool value)
+        {
+            itemName.ReadOnly = value;
+            itemPrice.ReadOnly = value;
+            c1.Enabled = !value;
         }
 
         private static bool AreValid(string id, string name, double price, int quantity)

@@ -39,17 +39,16 @@ namespace ES.DataAccessLayer
             _listOfItems.Remove(item);
         }
 
-        public static void Update(string id,string name, double price, int quantity, Category cat)
+        public static void Update(Item item)
         {
-            var i = GetSingleItem(id);
-            foreach (var itemi in _listOfItems)
+            foreach (var itemOnDb in _listOfItems)
             {
-                if(i.ItemNumber == id)
+                if(itemOnDb.ItemNumber == item.ItemNumber)
                 {
-                    itemi.Name = name;
-                    itemi.Price = price;
-                    itemi.Category = cat;
-                    itemi.Quantiy = quantity;
+                    itemOnDb.Name = item.Name;
+                    itemOnDb.Price = item.Price;
+                    itemOnDb.Category = item.Category;
+                    itemOnDb.Quantiy = item.Quantiy;
                 }
             }
             

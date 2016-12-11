@@ -16,7 +16,7 @@ namespace EasyService.UI
     {
         Category _category;
         bool _isInStock;
-        Item _item;
+        private readonly Item _item;
         public UC_AddNewItem()
         {
             InitializeComponent();
@@ -26,8 +26,9 @@ namespace EasyService.UI
         {
             InitializeComponent();
             _item = item;
+            ReadItem(_item, false);
             // Prepare this Item for being updated
-            PrepareForUpdate(_item);
+
         }
 
         private void UC_AddNewItem_Load(object sender, EventArgs e)
@@ -75,9 +76,10 @@ namespace EasyService.UI
 
                 double.TryParse(txbP.Text, out price);
                 int.TryParse(txbQuantity.Text, out quantity);
+
                 try
                 {
-                    blStock.UpdateItem(txbId.Text, txbName.Text, price, quantity, (Category)comboBox1.SelectedItem);
+                    blStock.UpdateItem(ChangeItemDetails(_item));
                     CallPanel(2);
                 }
                 catch
@@ -91,7 +93,7 @@ namespace EasyService.UI
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            _category = (Category)comboBox1.SelectedItem;
+            _category = (Category)comboBox1.SelectedValue;
         }
 
 
@@ -103,9 +105,15 @@ namespace EasyService.UI
             {
                 if (blStock.IsInStock(txt.Text))
                 {
-                    blStock.MakeReadOnly(txt, txbName, txbP, (ComboBox)comboBox1);
+                    blStock.FillText(txt, txbName, txbP, (ComboBox)comboBox1);
+                    blStock.MakeReadOnly(txbName, txbP, (ComboBox)comboBox1, true);
                     _isInStock = true;
                 }
+            }
+            else if (txt.Text.Length > 0)
+            {
+                blStock.MakeReadOnly(txbName, txbP, (ComboBox)comboBox1, false);
+                _isInStock = false;
             }
         }
 
@@ -126,19 +134,34 @@ namespace EasyService.UI
             }
         }
 
-        private void PrepareForUpdate(Item item)
+        private void ReadItem(Item item, bool readOnly)
         {
+            comboBox1.Enabled = readOnly;
+            comboBox1.SelectedValue = item.Category;
+
+
             txbId.Text = item.ItemNumber;
             txbId.ReadOnly = true;
+
             txbName.Text = item.Name;
-            txbName.ReadOnly = false;
+            txbName.ReadOnly = readOnly;
+
             txbP.Text = item.Price.ToString();
-            txbP.ReadOnly = false;
+            txbP.ReadOnly = readOnly;
+
             txbQuantity.Text = item.Quantiy.ToString();
-            txbQuantity.ReadOnly = false;
-            comboBox1.SelectedItem = item.Category;
-            comboBox1.Enabled = true;
+            txbQuantity.ReadOnly = readOnly;
+
             btnAdd.Text = "UPDATE THIS ITEM";
+        }
+
+        private Item ChangeItemDetails(Item item)
+        {
+            item.Name = txbName.Text;
+            item.Price = double.Parse(txbP.Text);
+            item.Category = _category;
+            item.Quantiy = int.Parse(txbQuantity.Text);
+            return item;
         }
     }
 }
