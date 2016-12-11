@@ -16,6 +16,7 @@ namespace EasyService.UI
     {
         Category _category;
         bool _isInStock;
+        Item _item;
         public UC_AddNewItem()
         {
             InitializeComponent();
@@ -24,20 +25,9 @@ namespace EasyService.UI
         public UC_AddNewItem(Item item)
         {
             InitializeComponent();
-
-            txbId.Text = item.ItemNumber;
-            txbId.ReadOnly = true;
-            txbName.Text = item.Name;
-            txbName.ReadOnly = false;
-            txbP.Text = item.Price.ToString();
-            txbP.ReadOnly = false;
-            txbQuantity.Text = item.Quantiy.ToString();
-            txbQuantity.ReadOnly = false;
-            comboBox1.SelectedItem = item.Category;
-            comboBox1.Enabled = true;
-            btnAdd.Text = "UPDATE THIS ITEM";
-
-
+            _item = item;
+            // Prepare this Item for being updated
+            PrepareForUpdate(_item);
         }
 
         private void UC_AddNewItem_Load(object sender, EventArgs e)
@@ -61,7 +51,6 @@ namespace EasyService.UI
             {
                 double price = 0;
                 int quantity = 0;
-
                 double.TryParse(txbP.Text, out price);
                 int.TryParse(txbQuantity.Text, out quantity);
 
@@ -71,12 +60,13 @@ namespace EasyService.UI
                         blStock.GetItem(txbId.Text).Quantiy += quantity;
                     else
                         blStock.AddItems(new Item(txbId.Text, txbName.Text, price, quantity, _category));
-                    CallStock();
+                    CallPanel(1);
                 }
                 catch
                 {
                     MessageBox.Show("Please fill the fields correctly!", "Invalid atempt input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
             else if (btnAdd.Text == "UPDATE THIS ITEM")
             {
@@ -88,7 +78,7 @@ namespace EasyService.UI
                 try
                 {
                     blStock.UpdateItem(txbId.Text, txbName.Text, price, quantity, (Category)comboBox1.SelectedItem);
-                    CallStock();
+                    CallPanel(2);
                 }
                 catch
                 {
@@ -119,11 +109,36 @@ namespace EasyService.UI
             }
         }
 
-        private void CallStock()
+        private void CallPanel(int number)
         {
-            UC_Stock stock = new UC_Stock();
-            this.Controls.Clear();
-            this.Controls.Add(stock);
+            switch (number)
+            {
+                case 1:
+                    UC_Stock stock = new UC_Stock();
+                    this.Controls.Clear();
+                    this.Controls.Add(stock);
+                    break;
+                case 2:
+                    UC_Item item = new UC_Item(blStock.GetAllByCategory(_category));
+                    this.Controls.Clear();
+                    this.Controls.Add(item);
+                    break;
+            }
+        }
+
+        private void PrepareForUpdate(Item item)
+        {
+            txbId.Text = item.ItemNumber;
+            txbId.ReadOnly = true;
+            txbName.Text = item.Name;
+            txbName.ReadOnly = false;
+            txbP.Text = item.Price.ToString();
+            txbP.ReadOnly = false;
+            txbQuantity.Text = item.Quantiy.ToString();
+            txbQuantity.ReadOnly = false;
+            comboBox1.SelectedItem = item.Category;
+            comboBox1.Enabled = true;
+            btnAdd.Text = "UPDATE THIS ITEM";
         }
     }
 }

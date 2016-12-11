@@ -38,5 +38,12 @@ namespace EasyService.UI
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(stock);
         }
+
+        private void btnKlient_Click(object sender, EventArgs e)
+        {
+            UC_Clients clients = new UC_Clients();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(clients);
+        }
     }
 }

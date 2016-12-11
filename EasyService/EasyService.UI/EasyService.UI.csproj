@@ -60,6 +60,12 @@
     <Compile Include="UC_AddNewItem.Designer.cs">
       <DependentUpon>UC_AddNewItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Clients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Clients.Designer.cs">
+      <DependentUpon>UC_Clients.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     </Compile>
     <Compile Include="UC_Item.Designer.cs">
       <DependentUpon>UC_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_PrivateClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_PrivateClient.Designer.cs">
+      <DependentUpon>UC_PrivateClient.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Stock.cs">
       <SubType>UserControl</SubType>
@@ -94,15 +106,22 @@
     <EmbeddedResource Include="UC_AddNewItem.resx">
       <DependentUpon>UC_AddNewItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Clients.resx">
+      <DependentUpon>UC_Clients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Item.resx">
       <DependentUpon>UC_Item.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_PrivateClient.resx">
+      <DependentUpon>UC_PrivateClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Stock.resx">
       <DependentUpon>UC_Stock.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\ES.EntityLayer.Clients.Client.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Stock.Item.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Vehicle.Vehicle.datasource" />
     <None Include="Properties\Settings.settings">
@@ -164,6 +183,21 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stroke-7_1-2-0_tools_256_0_019fde_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stroke-7_1-2-0_tools_256_0_019fde_none1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon-free_2014-12-23_user-tie_256_0_019fde_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon-free_2014-12-23_user-tie_256_0_32c2dd_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-icons_3-0-1_business_256_0_32c2dd_none.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

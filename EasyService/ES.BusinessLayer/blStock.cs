@@ -72,6 +72,16 @@ namespace ES.BusinessLayer
             return null;
         }
 
+        public static Item GetItemByList(string id,List<Item> list)
+        {
+            foreach (var item in list)
+            {
+                if (item.ItemNumber == id)
+                    return item;
+            }
+            return null;
+        }
+
         public static Category GetCategory(string id)
         {
             var item = GetItem(id);
@@ -110,6 +120,8 @@ namespace ES.BusinessLayer
                 return true;
             else return false;
         }
+
+
     }
     #endregion
 }

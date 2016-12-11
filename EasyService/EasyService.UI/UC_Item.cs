@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.EntityLayer.Stock;
+using ES.BusinessLayer;
 
 namespace EasyService.UI
 {
@@ -45,7 +46,21 @@ namespace EasyService.UI
 
         private void dgItems_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Item itemi = (Item)dgItems.Rows[e.RowIndex].DataBoundItem;
+            Item item = (Item)dgItems.Rows[e.RowIndex].DataBoundItem;
+            EditItem(item);
+        }
+
+        private void btnKerko_Click(object sender, EventArgs e)
+        {
+            var item = blStock.GetItemByList(txbKerko.Text,_listOfItems);
+            if(item != null)
+            {
+                EditItem(item);
+            }
+        }
+
+        private void EditItem(Item itemi)
+        {
             UC_AddNewItem editItem = new UC_AddNewItem(itemi);
             this.Controls.Clear();
             this.Controls.Add(editItem);

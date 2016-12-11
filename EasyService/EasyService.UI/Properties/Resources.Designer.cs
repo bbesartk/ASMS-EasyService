@@ -123,6 +123,36 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icomoon_free_2014_12_23_user_tie_256_0_019fde_none {
+            get {
+                object obj = ResourceManager.GetObject("icomoon-free_2014-12-23_user-tie_256_0_019fde_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icomoon_free_2014_12_23_user_tie_256_0_32c2dd_none {
+            get {
+                object obj = ResourceManager.GetObject("icomoon-free_2014-12-23_user-tie_256_0_32c2dd_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_icons_3_0_1_business_256_0_32c2dd_none {
+            get {
+                object obj = ResourceManager.GetObject("material-icons_3-0-1_business_256_0_32c2dd_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Seat_Belt_128 {
             get {
                 object obj = ResourceManager.GetObject("Seat_Belt-128", resourceCulture);
@@ -136,6 +166,26 @@ namespace EasyService.UI.Properties {
         internal static System.Drawing.Bitmap services_parts {
             get {
                 object obj = ResourceManager.GetObject("services parts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stroke_7_1_2_0_tools_256_0_019fde_none {
+            get {
+                object obj = ResourceManager.GetObject("stroke-7_1-2-0_tools_256_0_019fde_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stroke_7_1_2_0_tools_256_0_019fde_none1 {
+            get {
+                object obj = ResourceManager.GetObject("stroke-7_1-2-0_tools_256_0_019fde_none1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

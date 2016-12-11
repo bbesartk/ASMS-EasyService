@@ -39,11 +39,11 @@
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.lblLogedIn = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblLogedIn = new System.Windows.Forms.Label();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -141,6 +141,7 @@
             this.btnKlient.TabIndex = 1;
             this.btnKlient.Text = "CLIENTS";
             this.btnKlient.UseVisualStyleBackColor = false;
+            this.btnKlient.Click += new System.EventHandler(this.btnKlient_Click);
             // 
             // pnlMenu
             // 
@@ -183,16 +184,38 @@
             this.panel1.Size = new System.Drawing.Size(893, 41);
             this.panel1.TabIndex = 19;
             // 
-            // mainPanel
+            // label1
             // 
-            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.mainPanel.Location = new System.Drawing.Point(212, 40);
-            this.mainPanel.MaximumSize = new System.Drawing.Size(675, 596);
-            this.mainPanel.MinimumSize = new System.Drawing.Size(675, 596);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(675, 596);
-            this.mainPanel.TabIndex = 20;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Glacial Indifference", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.label1.Location = new System.Drawing.Point(74, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 29);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Service.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Glacial Indifference", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(22, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 29);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "easy";
+            // 
+            // lblLogedIn
+            // 
+            this.lblLogedIn.AutoSize = true;
+            this.lblLogedIn.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogedIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.lblLogedIn.Location = new System.Drawing.Point(551, 11);
+            this.lblLogedIn.Name = "lblLogedIn";
+            this.lblLogedIn.Size = new System.Drawing.Size(212, 19);
+            this.lblLogedIn.TabIndex = 6;
+            this.lblLogedIn.Text = "// You are loged in as: Admin";
             // 
             // btnLogOut
             // 
@@ -206,38 +229,16 @@
             this.btnLogOut.Text = "LOG OUT";
             this.btnLogOut.UseVisualStyleBackColor = true;
             // 
-            // lblLogedIn
+            // mainPanel
             // 
-            this.lblLogedIn.AutoSize = true;
-            this.lblLogedIn.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogedIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.lblLogedIn.Location = new System.Drawing.Point(551, 11);
-            this.lblLogedIn.Name = "lblLogedIn";
-            this.lblLogedIn.Size = new System.Drawing.Size(212, 19);
-            this.lblLogedIn.TabIndex = 6;
-            this.lblLogedIn.Text = "// You are loged in as: Admin";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Glacial Indifference", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(22, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "easy";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Glacial Indifference", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.label1.Location = new System.Drawing.Point(74, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 29);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Service.";
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.mainPanel.Location = new System.Drawing.Point(212, 40);
+            this.mainPanel.MaximumSize = new System.Drawing.Size(675, 596);
+            this.mainPanel.MinimumSize = new System.Drawing.Size(675, 596);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(675, 596);
+            this.mainPanel.TabIndex = 20;
             // 
             // MainPage
             // 
