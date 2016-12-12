@@ -48,5 +48,21 @@ namespace EasyService.UI
         {
             dgMechanic.DataSource = blEmployees.GetAllMechanics();
         }
+
+        private void txbKerko_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txbKerko.Text == "search for a mechanic...")
+            {
+                txbKerko.Clear();
+                txbKerko.ForeColor = Color.FromArgb(44, 55, 59);
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            UC_Staff staff = new UC_Staff();
+            this.Controls.Add(staff);
+        }
     }
 }
