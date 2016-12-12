@@ -23,7 +23,11 @@ namespace EasyService.UI
             this.Controls.Clear();
             this.Controls.Add(clients);
         }
-
+        /// <summary>
+        /// ClickComany
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCompany_Click(object sender, EventArgs e)
         {
             UC_Company company = new UC_Company();
