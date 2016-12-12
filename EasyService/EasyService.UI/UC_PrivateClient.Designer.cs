@@ -35,14 +35,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgPrivateClients = new System.Windows.Forms.DataGridView();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
             this.btnKerko = new System.Windows.Forms.Button();
             this.txbKerko = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgPrivateClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -77,10 +74,6 @@
             this.dgPrivateClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgPrivateClients.ColumnHeadersHeight = 30;
             this.dgPrivateClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgPrivateClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.lastnameDataGridViewTextBoxColumn});
             this.dgPrivateClients.DataSource = this.clientBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
@@ -123,11 +116,11 @@
             // 
             this.rbRegisterPlate.AutoSize = true;
             this.rbRegisterPlate.Checked = true;
-            this.rbRegisterPlate.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbRegisterPlate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbRegisterPlate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.rbRegisterPlate.Location = new System.Drawing.Point(69, 88);
             this.rbRegisterPlate.Name = "rbRegisterPlate";
-            this.rbRegisterPlate.Size = new System.Drawing.Size(94, 23);
+            this.rbRegisterPlate.Size = new System.Drawing.Size(104, 24);
             this.rbRegisterPlate.TabIndex = 18;
             this.rbRegisterPlate.TabStop = true;
             this.rbRegisterPlate.Text = "CLIENT ID";
@@ -138,11 +131,11 @@
             this.btnKerko.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnKerko.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnKerko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKerko.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKerko.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKerko.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.btnKerko.Location = new System.Drawing.Point(486, 23);
+            this.btnKerko.Location = new System.Drawing.Point(489, 21);
             this.btnKerko.Name = "btnKerko";
-            this.btnKerko.Size = new System.Drawing.Size(103, 42);
+            this.btnKerko.Size = new System.Drawing.Size(119, 42);
             this.btnKerko.TabIndex = 16;
             this.btnKerko.Text = "SEARCH";
             this.btnKerko.UseVisualStyleBackColor = false;
@@ -151,11 +144,11 @@
             // txbKerko
             // 
             this.txbKerko.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbKerko.Font = new System.Drawing.Font("Glacial Indifference", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbKerko.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbKerko.ForeColor = System.Drawing.Color.Silver;
             this.txbKerko.Location = new System.Drawing.Point(69, 23);
             this.txbKerko.Name = "txbKerko";
-            this.txbKerko.Size = new System.Drawing.Size(380, 42);
+            this.txbKerko.Size = new System.Drawing.Size(380, 40);
             this.txbKerko.TabIndex = 15;
             this.txbKerko.TabStop = false;
             this.txbKerko.Text = "search for a client...";
@@ -166,7 +159,7 @@
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.btnBack.Location = new System.Drawing.Point(28, 495);
             this.btnBack.Name = "btnBack";
@@ -175,31 +168,6 @@
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "Lastname";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Lastname";
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataSource = typeof(ES.EntityLayer.Clients.Client);
             // 
             // UC_PrivateClient
             // 

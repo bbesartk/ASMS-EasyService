@@ -96,11 +96,23 @@
     <Compile Include="UC_Item.Designer.cs">
       <DependentUpon>UC_Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Mechanic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Mechanic.Designer.cs">
+      <DependentUpon>UC_Mechanic.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_PrivateClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_PrivateClient.Designer.cs">
       <DependentUpon>UC_PrivateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Staff.Designer.cs">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Stock.cs">
       <SubType>UserControl</SubType>
@@ -142,8 +154,14 @@
     <EmbeddedResource Include="UC_Item.resx">
       <DependentUpon>UC_Item.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Mechanic.resx">
+      <DependentUpon>UC_Mechanic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_PrivateClient.resx">
       <DependentUpon>UC_PrivateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Staff.resx">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Stock.resx">
       <DependentUpon>UC_Stock.cs</DependentUpon>
