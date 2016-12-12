@@ -227,6 +227,12 @@
   <ItemGroup>
     <None Include="Resources\material-icons_3-0-1_business_256_0_32c2dd_none.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_users_256_0_32c2dd_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ionicons_2-0-1_settings_256_0_32c2dd_none %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

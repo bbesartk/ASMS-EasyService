@@ -121,6 +121,9 @@
   <data name="ukcp2_04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ukcp2_04.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="material-icons_3-0-1_business_256_0_32c2dd_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-icons_3-0-1_business_256_0_32c2dd_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\c1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="Seat_Belt-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Seat_Belt-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="font-awesome_4-7-0_users_256_0_32c2dd_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font-awesome_4-7-0_users_256_0_32c2dd_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="B1122577279" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\B1122577279.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +166,7 @@
   <data name="services parts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\services parts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="material-icons_3-0-1_business_256_0_32c2dd_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-icons_3-0-1_business_256_0_32c2dd_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ionicons_2-0-1_settings_256_0_32c2dd_none (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ionicons_2-0-1_settings_256_0_32c2dd_none (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

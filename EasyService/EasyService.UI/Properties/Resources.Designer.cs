@@ -123,6 +123,16 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap font_awesome_4_7_0_users_256_0_32c2dd_none {
+            get {
+                object obj = ResourceManager.GetObject("font-awesome_4-7-0_users_256_0_32c2dd_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icomoon_free_2014_12_23_user_tie_256_0_019fde_none {
             get {
                 object obj = ResourceManager.GetObject("icomoon-free_2014-12-23_user-tie_256_0_019fde_none", resourceCulture);
@@ -136,6 +146,16 @@ namespace EasyService.UI.Properties {
         internal static System.Drawing.Bitmap icomoon_free_2014_12_23_user_tie_256_0_32c2dd_none {
             get {
                 object obj = ResourceManager.GetObject("icomoon-free_2014-12-23_user-tie_256_0_32c2dd_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ionicons_2_0_1_settings_256_0_32c2dd_none__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ionicons_2-0-1_settings_256_0_32c2dd_none (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
