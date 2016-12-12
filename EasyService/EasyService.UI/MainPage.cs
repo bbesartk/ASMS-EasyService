@@ -45,5 +45,13 @@ namespace EasyService.UI
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(clients);
         }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            UC_Staff staff = new UC_Staff();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(staff);
+
+        }
     }
 }

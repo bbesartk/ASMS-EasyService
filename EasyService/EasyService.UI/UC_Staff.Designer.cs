@@ -66,6 +66,7 @@
             this.btnClients.TabIndex = 14;
             this.btnClients.Text = "SEE ALL";
             this.btnClients.UseVisualStyleBackColor = false;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
             // panel2
             // 
@@ -73,7 +74,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnClients);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(51, 43);
+            this.panel2.Location = new System.Drawing.Point(74, 40);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(156, 202);
             this.panel2.TabIndex = 18;
@@ -94,7 +95,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnCompany);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(265, 43);
+            this.panel1.Location = new System.Drawing.Point(288, 40);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(156, 202);
             this.panel1.TabIndex = 19;

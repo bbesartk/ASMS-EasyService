@@ -131,11 +131,11 @@
             this.btnKerko.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnKerko.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnKerko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKerko.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKerko.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.btnKerko.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.btnKerko.Location = new System.Drawing.Point(489, 21);
             this.btnKerko.Name = "btnKerko";
-            this.btnKerko.Size = new System.Drawing.Size(119, 42);
+            this.btnKerko.Size = new System.Drawing.Size(110, 42);
             this.btnKerko.TabIndex = 16;
             this.btnKerko.Text = "SEARCH";
             this.btnKerko.UseVisualStyleBackColor = false;

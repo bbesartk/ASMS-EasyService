@@ -127,6 +127,7 @@
             this.btnStaff.TabIndex = 2;
             this.btnStaff.Text = "STAFF";
             this.btnStaff.UseVisualStyleBackColor = false;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnKlient
             // 

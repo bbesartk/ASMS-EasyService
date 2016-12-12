@@ -16,5 +16,12 @@ namespace EasyService.UI
         {
             InitializeComponent();
         }
+
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            UC_Mechanic mechanic = new UC_Mechanic();
+            this.Controls.Clear();
+            this.Controls.Add(mechanic);
+        }
     }
 }
