@@ -34,8 +34,7 @@ namespace EasyService.UI
             {
                 try
                 {
-                    var client = blClients.GetClient(int.Parse(txbId.Text));
-                    blClients.UpdateClient(ChangeClientDetails(client));
+                    blClients.UpdateClient(ChangeClientDetails(_client));
 
                     CallPanel(2);
                 }

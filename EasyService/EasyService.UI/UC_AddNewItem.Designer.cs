@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txbP = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -58,12 +61,16 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(187, 206);
+            this.comboBox1.Location = new System.Drawing.Point(186, 210);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(300, 33);
             this.comboBox1.TabIndex = 18;
+            this.comboBox1.TabStop = false;
+            this.comboBox1.ValueMemberChanged += new System.EventHandler(this.comboBox1_ValueMemberChanged);
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // txbP
@@ -174,18 +181,22 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "In stock (quantity):";
             // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataSource = typeof(ES.EntityLayer.Stock.Item);
+            // 
             // UC_AddNewItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNotificiations);
             this.Controls.Add(this.txbQuantity);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txbP);
             this.Controls.Add(this.txbName);
             this.Controls.Add(this.txbId);
@@ -193,6 +204,7 @@
             this.Name = "UC_AddNewItem";
             this.Size = new System.Drawing.Size(675, 595);
             this.Load += new System.EventHandler(this.UC_AddNewItem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +212,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txbP;
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.TextBox txbId;
@@ -210,5 +221,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.BindingSource itemBindingSource;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }

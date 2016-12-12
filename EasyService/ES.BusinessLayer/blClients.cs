@@ -44,6 +44,7 @@ namespace ES.BusinessLayer
             ContactInfo c1 = new ContactInfo("Kosova", "Prishtina", "+37745463373", "bbesart-k@msn.com");
             blClients.InsertClient(new Client("Besart", "Kuleta", c1));
             blClients.InsertClient(new Client("AAA", "C@", c1));
+            blCompany.InserCompany(new Company("dsadas", "aaa", c1));
         }
 
         #endregion

@@ -16,7 +16,9 @@ namespace EasyService.UI
     {
         Category _category;
         bool _isInStock;
-        private readonly Item _item;
+        int selectedIndex = 0;
+        private Item _item;
+
         public UC_AddNewItem()
         {
             InitializeComponent();
@@ -26,14 +28,15 @@ namespace EasyService.UI
         {
             InitializeComponent();
             _item = item;
-            ReadItem(_item, false);
+            ReadItem(item, false);
             // Prepare this Item for being updated
 
         }
 
         private void UC_AddNewItem_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = blStock.GetItemCategories();
+            comboBox1.DataSource = (blStock.GetItemCategories());
+            
         }
 
         private void txb_MouseClick(object sender, MouseEventArgs e)
@@ -79,7 +82,8 @@ namespace EasyService.UI
 
                 try
                 {
-                    blStock.UpdateItem(ChangeItemDetails(_item));
+                    var item = _item;
+                    blStock.UpdateItem(ChangeItemDetails(item));
                     CallPanel(2);
                 }
                 catch
@@ -93,7 +97,9 @@ namespace EasyService.UI
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            _category = (Category)comboBox1.SelectedValue;
+            _category = (Category)comboBox1.SelectedItem;
+
+            selectedIndex = comboBox1.SelectedIndex;
         }
 
 
@@ -136,10 +142,7 @@ namespace EasyService.UI
 
         private void ReadItem(Item item, bool readOnly)
         {
-            comboBox1.Enabled = readOnly;
-            comboBox1.SelectedValue = item.Category;
-
-
+     
             txbId.Text = item.ItemNumber;
             txbId.ReadOnly = true;
 
@@ -152,6 +155,10 @@ namespace EasyService.UI
             txbQuantity.Text = item.Quantiy.ToString();
             txbQuantity.ReadOnly = readOnly;
 
+
+            comboBox1.Text = item.Category.ToString();
+            comboBox1.Enabled = !readOnly;
+
             btnAdd.Text = "UPDATE THIS ITEM";
         }
 
@@ -159,9 +166,14 @@ namespace EasyService.UI
         {
             item.Name = txbName.Text;
             item.Price = double.Parse(txbP.Text);
-            item.Category = _category;
+            item.Category =(Category)comboBox1.SelectedItem;
             item.Quantiy = int.Parse(txbQuantity.Text);
             return item;
+        }
+
+        private void comboBox1_ValueMemberChanged(object sender, EventArgs e)
+        {
+            _category = (Category)comboBox1.SelectedValue;
         }
     }
 }

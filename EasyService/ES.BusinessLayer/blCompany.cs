@@ -15,11 +15,11 @@ namespace ES.BusinessLayer
         {
             if (company != null)
                 dalCompany.Insert(company);
-            else throw new Exception("Invalid Client!");
+            else throw new Exception("Invalid Company!");
         }
 
 
-        public static void UpdateClient(Company company)
+        public static void UpdateCompany(Company company)
         {
             if (company != null)
                 dalCompany.Update(company);
@@ -27,7 +27,7 @@ namespace ES.BusinessLayer
         }
 
 
-        public static void DeleteClient(string businessNumber)
+        public static void DeleteCompany(string businessNumber)
         {
             if (String.IsNullOrEmpty(businessNumber))
                 throw new Exception("Invalid business number!");

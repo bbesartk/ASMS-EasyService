@@ -66,6 +66,18 @@
     <Compile Include="UC_Clients.Designer.cs">
       <DependentUpon>UC_Clients.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Company.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Company.Designer.cs">
+      <DependentUpon>UC_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_EditCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EditCompany.Designer.cs">
+      <DependentUpon>UC_EditCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     <EmbeddedResource Include="UC_Clients.resx">
       <DependentUpon>UC_Clients.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Company.resx">
+      <DependentUpon>UC_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_EditCompany.resx">
+      <DependentUpon>UC_EditCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +149,7 @@
       <DependentUpon>UC_Stock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Client.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Clients.Company.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Stock.Item.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Vehicle.Vehicle.datasource" />
     <None Include="Properties\Settings.settings">

@@ -24,6 +24,11 @@ namespace EasyService.UI
             this.Controls.Add(clients);
         }
 
-
+        private void btnCompany_Click(object sender, EventArgs e)
+        {
+            UC_Company company = new UC_Company();
+            this.Controls.Clear();
+            this.Controls.Add(company);
+        }
     }
 }
