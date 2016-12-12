@@ -43,7 +43,8 @@ namespace EasyService.UI
             else if (btnEdit.Text == "EDIT THIS COMPANY")
             {
                 btnEdit.Text = "VALIDATE EDIT";
-               
+                ReadCompany(_company, false);
+
             }
         }
 

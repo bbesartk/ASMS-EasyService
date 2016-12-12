@@ -39,7 +39,12 @@ namespace EasyService.UI
 
         private void btnKerko_Click(object sender, EventArgs e)
         {
-            
+            var client = blClients.GetClient(int.Parse(txbKerko.Text));
+            if (client != null)
+            {
+                EditClient(client);
+            }
+            else MessageBox.Show("This Client doesnt exist!", "Invalid Client!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dgNotifications_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
