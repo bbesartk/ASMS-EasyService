@@ -60,6 +60,12 @@
     <Compile Include="UC_AddNewItem.Designer.cs">
       <DependentUpon>UC_AddNewItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Appointments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Appointments.Designer.cs">
+      <DependentUpon>UC_Appointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Clients.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     <Compile Include="UC_EditClient.Designer.cs">
       <DependentUpon>UC_EditClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_EditMechanic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EditMechanic.Designer.cs">
+      <DependentUpon>UC_EditMechanic.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Item.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="UC_PrivateClient.Designer.cs">
       <DependentUpon>UC_PrivateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Reports.Designer.cs">
+      <DependentUpon>UC_Reports.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Staff.cs">
       <SubType>UserControl</SubType>
@@ -136,6 +154,9 @@
     <EmbeddedResource Include="UC_AddNewItem.resx">
       <DependentUpon>UC_AddNewItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Appointments.resx">
+      <DependentUpon>UC_Appointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Clients.resx">
       <DependentUpon>UC_Clients.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +172,9 @@
     <EmbeddedResource Include="UC_EditClient.resx">
       <DependentUpon>UC_EditClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_EditMechanic.resx">
+      <DependentUpon>UC_EditMechanic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Item.resx">
       <DependentUpon>UC_Item.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +184,9 @@
     <EmbeddedResource Include="UC_PrivateClient.resx">
       <DependentUpon>UC_PrivateClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Reports.resx">
+      <DependentUpon>UC_Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Staff.resx">
       <DependentUpon>UC_Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +195,7 @@
     </EmbeddedResource>
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Client.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Company.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Employees.Mechanic.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Stock.Item.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Vehicle.Vehicle.datasource" />
     <None Include="Properties\Settings.settings">

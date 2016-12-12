@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ES.DataAccessLayer;
 using ES.EntityLayer.Clients;
 using ES.EntityLayer.General;
+using ES.EntityLayer.Employees;
 
 namespace ES.BusinessLayer
 {
@@ -45,6 +46,8 @@ namespace ES.BusinessLayer
             blClients.InsertClient(new Client("Besart", "Kuleta", c1));
             blClients.InsertClient(new Client("AAA", "C@", c1));
             blCompany.InserCompany(new Company("dsadas", "aaa", c1));
+            blEmployees.InsertEmployees(new Mechanic("Kosova", "Prishtina", true, "abejjjaaaaa", "besartkuleta12", c1));
+           
         }
 
         #endregion
