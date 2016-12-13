@@ -53,5 +53,12 @@ namespace EasyService.UI
             mainPanel.Controls.Add(staff);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UC_Vehicle vh = new UC_Vehicle();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(vh);
+        }
     }
 }

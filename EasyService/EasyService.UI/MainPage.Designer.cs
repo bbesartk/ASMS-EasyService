@@ -45,6 +45,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -149,6 +150,7 @@
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.pnlMenu.Controls.Add(this.btnStock);
             this.pnlMenu.Controls.Add(this.btnAppointments);
+            this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Controls.Add(this.btnRaports);
             this.pnlMenu.Controls.Add(this.btnStaff);
             this.pnlMenu.Controls.Add(this.btnKlient);
@@ -241,6 +243,21 @@
             this.mainPanel.Size = new System.Drawing.Size(675, 596);
             this.mainPanel.TabIndex = 20;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.button1.Location = new System.Drawing.Point(0, 374);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 65);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "VEHICLE";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,5 +302,6 @@
         private System.Windows.Forms.Label lblLogedIn;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Button button1;
     }
 }
