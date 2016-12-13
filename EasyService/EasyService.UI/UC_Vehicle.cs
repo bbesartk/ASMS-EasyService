@@ -20,35 +20,5 @@ namespace EasyService.UI
             InitializeComponent();
             
         }
-
-        private void txbVehicle_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (txbVehicle.Text == "search for a vehicle...")
-            {
-                txbVehicle.Clear();
-                txbVehicle.ForeColor = Color.FromArgb(44, 55, 59);
-            }
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            UC_Vehicle allVehicle = new UC_Vehicle();
-            this.Controls.Clear();
-            this.Controls.Add(allVehicle);
-        }
-
-        private void btnKerko_Click(object sender, EventArgs e)
-        {
-            var vehicle = blVehicle.GetVehicle(txbVehicle.Text);
-            if (vehicle != null)
-            {
-                
-            }
-        }
-
-        private void UC_Vehicle_Load(object sender, EventArgs e)
-        {
-            dgVehicles.DataSource = blVehicle.GetAllSubscribed();
-        }
     }
 }

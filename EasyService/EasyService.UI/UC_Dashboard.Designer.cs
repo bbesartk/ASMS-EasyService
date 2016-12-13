@@ -35,11 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgNotifications = new System.Windows.Forms.DataGridView();
-            this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
-            this.lblNotificiations = new System.Windows.Forms.Label();
-            this.rbVIN = new System.Windows.Forms.RadioButton();
-            this.btnKerko = new System.Windows.Forms.Button();
-            this.txbKerko = new System.Windows.Forms.TextBox();
             this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productionYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +42,11 @@
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cubicCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
+            this.lblNotificiations = new System.Windows.Forms.Label();
+            this.rbVIN = new System.Windows.Forms.RadioButton();
+            this.btnKerko = new System.Windows.Forms.Button();
+            this.txbKerko = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgNotifications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -125,6 +125,52 @@
             this.dgNotifications.TabIndex = 12;
             this.dgNotifications.TabStop = false;
             // 
+            // licensePlateDataGridViewTextBoxColumn
+            // 
+            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
+            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "LicensePlate";
+            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
+            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vinDataGridViewTextBoxColumn
+            // 
+            this.vinDataGridViewTextBoxColumn.DataPropertyName = "Vin";
+            this.vinDataGridViewTextBoxColumn.HeaderText = "Vin";
+            this.vinDataGridViewTextBoxColumn.Name = "vinDataGridViewTextBoxColumn";
+            this.vinDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productionYearDataGridViewTextBoxColumn
+            // 
+            this.productionYearDataGridViewTextBoxColumn.DataPropertyName = "ProductionYear";
+            this.productionYearDataGridViewTextBoxColumn.HeaderText = "ProductionYear";
+            this.productionYearDataGridViewTextBoxColumn.Name = "productionYearDataGridViewTextBoxColumn";
+            this.productionYearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cubicCDataGridViewTextBoxColumn
+            // 
+            this.cubicCDataGridViewTextBoxColumn.DataPropertyName = "CubicC";
+            this.cubicCDataGridViewTextBoxColumn.HeaderText = "CubicC";
+            this.cubicCDataGridViewTextBoxColumn.Name = "cubicCDataGridViewTextBoxColumn";
+            this.cubicCDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vehicleBindingSource
+            // 
+            this.vehicleBindingSource.DataSource = typeof(ES.EntityLayer.Vehicle.Vehicle);
+            // 
             // rbRegisterPlate
             // 
             this.rbRegisterPlate.AutoSize = true;
@@ -188,52 +234,6 @@
             this.txbKerko.TabStop = false;
             this.txbKerko.Text = "search for a car...";
             this.txbKerko.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txbKerko_MouseClick);
-            // 
-            // licensePlateDataGridViewTextBoxColumn
-            // 
-            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
-            this.licensePlateDataGridViewTextBoxColumn.HeaderText = "LicensePlate";
-            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
-            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vinDataGridViewTextBoxColumn
-            // 
-            this.vinDataGridViewTextBoxColumn.DataPropertyName = "Vin";
-            this.vinDataGridViewTextBoxColumn.HeaderText = "Vin";
-            this.vinDataGridViewTextBoxColumn.Name = "vinDataGridViewTextBoxColumn";
-            this.vinDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productionYearDataGridViewTextBoxColumn
-            // 
-            this.productionYearDataGridViewTextBoxColumn.DataPropertyName = "ProductionYear";
-            this.productionYearDataGridViewTextBoxColumn.HeaderText = "ProductionYear";
-            this.productionYearDataGridViewTextBoxColumn.Name = "productionYearDataGridViewTextBoxColumn";
-            this.productionYearDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cubicCDataGridViewTextBoxColumn
-            // 
-            this.cubicCDataGridViewTextBoxColumn.DataPropertyName = "CubicC";
-            this.cubicCDataGridViewTextBoxColumn.HeaderText = "CubicC";
-            this.cubicCDataGridViewTextBoxColumn.Name = "cubicCDataGridViewTextBoxColumn";
-            this.cubicCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vehicleBindingSource
-            // 
-            this.vehicleBindingSource.DataSource = typeof(ES.EntityLayer.Vehicle.Vehicle);
             // 
             // UC_Dashboard
             // 
