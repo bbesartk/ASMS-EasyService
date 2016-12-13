@@ -54,5 +54,5 @@ namespace EasyService.UI
         }
 
         }
-    
-}
+    }
+

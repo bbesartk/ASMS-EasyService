@@ -16,12 +16,9 @@ namespace ES.DataAccessLayer
             _listOfAppointmens.Add(appointment);
         }
 
-        //public static void Update(Appointment appointment)
-        //{
-        //    foreach (Appointment OldAppointment in _listOfAppointmens)
-        //    {
-                
-        //    }
-        //}
+        public static void GetAppointment(string name)
+        {
+
+        }
     }
 }
