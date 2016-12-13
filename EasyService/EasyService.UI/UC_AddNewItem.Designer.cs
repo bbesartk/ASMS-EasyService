@@ -54,7 +54,7 @@
             this.btnAdd.Location = new System.Drawing.Point(186, 474);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(300, 58);
-            this.btnAdd.TabIndex = 21;
+            this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "ADD THIS ITEM";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -68,7 +68,7 @@
             this.comboBox1.Location = new System.Drawing.Point(186, 210);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(300, 33);
-            this.comboBox1.TabIndex = 18;
+            this.comboBox1.TabIndex = 5;
             this.comboBox1.TabStop = false;
             this.comboBox1.ValueMemberChanged += new System.EventHandler(this.comboBox1_ValueMemberChanged);
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
@@ -81,7 +81,7 @@
             this.txbP.Location = new System.Drawing.Point(187, 382);
             this.txbP.Name = "txbP";
             this.txbP.Size = new System.Drawing.Size(300, 33);
-            this.txbP.TabIndex = 20;
+            this.txbP.TabIndex = 9;
             this.txbP.TabStop = false;
             this.txbP.Text = "write...";
             this.txbP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
@@ -94,7 +94,7 @@
             this.txbName.Location = new System.Drawing.Point(187, 118);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(300, 33);
-            this.txbName.TabIndex = 17;
+            this.txbName.TabIndex = 3;
             this.txbName.TabStop = false;
             this.txbName.Text = "write...";
             this.txbName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
@@ -107,7 +107,7 @@
             this.txbId.Location = new System.Drawing.Point(187, 30);
             this.txbId.Name = "txbId";
             this.txbId.Size = new System.Drawing.Size(300, 33);
-            this.txbId.TabIndex = 16;
+            this.txbId.TabIndex = 1;
             this.txbId.TabStop = false;
             this.txbId.Text = "write...";
             this.txbId.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
@@ -121,7 +121,7 @@
             this.txbQuantity.Location = new System.Drawing.Point(187, 294);
             this.txbQuantity.Name = "txbQuantity";
             this.txbQuantity.Size = new System.Drawing.Size(300, 33);
-            this.txbQuantity.TabIndex = 19;
+            this.txbQuantity.TabIndex = 7;
             this.txbQuantity.TabStop = false;
             this.txbQuantity.Text = "write...";
             this.txbQuantity.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
@@ -134,7 +134,7 @@
             this.lblNotificiations.Location = new System.Drawing.Point(184, 9);
             this.lblNotificiations.Name = "lblNotificiations";
             this.lblNotificiations.Size = new System.Drawing.Size(92, 18);
-            this.lblNotificiations.TabIndex = 21;
+            this.lblNotificiations.TabIndex = 0;
             this.lblNotificiations.Text = "Item number:";
             // 
             // label1
@@ -145,7 +145,7 @@
             this.label1.Location = new System.Drawing.Point(184, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 18);
-            this.label1.TabIndex = 22;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Item name:";
             // 
             // label2
@@ -156,7 +156,7 @@
             this.label2.Location = new System.Drawing.Point(184, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 18);
-            this.label2.TabIndex = 22;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Category:";
             // 
             // label3
@@ -167,7 +167,7 @@
             this.label3.Location = new System.Drawing.Point(184, 361);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 18);
-            this.label3.TabIndex = 22;
+            this.label3.TabIndex = 8;
             this.label3.Text = "Price:";
             // 
             // label4
@@ -178,7 +178,7 @@
             this.label4.Location = new System.Drawing.Point(184, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 18);
-            this.label4.TabIndex = 22;
+            this.label4.TabIndex = 6;
             this.label4.Text = "In stock (quantity):";
             // 
             // itemBindingSource

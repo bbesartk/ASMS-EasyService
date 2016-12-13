@@ -99,7 +99,6 @@ namespace EasyService.UI
         {
             _category = (Category)comboBox1.SelectedItem;
 
-            selectedIndex = comboBox1.SelectedIndex;
         }
 
 
@@ -156,7 +155,7 @@ namespace EasyService.UI
             txbQuantity.ReadOnly = readOnly;
 
 
-            comboBox1.Text = item.Category.ToString();
+            comboBox1.SelectedItem = item.Category;
             comboBox1.Enabled = !readOnly;
 
             btnAdd.Text = "UPDATE THIS ITEM";

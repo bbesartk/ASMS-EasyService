@@ -45,8 +45,7 @@ namespace ES.BusinessLayer
         }
         public static List<Category> GetItemCategories()
         {
-             List<Category> list = new List<Category>() { Category.EngineParts, Category.Lubrificants, Category.CoolAndHeat, Category.ServiceParts, Category.Transmission };
-
+             List<Category> list = new List<Category>() { Category.EngineParts, Category.Lubrificants, Category.CoolAndHeat, Category.ServiceParts, Category.Transmission, Category.Brakes };
             return list;
         }
 
