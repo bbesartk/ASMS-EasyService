@@ -39,11 +39,7 @@ namespace EasyService.UI
 
         private void btnKerko_Click(object sender, EventArgs e)
         {
-            var vehicle = blVehicle.GetVehicle(txbVehicle.Text);
-            if (vehicle != null)
-            {
-                
-            }
+
         }
 
         private void UC_Vehicle_Load(object sender, EventArgs e)
