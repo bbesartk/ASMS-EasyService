@@ -98,6 +98,11 @@ namespace EasyService.UI
             return company;
         }
 
-
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            UC_Clients allClients = new UC_Clients();
+            this.Controls.Clear();
+            this.Controls.Add(allClients);
+        }
     }
 }

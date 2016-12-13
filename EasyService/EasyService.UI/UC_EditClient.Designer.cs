@@ -43,6 +43,7 @@
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -221,6 +222,21 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Address:";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.btnBack.Location = new System.Drawing.Point(65, 511);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(103, 42);
+            this.btnBack.TabIndex = 29;
+            this.btnBack.Text = "BACK";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // UC_EditClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +256,7 @@
             this.Controls.Add(this.txbCity);
             this.Controls.Add(this.txbName);
             this.Controls.Add(this.txbId);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEdit);
             this.Name = "UC_EditClient";
             this.Size = new System.Drawing.Size(675, 595);
@@ -266,5 +283,6 @@
         private System.Windows.Forms.TextBox txbAddress;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnBack;
     }
 }
