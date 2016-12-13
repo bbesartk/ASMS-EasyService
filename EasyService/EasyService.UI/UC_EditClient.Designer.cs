@@ -98,7 +98,7 @@
             this.lblNotificiations.Name = "lblNotificiations";
             this.lblNotificiations.Size = new System.Drawing.Size(66, 18);
             this.lblNotificiations.TabIndex = 28;
-            this.lblNotificiations.Text = "Client id:";
+            this.lblNotificiations.Text = "Client Id:";
             // 
             // txbLastName
             // 
@@ -168,7 +168,7 @@
             this.txbPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPhoneNumber.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPhoneNumber.ForeColor = System.Drawing.Color.Silver;
-            this.txbPhoneNumber.Location = new System.Drawing.Point(64, 320);
+            this.txbPhoneNumber.Location = new System.Drawing.Point(65, 320);
             this.txbPhoneNumber.Name = "txbPhoneNumber";
             this.txbPhoneNumber.Size = new System.Drawing.Size(228, 33);
             this.txbPhoneNumber.TabIndex = 27;
