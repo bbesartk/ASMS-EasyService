@@ -52,7 +52,7 @@
             this.txbLicensePlate.ForeColor = System.Drawing.Color.Silver;
             this.txbLicensePlate.Location = new System.Drawing.Point(65, 56);
             this.txbLicensePlate.Name = "txbLicensePlate";
-            this.txbLicensePlate.Size = new System.Drawing.Size(224, 33);
+            this.txbLicensePlate.Size = new System.Drawing.Size(228, 33);
             this.txbLicensePlate.TabIndex = 0;
             this.txbLicensePlate.Text = "write...";
             // 
@@ -62,7 +62,7 @@
             this.txbVin.ForeColor = System.Drawing.Color.Silver;
             this.txbVin.Location = new System.Drawing.Point(65, 144);
             this.txbVin.Name = "txbVin";
-            this.txbVin.Size = new System.Drawing.Size(224, 33);
+            this.txbVin.Size = new System.Drawing.Size(228, 33);
             this.txbVin.TabIndex = 0;
             this.txbVin.Text = "write...";
             // 
@@ -72,7 +72,7 @@
             this.txbProductYear.ForeColor = System.Drawing.Color.Silver;
             this.txbProductYear.Location = new System.Drawing.Point(65, 236);
             this.txbProductYear.Name = "txbProductYear";
-            this.txbProductYear.Size = new System.Drawing.Size(224, 33);
+            this.txbProductYear.Size = new System.Drawing.Size(228, 33);
             this.txbProductYear.TabIndex = 0;
             this.txbProductYear.Text = "write...";
             // 
@@ -82,7 +82,7 @@
             this.txbType.ForeColor = System.Drawing.Color.Silver;
             this.txbType.Location = new System.Drawing.Point(65, 320);
             this.txbType.Name = "txbType";
-            this.txbType.Size = new System.Drawing.Size(224, 33);
+            this.txbType.Size = new System.Drawing.Size(228, 33);
             this.txbType.TabIndex = 0;
             this.txbType.Text = "write...";
             // 
@@ -92,7 +92,7 @@
             this.txbModel.ForeColor = System.Drawing.Color.Silver;
             this.txbModel.Location = new System.Drawing.Point(65, 408);
             this.txbModel.Name = "txbModel";
-            this.txbModel.Size = new System.Drawing.Size(224, 33);
+            this.txbModel.Size = new System.Drawing.Size(228, 33);
             this.txbModel.TabIndex = 0;
             this.txbModel.Text = "write...";
             // 
@@ -102,7 +102,7 @@
             this.txbCubic.ForeColor = System.Drawing.Color.Silver;
             this.txbCubic.Location = new System.Drawing.Point(390, 56);
             this.txbCubic.Name = "txbCubic";
-            this.txbCubic.Size = new System.Drawing.Size(224, 33);
+            this.txbCubic.Size = new System.Drawing.Size(228, 33);
             this.txbCubic.TabIndex = 0;
             this.txbCubic.Text = "write...";
             // 
@@ -216,7 +216,7 @@
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.btnNext.Location = new System.Drawing.Point(374, 491);
+            this.btnNext.Location = new System.Drawing.Point(390, 495);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(228, 58);
             this.btnNext.TabIndex = 30;
