@@ -138,6 +138,12 @@
     <Compile Include="UC_Stock.Designer.cs">
       <DependentUpon>UC_Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Vehicle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Vehicle.Designer.cs">
+      <DependentUpon>UC_Vehicle.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Stock.resx">
       <DependentUpon>UC_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Vehicle.resx">
+      <DependentUpon>UC_Vehicle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Client.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Company.datasource" />

@@ -14,6 +14,36 @@ namespace ES.BusinessLayer
     public class blVehicle
     {
         #region CRUD
+        public static void InsertVehicle(Vehicle vehicle)
+        {
+            if (vehicle != null)
+                dalVehicle.Insert(vehicle);
+            else throw new Exception("Invalid Vehicle!");
+        }
+
+        public static void UpdateVehicle(Vehicle vehicle)
+        {
+            if (vehicle != null)
+                dalVehicle.Update(vehicle);
+            else throw new Exception("Invalid Vehicle!");
+        }
+
+      
+
+        public static Vehicle GetVehicle(string licensePlate)
+        {
+            return dalVehicle.GetSingleVehicle(licensePlate);
+        }
+
+        public static void LotOfVehicle()
+        {
+            
+            blVehicle.InsertVehicle(new Vehicle("01-111-AI", 2016, "Mustang", "Shelby", 5200));
+            blVehicle.InsertVehicle(new Vehicle("01-123-BC", 2013, "Mercedes Benz", "C", 2200));
+            blVehicle.InsertVehicle(new Vehicle("01-456-DG", 2003, "Volswagen", "Golf", 1900));
+
+        }
+
 
         #endregion
 
