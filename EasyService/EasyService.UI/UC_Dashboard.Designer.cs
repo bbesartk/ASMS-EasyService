@@ -42,7 +42,7 @@
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cubicCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
+            this.rbLicensePlate = new System.Windows.Forms.RadioButton();
             this.lblNotificiations = new System.Windows.Forms.Label();
             this.rbVIN = new System.Windows.Forms.RadioButton();
             this.btnKerko = new System.Windows.Forms.Button();
@@ -124,6 +124,7 @@
             this.dgNotifications.Size = new System.Drawing.Size(645, 309);
             this.dgNotifications.TabIndex = 12;
             this.dgNotifications.TabStop = false;
+            this.dgNotifications.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNotifications_CellContentDoubleClick);
             // 
             // licensePlateDataGridViewTextBoxColumn
             // 
@@ -171,19 +172,19 @@
             // 
             this.vehicleBindingSource.DataSource = typeof(ES.EntityLayer.Vehicle.Vehicle);
             // 
-            // rbRegisterPlate
+            // rbLicensePlate
             // 
-            this.rbRegisterPlate.AutoSize = true;
-            this.rbRegisterPlate.Checked = true;
-            this.rbRegisterPlate.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRegisterPlate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.rbRegisterPlate.Location = new System.Drawing.Point(69, 108);
-            this.rbRegisterPlate.Name = "rbRegisterPlate";
-            this.rbRegisterPlate.Size = new System.Drawing.Size(140, 23);
-            this.rbRegisterPlate.TabIndex = 14;
-            this.rbRegisterPlate.TabStop = true;
-            this.rbRegisterPlate.Text = "REGISTER PLATE";
-            this.rbRegisterPlate.UseVisualStyleBackColor = true;
+            this.rbLicensePlate.AutoSize = true;
+            this.rbLicensePlate.Checked = true;
+            this.rbLicensePlate.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLicensePlate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.rbLicensePlate.Location = new System.Drawing.Point(69, 108);
+            this.rbLicensePlate.Name = "rbLicensePlate";
+            this.rbLicensePlate.Size = new System.Drawing.Size(131, 23);
+            this.rbLicensePlate.TabIndex = 14;
+            this.rbLicensePlate.TabStop = true;
+            this.rbLicensePlate.Text = "LICENSE PLATE";
+            this.rbLicensePlate.UseVisualStyleBackColor = true;
             // 
             // lblNotificiations
             // 
@@ -221,6 +222,7 @@
             this.btnKerko.TabIndex = 10;
             this.btnKerko.Text = "SEARCH";
             this.btnKerko.UseVisualStyleBackColor = false;
+            this.btnKerko.Click += new System.EventHandler(this.btnKerko_Click);
             // 
             // txbKerko
             // 
@@ -241,7 +243,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.Controls.Add(this.dgNotifications);
-            this.Controls.Add(this.rbRegisterPlate);
+            this.Controls.Add(this.rbLicensePlate);
             this.Controls.Add(this.lblNotificiations);
             this.Controls.Add(this.rbVIN);
             this.Controls.Add(this.btnKerko);
@@ -259,7 +261,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgNotifications;
-        private System.Windows.Forms.RadioButton rbRegisterPlate;
+        private System.Windows.Forms.RadioButton rbLicensePlate;
         private System.Windows.Forms.Label lblNotificiations;
         private System.Windows.Forms.RadioButton rbVIN;
         private System.Windows.Forms.Button btnKerko;

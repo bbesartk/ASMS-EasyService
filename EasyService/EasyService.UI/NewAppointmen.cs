@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ES.EntityLayer.Vehicle;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,12 @@ namespace EasyService.UI
 {
     public partial class NewAppointmen : Form
     {
-        public NewAppointmen()
+        private readonly Vehicle _vehicle;
+        public NewAppointmen(Vehicle vehicle)
         {
             InitializeComponent();
+            _vehicle = vehicle;
         }
-
-        Button[] buttons = new Button[10];
 
         private void NewAppointmen_Load(object sender, EventArgs e)
         {
