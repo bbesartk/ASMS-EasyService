@@ -19,7 +19,7 @@ namespace ES.EntityLayer.Finance
         #endregion
 
         #region Properties
-        public string Id { get; private set; }
+        public int Id { get; private set; }
         public DateTime DateOfBill
         {
             get { return DateTime.Now; }
