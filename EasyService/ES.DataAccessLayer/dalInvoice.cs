@@ -9,7 +9,7 @@ namespace ES.DataAccessLayer
 {
     public class dalInvoice
     {
-        public static List<Invoice> ListOfInvoices = new List<Invoice>();
+        private static List<Invoice> ListOfInvoices = new List<Invoice>();
 
         public static void Insert(Invoice invoice)
         {

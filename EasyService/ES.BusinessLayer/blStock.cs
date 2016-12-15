@@ -12,7 +12,6 @@ namespace ES.BusinessLayer
 {
     public class blStock
     {
-        private static List<Item> _listOfItems = dalStock.GetAll();
 
         #region CRUD
 
@@ -36,7 +35,7 @@ namespace ES.BusinessLayer
 
         public static List<Item> GetAllItems()
         {
-            return _listOfItems;
+            return dalStock.GetAll();
         }
 
         public static void DeleteItem(string id)
@@ -55,7 +54,7 @@ namespace ES.BusinessLayer
 
         public static bool IsInStock(string id)
         {
-            foreach (var item in _listOfItems)
+            foreach (var item in dalStock.GetAll())
             {
                 if (item.ItemNumber == id)
                     return true;
@@ -65,7 +64,7 @@ namespace ES.BusinessLayer
 
         public static Item GetItem(string id)
         {
-            foreach (var item in _listOfItems)
+            foreach (var item in dalStock.GetAll())
             {
                 if (item.ItemNumber == id)
                     return item;
@@ -94,7 +93,7 @@ namespace ES.BusinessLayer
         public static List<Item> GetAllByCategory(Category category)
         {
             List<Item> listItems = new List<Item>();
-            foreach (var item in _listOfItems)
+            foreach (var item in dalStock.GetAll())
             {
                 if (item.Category == category)
                 {
@@ -128,6 +127,15 @@ namespace ES.BusinessLayer
         }
 
 
+        public static int CountAllItems()
+        {
+            int total = 0;
+            foreach (var item in GetAllItems())
+            {
+                total += item.Quantiy;
+            }
+            return total;
+        }
     }
     #endregion
 }

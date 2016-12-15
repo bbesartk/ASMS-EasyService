@@ -16,6 +16,7 @@ namespace EasyService.UI
         public MainPage()
         {
             InitializeComponent();
+            lblTime.Text += (DateTime.Now.Date).ToShortDateString();
         }
 
         private void btnHome_Click(object sender, EventArgs e)

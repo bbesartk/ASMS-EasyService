@@ -49,7 +49,6 @@ namespace ES.EntityLayer.Finance
         #region Constructors
         public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, Employee issuedBy, int vat)
         {
-            Id = ++_id;
             ServicedVehicle = servicedVehicle;
             Service = service;
             Client = client;
@@ -60,7 +59,6 @@ namespace ES.EntityLayer.Finance
 
         public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, Employee issuedBy, int vat)
         {
-            Id = ++_id;
             ServicedVehicle = servicedVehicle;
             Service = service;
             Company = company; ;
