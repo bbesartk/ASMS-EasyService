@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.EntityLayer.Vehicle;
 using ES.BusinessLayer;
+using ES.EntityLayer;
 
 namespace EasyService.UI
 {
@@ -27,6 +28,8 @@ namespace EasyService.UI
                 txbLicensePlate.Text = tableOrVin;
             }
             else txbVin.Text = tableOrVin;
+
+            cbType.DataSource = blVehicle.listCarType;
         }
 
         public UC_RegVehicle(Vehicle vehicle)
@@ -54,14 +57,14 @@ namespace EasyService.UI
                 if (rbClient.Checked == true)
                 {
                     
-                    UC_EditClient newClient = new UC_EditClient(new Vehicle(txbLicensePlate.Text, txbVin.Text, int.Parse(txbProductYear.Text), txbType.Text, txbModel.Text, int.Parse(txbCubic.Text)));
+                    UC_EditClient newClient = new UC_EditClient(new Vehicle(txbLicensePlate.Text, txbVin.Text, int.Parse(txbProductYear.Text),cbType.Text,cbModel.Text, int.Parse(txbCubic.Text)));
                     panelClient.Visible = true;
                     panelClient.Controls.Clear();
                     panelClient.Controls.Add(newClient);
                 }
                 else if (rbCompany.Checked == true)
                 {
-                    UC_EditCompany newCompany = new UC_EditCompany(new Vehicle(txbLicensePlate.Text, txbVin.Text, int.Parse(txbProductYear.Text), txbType.Text, txbModel.Text, int.Parse(txbCubic.Text)));
+                    UC_EditCompany newCompany = new UC_EditCompany(new Vehicle(txbLicensePlate.Text, txbVin.Text, int.Parse(txbProductYear.Text), cbType.Text, cbModel.Text, int.Parse(txbCubic.Text)));
                     panelClient.Visible = true;
                     panelClient.Controls.Clear();                  
                     panelClient.Controls.Add(newCompany);
@@ -73,8 +76,16 @@ namespace EasyService.UI
             }
         }
 
-
-
         
+        
+
+
+        private void cbType_SelectedValueChanged(object sender, EventArgs e)
+        {
+           int id = blVehicle.GetCarId(cbType.SelectedItem.ToString());
+
+            cbModel.DataSource = blVehicle.GetCarModels(id);
+
+        }
     }
 }

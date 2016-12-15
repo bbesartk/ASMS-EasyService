@@ -31,8 +31,6 @@
             this.txbLicensePlate = new System.Windows.Forms.TextBox();
             this.txbVin = new System.Windows.Forms.TextBox();
             this.txbProductYear = new System.Windows.Forms.TextBox();
-            this.txbType = new System.Windows.Forms.TextBox();
-            this.txbModel = new System.Windows.Forms.TextBox();
             this.txbCubic = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +42,8 @@
             this.rbCompany = new System.Windows.Forms.RadioButton();
             this.rbClient = new System.Windows.Forms.RadioButton();
             this.btnNext = new System.Windows.Forms.Button();
+            this.cbType = new System.Windows.Forms.ComboBox();
+            this.cbModel = new System.Windows.Forms.ComboBox();
             this.panelClient = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -79,28 +79,6 @@
             this.txbProductYear.TabIndex = 0;
             this.txbProductYear.Text = "write...";
             this.txbProductYear.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
-            // 
-            // txbType
-            // 
-            this.txbType.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
-            this.txbType.ForeColor = System.Drawing.Color.Silver;
-            this.txbType.Location = new System.Drawing.Point(65, 320);
-            this.txbType.Name = "txbType";
-            this.txbType.Size = new System.Drawing.Size(228, 33);
-            this.txbType.TabIndex = 0;
-            this.txbType.Text = "write...";
-            this.txbType.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
-            // 
-            // txbModel
-            // 
-            this.txbModel.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
-            this.txbModel.ForeColor = System.Drawing.Color.Silver;
-            this.txbModel.Location = new System.Drawing.Point(65, 408);
-            this.txbModel.Name = "txbModel";
-            this.txbModel.Size = new System.Drawing.Size(228, 33);
-            this.txbModel.TabIndex = 0;
-            this.txbModel.Text = "write...";
-            this.txbModel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbCubic
             // 
@@ -231,12 +209,31 @@
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // cbType
+            // 
+            this.cbType.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Location = new System.Drawing.Point(65, 320);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(228, 33);
+            this.cbType.TabIndex = 31;
+            this.cbType.SelectedValueChanged += new System.EventHandler(this.cbType_SelectedValueChanged);
+            // 
+            // cbModel
+            // 
+            this.cbModel.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
+            this.cbModel.FormattingEnabled = true;
+            this.cbModel.Location = new System.Drawing.Point(65, 408);
+            this.cbModel.Name = "cbModel";
+            this.cbModel.Size = new System.Drawing.Size(228, 33);
+            this.cbModel.TabIndex = 32;
+            // 
             // panelClient
             // 
-            this.panelClient.Location = new System.Drawing.Point(0, 0);
+            this.panelClient.Location = new System.Drawing.Point(0, -1);
             this.panelClient.Name = "panelClient";
             this.panelClient.Size = new System.Drawing.Size(675, 595);
-            this.panelClient.TabIndex = 31;
+            this.panelClient.TabIndex = 35;
             this.panelClient.Visible = false;
             // 
             // UC_RegVehicle
@@ -245,6 +242,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.Controls.Add(this.panelClient);
+            this.Controls.Add(this.cbModel);
+            this.Controls.Add(this.cbType);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.rbClient);
             this.Controls.Add(this.rbCompany);
@@ -256,8 +255,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbCubic);
-            this.Controls.Add(this.txbModel);
-            this.Controls.Add(this.txbType);
             this.Controls.Add(this.txbProductYear);
             this.Controls.Add(this.txbVin);
             this.Controls.Add(this.txbLicensePlate);
@@ -273,8 +270,6 @@
         private System.Windows.Forms.TextBox txbLicensePlate;
         private System.Windows.Forms.TextBox txbVin;
         private System.Windows.Forms.TextBox txbProductYear;
-        private System.Windows.Forms.TextBox txbType;
-        private System.Windows.Forms.TextBox txbModel;
         private System.Windows.Forms.TextBox txbCubic;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -286,6 +281,8 @@
         private System.Windows.Forms.RadioButton rbCompany;
         private System.Windows.Forms.RadioButton rbClient;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.ComboBox cbType;
+        private System.Windows.Forms.ComboBox cbModel;
         private System.Windows.Forms.Panel panelClient;
     }
 }

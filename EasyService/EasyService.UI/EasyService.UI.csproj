@@ -235,6 +235,7 @@
     <EmbeddedResource Include="UC_ViewVehicle.resx">
       <DependentUpon>UC_ViewVehicle.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Client.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Company.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Employees.Mechanic.datasource" />
@@ -367,6 +368,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_cbb65a_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sevicePart-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brakes-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engine-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transmission-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lubrificant-02.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

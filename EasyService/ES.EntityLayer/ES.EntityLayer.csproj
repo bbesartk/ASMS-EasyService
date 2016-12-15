@@ -46,6 +46,7 @@
     <Compile Include="Employees\Employee.cs" />
     <Compile Include="Employees\Mechanic.cs" />
     <Compile Include="Finance\Invoice.cs" />
+    <Compile Include="General\Car.cs" />
     <Compile Include="General\ContactInfo.cs" />
     <Compile Include="General\Person.cs" />
     <Compile Include="General\Slot.cs" />

@@ -18,16 +18,16 @@ namespace ES.DataAccessLayer
 
         public static void Update(Invoice invoice)
         {
-            foreach (Invoice dbInvoice in ListOfInvoices)
+            foreach (Invoice oldInvoice in ListOfInvoices)
             {
-                if (dbInvoice.Id == invoice.Id)
+                if (invoice.Id == oldInvoice.Id)
                 {
                     
                 }
             }
         }
 
-        public static Invoice GetSingleInvoice(string id)
+        public static Invoice GetSingleInvoice(int id)
         {
             foreach (Invoice invoice in ListOfInvoices)
             {
@@ -37,7 +37,7 @@ namespace ES.DataAccessLayer
             return null;
         }
 
-        public static void Remove(string id)
+        public static void Remove(int id)
         {
             Invoice invoice = GetSingleInvoice(id);
             ListOfInvoices.Remove(invoice);

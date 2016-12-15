@@ -127,17 +127,20 @@
   <data name="DB2007AU00875_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DB2007AU00875_medium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="brakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\brakes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="material-icons_3-0-1_business_256_0_32c2dd_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-icons_3-0-1_business_256_0_32c2dd_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Seat_Belt-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Seat_Belt-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="material-icons_3-0-1_business_256_0_32c2dd_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-icons_3-0-1_business_256_0_32c2dd_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="brakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brakes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icomoon-free_2014-12-23_user-tie_256_0_32c2dd_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icomoon-free_2014-12-23_user-tie_256_0_32c2dd_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="engine-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\engine-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icomoon-free_2014-12-23_user-tie_256_0_ffffff_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icomoon-free_2014-12-23_user-tie_256_0_ffffff_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="font-awesome_4-7-0_sitemap_256_0_263135_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\font-awesome_4-7-0_sitemap_256_0_263135_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +151,14 @@
   <data name="c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\c1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icomoon-free_2014-12-23_user-tie_256_0_ffffff_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icomoon-free_2014-12-23_user-tie_256_0_ffffff_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="brakes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brakes1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="octicons_4-3-0_triangle-left_256_0_ffffff_none1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\octicons_4-3-0_triangle-left_256_0_ffffff_none1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cool-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cool-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ionicons_2-0-1_settings_256_0_263135_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ionicons_2-0-1_settings_256_0_263135_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +184,14 @@
   <data name="Eco-Tech-Clutch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eco-Tech-Clutch.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Transmission-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transmission-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icomoon-free_2014-12-23_user-tie_256_0_263135_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icomoon-free_2014-12-23_user-tie_256_0_263135_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brakes-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brakes-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ligature-symbols_2-11-0_users_256_0_263135_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ligature-symbols_2-11-0_users_256_0_263135_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +205,12 @@
   <data name="B1122577279" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\B1122577279.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icomoon-free_2014-12-23_user-tie_256_0_32c2dd_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icomoon-free_2014-12-23_user-tie_256_0_32c2dd_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foundation-icon-fonts_2015-02-16_dollar_256_0_cbb65a_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_cbb65a_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ukcp2_04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ukcp2_04.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,10 +223,13 @@
   <data name="octicons_4-3-0_triangle-left_256_0_ffffff_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\octicons_4-3-0_triangle-left_256_0_ffffff_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sevicePart-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sevicePart-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="foundation-icon-fonts_2015-02-16_dollar_256_0_5895bf_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_5895bf_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foundation-icon-fonts_2015-02-16_dollar_256_0_cbb65a_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_cbb65a_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lubrificant-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lubrificant-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -26,14 +26,14 @@ namespace ES.BusinessLayer
             else throw new Exception("Invalid Incoice!");
         }
 
-        public static void DeleteClient(string id)
+        public static void DeleteClient(int id)
         {
-            if (id != "")
+            if (id != 0)
                 dalInvoice.Remove(id);
             else throw new Exception("Invalid Id!");
         } 
 
-        public static Invoice GetInvoice(string id)
+        public static Invoice GetInvoice(int id)
         {
             return dalInvoice.GetSingleInvoice(id);
         }

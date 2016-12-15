@@ -83,6 +83,16 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brakes_02 {
+            get {
+                object obj = ResourceManager.GetObject("brakes-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brakes1 {
             get {
                 object obj = ResourceManager.GetObject("brakes1", resourceCulture);
@@ -103,6 +113,16 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cool_02 {
+            get {
+                object obj = ResourceManager.GetObject("cool-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DB2007AU00875_medium {
             get {
                 object obj = ResourceManager.GetObject("DB2007AU00875_medium", resourceCulture);
@@ -116,6 +136,16 @@ namespace EasyService.UI.Properties {
         internal static System.Drawing.Bitmap Eco_Tech_Clutch {
             get {
                 object obj = ResourceManager.GetObject("Eco-Tech-Clutch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap engine_02 {
+            get {
+                object obj = ResourceManager.GetObject("engine-02", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,6 +323,16 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lubrificant_02 {
+            get {
+                object obj = ResourceManager.GetObject("Lubrificant-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap material_icons_3_0_1_business_256_0_32c2dd_none {
             get {
                 object obj = ResourceManager.GetObject("material-icons_3-0-1_business_256_0_32c2dd_none", resourceCulture);
@@ -343,6 +383,16 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sevicePart_02 {
+            get {
+                object obj = ResourceManager.GetObject("sevicePart-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stroke_7_1_2_0_tools_256_0_019fde_none {
             get {
                 object obj = ResourceManager.GetObject("stroke-7_1-2-0_tools_256_0_019fde_none", resourceCulture);
@@ -356,6 +406,16 @@ namespace EasyService.UI.Properties {
         internal static System.Drawing.Bitmap stroke_7_1_2_0_tools_256_0_019fde_none1 {
             get {
                 object obj = ResourceManager.GetObject("stroke-7_1-2-0_tools_256_0_019fde_none1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Transmission_02 {
+            get {
+                object obj = ResourceManager.GetObject("Transmission-02", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
