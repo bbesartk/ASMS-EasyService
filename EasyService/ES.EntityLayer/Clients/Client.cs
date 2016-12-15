@@ -9,21 +9,17 @@ namespace ES.EntityLayer.Clients
 {
     public class Client:Person
     {
-        #region StaticMembers
-        private static int _id = 0;
-        #endregion
-
         #region Properties
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public ContactInfo ContactInfo { get; set; }
         #endregion
 
         #region Constructors
 
-        public Client(string name, string lastname, ContactInfo contactInfo) : base(name, lastname)
+        public Client(string id,string name, string lastname, ContactInfo contactInfo) : base(name, lastname)
         {
-            Id = ++_id;
+            Id = id;
             ContactInfo = contactInfo;
         }
 

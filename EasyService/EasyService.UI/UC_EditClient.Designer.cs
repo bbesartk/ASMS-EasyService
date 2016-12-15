@@ -97,9 +97,9 @@
             this.lblNotificiations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.lblNotificiations.Location = new System.Drawing.Point(62, 35);
             this.lblNotificiations.Name = "lblNotificiations";
-            this.lblNotificiations.Size = new System.Drawing.Size(66, 18);
+            this.lblNotificiations.Size = new System.Drawing.Size(120, 18);
             this.lblNotificiations.TabIndex = 28;
-            this.lblNotificiations.Text = "Client Id:";
+            this.lblNotificiations.Text = "Personal number:";
             // 
             // txbLastName
             // 
@@ -112,6 +112,8 @@
             this.txbLastName.TabIndex = 26;
             this.txbLastName.TabStop = false;
             this.txbLastName.Text = "write...";
+            this.txbLastName.Click += new System.EventHandler(this.txb_MouseClick);
+            this.txbLastName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbEmail
             // 
@@ -124,6 +126,8 @@
             this.txbEmail.TabIndex = 27;
             this.txbEmail.TabStop = false;
             this.txbEmail.Text = "write...";
+            this.txbEmail.Click += new System.EventHandler(this.txb_MouseClick);
+            this.txbEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbName
             // 
@@ -136,6 +140,8 @@
             this.txbName.TabIndex = 24;
             this.txbName.TabStop = false;
             this.txbName.Text = "write...";
+            this.txbName.Click += new System.EventHandler(this.txb_MouseClick);
+            this.txbName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbId
             // 
@@ -148,6 +154,9 @@
             this.txbId.TabIndex = 23;
             this.txbId.TabStop = false;
             this.txbId.Text = "write...";
+            this.txbId.Click += new System.EventHandler(this.txb_MouseClick);
+            this.txbId.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
+            this.txbId.TextChanged += new System.EventHandler(this.txbId_TextChanged);
             // 
             // btnEdit
             // 
@@ -175,6 +184,8 @@
             this.txbPhoneNumber.TabIndex = 27;
             this.txbPhoneNumber.TabStop = false;
             this.txbPhoneNumber.Text = "write...";
+            this.txbPhoneNumber.Click += new System.EventHandler(this.txb_MouseClick);
+            this.txbPhoneNumber.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbCity
             // 
@@ -187,6 +198,8 @@
             this.txbCity.TabIndex = 23;
             this.txbCity.TabStop = false;
             this.txbCity.Text = "write...";
+            this.txbCity.Click += new System.EventHandler(this.txb_MouseClick);
+            this.txbCity.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbAddress
             // 
@@ -199,6 +212,8 @@
             this.txbAddress.TabIndex = 24;
             this.txbAddress.TabStop = false;
             this.txbAddress.Text = "write...";
+            this.txbAddress.Click += new System.EventHandler(this.txb_MouseClick);
+            this.txbAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // label5
             // 
@@ -235,7 +250,7 @@
             this.btnBack.TabIndex = 29;
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // UC_EditClient
             // 

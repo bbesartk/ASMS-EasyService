@@ -47,7 +47,7 @@ namespace ES.DataAccessLayer
         /// <param name="id"></param>
         /// <returns></returns>
 
-        public static Client GetSingleClient(int id)
+        public static Client GetSingleClient(string id)
         {
 
             foreach (Client client in ListOfClients)
@@ -60,7 +60,7 @@ namespace ES.DataAccessLayer
         }
 
         
-        public static void Remove(int id)
+        public static void Remove(string id)
         {
             Client client = GetSingleClient(id);
             ListOfClients.Remove(client);

@@ -44,6 +44,7 @@
             this.rbCompany = new System.Windows.Forms.RadioButton();
             this.rbClient = new System.Windows.Forms.RadioButton();
             this.btnNext = new System.Windows.Forms.Button();
+            this.panelClient = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // txbLicensePlate
@@ -55,6 +56,7 @@
             this.txbLicensePlate.Size = new System.Drawing.Size(228, 33);
             this.txbLicensePlate.TabIndex = 0;
             this.txbLicensePlate.Text = "write...";
+            this.txbLicensePlate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbVin
             // 
@@ -65,6 +67,7 @@
             this.txbVin.Size = new System.Drawing.Size(228, 33);
             this.txbVin.TabIndex = 0;
             this.txbVin.Text = "write...";
+            this.txbVin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbProductYear
             // 
@@ -75,6 +78,7 @@
             this.txbProductYear.Size = new System.Drawing.Size(228, 33);
             this.txbProductYear.TabIndex = 0;
             this.txbProductYear.Text = "write...";
+            this.txbProductYear.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbType
             // 
@@ -85,6 +89,7 @@
             this.txbType.Size = new System.Drawing.Size(228, 33);
             this.txbType.TabIndex = 0;
             this.txbType.Text = "write...";
+            this.txbType.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbModel
             // 
@@ -95,6 +100,7 @@
             this.txbModel.Size = new System.Drawing.Size(228, 33);
             this.txbModel.TabIndex = 0;
             this.txbModel.Text = "write...";
+            this.txbModel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // txbCubic
             // 
@@ -105,6 +111,7 @@
             this.txbCubic.Size = new System.Drawing.Size(228, 33);
             this.txbCubic.TabIndex = 0;
             this.txbCubic.Text = "write...";
+            this.txbCubic.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
             // 
             // label1
             // 
@@ -222,12 +229,22 @@
             this.btnNext.TabIndex = 30;
             this.btnNext.Text = "NEXT";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // panelClient
+            // 
+            this.panelClient.Location = new System.Drawing.Point(0, 0);
+            this.panelClient.Name = "panelClient";
+            this.panelClient.Size = new System.Drawing.Size(675, 595);
+            this.panelClient.TabIndex = 31;
+            this.panelClient.Visible = false;
             // 
             // UC_RegVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.Controls.Add(this.panelClient);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.rbClient);
             this.Controls.Add(this.rbCompany);
@@ -269,5 +286,6 @@
         private System.Windows.Forms.RadioButton rbCompany;
         private System.Windows.Forms.RadioButton rbClient;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Panel panelClient;
     }
 }

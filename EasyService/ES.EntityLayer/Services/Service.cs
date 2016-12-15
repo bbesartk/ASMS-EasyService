@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ES.EntityLayer.Employees;
 
-namespace ES.EntityLayer.Finance
+namespace ES.EntityLayer.Services
 {
     public class Service
     {

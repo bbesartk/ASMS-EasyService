@@ -56,7 +56,7 @@ namespace EasyService.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UC_Vehicle vh = new UC_Vehicle();
+            UC_Dashboard vh = new UC_Dashboard(true);
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(vh);
         }

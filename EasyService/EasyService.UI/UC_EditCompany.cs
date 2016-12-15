@@ -9,26 +9,66 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.EntityLayer.Clients;
 using ES.BusinessLayer;
+using ES.EntityLayer.Vehicle;
+using ES.EntityLayer.General;
 
 namespace EasyService.UI
 {
     public partial class UC_EditCompany : UserControl
     {
         private readonly Company _company;
+        private readonly Vehicle _vehicle;
+
+        public UC_EditCompany(Vehicle vehicle)
+        {
+            InitializeComponent();
+            _vehicle = vehicle;
+        }
+
+
         public UC_EditCompany(Company company)
         {
             InitializeComponent();
             _company = company;
+            ReadCompany(_company, true);
         }
-
         private void UC_Company_Load(object sender, EventArgs e)
         {
-            ReadCompany(_company, true);
+            if (_vehicle != null)
+            {
+                btnEdit.Text = "FINISH REGISTRATION";
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Text == "VALIDATE EDIT")
+            if (_vehicle != null)
+            {
+                try
+                {
+                    if (blCompany.GetCompany(txbId.Text) != null)
+                    {
+                        _vehicle.Company = blCompany.GetCompany(txbId.Text);
+                        blVehicle.InsertVehicle(_vehicle);
+                    }
+                    else if (blCompany.GetCompany(txbId.Text) == null)
+                    {
+                        Company c1 = new Company(txbId.Text, txbName.Text, new ContactInfo(txbCity.Text, txbAddress.Text, txbPhoneNumber.Text, txbEmail.Text));
+                        blCompany.InserCompany(c1);
+                        _vehicle.Company = c1;
+                        blVehicle.InsertVehicle(_vehicle);
+
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Please fill the fields correctly!", "Invalid attempt input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
+
+            else if (btnEdit.Text == "VALIDATE EDIT")
             {
                 try
                 {
@@ -47,6 +87,8 @@ namespace EasyService.UI
 
             }
         }
+
+
 
         private void CallPanel(int number)
         {
@@ -104,5 +146,17 @@ namespace EasyService.UI
             this.Controls.Clear();
             this.Controls.Add(allClients);
         }
+
+        private void txb_MouseClick(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+
+            if (txt.Text == "write...")
+            {
+                txt.Clear();
+                txt.ForeColor = Color.FromArgb(44, 55, 59);
+            }
+        }
+
     }
 }

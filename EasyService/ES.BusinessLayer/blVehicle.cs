@@ -7,7 +7,7 @@ using ES.EntityLayer.Vehicle;
 using ES.DataAccessLayer;
 using ES.EntityLayer.Clients;
 using ES.EntityLayer.Employees;
-
+using ES.EntityLayer.General;
 
 namespace ES.BusinessLayer
 {
@@ -28,7 +28,7 @@ namespace ES.BusinessLayer
             else throw new Exception("Invalid Vehicle!");
         }
 
-      
+
 
         public static Vehicle GetVehicle(string licensePlate)
         {
@@ -37,10 +37,12 @@ namespace ES.BusinessLayer
 
         public static void LotOfVehicle()
         {
+
             
-            blVehicle.InsertVehicle(new Vehicle("01-111-AI", 2016, "Mustang", "Shelby", 5200));
-            blVehicle.InsertVehicle(new Vehicle("01-123-BC", 2013, "Mercedes Benz", "C", 2200));
-            blVehicle.InsertVehicle(new Vehicle("01-456-DG", 2003, "Volswagen", "Golf", 1900));
+            ContactInfo c1 = new ContactInfo("Prishtine", "Kosove", "+37745363373", "bbesartk@msn.com");
+            blVehicle.InsertVehicle(new Vehicle("01-111-AI","23234234234", 2016, "Mustang", "Shelby", 5200));
+            blVehicle.InsertVehicle(new Vehicle("01-123-BC", "23234234234", 2013, "Mercedes Benz", "C", 2200));
+            blVehicle.InsertVehicle(new Vehicle("01-456-DG", "23234234234", 2003, "Volswagen", "Golf", 1900));
 
         }
 
@@ -70,7 +72,7 @@ namespace ES.BusinessLayer
             List<Vehicle> _allFromClient = new List<Vehicle>();
             foreach (var item in GetAll())
             {
-                if(item.Client != null)
+                if (item.Client != null)
                 {
                     _allFromClient.Add(item);
                 }
@@ -79,7 +81,7 @@ namespace ES.BusinessLayer
         }
 
 
-        public static List<Vehicle> GetAllFromClient(Company company)
+        public static List<Vehicle> GetAllFromCompany(Company company)
         {
             List<Vehicle> _allFromCompany = new List<Vehicle>();
             foreach (var item in GetAll())
@@ -92,20 +94,36 @@ namespace ES.BusinessLayer
             return _allFromCompany;
         }
 
-        //Palidhje e menaxhume :)
-        public static List<Vehicle> ServicedBy(Mechanic mch)
+        public static List<Vehicle> GeAllReadyForService()
         {
-            List<Vehicle> servicedBy = new List<Vehicle>();
-
-            for (int i = 0; i < GetAll().Count(); i++)
+            List<Vehicle> readyForService = new List<Vehicle>();
+            foreach (Vehicle vh in GetAllSubscribed())
             {
-                if (GetAll()[i].ServiceList[i].ServicedBy.Id == mch.Id)
-                    servicedBy.Add(GetAll()[i]);
+                if (blServices.GetLastService(vh) != null)
+                {
+                    TimeSpan daysSinceLastService = DateTime.Now.Date - blServices.GetLastService(vh).DateOfService.Date;
+                    if (daysSinceLastService.TotalDays >= 100)
+                        readyForService.Add(vh);
+                }
+                
             }
 
-            return servicedBy;
+            return readyForService;
         }
+            ////Palidhje e menaxhume :)
+            //public static List<Vehicle> ServicedBy(Mechanic mch)
+            //{
+            //    List<Vehicle> servicedBy = new List<Vehicle>();
 
-        #endregion
+            //    for (int i = 0; i < GetAll().Count(); i++)
+            //    {
+            //        if (GetAll()[i].ServiceList[i].ServicedBy.Id == mch.Id)
+            //            servicedBy.Add(GetAll()[i]);
+            //    }
+
+            //    return servicedBy;
+            //}
+
+            #endregion
         }
-}
+    }
