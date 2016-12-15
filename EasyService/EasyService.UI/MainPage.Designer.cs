@@ -114,6 +114,7 @@
             this.btnRaports.TabIndex = 3;
             this.btnRaports.Text = "REPORTS";
             this.btnRaports.UseVisualStyleBackColor = false;
+            this.btnRaports.Click += new System.EventHandler(this.btnRaports_Click);
             // 
             // btnStaff
             // 

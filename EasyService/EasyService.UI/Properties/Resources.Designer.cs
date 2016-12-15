@@ -123,9 +123,29 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap font_awesome_4_7_0_car_256_0_263135_none {
+            get {
+                object obj = ResourceManager.GetObject("font-awesome_4-7-0_car_256_0_263135_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap font_awesome_4_7_0_save_256_0_ffffff_none {
             get {
                 object obj = ResourceManager.GetObject("font-awesome_4-7-0_save_256_0_ffffff_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap font_awesome_4_7_0_sitemap_256_0_263135_none {
+            get {
+                object obj = ResourceManager.GetObject("font-awesome_4-7-0_sitemap_256_0_263135_none", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +163,69 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap foundation_icon_fonts_2015_02_16_dollar_256_0_114499_none {
+            get {
+                object obj = ResourceManager.GetObject("foundation-icon-fonts_2015-02-16_dollar_256_0_114499_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foundation_icon_fonts_2015_02_16_dollar_256_0_5895bf_none {
+            get {
+                object obj = ResourceManager.GetObject("foundation-icon-fonts_2015-02-16_dollar_256_0_5895bf_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foundation_icon_fonts_2015_02_16_dollar_256_0_cbb65a_none {
+            get {
+                object obj = ResourceManager.GetObject("foundation-icon-fonts_2015-02-16_dollar_256_0_cbb65a_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foundation_icon_fonts_2015_02_16_dollar_256_0_d05438_none {
+            get {
+                object obj = ResourceManager.GetObject("foundation-icon-fonts_2015-02-16_dollar_256_0_d05438_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foundation_icon_fonts_2015_02_16_dollar_256_0_e2ce4c_none {
+            get {
+                object obj = ResourceManager.GetObject("foundation-icon-fonts_2015-02-16_dollar_256_0_e2ce4c_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icomoon_free_2014_12_23_user_tie_256_0_019fde_none {
             get {
                 object obj = ResourceManager.GetObject("icomoon-free_2014-12-23_user-tie_256_0_019fde_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icomoon_free_2014_12_23_user_tie_256_0_263135_none {
+            get {
+                object obj = ResourceManager.GetObject("icomoon-free_2014-12-23_user-tie_256_0_263135_none", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +243,49 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icomoon_free_2014_12_23_user_tie_256_0_ffffff_none {
+            get {
+                object obj = ResourceManager.GetObject("icomoon-free_2014-12-23_user-tie_256_0_ffffff_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ionicons_2_0_1_settings_256_0_263135_none {
+            get {
+                object obj = ResourceManager.GetObject("ionicons_2-0-1_settings_256_0_263135_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ionicons_2_0_1_settings_256_0_32c2dd_none__1_ {
             get {
                 object obj = ResourceManager.GetObject("ionicons_2-0-1_settings_256_0_32c2dd_none (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ligature_symbols_2_11_0_human_256_0_263135_none {
+            get {
+                object obj = ResourceManager.GetObject("ligature-symbols_2-11-0_human_256_0_263135_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ligature_symbols_2_11_0_users_256_0_263135_none {
+            get {
+                object obj = ResourceManager.GetObject("ligature-symbols_2-11-0_users_256_0_263135_none", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

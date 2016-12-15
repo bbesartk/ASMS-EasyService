@@ -60,5 +60,12 @@ namespace EasyService.UI
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(vh);
         }
+
+        private void btnRaports_Click(object sender, EventArgs e)
+        {
+            UC_Reports rep = new UC_Reports();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(rep);
+        }
     }
 }
