@@ -29,8 +29,20 @@ namespace ES.DataAccessLayer
             {
                 if (item.RowNumber == id)
                     return item;
-                return null;
+
             }
+            return null;
+        }
+
+        public static int GetSlotId(string name)
+        {
+            foreach (var item in AllSlots())
+            {
+                if (name == item.Description)
+                    return item.RowNumber;
+            }
+
+            return -1;
         }
 
     }

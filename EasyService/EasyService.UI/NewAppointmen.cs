@@ -17,17 +17,20 @@ namespace EasyService.UI
     {
         private readonly Vehicle _vehicle;
         private static string typeOfService;
-        private static int rowNumber;
+        private static int slotNumber;
         public NewAppointmen(Vehicle vehicle)
         {
             InitializeComponent();
             _vehicle = vehicle;
+            blAppointments.ListaApointment();
         }
 
         private void NewAppointmen_Load(object sender, EventArgs e)
         {
             mcDate.MinDate = DateTime.Now.Date;
             cmbSlot.DataSource = dalSlot.AllSlots();
+
+            
 
         }
 
@@ -65,8 +68,6 @@ namespace EasyService.UI
         {
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
-
-            MessageBox.Show(dtTime.ToString());
         }
 
         private void cmbHour_SelectedValueChanged(object sender, EventArgs e)
@@ -75,23 +76,18 @@ namespace EasyService.UI
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
             var dtTime = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0);
-            blAppointments.AvailableSlots(dtTime, typeOfService,)
+            blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.AllSlots());
         }
 
         private void chb_Checked(object sender, EventArgs e)
         {
-
             RadioButton rb = (RadioButton)sender;
-
-            if (rb.Checked == true)
-            {
-                typeOfService = rb.Text;
-            }
+            typeOfService = rb.Text;
         }
 
         private void cmbSlot_SelectedValueChanged(object sender, EventArgs e)
         {
-             o
+            slotNumber = dalSlot.GetSlotId(cmbSlot.Text);
         }
     }
 }

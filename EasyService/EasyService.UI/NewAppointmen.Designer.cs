@@ -174,7 +174,6 @@
             this.mcDate.Location = new System.Drawing.Point(5, -16);
             this.mcDate.MinDate = new System.DateTime(2016, 12, 13, 0, 0, 0, 0);
             this.mcDate.Name = "mcDate";
-            this.mcDate.ShowToday = false;
             this.mcDate.TabIndex = 17;
             this.mcDate.TabStop = false;
             this.mcDate.TitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;

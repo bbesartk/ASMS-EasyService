@@ -84,6 +84,15 @@ namespace ES.BusinessLayer
             return freeSlots;
         }
 
+        static DateTime d1 = new DateTime(2016, 12, 15, 15, 0, 0);
+
+        public static void ListaApointment()
+        {
+            
+
+            dalAppointments.Insert(new Appointment("dsadas", d1, 1, ServiceType.SmallService, null));
+            dalAppointments.Insert(new Appointment("dsadas", d1, 2, ServiceType.SmallService, null));
+        }
         
         #endregion
 
