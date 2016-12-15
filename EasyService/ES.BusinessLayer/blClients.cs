@@ -28,24 +28,24 @@ namespace ES.BusinessLayer
             else throw new Exception("Invalid Client!");
         }
 
-        public static void DeleteClient(int id)
+        public static void DeleteClient(string id)
         {
-            if(id>0)
+            if(id!="")
             dalClients.Remove(id);
             else throw new Exception("Invalid Id!");
         }
 
-        public static Client GetClient(int id)
+        public static Client GetClient(string id)
         {
             return dalClients.GetSingleClient(id);
         }
 
         public static void LotOfClient()
         {
-            ContactInfo c1 = new ContactInfo("Kosova", "Prishtina", "+37745463373", "bbesart-k@msn.com");
-            blClients.InsertClient(new Client("Besart", "Kuleta", c1));
-            blClients.InsertClient(new Client("AAA", "C@", c1));
-            blCompany.InserCompany(new Company("dsadas", "aaa", c1));
+            ContactInfo c1 = new ContactInfo("Kosova", "Prishtina", "0442620629", "bbesart-k@msn.com");
+            blClients.InsertClient(new Client("1234567899","Besart", "Kuleta", c1));
+            blClients.InsertClient(new Client("1444467899","AAaaaaaA", "C@", c1));
+            blCompany.InserCompany(new Company("dsadaaaas", "aaa", c1));
             blEmployees.InsertEmployees(new Mechanic("Kosova", "Prishtina", true, "abejjjaaaaa", "besartkuleta12", c1));
            
         }

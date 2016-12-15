@@ -121,6 +121,7 @@
             this.txbPhoneNumber.TabIndex = 39;
             this.txbPhoneNumber.TabStop = false;
             this.txbPhoneNumber.Text = "write...";
+            this.txbPhoneNumber.Click += new System.EventHandler(this.txb_MouseClick);
             // 
             // txbEmail
             // 
@@ -133,6 +134,7 @@
             this.txbEmail.TabIndex = 40;
             this.txbEmail.TabStop = false;
             this.txbEmail.Text = "write...";
+            this.txbEmail.Click += new System.EventHandler(this.txb_MouseClick);
             // 
             // txbAddress
             // 
@@ -145,6 +147,7 @@
             this.txbAddress.TabIndex = 36;
             this.txbAddress.TabStop = false;
             this.txbAddress.Text = "write...";
+            this.txbAddress.Click += new System.EventHandler(this.txb_MouseClick);
             // 
             // txbCity
             // 
@@ -157,6 +160,7 @@
             this.txbCity.TabIndex = 34;
             this.txbCity.TabStop = false;
             this.txbCity.Text = "write...";
+            this.txbCity.Click += new System.EventHandler(this.txb_MouseClick);
             // 
             // txbName
             // 
@@ -169,6 +173,7 @@
             this.txbName.TabIndex = 37;
             this.txbName.TabStop = false;
             this.txbName.Text = "write...";
+            this.txbName.Click += new System.EventHandler(this.txb_MouseClick);
             // 
             // txbId
             // 
@@ -181,6 +186,7 @@
             this.txbId.TabIndex = 35;
             this.txbId.TabStop = false;
             this.txbId.Text = "write...";
+            this.txbId.Click += new System.EventHandler(this.txb_MouseClick);
             // 
             // btnEdit
             // 

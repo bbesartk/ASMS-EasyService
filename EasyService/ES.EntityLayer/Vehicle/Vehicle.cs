@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ES.EntityLayer.Clients;
-using ES.EntityLayer.Finance;
+using ES.EntityLayer.Services;
 
 namespace ES.EntityLayer.Vehicle
 {
@@ -113,24 +113,15 @@ namespace ES.EntityLayer.Vehicle
         #endregion
 
         #region Constructors
-        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm)
+        public Vehicle(string licensePlate, string vin, int productionYear, string type, string model, int cubicCm)
         {
             LicensePlate = licensePlate;
             ProductionYear = productionYear;
             Type = type;
             Model = model;
+            Vin = vin;
             CubicC = cubicCm;
             IsSubscribed = true;
-        }
-
-        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, Company company) : this(licensePlate, productionYear, type, model, cubicCm)
-        {
-            Company = company;
-        }
-
-        public Vehicle(string licensePlate, int productionYear, string type, string model, int cubicCm, Client client) : this(licensePlate, productionYear, type, model, cubicCm)
-        {
-            Client = client;
         }
 
 

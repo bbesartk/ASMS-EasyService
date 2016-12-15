@@ -82,19 +82,22 @@ namespace ES.EntityLayer.General
         #region Methods
         private bool IsEmail(string email)
         {
-            Regex rgx = new Regex(@"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
-            if (rgx.IsMatch(email))
-                return true;
-            else return false;
+            //Regex rgx = new Regex(@"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
+            //if (rgx.IsMatch(email))
+            //    return true;
+            //else return false;
+            return true;
         }
 
 
         private bool IsPhoneNumber(string phone)
         {
-            Regex rgx = new Regex(@"^(\+[0-9]{9,15})$");
-            if (rgx.IsMatch(phone))
-                return true;
-            else return false;
+            //Regex rgx = new Regex(@"^(\[0-9]{7,15})$");
+            //if (rgx.IsMatch(phone))
+            //    return true;
+            //else return false;
+
+            return true;
         }
         #endregion
     }

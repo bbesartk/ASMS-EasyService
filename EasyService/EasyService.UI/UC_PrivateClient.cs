@@ -39,7 +39,7 @@ namespace EasyService.UI
 
         private void btnKerko_Click(object sender, EventArgs e)
         {
-            var client = blClients.GetClient(int.Parse(txbKerko.Text));
+            var client = blClients.GetClient(txbKerko.Text);
             if (client != null)
             {
                 EditClient(client);

@@ -123,7 +123,7 @@
             this.txbCubic.ForeColor = System.Drawing.Color.Silver;
             this.txbCubic.Location = new System.Drawing.Point(387, 38);
             this.txbCubic.Name = "txbCubic";
-            this.txbCubic.Size = new System.Drawing.Size(228, 33);
+            this.txbCubic.Size = new System.Drawing.Size(232, 33);
             this.txbCubic.TabIndex = 5;
             this.txbCubic.Text = "write...";
             // 
@@ -191,16 +191,16 @@
             // 
             // pBmajorService
             // 
-            this.pBmajorService.Location = new System.Drawing.Point(52, 134);
+            this.pBmajorService.Location = new System.Drawing.Point(192, 103);
             this.pBmajorService.Name = "pBmajorService";
-            this.pBmajorService.Size = new System.Drawing.Size(553, 42);
+            this.pBmajorService.Size = new System.Drawing.Size(426, 38);
             this.pBmajorService.TabIndex = 17;
             // 
             // pBsmallService
             // 
-            this.pBsmallService.Location = new System.Drawing.Point(53, 44);
+            this.pBsmallService.Location = new System.Drawing.Point(192, 44);
             this.pBsmallService.Name = "pBsmallService";
-            this.pBsmallService.Size = new System.Drawing.Size(553, 42);
+            this.pBsmallService.Size = new System.Drawing.Size(427, 38);
             this.pBsmallService.TabIndex = 17;
             // 
             // label8
@@ -208,7 +208,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Glacial Indifference", 11.25F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.label8.Location = new System.Drawing.Point(55, 103);
+            this.label8.Location = new System.Drawing.Point(59, 110);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 18);
             this.label8.TabIndex = 11;
@@ -219,7 +219,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Glacial Indifference", 11.25F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.label7.Location = new System.Drawing.Point(56, 13);
+            this.label7.Location = new System.Drawing.Point(59, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 18);
             this.label7.TabIndex = 11;

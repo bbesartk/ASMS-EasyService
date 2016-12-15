@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ES.EntityLayer.Finance
+namespace ES.EntityLayer.Services
 {
     public class ServicedInspection
     {

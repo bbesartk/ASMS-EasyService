@@ -10,43 +10,89 @@ using System.Windows.Forms;
 using ES.EntityLayer.Clients;
 using ES.BusinessLayer;
 using ES.EntityLayer.General;
+using ES.EntityLayer.Vehicle;
 
 namespace EasyService.UI
 {
     public partial class UC_EditClient : UserControl
     {
         private readonly Client _client;
+        private readonly Vehicle _vehicle;
+
         public UC_EditClient(Client client)
         {
+            //fro editing a client
             InitializeComponent();
             _client = client;
-        }
-
-        private void UC_EditClient_Load(object sender, EventArgs e)
-        {
             ReadClient(_client, true);
         }
 
+        public UC_EditClient(Vehicle vehicle)
+        {
+            //For inserting a new vehicle we need a owner!!!
+            InitializeComponent();
+            _vehicle = vehicle;
+        }
+        private void UC_EditClient_Load(object sender, EventArgs e)
+        {
+            if(_vehicle != null)
+            {
+                btnEdit.Text = "FINISH REGISTRATION";
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            CallPanel(2);
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (btnEdit.Text == "VALIDATE EDIT")
+            if(_vehicle!=null)
             {
-                try
+                if(blClients.GetClient(txbId.Text)!=null)
                 {
-                    blClients.UpdateClient(ChangeClientDetails(_client));
-
-                    CallPanel(2);
+                    _vehicle.Client = blClients.GetClient(txbId.Text);
+                    blVehicle.InsertVehicle(_vehicle);
                 }
-                catch
+                else if(blClients.GetClient(txbId.Text)==null)
                 {
-                    MessageBox.Show("Please fill the fields correctly!", "Invalid atempt input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Client c1 = new Client(txbId.Text, txbName.Text, txbLastName.Text, new ContactInfo(txbCity.Text, txbAddress.Text, txbPhoneNumber.Text, txbEmail.Text));
+                    blClients.InsertClient(c1);
+                    _vehicle.Client = c1;
+                    blVehicle.InsertVehicle(_vehicle);
                 }
+                
             }
-            else if (btnEdit.Text == "EDIT THIS CLIENT")
+
+            else if (_vehicle == null)
             {
-                btnEdit.Text = "VALIDATE EDIT";
-                ReadClient(_client, false);
+                if (btnEdit.Text == "VALIDATE EDIT")
+                {
+                    try
+                    {
+                        blClients.UpdateClient(ChangeClientDetails(_client));
+
+                        CallPanel(2);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Please fill the fields correctly!", "Invalid atempt input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (btnEdit.Text == "EDIT THIS CLIENT")
+                {
+                    try
+                    {
+                        btnEdit.Text = "VALIDATE EDIT";
+                        ReadClient(_client, false);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Please fill the fields correctly!", "Invalid atempt input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
             }
         }
 
@@ -69,7 +115,7 @@ namespace EasyService.UI
 
         private Client ChangeClientDetails(Client client)
         {
-            client.Id = int.Parse(txbId.Text);
+            client.Id = txbId.Text;
             client.Name = txbName.Text;
             client.Lastname = txbLastName.Text;
             client.ContactInfo.Address = txbAddress.Text;
@@ -101,9 +147,44 @@ namespace EasyService.UI
 
             txbCity.Text = client.ContactInfo.City;
             txbCity.ReadOnly = readOnly;
+        }
 
+
+        private void txb_MouseClick(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+
+            if (txt.Text == "write...")
+            {
+                txt.Clear();
+                txt.ForeColor = Color.FromArgb(44, 55, 59);
+            }
+        }
+
+
+        private void txbId_TextChanged(object sender, EventArgs e)
+        {
+            if (txbId.Text.Length == 10)
+            {
+                foreach (var client in blClients.GetAllClients())
+                {
+                    if(txbId.Text==client.Id)
+                    {
+                        FillText(client);
+                    }
+                }
+            }
 
         }
 
+        private void FillText(Client client)
+        {
+            txbName.Text = client.Name;
+            txbLastName.Text = client.Lastname;
+            txbEmail.Text = client.ContactInfo.Email;
+            txbAddress.Text = client.ContactInfo.Address;
+            txbPhoneNumber.Text = client.ContactInfo.PhoneNumber;
+            txbCity.Text = client.ContactInfo.City;
+        }
     }
 }

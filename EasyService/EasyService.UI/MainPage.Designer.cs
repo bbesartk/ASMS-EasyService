@@ -37,6 +37,7 @@
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnKlient = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStock.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.btnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.btnStock.Location = new System.Drawing.Point(-3, 250);
+            this.btnStock.Location = new System.Drawing.Point(3, 261);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(224, 65);
             this.btnStock.TabIndex = 6;
@@ -94,7 +94,7 @@
             this.btnAppointments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppointments.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.btnAppointments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.btnAppointments.Location = new System.Drawing.Point(0, 127);
+            this.btnAppointments.Location = new System.Drawing.Point(-3, 69);
             this.btnAppointments.Name = "btnAppointments";
             this.btnAppointments.Size = new System.Drawing.Size(224, 65);
             this.btnAppointments.TabIndex = 5;
@@ -108,7 +108,7 @@
             this.btnRaports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRaports.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.btnRaports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.btnRaports.Location = new System.Drawing.Point(0, 312);
+            this.btnRaports.Location = new System.Drawing.Point(3, 197);
             this.btnRaports.Name = "btnRaports";
             this.btnRaports.Size = new System.Drawing.Size(224, 65);
             this.btnRaports.TabIndex = 3;
@@ -122,7 +122,7 @@
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaff.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.btnStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.btnStaff.Location = new System.Drawing.Point(0, 189);
+            this.btnStaff.Location = new System.Drawing.Point(0, 325);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(224, 65);
             this.btnStaff.TabIndex = 2;
@@ -137,7 +137,7 @@
             this.btnKlient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKlient.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.btnKlient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.btnKlient.Location = new System.Drawing.Point(0, 65);
+            this.btnKlient.Location = new System.Drawing.Point(0, 389);
             this.btnKlient.Name = "btnKlient";
             this.btnKlient.Size = new System.Drawing.Size(224, 65);
             this.btnKlient.TabIndex = 1;
@@ -148,17 +148,32 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.pnlMenu.Controls.Add(this.btnStock);
-            this.pnlMenu.Controls.Add(this.btnAppointments);
-            this.pnlMenu.Controls.Add(this.button1);
-            this.pnlMenu.Controls.Add(this.btnRaports);
-            this.pnlMenu.Controls.Add(this.btnStaff);
             this.pnlMenu.Controls.Add(this.btnKlient);
+            this.pnlMenu.Controls.Add(this.btnStaff);
+            this.pnlMenu.Controls.Add(this.btnStock);
+            this.pnlMenu.Controls.Add(this.btnRaports);
+            this.pnlMenu.Controls.Add(this.button1);
+            this.pnlMenu.Controls.Add(this.btnAppointments);
             this.pnlMenu.Controls.Add(this.btnHome);
             this.pnlMenu.Location = new System.Drawing.Point(-7, 33);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(219, 630);
             this.pnlMenu.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.button1.Location = new System.Drawing.Point(0, 133);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 65);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "VEHICLE";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnHome
             // 
@@ -167,7 +182,7 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.btnHome.Location = new System.Drawing.Point(0, 3);
+            this.btnHome.Location = new System.Drawing.Point(0, 5);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(224, 65);
             this.btnHome.TabIndex = 0;
@@ -242,21 +257,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(675, 596);
             this.mainPanel.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.button1.Location = new System.Drawing.Point(0, 374);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 65);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "VEHICLE";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainPage
             // 
