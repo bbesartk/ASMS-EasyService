@@ -50,17 +50,20 @@ namespace EasyService.UI
         {
             try
             {
-                panelClient.Visible = true;
+                
                 if (rbClient.Checked == true)
                 {
-                    panelClient.Controls.Clear();
+                    
                     UC_EditClient newClient = new UC_EditClient(new Vehicle(txbLicensePlate.Text, txbVin.Text, int.Parse(txbProductYear.Text), txbType.Text, txbModel.Text, int.Parse(txbCubic.Text)));
+                    panelClient.Visible = true;
+                    panelClient.Controls.Clear();
                     panelClient.Controls.Add(newClient);
                 }
                 else if (rbCompany.Checked == true)
                 {
-                    panelClient.Controls.Clear();
                     UC_EditCompany newCompany = new UC_EditCompany(new Vehicle(txbLicensePlate.Text, txbVin.Text, int.Parse(txbProductYear.Text), txbType.Text, txbModel.Text, int.Parse(txbCubic.Text)));
+                    panelClient.Visible = true;
+                    panelClient.Controls.Clear();                  
                     panelClient.Controls.Add(newCompany);
                 }
             }

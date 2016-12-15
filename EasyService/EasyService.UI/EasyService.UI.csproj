@@ -321,6 +321,42 @@
   <ItemGroup>
     <None Include="Resources\font-awesome_4-7-0_save_256_0_ffffff_none.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon-free_2014-12-23_user-tie_256_0_ffffff_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icomoon-free_2014-12-23_user-tie_256_0_263135_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ligature-symbols_2-11-0_users_256_0_263135_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_car_256_0_263135_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ligature-symbols_2-11-0_human_256_0_263135_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ionicons_2-0-1_settings_256_0_263135_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_sitemap_256_0_263135_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_114499_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_5895bf_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_d05438_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_e2ce4c_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foundation-icon-fonts_2015-02-16_dollar_256_0_cbb65a_none.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
