@@ -35,15 +35,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgItems = new System.Windows.Forms.DataGridView();
-            this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
-            this.btnKerko = new System.Windows.Forms.Button();
-            this.txbKerko = new System.Windows.Forms.TextBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.itemNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantiyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rbRegisterPlate = new System.Windows.Forms.RadioButton();
+            this.btnKerko = new System.Windows.Forms.Button();
+            this.txbKerko = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -114,12 +114,44 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgItems.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgItems.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgItems.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgItems.Size = new System.Drawing.Size(443, 309);
             this.dgItems.TabIndex = 13;
             this.dgItems.TabStop = false;
             this.dgItems.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgItems_CellDoubleClick);
+            // 
+            // itemNumberDataGridViewTextBoxColumn
+            // 
+            this.itemNumberDataGridViewTextBoxColumn.DataPropertyName = "ItemNumber";
+            this.itemNumberDataGridViewTextBoxColumn.HeaderText = "ItemNumber";
+            this.itemNumberDataGridViewTextBoxColumn.Name = "itemNumberDataGridViewTextBoxColumn";
+            this.itemNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantiyDataGridViewTextBoxColumn
+            // 
+            this.quantiyDataGridViewTextBoxColumn.DataPropertyName = "Quantiy";
+            this.quantiyDataGridViewTextBoxColumn.HeaderText = "Quantiy";
+            this.quantiyDataGridViewTextBoxColumn.Name = "quantiyDataGridViewTextBoxColumn";
+            this.quantiyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataSource = typeof(ES.EntityLayer.Stock.Item);
             // 
             // rbRegisterPlate
             // 
@@ -177,38 +209,6 @@
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // itemNumberDataGridViewTextBoxColumn
-            // 
-            this.itemNumberDataGridViewTextBoxColumn.DataPropertyName = "ItemNumber";
-            this.itemNumberDataGridViewTextBoxColumn.HeaderText = "ItemNumber";
-            this.itemNumberDataGridViewTextBoxColumn.Name = "itemNumberDataGridViewTextBoxColumn";
-            this.itemNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantiyDataGridViewTextBoxColumn
-            // 
-            this.quantiyDataGridViewTextBoxColumn.DataPropertyName = "Quantiy";
-            this.quantiyDataGridViewTextBoxColumn.HeaderText = "Quantiy";
-            this.quantiyDataGridViewTextBoxColumn.Name = "quantiyDataGridViewTextBoxColumn";
-            this.quantiyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataSource = typeof(ES.EntityLayer.Stock.Item);
             // 
             // UC_Item
             // 

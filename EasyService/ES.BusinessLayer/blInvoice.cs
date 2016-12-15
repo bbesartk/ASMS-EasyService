@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ES.DataAccessLayer;
 using ES.EntityLayer.Finance;
-
+using ES.EntityLayer.Services;
 
 namespace ES.BusinessLayer
 {
-    class blInvoice
+    public class blInvoice
     {
         #region CRUD
         public static void InsertInvoice(Invoice invoice)
@@ -47,6 +47,41 @@ namespace ES.BusinessLayer
             return dalInvoice.GetAll();
         }
 
+        public static decimal GetAllIncomes()
+        {
+            decimal total = 0;
+            foreach (var item in GetAllInvoice())
+            {
+                total += item.Total;
+            }
+            return total;
+        }
+
+        public static decimal GetThisYearIncomes()
+        {
+            decimal total = 0;
+            foreach (var item in GetAllInvoice())
+            {
+                if(item.DateOfBill.Year==DateTime.Now.Year)
+                {
+                    total += item.Total;
+                }
+            }
+            return total;
+        }
+
+        public static decimal GetTodayIncomes()
+        {
+            decimal total = 0;
+            foreach (var item in GetAllInvoice())
+            {
+                if(item.DateOfBill.Date==DateTime.Now.Date)
+                {
+                    total += item.Total;
+                }
+            }
+            return total;
+        }
        
         #endregion
     }

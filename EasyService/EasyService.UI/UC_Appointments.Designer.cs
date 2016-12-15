@@ -100,7 +100,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgAppointment.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgAppointment.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgAppointment.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgAppointment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgAppointment.Size = new System.Drawing.Size(645, 309);
             this.dgAppointment.TabIndex = 18;

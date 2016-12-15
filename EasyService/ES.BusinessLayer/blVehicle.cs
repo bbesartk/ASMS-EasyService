@@ -110,20 +110,21 @@ namespace ES.BusinessLayer
 
             return readyForService;
         }
-            ////Palidhje e menaxhume :)
-            //public static List<Vehicle> ServicedBy(Mechanic mch)
-            //{
-            //    List<Vehicle> servicedBy = new List<Vehicle>();
 
-            //    for (int i = 0; i < GetAll().Count(); i++)
-            //    {
-            //        if (GetAll()[i].ServiceList[i].ServicedBy.Id == mch.Id)
-            //            servicedBy.Add(GetAll()[i]);
-            //    }
-
-            //    return servicedBy;
-            //}
-
-            #endregion
+        public static List<Vehicle> ServicedBy(string mechanicId)
+        {
+            List<Vehicle> servicedVehicles = new List<Vehicle>();
+            var mechanic = blEmployees.GetMechanic(mechanicId);
+            foreach (var item in blInvoice.GetAllInvoice())
+            {
+                if (item.ServicedBy == mechanic)
+                {
+                    servicedVehicles.Add(item.ServicedVehicle);
+                }
+            }
+            return servicedVehicles;
         }
+
+        #endregion
+    }
     }
