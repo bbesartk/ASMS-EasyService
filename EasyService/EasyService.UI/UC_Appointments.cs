@@ -21,7 +21,7 @@ namespace EasyService.UI
 
         private void UC_Appointments_Load(object sender, EventArgs e)
         {
-            dgAppointment.DataSource = blAppointments;
+            
         }
     }
 }
