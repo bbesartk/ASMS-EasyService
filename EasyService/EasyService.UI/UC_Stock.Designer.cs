@@ -33,49 +33,49 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBrakes = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEngines = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLubrificants = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCoolHeat = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnTransmission = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.itemPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnServiceParts
             // 
-            this.btnServiceParts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnServiceParts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnServiceParts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnServiceParts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServiceParts.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServiceParts.ForeColor = System.Drawing.Color.White;
-            this.btnServiceParts.Location = new System.Drawing.Point(-2, 167);
+            this.btnServiceParts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.btnServiceParts.Location = new System.Drawing.Point(-2, 166);
             this.btnServiceParts.Name = "btnServiceParts";
             this.btnServiceParts.Size = new System.Drawing.Size(159, 34);
             this.btnServiceParts.TabIndex = 16;
@@ -87,8 +87,8 @@
             // 
             this.lblNotificiations.AutoSize = true;
             this.lblNotificiations.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotificiations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.lblNotificiations.Location = new System.Drawing.Point(3, 134);
+            this.lblNotificiations.ForeColor = System.Drawing.Color.White;
+            this.lblNotificiations.Location = new System.Drawing.Point(3, 136);
             this.lblNotificiations.Name = "lblNotificiations";
             this.lblNotificiations.Size = new System.Drawing.Size(152, 25);
             this.lblNotificiations.TabIndex = 15;
@@ -96,7 +96,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnBrakes);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -109,8 +109,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.label1.Location = new System.Drawing.Point(37, 134);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(37, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 15;
@@ -118,11 +118,11 @@
             // 
             // btnBrakes
             // 
-            this.btnBrakes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnBrakes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnBrakes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnBrakes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrakes.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrakes.ForeColor = System.Drawing.Color.White;
+            this.btnBrakes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.btnBrakes.Location = new System.Drawing.Point(-2, 167);
             this.btnBrakes.Name = "btnBrakes";
             this.btnBrakes.Size = new System.Drawing.Size(159, 34);
@@ -131,19 +131,9 @@
             this.btnBrakes.UseVisualStyleBackColor = false;
             this.btnBrakes.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::EasyService.UI.Properties.Resources.brakes;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(156, 131);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.btnEngines);
             this.panel3.Controls.Add(this.pictureBox3);
@@ -156,8 +146,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.label2.Location = new System.Drawing.Point(3, 134);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 25);
             this.label2.TabIndex = 15;
@@ -165,11 +155,11 @@
             // 
             // btnEngines
             // 
-            this.btnEngines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnEngines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnEngines.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEngines.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEngines.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEngines.ForeColor = System.Drawing.Color.White;
+            this.btnEngines.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.btnEngines.Location = new System.Drawing.Point(-2, 167);
             this.btnEngines.Name = "btnEngines";
             this.btnEngines.Size = new System.Drawing.Size(159, 34);
@@ -178,19 +168,9 @@
             this.btnEngines.UseVisualStyleBackColor = false;
             this.btnEngines.Click += new System.EventHandler(this.btnEngines_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::EasyService.UI.Properties.Resources.DB2007AU00875_medium;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(156, 131);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 15;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.btnLubrificants);
             this.panel4.Controls.Add(this.pictureBox4);
@@ -203,7 +183,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(8, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 25);
@@ -212,11 +192,11 @@
             // 
             // btnLubrificants
             // 
-            this.btnLubrificants.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnLubrificants.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnLubrificants.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLubrificants.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLubrificants.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLubrificants.ForeColor = System.Drawing.Color.White;
+            this.btnLubrificants.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.btnLubrificants.Location = new System.Drawing.Point(-1, 167);
             this.btnLubrificants.Name = "btnLubrificants";
             this.btnLubrificants.Size = new System.Drawing.Size(159, 34);
@@ -225,19 +205,9 @@
             this.btnLubrificants.UseVisualStyleBackColor = false;
             this.btnLubrificants.Click += new System.EventHandler(this.btnLubrificants_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::EasyService.UI.Properties.Resources.B1122577279;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(156, 131);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
-            // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.btnCoolHeat);
             this.panel5.Controls.Add(this.pictureBox5);
@@ -249,8 +219,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.label4.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(9, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 25);
@@ -259,11 +230,11 @@
             // 
             // btnCoolHeat
             // 
-            this.btnCoolHeat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnCoolHeat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnCoolHeat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCoolHeat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCoolHeat.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCoolHeat.ForeColor = System.Drawing.Color.White;
+            this.btnCoolHeat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.btnCoolHeat.Location = new System.Drawing.Point(-1, 167);
             this.btnCoolHeat.Name = "btnCoolHeat";
             this.btnCoolHeat.Size = new System.Drawing.Size(158, 34);
@@ -272,19 +243,9 @@
             this.btnCoolHeat.UseVisualStyleBackColor = false;
             this.btnCoolHeat.Click += new System.EventHandler(this.btnCoolHeat_Click);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::EasyService.UI.Properties.Resources.c1;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(156, 131);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 15;
-            this.pictureBox5.TabStop = false;
-            // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.btnTransmission);
             this.panel6.Controls.Add(this.pictureBox6);
@@ -297,7 +258,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(150, 25);
@@ -306,11 +267,11 @@
             // 
             // btnTransmission
             // 
-            this.btnTransmission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnTransmission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnTransmission.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnTransmission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransmission.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransmission.ForeColor = System.Drawing.Color.White;
+            this.btnTransmission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.btnTransmission.Location = new System.Drawing.Point(-1, 167);
             this.btnTransmission.Name = "btnTransmission";
             this.btnTransmission.Size = new System.Drawing.Size(158, 34);
@@ -318,16 +279,6 @@
             this.btnTransmission.Text = "SEE ALL";
             this.btnTransmission.UseVisualStyleBackColor = false;
             this.btnTransmission.Click += new System.EventHandler(this.btnTransmission_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::EasyService.UI.Properties.Resources.Eco_Tech_Clutch;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(156, 131);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
             // 
             // button6
             // 
@@ -354,7 +305,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.panel1.Controls.Add(this.btnServiceParts);
             this.panel1.Controls.Add(this.lblNotificiations);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -363,12 +314,62 @@
             this.panel1.Size = new System.Drawing.Size(156, 200);
             this.panel1.TabIndex = 13;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::EasyService.UI.Properties.Resources.Lubrificant_02;
+            this.pictureBox4.Location = new System.Drawing.Point(9, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(139, 131);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::EasyService.UI.Properties.Resources.cool_02;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(146, 131);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::EasyService.UI.Properties.Resources.engine_02;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(139, 131);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::EasyService.UI.Properties.Resources.Transmission_02;
+            this.pictureBox6.Location = new System.Drawing.Point(10, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(134, 131);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 15;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::EasyService.UI.Properties.Resources.brakes_02;
+            this.pictureBox2.Location = new System.Drawing.Point(5, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(146, 131);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EasyService.UI.Properties.Resources.services_parts;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Image = global::EasyService.UI.Properties.Resources.sevicePart_02;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(145, 131);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -378,7 +379,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.Controls.Add(this.itemPanel);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
@@ -386,25 +386,26 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.itemPanel);
             this.Name = "UC_Stock";
             this.Size = new System.Drawing.Size(675, 595);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
