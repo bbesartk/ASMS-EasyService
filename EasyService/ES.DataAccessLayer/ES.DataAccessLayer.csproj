@@ -46,6 +46,7 @@
     <Compile Include="dalEmployees.cs" />
     <Compile Include="dalInspections.cs" />
     <Compile Include="dalInvoice.cs" />
+    <Compile Include="dalSlot.cs" />
     <Compile Include="dalStock.cs" />
     <Compile Include="dalVehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

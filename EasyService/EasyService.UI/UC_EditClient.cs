@@ -61,8 +61,16 @@ namespace EasyService.UI
                     blClients.InsertClient(c1);
                     _vehicle.Client = c1;
                     blVehicle.InsertVehicle(_vehicle);
+
                 }
-                
+                DialogResult dg = MessageBox.Show("This car has successfully registred!", "Car Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dg == DialogResult.OK)
+                {
+                    UC_Dashboard allCars = new UC_Dashboard(true);
+                    this.Controls.Clear();
+                    this.Controls.Add(allCars);
+                }
+
             }
 
             else if (_vehicle == null)

@@ -74,5 +74,12 @@ namespace EasyService.UI
                 }
             }
         }
+
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            UC_ViewServices allServices = new UC_ViewServices(_vehicle);
+            this.Controls.Clear();
+            this.Controls.Add(allServices);
+        }
     }
 }

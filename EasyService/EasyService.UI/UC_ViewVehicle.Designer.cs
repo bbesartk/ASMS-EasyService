@@ -238,6 +238,7 @@
             this.btnServices.TabIndex = 31;
             this.btnServices.Text = "VIEW SERVICES";
             this.btnServices.UseVisualStyleBackColor = false;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
             // 
             // btnAddService
             // 

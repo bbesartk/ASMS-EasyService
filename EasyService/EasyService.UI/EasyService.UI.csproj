@@ -155,6 +155,12 @@
     <Compile Include="UC_Stock.Designer.cs">
       <DependentUpon>UC_Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ViewServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ViewServices.Designer.cs">
+      <DependentUpon>UC_ViewServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ViewVehicle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -223,12 +229,17 @@
     <EmbeddedResource Include="UC_Stock.resx">
       <DependentUpon>UC_Stock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_ViewServices.resx">
+      <DependentUpon>UC_ViewServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_ViewVehicle.resx">
       <DependentUpon>UC_ViewVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Client.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Company.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Employees.Mechanic.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Finance.Invoice.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Services.Service.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Stock.Item.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Vehicle.Vehicle.datasource" />
     <None Include="Properties\Settings.settings">
