@@ -45,6 +45,7 @@
     <Compile Include="blClients.cs" />
     <Compile Include="blCompany.cs" />
     <Compile Include="blEmployees.cs" />
+    <Compile Include="blInvoice.cs" />
     <Compile Include="blReports.cs" />
     <Compile Include="blServices.cs" />
     <Compile Include="blStock.cs" />

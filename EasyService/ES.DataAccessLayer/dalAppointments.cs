@@ -7,7 +7,7 @@ using ES.EntityLayer.Appointments;
 
 namespace ES.DataAccessLayer
 {
-    class dalAppointments
+    public class dalAppointments
     {
         private static List<Appointment> _listOfAppointmens = new List<Appointment>();
 
@@ -16,9 +16,38 @@ namespace ES.DataAccessLayer
             _listOfAppointmens.Add(appointment);
         }
 
-        public static void GetAppointment(string name)
+        
+        public static void Update(Appointment appointment)
         {
+            foreach (Appointment oldAppointment in _listOfAppointmens)
+            {
+                if (appointment.IsPending == oldAppointment.IsPending)
+                {
+                    oldAppointment.IsPending = appointment.IsPending;
+                    oldAppointment.IsTreated = appointment.IsTreated;
+                }
+            }
+        }
 
+
+        public static Appointment GetAppointment(string licensePlate)
+        {
+            foreach (Appointment appointment in _listOfAppointmens)
+            {
+                if (appointment.Vehicle.LicensePlate == licensePlate)
+                    return appointment;
+            }
+            return null;
+        }
+
+        public static void Remove(string id)
+        {
+            Appointment appointment = GetAppointment(id);
+            _listOfAppointmens.Remove(appointment);
+        }
+        public static List<Appointment> GetAll()
+        {
+            return _listOfAppointmens;
         }
     }
 }
