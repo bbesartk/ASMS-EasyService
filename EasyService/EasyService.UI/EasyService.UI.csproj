@@ -137,6 +137,12 @@
     <Compile Include="UC_PrivateClient.Designer.cs">
       <DependentUpon>UC_PrivateClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_RegisterServiceName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_RegisterServiceName.Designer.cs">
+      <DependentUpon>UC_RegisterServiceName.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_RegVehicle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_PrivateClient.resx">
       <DependentUpon>UC_PrivateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_RegisterServiceName.resx">
+      <DependentUpon>UC_RegisterServiceName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_RegVehicle.resx">
       <DependentUpon>UC_RegVehicle.cs</DependentUpon>
