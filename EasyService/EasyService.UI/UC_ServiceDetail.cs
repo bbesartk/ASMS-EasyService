@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using ES.EntityLayer.Appointments;
 using ES.EntityLayer.Services;
 using ES.BusinessLayer;
+using ES.DataAccessLayer;
+using ES.EntityLayer.Stock;
 
 namespace EasyService.UI
 {
@@ -22,7 +24,7 @@ namespace EasyService.UI
 
             
 
-            lista.Add(new ServiceName("Fuel", true, true, true, 1));
+            lista.Add(new ServiceName("Fuel", true, true, true,Category.CoolAndHeat ));
             foreach (var item in lista)
             {
                 listBoxServices.Items.Add(item);
@@ -33,7 +35,10 @@ namespace EasyService.UI
         {
             CheckedListBox chb = (CheckedListBox)sender;
 
-            MessageBox.Show(chb.SelectedItem.ToString());
+            var serviceName = dalService.GetServiceName(chb.SelectedItem.ToString());
+
+            InspectionDetail ins = new InspectionDetail(serviceName);
+            ins.ShowDialog();
         }
 
         private void UC_ServiceDetail_Load(object sender, EventArgs e)

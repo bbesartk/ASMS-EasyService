@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ES.BusinessLayer;
+using ES.EntityLayer.Services;
+using ES.EntityLayer.Stock;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,34 @@ namespace EasyService.UI
 {
     public partial class InspectionDetail : Form
     {
-        public InspectionDetail()
+        private readonly ServiceName _serviceName;
+        public InspectionDetail(ServiceName serviceName)
         {
             InitializeComponent();
+            _serviceName = serviceName;
+        }
+
+        private void InspectionDetail_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                lblServiceName.Text = _serviceName.Description;
+                List<Item> itemsByCategory = blStock.GetAllByCategory(_serviceName.ItemCategory);
+
+                cmbItemsByCategory.DataSource = itemsByCategory;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("This Service isnt well validated!");
+            }
+           
+
+        }
+
+        private void cmbItemsByCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txbPrice.Text = cmbItemsByCategory.SelectedItem.ToString();
         }
     }
 }
