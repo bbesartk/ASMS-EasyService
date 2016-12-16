@@ -68,5 +68,12 @@ namespace EasyService.UI
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(rep);
         }
+
+        private void btnGeneralSettings_Click(object sender, EventArgs e)
+        {
+            UC_Settings settings = new UC_Settings();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(settings);
+        }
     }
 }

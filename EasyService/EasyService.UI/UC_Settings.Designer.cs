@@ -1,6 +1,6 @@
 ﻿namespace EasyService.UI
 {
-    partial class UC_Slots
+    partial class UC_Settings
     {
         /// <summary> 
         /// Required designer variable.

@@ -20,5 +20,13 @@ namespace ES.BusinessLayer
         }
 
 
+
+        #region Service Types
+
+
+
+        #endregion
+
+
     }
 }

@@ -46,6 +46,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnGeneralSettings = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -149,6 +150,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.pnlMenu.Controls.Add(this.btnGeneralSettings);
             this.pnlMenu.Controls.Add(this.btnKlient);
             this.pnlMenu.Controls.Add(this.btnStaff);
             this.pnlMenu.Controls.Add(this.btnStock);
@@ -259,6 +261,21 @@
             this.mainPanel.Size = new System.Drawing.Size(675, 596);
             this.mainPanel.TabIndex = 20;
             // 
+            // btnGeneralSettings
+            // 
+            this.btnGeneralSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnGeneralSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGeneralSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeneralSettings.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
+            this.btnGeneralSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.btnGeneralSettings.Location = new System.Drawing.Point(-3, 453);
+            this.btnGeneralSettings.Name = "btnGeneralSettings";
+            this.btnGeneralSettings.Size = new System.Drawing.Size(224, 65);
+            this.btnGeneralSettings.TabIndex = 7;
+            this.btnGeneralSettings.Text = "SETTINGS";
+            this.btnGeneralSettings.UseVisualStyleBackColor = false;
+            this.btnGeneralSettings.Click += new System.EventHandler(this.btnGeneralSettings_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,5 +321,6 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGeneralSettings;
     }
 }

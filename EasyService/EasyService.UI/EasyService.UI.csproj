@@ -51,6 +51,12 @@
     <Reference Include="TelerikCommon, Version=2016.3.1024.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InspectionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InspectionDetail.Designer.cs">
+      <DependentUpon>InspectionDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,12 +179,15 @@
     <Compile Include="UC_ViewVehicle.Designer.cs">
       <DependentUpon>UC_ViewVehicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Slots.cs">
+    <Compile Include="UC_Settings.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Slots.Designer.cs">
-      <DependentUpon>UC_Slots.cs</DependentUpon>
+    <Compile Include="UC_Settings.Designer.cs">
+      <DependentUpon>UC_Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="InspectionDetail.resx">
+      <DependentUpon>InspectionDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,8 +259,8 @@
     <EmbeddedResource Include="UC_ViewVehicle.resx">
       <DependentUpon>UC_ViewVehicle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Slots.resx">
-      <DependentUpon>UC_Slots.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Settings.resx">
+      <DependentUpon>UC_Settings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Client.datasource" />
@@ -259,6 +268,7 @@
     <None Include="Properties\DataSources\ES.EntityLayer.Employees.Mechanic.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Finance.Invoice.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Services.Service.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Services.ServiceType.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Stock.Item.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Vehicle.Vehicle.datasource" />
     <None Include="Properties\Settings.settings">

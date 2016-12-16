@@ -81,5 +81,12 @@ namespace EasyService.UI
             this.Controls.Clear();
             this.Controls.Add(allServices);
         }
+
+        private void btnAddService_Click(object sender, EventArgs e)
+        {
+            UC_ServiceDetail sd = new UC_ServiceDetail();
+            this.Controls.Clear();
+            this.Controls.Add(sd);
+        }
     }
 }

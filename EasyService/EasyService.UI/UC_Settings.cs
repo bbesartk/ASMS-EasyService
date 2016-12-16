@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EasyService.UI
 {
-    public partial class UC_Slots : UserControl
+    public partial class UC_Settings : UserControl
     {
-        public UC_Slots()
+        public UC_Settings()
         {
             InitializeComponent();
         }

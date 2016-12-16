@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ES.EntityLayer.Services
 {
-    class ServiceType
+    public class ServiceName
     {
         public bool IsInMinorService { get; set; }
         public bool IsInMajorService { get; set; }
@@ -15,7 +15,7 @@ namespace ES.EntityLayer.Services
         public string Description { get; set; }
         public bool NeedsReplacement { get; set; }
 
-        public ServiceType(string description, bool isInMinor, bool isInMajor,bool needsReplacement, int itemCategoryId )
+        public ServiceName(string description, bool isInMinor, bool isInMajor,bool needsReplacement, int itemCategoryId )
         {
             Description = description;
             IsInMajorService = isInMajor;
@@ -23,7 +23,7 @@ namespace ES.EntityLayer.Services
             ItemCategoryId = itemCategoryId;
             NeedsReplacement = needsReplacement;
         }
-        public ServiceType(string description, bool isInMinor, bool isInMajor)
+        public ServiceName(string description, bool isInMinor, bool isInMajor)
         {
             Description = description;
             IsInMajorService = isInMajor;
