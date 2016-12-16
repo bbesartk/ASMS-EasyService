@@ -1,7 +1,7 @@
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\bin\Debug\ES.DataAccessLayer.dll
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\bin\Debug\ES.DataAccessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\bin\Debug\ES.EntityLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\bin\Debug\ES.EntityLayer.pdb
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\obj\Debug\ES.DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\obj\Debug\ES.DataAccessLayer.dll
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\obj\Debug\ES.DataAccessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\bin\Debug\ES.EntityLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.DataAccessLayer\bin\Debug\ES.EntityLayer.pdb

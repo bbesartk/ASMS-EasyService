@@ -96,9 +96,9 @@ namespace ES.EntityLayer.Services
             decimal total = 0;
             foreach (Inspection item in ListInspection)
             {
-                if (item.ServicedInspection != null)
+                if (item.InspectionDetail != null)
                 {
-                    total += item.ServicedInspection.Total;
+                    
                 }
             }
             return total;
@@ -108,7 +108,7 @@ namespace ES.EntityLayer.Services
         {
             foreach (Inspection item in ListInspection)
             {
-                if (item.ServicedInspection != null)
+                if (item.InspectionDetail != null)
                     return true;
             }
             return false;

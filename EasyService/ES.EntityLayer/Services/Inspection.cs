@@ -14,7 +14,7 @@ namespace ES.EntityLayer.Services
         #endregion
 
         #region Properties
-        public InspectionDetail ServicedInspection { get; set; } //if particular inspection is also serviced; this class should be not null
+        public InspectionDetail InspectionDetail { get; set; } //if particular inspection is also serviced; this class should be not null
 
         public string Name
         {
@@ -33,14 +33,14 @@ namespace ES.EntityLayer.Services
         public Inspection(string name)
         {
             Name = name;
-            ServicedInspection = null;
+            InspectionDetail = null;
         }
 
 
         public Inspection(string name, InspectionDetail servicedInspection)
         {
             Name = name;
-            ServicedInspection = servicedInspection;
+            InspectionDetail = servicedInspection;
         }
         #endregion
 

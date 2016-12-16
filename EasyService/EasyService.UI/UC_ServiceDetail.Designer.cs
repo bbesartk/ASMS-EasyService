@@ -69,7 +69,7 @@
             this.rbSmallService.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.rbSmallService.AutoSize = true;
             this.rbSmallService.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSmallService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.rbSmallService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.rbSmallService.Location = new System.Drawing.Point(352, 3);
             this.rbSmallService.Name = "rbSmallService";
             this.rbSmallService.Size = new System.Drawing.Size(217, 33);
@@ -82,7 +82,7 @@
             this.rbMajorService.AutoSize = true;
             this.rbMajorService.Checked = true;
             this.rbMajorService.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMajorService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.rbMajorService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.rbMajorService.Location = new System.Drawing.Point(9, 3);
             this.rbMajorService.Name = "rbMajorService";
             this.rbMajorService.Size = new System.Drawing.Size(223, 33);
@@ -119,10 +119,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.panel1.Controls.Add(this.rbSmallService);
             this.panel1.Controls.Add(this.rbMajorService);
-            this.panel1.Location = new System.Drawing.Point(51, 0);
+            this.panel1.Location = new System.Drawing.Point(51, 15);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(572, 46);
             this.panel1.TabIndex = 35;
@@ -131,7 +131,7 @@
             // 
             this.txbLicensePlate.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
             this.txbLicensePlate.ForeColor = System.Drawing.Color.Silver;
-            this.txbLicensePlate.Location = new System.Drawing.Point(55, 84);
+            this.txbLicensePlate.Location = new System.Drawing.Point(55, 115);
             this.txbLicensePlate.Name = "txbLicensePlate";
             this.txbLicensePlate.Size = new System.Drawing.Size(228, 33);
             this.txbLicensePlate.TabIndex = 36;
@@ -142,7 +142,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.label1.Location = new System.Drawing.Point(51, 54);
+            this.label1.Location = new System.Drawing.Point(51, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 23);
             this.label1.TabIndex = 34;
@@ -150,11 +150,11 @@
             // 
             // cmbEmployee
             // 
-            this.cmbEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.cmbEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             this.cmbEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbEmployee.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.cmbEmployee.Location = new System.Drawing.Point(445, 84);
+            this.cmbEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.cmbEmployee.Location = new System.Drawing.Point(445, 115);
             this.cmbEmployee.Name = "cmbEmployee";
             this.cmbEmployee.Size = new System.Drawing.Size(178, 33);
             this.cmbEmployee.TabIndex = 37;
@@ -164,7 +164,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.label2.Location = new System.Drawing.Point(441, 52);
+            this.label2.Location = new System.Drawing.Point(441, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 23);
             this.label2.TabIndex = 34;
