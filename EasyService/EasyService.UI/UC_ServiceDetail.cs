@@ -36,7 +36,7 @@ namespace EasyService.UI
         {
             CheckedListBox chb = (CheckedListBox)sender;
 
-            var serviceName = dalService.GetServiceName(chb.SelectedItem.ToString());
+            var serviceName = dalServiceName.GetServiceName(chb.SelectedItem.ToString());
             if (serviceName != null)
             {
                 InspectionDetail ins = new InspectionDetail(serviceName);

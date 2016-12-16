@@ -10,7 +10,7 @@ namespace ES.BusinessLayer
 {
     class blSlots
     {
-        public static void InsertSlots(Slot slot)
+        public static void InsertSlot(Slot slot)
         {
             if (slot != null)
                 dalSlot.Insert(slot);
@@ -19,19 +19,24 @@ namespace ES.BusinessLayer
 
         public static void DeleteSlot(int id)
         {
-            if (id != 0)
+            if (id >= 0)
                 dalSlot.Remove(id);
             else throw new Exception("Ivalide Id!");
         }
 
-        public static Slot GetAllSlots(int id)
+        public static Slot GetSlot(int id)
         {
-            return dalSlot.GetSlot(id);
+            return dalSlot.GetSingleSlot(id);
         }
-       
-        public static int GetSingelSlot(string name)
+
+        public static int GetSlodId(string name)
         {
             return dalSlot.GetSlotId(name);
+        }
+
+        public static List<Slot> GetAllSlots()
+        {
+            return dalSlot.GetAllSlots();
         }
     }
 }

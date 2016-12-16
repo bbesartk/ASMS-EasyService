@@ -7,7 +7,7 @@ using ES.EntityLayer.Services;
 
 namespace ES.DataAccessLayer
 {
-    public class dalService
+    public class dalServiceName
     {
         private static List<ServiceName> listOfAllServiceNames = new List<ServiceName>();
 
@@ -38,6 +38,8 @@ namespace ES.DataAccessLayer
             }
             return null;
         }
+
+        
 
         
     }

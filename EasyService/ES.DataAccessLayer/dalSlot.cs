@@ -11,7 +11,7 @@ namespace ES.DataAccessLayer
     {
         static public List<Slot> listOfSlot = new List<Slot>();
 
-        public static List<Slot> AllSlots()
+        public static List<Slot> SlotList()
         {
             List<Slot> slot = new List<Slot>();
             slot.Add(new Slot(1, "Slloti1"));
@@ -21,19 +21,23 @@ namespace ES.DataAccessLayer
 
             return slot;
         }
+
+
         public static void Insert(Slot slot)
         {
             listOfSlot.Add(slot);
         }
+
+
         public static void Remove(int id)
         {
-            Slot slots = GetSlot(id);
+            Slot slots = GetSingleSlot(id);
             listOfSlot.Remove(slots);
         }
 
-        public static Slot GetSlot(int id)
+        public static Slot GetSingleSlot(int id)
         {
-            foreach (var item in AllSlots())
+            foreach (var item in SlotList())
             {
                 if (item.RowNumber == id)
                     return item;
@@ -44,13 +48,18 @@ namespace ES.DataAccessLayer
 
         public static int GetSlotId(string name)
         {
-            foreach (var item in AllSlots())
+            foreach (var item in SlotList())
             {
                 if (name == item.Description)
                     return item.RowNumber;
             }
 
             return -1;
+        }
+
+        public static List<Slot> GetAllSlots()
+        {
+            return listOfSlot;
         }
 
     }

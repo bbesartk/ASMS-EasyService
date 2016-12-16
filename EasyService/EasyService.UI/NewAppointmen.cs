@@ -28,7 +28,7 @@ namespace EasyService.UI
         private void NewAppointmen_Load(object sender, EventArgs e)
         {
             mcDate.MinDate = DateTime.Now.Date;
-            cmbSlot.DataSource = dalSlot.AllSlots();
+            cmbSlot.DataSource = dalSlot.SlotList();
             typeOfService = rbSmall.Checked ? rbSmall.Text : rbMajor.Text;
 
 
@@ -76,7 +76,7 @@ namespace EasyService.UI
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
             var dtTime = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0,0,0);
-            cmbSlot.DataSource = blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.AllSlots());
+            cmbSlot.DataSource = blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.SlotList());
         }
 
         private void chb_Checked(object sender, EventArgs e)
