@@ -18,6 +18,7 @@ namespace EasyService.UI
     public partial class UC_ServiceDetail : UserControl
     {
         List<ServiceName> lista = new List<ServiceName>();
+
         public UC_ServiceDetail()
         {
             InitializeComponent();
@@ -36,9 +37,12 @@ namespace EasyService.UI
             CheckedListBox chb = (CheckedListBox)sender;
 
             var serviceName = dalService.GetServiceName(chb.SelectedItem.ToString());
-
-            InspectionDetail ins = new InspectionDetail(serviceName);
-            ins.ShowDialog();
+            if (serviceName != null)
+            {
+                InspectionDetail ins = new InspectionDetail(serviceName);
+                ins.ShowDialog();
+            }
+            else MessageBox.Show("This item is not well validated!");
         }
 
         private void UC_ServiceDetail_Load(object sender, EventArgs e)
