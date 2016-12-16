@@ -7,23 +7,36 @@ using ES.EntityLayer.Services;
 
 namespace ES.DataAccessLayer
 {
-    class dalService
+    public class dalService
     {
-        private static List<ServiceName> listOfAllServices = new List<ServiceName>();
+        private static List<ServiceName> listOfAllServiceNames = new List<ServiceName>();
 
         public static List<ServiceName> GetAll()
         {
-            return listOfAllServices;
+            return listOfAllServiceNames;
         }
 
         public static void Insert(ServiceName serviceName)
         {
-            listOfAllServices.Add(serviceName);
+            listOfAllServiceNames.Add(serviceName);
         }
     
         public static void Remove(ServiceName serviceName)
         {
-            listOfAllServices.Remove(serviceName);
+            listOfAllServiceNames.Remove(serviceName);
+        }
+
+        public static ServiceName GetServiceName(string serviceName)
+        {
+            foreach (var item in listOfAllServiceNames)
+            {
+                if(serviceName==item.Description)
+                {
+                    return item;
+                }
+
+            }
+            return null;
         }
 
         
