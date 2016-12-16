@@ -143,6 +143,12 @@
     <Compile Include="UC_Reports.Designer.cs">
       <DependentUpon>UC_Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ServiceDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ServiceDetail.Designer.cs">
+      <DependentUpon>UC_ServiceDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Staff.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Reports.resx">
       <DependentUpon>UC_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ServiceDetail.resx">
+      <DependentUpon>UC_ServiceDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Staff.resx">
       <DependentUpon>UC_Staff.cs</DependentUpon>

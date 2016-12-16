@@ -187,6 +187,7 @@
             this.txbId.TabStop = false;
             this.txbId.Text = "write...";
             this.txbId.Click += new System.EventHandler(this.txb_MouseClick);
+            this.txbId.TextChanged += new System.EventHandler(this.txbId_TextChanged);
             // 
             // btnEdit
             // 

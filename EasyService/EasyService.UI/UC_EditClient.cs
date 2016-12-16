@@ -178,21 +178,13 @@ namespace EasyService.UI
                 {
                     if(txbId.Text==client.Id)
                     {
-                        FillText(client);
+                        ReadClient(client,false);
                     }
                 }
             }
 
         }
 
-        private void FillText(Client client)
-        {
-            txbName.Text = client.Name;
-            txbLastName.Text = client.Lastname;
-            txbEmail.Text = client.ContactInfo.Email;
-            txbAddress.Text = client.ContactInfo.Address;
-            txbPhoneNumber.Text = client.ContactInfo.PhoneNumber;
-            txbCity.Text = client.ContactInfo.City;
-        }
+        
     }
 }

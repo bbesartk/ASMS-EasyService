@@ -164,6 +164,16 @@ namespace EasyService.UI
                 txt.ForeColor = Color.FromArgb(44, 55, 59);
             }
         }
-
+        
+        private void txbId_TextChanged(object sender, EventArgs e)
+        {
+            if(txbId.Text.Length==9)
+            {
+                if(blCompany.GetCompany(txbId.Text)!=null)
+                {
+                    ReadCompany(blCompany.GetCompany(txbId.Text), false);
+                }
+            }
+        }
     }
 }
