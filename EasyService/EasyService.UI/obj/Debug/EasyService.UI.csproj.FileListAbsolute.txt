@@ -35,3 +35,6 @@ C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debu
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe.licenses
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.pdb
+C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe.config
+C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe
+C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\EasyService.UI\obj\Debug\EasyService.UI.pdb
