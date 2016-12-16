@@ -61,39 +61,44 @@ namespace ES.BusinessLayer
         }
 
 
-        public static List<Slot> AvailableSlots(DateTime timeOfAppointment, string serviceType, int slotRowNumber,int endTime, List<Slot> allSlots)
+        public static List<Slot> AvailableSlots(DateTime timeOfAppointment, string serviceType, int slotRowNumber, int endTime, List<Slot> allSlots)
         {
-            List<Slot> freeSlots = new List<Slot>();
-            foreach (var item in GetAllAppointment())
+
+            bool[] array = new bool[allSlots.Count];
+            List<Slot> availableSlots = new List<Slot>();
+
+            if (HasValidTime(serviceType, timeOfAppointment.Hour, endTime))
             {
-                if(timeOfAppointment.Date==item.TimeOfMeeting.Date)
+                foreach (var item in GetAllAppointment())
                 {
-                    if(HasValidTime(serviceType,timeOfAppointment.Hour,endTime))
+                    if (DateTime.Equals(item.TimeOfMeeting,timeOfAppointment))
                     {
-                        for (int i = 0; i < allSlots.Count; i++)
-                        {
-                            if(slotRowNumber != allSlots[i].RowNumber)
-                            {
-                                freeSlots.Add(allSlots[i]);
-                            }
-                        }
+                        array[item.SlotRowNumber - 1] = true;
+
                     }
                 }
             }
 
-            return freeSlots;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if(array[i]==false)
+                {
+                    availableSlots.Add(allSlots[i]);
+                }
+            }
+            return availableSlots;
         }
 
-        static DateTime d1 = new DateTime(2016, 12, 15, 15, 0, 0);
+        static DateTime d1 = new DateTime(2016, 12, 16, 11, 0, 0,0,0);
 
         public static void ListaApointment()
         {
-            
+
 
             dalAppointments.Insert(new Appointment("dsadas", d1, 1, ServiceType.SmallService, null));
             dalAppointments.Insert(new Appointment("dsadas", d1, 2, ServiceType.SmallService, null));
         }
-        
+
         #endregion
 
 

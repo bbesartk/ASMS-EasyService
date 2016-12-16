@@ -29,8 +29,8 @@ namespace EasyService.UI
         {
             mcDate.MinDate = DateTime.Now.Date;
             cmbSlot.DataSource = dalSlot.AllSlots();
+            typeOfService = rbSmall.Checked ? rbSmall.Text : rbMajor.Text;
 
-            
 
         }
 
@@ -75,19 +75,23 @@ namespace EasyService.UI
 
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
-            var dtTime = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0);
-            blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.AllSlots());
+            var dtTime = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0,0,0);
+            cmbSlot.DataSource = blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.AllSlots());
         }
 
         private void chb_Checked(object sender, EventArgs e)
         {
-            RadioButton rb = (RadioButton)sender;
-            typeOfService = rb.Text;
+            typeOfService = rbSmall.Checked ? rbSmall.Text : rbMajor.Text;
         }
 
         private void cmbSlot_SelectedValueChanged(object sender, EventArgs e)
         {
             slotNumber = dalSlot.GetSlotId(cmbSlot.Text);
+        }
+
+        private void mcDate_DateSelected(object sender, DateRangeEventArgs e)
+        {
+           //string data = mcDate.
         }
     }
 }
