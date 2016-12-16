@@ -9,7 +9,7 @@ namespace ES.DataAccessLayer
 {
     public class dalSlot
     {
-        public List<Slot> listOfSlot = new List<Slot>();
+        static public List<Slot> listOfSlot = new List<Slot>();
 
         public static List<Slot> AllSlots()
         {
@@ -21,7 +21,15 @@ namespace ES.DataAccessLayer
 
             return slot;
         }
-
+        public static void Insert(Slot slot)
+        {
+            listOfSlot.Add(slot);
+        }
+        public static void Remove(int id)
+        {
+            Slot slots = GetSlot(id);
+            listOfSlot.Remove(slots);
+        }
 
         public static Slot GetSlot(int id)
         {
