@@ -16,7 +16,7 @@ namespace EasyService.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NewAppointmen(null) /* NewAppointmen(new ES.EntityLayer.Vehicle.Vehicle("Helooo", 2010, "Helooo", "Helooo", 4000))*/);
+            Application.Run(new MainPage /* NewAppointmen(new ES.EntityLayer.Vehicle.Vehicle("Helooo", 2010, "Helooo", "Helooo", 4000))*/);
         }
     }
 }

@@ -48,6 +48,7 @@
     <Compile Include="blInvoice.cs" />
     <Compile Include="blReports.cs" />
     <Compile Include="blServices.cs" />
+    <Compile Include="blSlots.cs" />
     <Compile Include="blStock.cs" />
     <Compile Include="blVehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -167,6 +167,12 @@
     <Compile Include="UC_ViewVehicle.Designer.cs">
       <DependentUpon>UC_ViewVehicle.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Slots.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Slots.Designer.cs">
+      <DependentUpon>UC_Slots.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ViewVehicle.resx">
       <DependentUpon>UC_ViewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Slots.resx">
+      <DependentUpon>UC_Slots.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Client.datasource" />
