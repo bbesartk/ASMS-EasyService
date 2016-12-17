@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
@@ -53,7 +54,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel6.Controls.Add(this.pictureBox1);
             this.panel6.Controls.Add(this.txbSubject);
             this.panel6.Location = new System.Drawing.Point(0, -1);
@@ -73,7 +74,7 @@
             // 
             // txbSubject
             // 
-            this.txbSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.txbSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbSubject.Font = new System.Drawing.Font("Metropolis Thin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbSubject.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -105,9 +106,9 @@
             "14:00",
             "15:00",
             "16:00"});
-            this.cmbHour.Location = new System.Drawing.Point(270, 199);
+            this.cmbHour.Location = new System.Drawing.Point(312, 183);
             this.cmbHour.Name = "cmbHour";
-            this.cmbHour.Size = new System.Drawing.Size(88, 27);
+            this.cmbHour.Size = new System.Drawing.Size(83, 27);
             this.cmbHour.TabIndex = 17;
             this.cmbHour.SelectedValueChanged += new System.EventHandler(this.cmbHour_SelectedValueChanged);
             // 
@@ -158,21 +159,20 @@
             this.mcDate.TabIndex = 17;
             this.mcDate.TabStop = false;
             this.mcDate.TitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.mcDate.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mcDate_DateSelected);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.cmbSlot);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(6, 221);
+            this.panel2.Location = new System.Drawing.Point(0, 217);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(235, 51);
+            this.panel2.Size = new System.Drawing.Size(399, 51);
             this.panel2.TabIndex = 18;
             // 
             // cmbSlot
             // 
-            this.cmbSlot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.cmbSlot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cmbSlot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSlot.Font = new System.Drawing.Font("Glacial Indifference", 12F);
             this.cmbSlot.ForeColor = System.Drawing.Color.White;
@@ -182,7 +182,7 @@
             "SLOT 2",
             "SLOT 3",
             "SLOT 4"});
-            this.cmbSlot.Location = new System.Drawing.Point(156, 12);
+            this.cmbSlot.Location = new System.Drawing.Point(163, 12);
             this.cmbSlot.Name = "cmbSlot";
             this.cmbSlot.Size = new System.Drawing.Size(73, 27);
             this.cmbSlot.TabIndex = 17;
@@ -194,7 +194,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Metropolis Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 17);
+            this.label1.Location = new System.Drawing.Point(10, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 16);
             this.label1.TabIndex = 14;
@@ -231,12 +231,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Metropolis Thin", 18F);
-            this.button1.Location = new System.Drawing.Point(0, 278);
+            this.button1.Location = new System.Drawing.Point(0, 266);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(398, 56);
+            this.button1.Size = new System.Drawing.Size(398, 68);
             this.button1.TabIndex = 23;
             this.button1.Text = "ADD THIS APPOINTMEN";
             this.button1.UseVisualStyleBackColor = false;
@@ -257,19 +257,32 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Metropolis", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(244, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 19);
             this.label2.TabIndex = 14;
             this.label2.Text = "SERVICE TYPE:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Metropolis", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(245, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 16);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "HOUR:";
+            // 
             // NewAppointmen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(398, 330);
+            this.ClientSize = new System.Drawing.Size(397, 330);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbHour);
@@ -280,6 +293,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.Color.White;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(413, 369);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(413, 369);
             this.Name = "NewAppointmen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Appointment";
@@ -314,5 +331,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }

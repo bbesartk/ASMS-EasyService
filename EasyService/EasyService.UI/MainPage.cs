@@ -14,12 +14,12 @@ namespace EasyService.UI
 {
     public partial class MainPage : Form
     {
-        public static int StartTime { get; set; }
-        public static int EndTime { get; set; }
-        public static string Username { get; set; } 
-        public static string Password { get; set; }
-        
-        public static int ActiveSlots { get; set; }
+        public static int StartTime { get; set; } = 7;
+        public static int EndTime { get; set; } = 16;
+        public static string Username { get; set; } = "easyservice";
+        public static string Password { get; set; } = "password";
+
+        public static int ActiveSlots { get; set; } = 4;
 
         public MainPage()
         {

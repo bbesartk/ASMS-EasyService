@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.DataAccessLayer;
 using ES.BusinessLayer;
+using ES.EntityLayer.General;
 
 namespace EasyService.UI
 {
@@ -28,10 +29,19 @@ namespace EasyService.UI
         private void NewAppointmen_Load(object sender, EventArgs e)
         {
             mcDate.MinDate = DateTime.Now.Date;
-            cmbSlot.DataSource = dalSlot.SlotList();
             typeOfService = rbSmall.Checked ? rbSmall.Text : rbMajor.Text;
 
+            for (int i = 0; i < MainPage.ActiveSlots; i++)
+            {
+                dalSlot.Insert(new Slot(i + 1, "Slot" + (i+1)));
+            }
+            cmbSlot.DataSource = dalSlot.GetAllSlots();
 
+
+            for (int i = MainPage.StartTime; i <= MainPage.EndTime; i++)
+            {
+                cmbHour.Items.Add(i + ":00");
+            }
         }
 
 
@@ -76,7 +86,7 @@ namespace EasyService.UI
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
             var dtTime = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0,0,0);
-            cmbSlot.DataSource = blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.SlotList());
+            cmbSlot.DataSource = blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.GetAllSlots());
         }
 
         private void chb_Checked(object sender, EventArgs e)
@@ -87,11 +97,6 @@ namespace EasyService.UI
         private void cmbSlot_SelectedValueChanged(object sender, EventArgs e)
         {
             slotNumber = dalSlot.GetSlotId(cmbSlot.Text);
-        }
-
-        private void mcDate_DateSelected(object sender, DateRangeEventArgs e)
-        {
-           //string data = mcDate.
         }
     }
 }
