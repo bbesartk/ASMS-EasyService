@@ -1,6 +1,6 @@
 ﻿namespace EasyService.UI
 {
-    partial class InspectionDetail
+    partial class InspectionDetailForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txbQuantity = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnOwner = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,19 +143,20 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "x";
             // 
-            // btnOwner
+            // btnSubmit
             // 
-            this.btnOwner.BackColor = System.Drawing.Color.White;
-            this.btnOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOwner.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOwner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.btnOwner.Location = new System.Drawing.Point(188, 269);
-            this.btnOwner.Name = "btnOwner";
-            this.btnOwner.Size = new System.Drawing.Size(168, 58);
-            this.btnOwner.TabIndex = 40;
-            this.btnOwner.Text = "SUBMIT";
-            this.btnOwner.UseVisualStyleBackColor = false;
+            this.btnSubmit.BackColor = System.Drawing.Color.White;
+            this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.btnSubmit.Location = new System.Drawing.Point(188, 269);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(168, 58);
+            this.btnSubmit.TabIndex = 40;
+            this.btnSubmit.Text = "SUBMIT";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // InspectionDetail
             // 
@@ -163,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(388, 368);
-            this.Controls.Add(this.btnOwner);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txbQuantity);
             this.Controls.Add(this.txbPrice);
             this.Controls.Add(this.label3);
@@ -175,6 +176,7 @@
             this.MaximumSize = new System.Drawing.Size(404, 407);
             this.MinimumSize = new System.Drawing.Size(404, 407);
             this.Name = "InspectionDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InspectionDetail";
             this.Load += new System.EventHandler(this.InspectionDetail_Load);
             this.panel1.ResumeLayout(false);
@@ -195,6 +197,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbQuantity;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnOwner;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }

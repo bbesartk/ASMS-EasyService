@@ -84,7 +84,7 @@ namespace EasyService.UI
 
         private void btnAddService_Click(object sender, EventArgs e)
         {
-            UC_ServiceDetail sd = new UC_ServiceDetail();
+            UC_ServiceDetail sd = new UC_ServiceDetail(_vehicle);
             this.Controls.Clear();
             this.Controls.Add(sd);
         }

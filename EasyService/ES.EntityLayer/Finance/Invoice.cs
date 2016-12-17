@@ -14,12 +14,12 @@ namespace ES.EntityLayer.Finance
     public class Invoice
     {
         #region StaticMembers
-        public readonly int Vat;
-        private static int _id;
+        public readonly decimal Vat;
         #endregion
 
         #region Properties
         public int Id { get; private set; }
+
         public DateTime DateOfBill
         {
             get { return DateTime.Now; }
@@ -31,48 +31,38 @@ namespace ES.EntityLayer.Finance
 
         public Employee ServicedBy { get; } //Employee that did this particular service
 
-        public Employee IssuedBy { get; } //The employee that issued this bill
-
         public Client Client { get; }
 
         public Company Company { get; }
 
         public decimal Total
         {
-            get
-            {
-                return CalculateTotal();
-            }
+            get;set;
         }
         #endregion
 
         #region Constructors
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, Employee issuedBy, int vat)
+        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, decimal vat)
         {
             ServicedVehicle = servicedVehicle;
             Service = service;
             Client = client;
             ServicedBy = servicedBy;
-            IssuedBy = issuedBy;
             Vat = vat;
         }
 
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, Employee issuedBy, int vat)
+        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, decimal vat)
         {
             ServicedVehicle = servicedVehicle;
             Service = service;
             Company = company; ;
             ServicedBy = servicedBy;
-            IssuedBy = issuedBy;
             Vat = vat;
         }
         #endregion
 
         #region Methods
-        private decimal CalculateTotal()
-        {
-            return Service.Total + (Service.Total * (Vat / 100));
-        }
+       
         #endregion
     }
 }

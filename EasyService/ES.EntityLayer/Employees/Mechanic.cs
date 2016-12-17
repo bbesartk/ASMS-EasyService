@@ -25,11 +25,18 @@ namespace ES.EntityLayer.Employees
         }
         #endregion
 
+
+
         #region Methods
        public override string GenerateId()
         {
             int id = ++_id;
             return id.ToString() + "M";
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
         #endregion
     }

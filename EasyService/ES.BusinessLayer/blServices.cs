@@ -23,7 +23,10 @@ namespace ES.BusinessLayer
 
         #region Service Types
 
-
+        public static void InsertNewServiceType(ServiceName serviceName)
+        {
+            dalServiceName.Insert(serviceName);
+        }
 
         #endregion
 

@@ -12,20 +12,47 @@ using ES.EntityLayer.Services;
 using ES.BusinessLayer;
 using ES.DataAccessLayer;
 using ES.EntityLayer.Stock;
+using ES.EntityLayer.Finance;
+using ES.EntityLayer.Vehicle;
+using ES.EntityLayer.Employees;
+using ES.EntityLayer.Clients;
 
 namespace EasyService.UI
 {
     public partial class UC_ServiceDetail : UserControl
     {
-        List<ServiceName> lista = new List<ServiceName>();
+        List<ServiceName> lista = dalServiceName.GetAll();
 
-        public UC_ServiceDetail()
+        List<Inspection> allInspections = new List<Inspection>();
+        Mechanic servicedBy { get; set; }
+        decimal WorkPay { get; set;}
+        decimal VAT { get; set; }
+        double CurrentKm { get; set; }
+
+
+        private readonly Vehicle _vehicle;
+        private readonly Client _client;
+        private readonly Company _company;
+        
+
+
+        public UC_ServiceDetail(Vehicle vehicle)
         {
             InitializeComponent();
+            _vehicle = vehicle;
 
-            
+            if (_vehicle.Client != null)
+            {
+                _client = _vehicle.Client;
+            }
+            else if (_vehicle.Company != null)
+            {
+                _company = _vehicle.Company;
+            }
 
-            lista.Add(new ServiceName("Fuel", true, true, true,Category.CoolAndHeat ));
+            lblTotalPrice.Text = " " + FinalTotal((decimal)CalculateTotal(), WorkPay, VAT) + " €";
+
+            lista.Add(new ServiceName("Fuel", true, true, true, Category.CoolAndHeat));
             foreach (var item in lista)
             {
                 listBoxServices.Items.Add(item);
@@ -35,37 +62,166 @@ namespace EasyService.UI
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckedListBox chb = (CheckedListBox)sender;
+            //merr servisin e klikuar
+            var serviceType = dalServiceName.GetServiceName(chb.SelectedItem.ToString());
+            //nese servisi nuk eshte null dhe lloji i servisit kerkon qe te behet riparim replacement/ndrrim hapet forma
 
-            var serviceName = dalServiceName.GetServiceName(chb.SelectedItem.ToString());
-            if (serviceName != null)
+            if (serviceType != null && serviceType.NeedsReplacement == true)
             {
-                InspectionDetail ins = new InspectionDetail(serviceName);
-                ins.ShowDialog();
+                //using na mundeson qe ta hapim formen dhe permes dialog reusltit ta marrim te dhenen qe e kemi ruaj aty
+                using (InspectionDetailForm ins = new InspectionDetailForm(serviceType))
+                {
+                    //nese ka nevoj per ndrrim hapet forma i mbushim te dhanat edhe i ruajm ne listen siper 
+                    ins.ShowDialog();
+                    if (ins.DialogResult == DialogResult.OK)
+                    {
+                        allInspections.Add(new Inspection(serviceType.Description, new InspectionDetail(ins.InspectionDetail.Item, ins.InspectionDetail.Quantity)));
+                    }
+                }
+
             }
+            //nese jo atehere ruhet vetem emri i inspektimit dhe jo edhe ndrrimi (se nuk ka pas nderrim dmth)
+            else if (serviceType != null && serviceType.NeedsReplacement == false)
+            {
+                allInspections.Add(new Inspection(serviceType.Description));
+            }
+            //nese ka diqka gabim qet njoftim
             else MessageBox.Show("This item is not well validated!");
+            lblTotalPrice.Text = " " + FinalTotal((decimal)CalculateTotal(), WorkPay, VAT) + " €";
+
         }
 
         private void UC_ServiceDetail_Load(object sender, EventArgs e)
         {
-            
+            lblDateOfService.Text += DateTime.Now.Date.ToShortDateString();
+            cmbEmployee.DataSource = dalEmployees.GetAll();
         }
 
         private void rbMajorService_CheckedChanged(object sender, EventArgs e)
         {
-           
-            if(rbMajorService.Checked)
+
+            if (rbMajorService.Checked)
             {
                 listBoxServices.Items.Clear();
                 foreach (var item in lista)
                 {
                     listBoxServices.Items.Add(item);
-                    
+
                 }
             }
             else
             {
                 listBoxServices.Items.Clear();
             }
+        }
+
+        private double CalculateTotal()
+        {
+            //kjo na ben update totalin vazhdimisht
+            double total = 0;
+
+            foreach (var typeOfInspection in allInspections)
+            {
+                if (typeOfInspection.InspectionDetail != null)
+                {
+                    total +=  (typeOfInspection.InspectionDetail.Quantity * typeOfInspection.InspectionDetail.Item.Price);
+                }
+            }
+            return total;
+        }
+
+        private void txbCurrentKm_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txbCurrentKm.Text == "write...")
+            {
+                txbCurrentKm.Clear();
+                txbCurrentKm.ForeColor = Color.FromArgb(44, 55, 59);
+            }
+        }
+
+        private void btnBillAndSave_Click(object sender, EventArgs e)
+        {
+            
+
+
+
+            if (IsValidKM(CurrentKm) && WorkPay > 0)
+            {
+                Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy, FinalTotal((decimal)CalculateTotal(), WorkPay, VAT));
+                _vehicle.ServiceList.Add(sv);
+                if (_client != null)
+                {
+                    blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _client,servicedBy,VAT));
+                }
+                else if(_company!=null)
+                {
+                    blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT));
+                }
+            }
+
+            
+        }
+
+        private decimal FinalTotal(decimal total,decimal workpay,decimal vat)
+        {
+            decimal firstTotal = total + workpay;
+            return firstTotal + (vat / 100 * firstTotal);
+        }
+
+        private bool IsValidKM(double km)
+        {
+            int numberOfServices = _vehicle.ServiceList.Count;
+            if (_vehicle.ServiceList.Count >= 1)
+            {
+                if (_vehicle.ServiceList[numberOfServices - 1].ServicedKm > km)
+                    return false;
+                else return true;
+            }
+            throw new Exception("It has 0 services!");
+        }
+
+        private void cmbEmployee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var mechanic = blEmployees.GetAllMechanics()[cmbEmployee.SelectedIndex];
+            servicedBy = mechanic;
+        }
+
+        private void txbWork_TextChanged(object sender, EventArgs e)
+        {
+            decimal workpay = 0;
+            decimal.TryParse(txbWork.Text, out workpay);
+            if (workpay > 0)
+            {
+                WorkPay = workpay;
+            }
+            decimal total = FinalTotal((decimal)CalculateTotal(), WorkPay, VAT);
+            lblTotalPrice.Text = " " + total + " €";
+        }
+
+        private void txbVAT_TextChanged(object sender, EventArgs e)
+        {
+            decimal vat = 0;
+            decimal.TryParse(txbVAT.Text, out vat);
+            if (vat > 0)
+            {
+                VAT = vat;
+            }
+            decimal total = FinalTotal((decimal)CalculateTotal(), WorkPay, VAT);
+            lblTotalPrice.Text = " " + total + " €";
+        }
+
+        private void txbCurrentKm_TextChanged(object sender, EventArgs e)
+        {
+
+            double currentKm = 0;
+
+            double.TryParse(txbCurrentKm.Text, out currentKm);
+            if (currentKm > 0)
+            {
+                CurrentKm = currentKm;
+            }
+
+            
         }
     }
 }

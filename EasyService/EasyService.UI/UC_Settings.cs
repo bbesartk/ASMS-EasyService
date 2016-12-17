@@ -16,5 +16,13 @@ namespace EasyService.UI
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            UC_RegisterServiceName extraService = new UC_RegisterServiceName();
+            this.Controls.Add(extraService);
+            
+        }
     }
 }

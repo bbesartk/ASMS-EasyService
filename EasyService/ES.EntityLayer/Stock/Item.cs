@@ -91,6 +91,11 @@ namespace ES.EntityLayer.Stock
             Quantiy = quantity;
             Category = category;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
         #endregion
     }
 }

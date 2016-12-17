@@ -32,14 +32,20 @@
             this.rbSmallService = new System.Windows.Forms.RadioButton();
             this.rbMajorService = new System.Windows.Forms.RadioButton();
             this.btnBillAndSave = new System.Windows.Forms.Button();
-            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txbLicensePlate = new System.Windows.Forms.TextBox();
+            this.txbCurrentKm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbEmployee = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.technicalWork = new System.Windows.Forms.Label();
-            this.dateOfService = new System.Windows.Forms.Label();
+            this.lblDateOfService = new System.Windows.Forms.Label();
+            this.txbWork = new System.Windows.Forms.TextBox();
+            this.txbVAT = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +64,7 @@
             this.listBoxServices.Location = new System.Drawing.Point(51, 166);
             this.listBoxServices.Name = "listBoxServices";
             this.listBoxServices.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listBoxServices.Size = new System.Drawing.Size(575, 330);
+            this.listBoxServices.Size = new System.Drawing.Size(575, 310);
             this.listBoxServices.TabIndex = 0;
             this.listBoxServices.ThreeDCheckBoxes = true;
             this.listBoxServices.UseCompatibleTextRendering = true;
@@ -99,23 +105,24 @@
             this.btnBillAndSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBillAndSave.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBillAndSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.btnBillAndSave.Location = new System.Drawing.Point(378, 514);
+            this.btnBillAndSave.Location = new System.Drawing.Point(378, 502);
             this.btnBillAndSave.Name = "btnBillAndSave";
             this.btnBillAndSave.Size = new System.Drawing.Size(248, 58);
             this.btnBillAndSave.TabIndex = 32;
             this.btnBillAndSave.Text = "BILL AND SAVE SERVICE";
             this.btnBillAndSave.UseVisualStyleBackColor = false;
+            this.btnBillAndSave.Click += new System.EventHandler(this.btnBillAndSave_Click);
             // 
-            // lblTotalPrice
+            // lbl
             // 
-            this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.lblTotalPrice.Location = new System.Drawing.Point(50, 514);
-            this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(102, 19);
-            this.lblTotalPrice.TabIndex = 34;
-            this.lblTotalPrice.Text = "TOTAL PRICE:";
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.lbl.Location = new System.Drawing.Point(47, 502);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(102, 19);
+            this.lbl.TabIndex = 34;
+            this.lbl.Text = "TOTAL PRICE:";
             // 
             // panel1
             // 
@@ -127,15 +134,17 @@
             this.panel1.Size = new System.Drawing.Size(572, 46);
             this.panel1.TabIndex = 35;
             // 
-            // txbLicensePlate
+            // txbCurrentKm
             // 
-            this.txbLicensePlate.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
-            this.txbLicensePlate.ForeColor = System.Drawing.Color.Silver;
-            this.txbLicensePlate.Location = new System.Drawing.Point(55, 115);
-            this.txbLicensePlate.Name = "txbLicensePlate";
-            this.txbLicensePlate.Size = new System.Drawing.Size(228, 33);
-            this.txbLicensePlate.TabIndex = 36;
-            this.txbLicensePlate.Text = "write...";
+            this.txbCurrentKm.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
+            this.txbCurrentKm.ForeColor = System.Drawing.Color.Silver;
+            this.txbCurrentKm.Location = new System.Drawing.Point(55, 115);
+            this.txbCurrentKm.Name = "txbCurrentKm";
+            this.txbCurrentKm.Size = new System.Drawing.Size(228, 33);
+            this.txbCurrentKm.TabIndex = 36;
+            this.txbCurrentKm.Text = "write...";
+            this.txbCurrentKm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txbCurrentKm_MouseClick);
+            this.txbCurrentKm.TextChanged += new System.EventHandler(this.txbCurrentKm_TextChanged);
             // 
             // label1
             // 
@@ -158,6 +167,7 @@
             this.cmbEmployee.Name = "cmbEmployee";
             this.cmbEmployee.Size = new System.Drawing.Size(178, 33);
             this.cmbEmployee.TabIndex = 37;
+            this.cmbEmployee.SelectedIndexChanged += new System.EventHandler(this.cmbEmployee_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -175,36 +185,107 @@
             this.technicalWork.AutoSize = true;
             this.technicalWork.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.technicalWork.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.technicalWork.Location = new System.Drawing.Point(50, 538);
+            this.technicalWork.Location = new System.Drawing.Point(50, 529);
             this.technicalWork.Name = "technicalWork";
-            this.technicalWork.Size = new System.Drawing.Size(85, 19);
+            this.technicalWork.Size = new System.Drawing.Size(99, 19);
             this.technicalWork.TabIndex = 41;
-            this.technicalWork.Text = "WORK PAY:";
+            this.technicalWork.Text = "INSPECTION:";
             // 
-            // dateOfService
+            // lblDateOfService
             // 
-            this.dateOfService.AutoSize = true;
-            this.dateOfService.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.dateOfService.Location = new System.Drawing.Point(51, 561);
-            this.dateOfService.Name = "dateOfService";
-            this.dateOfService.Size = new System.Drawing.Size(46, 19);
-            this.dateOfService.TabIndex = 41;
-            this.dateOfService.Text = "Date:";
+            this.lblDateOfService.AutoSize = true;
+            this.lblDateOfService.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.lblDateOfService.Location = new System.Drawing.Point(374, 563);
+            this.lblDateOfService.Name = "lblDateOfService";
+            this.lblDateOfService.Size = new System.Drawing.Size(46, 19);
+            this.lblDateOfService.TabIndex = 41;
+            this.lblDateOfService.Text = "Date:";
+            // 
+            // txbWork
+            // 
+            this.txbWork.Font = new System.Drawing.Font("Glacial Indifference", 12F);
+            this.txbWork.ForeColor = System.Drawing.Color.Silver;
+            this.txbWork.Location = new System.Drawing.Point(155, 525);
+            this.txbWork.Name = "txbWork";
+            this.txbWork.Size = new System.Drawing.Size(68, 27);
+            this.txbWork.TabIndex = 36;
+            this.txbWork.Text = "15";
+            this.txbWork.TextChanged += new System.EventHandler(this.txbWork_TextChanged);
+            // 
+            // txbVAT
+            // 
+            this.txbVAT.Font = new System.Drawing.Font("Glacial Indifference", 12F);
+            this.txbVAT.ForeColor = System.Drawing.Color.Silver;
+            this.txbVAT.Location = new System.Drawing.Point(155, 558);
+            this.txbVAT.Name = "txbVAT";
+            this.txbVAT.Size = new System.Drawing.Size(44, 27);
+            this.txbVAT.TabIndex = 36;
+            this.txbVAT.Text = "15";
+            this.txbVAT.TextChanged += new System.EventHandler(this.txbVAT_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.label3.Location = new System.Drawing.Point(51, 558);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 19);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "VAT:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.label4.Location = new System.Drawing.Point(205, 563);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 19);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "%";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.label5.Location = new System.Drawing.Point(229, 525);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 19);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "€";
+            // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.lblTotalPrice.Location = new System.Drawing.Point(156, 502);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(0, 19);
+            this.lblTotalPrice.TabIndex = 34;
             // 
             // UC_ServiceDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.Controls.Add(this.dateOfService);
+            this.Controls.Add(this.lblDateOfService);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.technicalWork);
+            this.Controls.Add(this.txbVAT);
             this.Controls.Add(this.cmbEmployee);
-            this.Controls.Add(this.txbLicensePlate);
+            this.Controls.Add(this.txbWork);
+            this.Controls.Add(this.txbCurrentKm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTotalPrice);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnBillAndSave);
             this.Controls.Add(this.listBoxServices);
             this.Name = "UC_ServiceDetail";
@@ -223,13 +304,19 @@
         private System.Windows.Forms.RadioButton rbSmallService;
         private System.Windows.Forms.RadioButton rbMajorService;
         private System.Windows.Forms.Button btnBillAndSave;
-        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txbLicensePlate;
+        private System.Windows.Forms.TextBox txbCurrentKm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbEmployee;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label technicalWork;
-        private System.Windows.Forms.Label dateOfService;
+        private System.Windows.Forms.Label lblDateOfService;
+        private System.Windows.Forms.TextBox txbWork;
+        private System.Windows.Forms.TextBox txbVAT;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTotalPrice;
     }
 }

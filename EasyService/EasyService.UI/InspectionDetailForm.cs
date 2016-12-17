@@ -9,14 +9,18 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
+
 
 namespace EasyService.UI
 {
-    public partial class InspectionDetail : Form
+    public partial class InspectionDetailForm : Form
     {
-        private readonly ServiceName _serviceName;
-        public InspectionDetail(ServiceName serviceName)
+        public InspectionDetail InspectionDetail { get; set; } = new InspectionDetail(new Item("dsadasd","dsadas",4,2,Category.CoolAndHeat),4);
+        public readonly ServiceName _serviceName;
+
+        public InspectionDetailForm(ServiceName serviceName)
         {
             InitializeComponent();
             _serviceName = serviceName;
@@ -42,7 +46,24 @@ namespace EasyService.UI
 
         private void cmbItemsByCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txbPrice.Text = cmbItemsByCategory.SelectedItem.ToString();
+
+            Item item2 = blStock.GetAllByCategory(_serviceName.ItemCategory)[cmbItemsByCategory.SelectedIndex];
+            
+            InspectionDetail.Item = item2;
+            txbPrice.Text = item2.Price.ToString();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            int quantity;
+
+            int.TryParse(txbQuantity.Text, out quantity);
+            
+            InspectionDetail.Quantity = quantity;
+
+            DialogResult = DialogResult.OK;
+            this.Close();
+            
         }
     }
 }

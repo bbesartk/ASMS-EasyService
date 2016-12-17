@@ -42,12 +42,7 @@ namespace ES.EntityLayer.Services
 
         public decimal Total
         {
-            get
-            {
-                if (HasServicedInspections())
-                    return (TechnicalWorkPay + CalculateTotal());
-                else return TechnicalWorkPay;
-            }
+            get;set;
 
         }
 
@@ -79,40 +74,20 @@ namespace ES.EntityLayer.Services
         #endregion
 
         #region Constructors
-        public Service(DateTime dateOfService, double servicedKm, decimal technicalWork, List<Inspection> listOfInspection, Employee servicedBy)
+        public Service(DateTime dateOfService, double servicedKm, decimal technicalWork, List<Inspection> listOfInspection, Employee servicedBy, decimal total)
         {
             DateOfService = dateOfService;
             ServicedKm = servicedKm;
             TechnicalWorkPay = technicalWork;
             ListInspection = listOfInspection;
             ServicedBy = servicedBy;
+            Total = total;
         }
         #endregion
 
         #region Methods
         //Calculate total for all serviced Inspections
-        private decimal CalculateTotal()
-        {
-            decimal total = 0;
-            foreach (Inspection item in ListInspection)
-            {
-                if (item.InspectionDetail != null)
-                {
-                    
-                }
-            }
-            return total;
-        }
-        //Check all Inspections in listOfInspection
-        private bool HasServicedInspections()
-        {
-            foreach (Inspection item in ListInspection)
-            {
-                if (item.InspectionDetail != null)
-                    return true;
-            }
-            return false;
-        }
+        
         #endregion
     }
 }

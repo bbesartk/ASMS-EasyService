@@ -9,11 +9,6 @@ namespace ES.EntityLayer.Services
 {
     public class InspectionDetail
     {
-        #region PrivateMembers
-
-
-        #endregion
-
         #region Properties
         public Item Item { get; set; }
 
