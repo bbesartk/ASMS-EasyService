@@ -112,6 +112,18 @@ namespace ES.BusinessLayer
             return readyForService;
         }
 
+        public static int CalculateSmallService(Vehicle vehicle)
+        {
+            if(blServices.GetLastService(vehicle) != null)
+            {
+                TimeSpan daysSinceLastService = DateTime.Now.Date - blServices.GetLastService(vehicle).DateOfService.Date;
+                return int.Parse(daysSinceLastService.TotalDays.ToString());
+            }
+            return 0;
+        }
+
+
+
         public static List<Vehicle> ServicedBy(string mechanicId)
         {
             List<Vehicle> servicedVehicles = new List<Vehicle>();

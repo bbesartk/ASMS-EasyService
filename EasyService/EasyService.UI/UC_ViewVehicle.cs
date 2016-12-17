@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.EntityLayer.Vehicle;
+using ES.BusinessLayer;
 
 namespace EasyService.UI
 {
@@ -24,7 +25,7 @@ namespace EasyService.UI
         private void UC_ViewVehicle_Load(object sender, EventArgs e)
         {
 
-            pBsmallService.Value = 10;
+            pBsmallService.Value = blVehicle.CalculateSmallService(_vehicle)+1;
             pBmajorService.Value = 78;
         }
 
