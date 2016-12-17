@@ -51,6 +51,7 @@
     <Compile Include="blSlots.cs" />
     <Compile Include="blStock.cs" />
     <Compile Include="blVehicle.cs" />
+    <Compile Include="DataTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

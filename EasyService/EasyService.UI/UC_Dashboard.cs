@@ -19,7 +19,6 @@ namespace EasyService.UI
         public UC_Dashboard()
         {
             InitializeComponent();
-            blVehicle.LotOfVehicle();
         }
 
         public UC_Dashboard(bool getAll)

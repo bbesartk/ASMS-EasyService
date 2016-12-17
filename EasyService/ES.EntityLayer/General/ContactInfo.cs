@@ -77,6 +77,14 @@ namespace ES.EntityLayer.General
             PhoneNumber = phonenumber;
             Email = email;
         }
+
+        public ContactInfo(ContactInfo cinfo)
+        {
+            City = cinfo.City;
+            Email = cinfo.Email;
+            Address = cinfo.Address;
+            PhoneNumber = cinfo.PhoneNumber;
+        }
         #endregion
 
         #region Methods

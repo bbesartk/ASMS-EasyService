@@ -113,7 +113,7 @@ namespace ES.EntityLayer.Vehicle
         #endregion
 
         #region Constructors
-        public Vehicle(string licensePlate, string vin, int productionYear, string type, string model, int cubicCm)
+        public Vehicle(string licensePlate, string vin, int productionYear, string type, string model, int cubicCm,Client client)
         {
             LicensePlate = licensePlate;
             ProductionYear = productionYear;
@@ -124,6 +124,17 @@ namespace ES.EntityLayer.Vehicle
             IsSubscribed = true;
         }
 
+
+        public Vehicle(string licensePlate, string vin, int productionYear, string type, string model, int cubicCm, Company company)
+        {
+            LicensePlate = licensePlate;
+            ProductionYear = productionYear;
+            Type = type;
+            Model = model;
+            Vin = vin;
+            CubicC = cubicCm;
+            IsSubscribed = true;
+        }
 
         #endregion
 

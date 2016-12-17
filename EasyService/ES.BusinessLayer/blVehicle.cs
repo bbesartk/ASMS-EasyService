@@ -36,18 +36,6 @@ namespace ES.BusinessLayer
             return dalVehicle.GetSingleVehicle(licensePlate);
         }
 
-        public static void LotOfVehicle()
-        {
-
-            
-            ContactInfo c1 = new ContactInfo("Prishtine", "Kosove", "+37745363373", "bbesartk@msn.com");
-            blVehicle.InsertVehicle(new Vehicle("01-111-AI","23234234234", 2016, "Mustang", "Shelby", 5200));
-            blVehicle.InsertVehicle(new Vehicle("01-123-BC", "23234234234", 2013, "Mercedes Benz", "C", 2200));
-            blVehicle.InsertVehicle(new Vehicle("01-456-DG", "23234234234", 2003, "Volswagen", "Golf", 1900));
-
-        }
-
-
         #endregion
 
         #region Query
