@@ -94,11 +94,30 @@ namespace ES.BusinessLayer
         public static void ListaApointment()
         {
 
-
             dalAppointments.Insert(new Appointment("dsadas", d1, 1, ServiceType.SmallService, null));
             dalAppointments.Insert(new Appointment("dsadas", d1, 2, ServiceType.SmallService, null));
         }
 
+
+
+        public static bool IsValid(DateTime appointment,int startHour, int endHour)
+        {
+
+                if ((appointment.Date == DateTime.Now.Date) && (appointment.TimeOfDay < DateTime.Now.TimeOfDay))
+                    throw new Exception("You have chosen a negative appointment!");
+                else if (appointment.Hour < startHour || appointment.Hour > endHour)
+                    throw new Exception("Outside the working hours!");
+                else if ((appointment.DayOfWeek == DayOfWeek.Saturday) || (appointment.DayOfWeek == DayOfWeek.Sunday))
+                    throw new Exception("Weekend!");
+                else
+                    return true;
+
+        }
+
+        public static void MakeTreated(Appointment appointment)
+        {
+            appointment.IsTreated = true;
+        }
         #endregion
 
 

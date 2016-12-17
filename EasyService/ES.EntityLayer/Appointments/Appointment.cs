@@ -21,6 +21,8 @@ namespace ES.EntityLayer.Appointments
 
         public Vehicle.Vehicle Vehicle { get; set; }
 
+        public bool IsTreated { get; set; }
+
 
         public Appointment(string subject, DateTime timeOfMeeting, int slotRowNumber, ServiceType serviceType, Vehicle.Vehicle vehicle)
         {
@@ -28,6 +30,7 @@ namespace ES.EntityLayer.Appointments
             TimeOfMeeting = timeOfMeeting;
             SlotRowNumber = slotRowNumber;
             Vehicle = vehicle;
+            IsTreated = false;
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ES.DataAccessLayer;
 using ES.BusinessLayer;
 using ES.EntityLayer.General;
+using ES.EntityLayer.Appointments;
 
 namespace EasyService.UI
 {
@@ -19,6 +20,10 @@ namespace EasyService.UI
         private readonly Vehicle _vehicle;
         private static string typeOfService;
         private static int slotNumber;
+        private DateTime date { get; set; }
+
+        ServiceType serviceType;
+
         public NewAppointmen(Vehicle vehicle)
         {
             InitializeComponent();
@@ -75,14 +80,15 @@ namespace EasyService.UI
             cmbSlot.Enabled = true;
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
-            var dtTime = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0,0,0);
-            cmbSlot.DataSource = blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.GetAllSlots());
+            date = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0,0,0);
+            cmbSlot.DataSource = blAppointments.AvailableSlots(date, typeOfService, slotNumber, 17, dalSlot.GetAllSlots());
             
         }
 
         private void chb_Checked(object sender, EventArgs e)
         {
             typeOfService = rbSmall.Checked ? rbSmall.Text : rbMajor.Text;
+            this.serviceType = rbSmall.Checked ? ServiceType.SmallService : ServiceType.MajorService;
         }
 
         private void cmbSlot_SelectedValueChanged(object sender, EventArgs e)
@@ -92,7 +98,23 @@ namespace EasyService.UI
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (blAppointments.IsValid(date, MainPage.StartTime, MainPage.EndTime))
+                {
 
+                    dalAppointments.Insert(new Appointment(txbSubject.Text, date, slotNumber, serviceType, _vehicle));
+                    DialogResult dg = MessageBox.Show("Appointment set scuccesfully!","New Appointment",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    if(dg==DialogResult.OK)
+                    {
+                        this.Dispose();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error - not valid appointment!");
+            }
         }
 
         private void cmbHour_SelectedIndexChanged(object sender, EventArgs e)
