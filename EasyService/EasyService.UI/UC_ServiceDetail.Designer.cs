@@ -82,6 +82,7 @@
             this.rbSmallService.TabIndex = 19;
             this.rbSmallService.Text = "SMALL SERVICE";
             this.rbSmallService.UseVisualStyleBackColor = true;
+            this.rbSmallService.CheckedChanged += new System.EventHandler(this.rbMajorService_CheckedChanged);
             // 
             // rbMajorService
             // 

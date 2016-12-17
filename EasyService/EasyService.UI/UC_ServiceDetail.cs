@@ -25,7 +25,7 @@ namespace EasyService.UI
 
         List<Inspection> allInspections = new List<Inspection>();
         Mechanic servicedBy { get; set; }
-        decimal WorkPay { get; set;}
+        decimal WorkPay { get; set; }
         decimal VAT { get; set; }
         double CurrentKm { get; set; }
 
@@ -33,7 +33,7 @@ namespace EasyService.UI
         private readonly Vehicle _vehicle;
         private readonly Client _client;
         private readonly Company _company;
-        
+
 
 
         public UC_ServiceDetail(Vehicle vehicle)
@@ -50,7 +50,8 @@ namespace EasyService.UI
                 _company = _vehicle.Company;
             }
 
-            lblTotalPrice.Text = " " + FinalTotal((decimal)CalculateTotal(), WorkPay, VAT) + " €";
+            txbVAT.Text = 15.ToString();
+            txbWork.Text = 20.ToString();
 
             lista.Add(new ServiceName("Fuel", true, true, true, Category.CoolAndHeat));
             foreach (var item in lista)
@@ -87,7 +88,8 @@ namespace EasyService.UI
             }
             //nese ka diqka gabim qet njoftim
             else MessageBox.Show("This item is not well validated!");
-            lblTotalPrice.Text = " " + FinalTotal((decimal)CalculateTotal(), WorkPay, VAT) + " €";
+
+            UpdatePrice();
 
         }
 
@@ -105,14 +107,22 @@ namespace EasyService.UI
                 listBoxServices.Items.Clear();
                 foreach (var item in lista)
                 {
-                    listBoxServices.Items.Add(item);
+                    if (item.IsInMajorService)
+                        listBoxServices.Items.Add(item);
 
                 }
             }
-            else
+            else if (rbSmallService.Checked)
             {
                 listBoxServices.Items.Clear();
+                foreach (var item in lista)
+                {
+                    if (item.IsInMinorService)
+                        listBoxServices.Items.Add(item);
+                }
             }
+
+            UpdatePrice();
         }
 
         private double CalculateTotal()
@@ -124,7 +134,7 @@ namespace EasyService.UI
             {
                 if (typeOfInspection.InspectionDetail != null)
                 {
-                    total +=  (typeOfInspection.InspectionDetail.Quantity * typeOfInspection.InspectionDetail.Item.Price);
+                    total += (typeOfInspection.InspectionDetail.Quantity * typeOfInspection.InspectionDetail.Item.Price);
                 }
             }
             return total;
@@ -141,28 +151,42 @@ namespace EasyService.UI
 
         private void btnBillAndSave_Click(object sender, EventArgs e)
         {
-            
-
-
-
-            if (IsValidKM(CurrentKm) && WorkPay > 0)
+            try
             {
-                Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy, FinalTotal((decimal)CalculateTotal(), WorkPay, VAT));
-                _vehicle.ServiceList.Add(sv);
-                if (_client != null)
+                if (IsValidKM(CurrentKm) && WorkPay > 0)
                 {
-                    blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _client,servicedBy,VAT));
-                }
-                else if(_company!=null)
-                {
-                    blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT));
+                    Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy, FinalTotal((decimal)CalculateTotal(), WorkPay, VAT));
+                    _vehicle.ServiceList.Add(sv);
+                    if (_client != null)
+                    {
+                        blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT));
+                    }
+                    else if (_company != null)
+                    {
+
+                        blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT));
+                    }
+
+                    UpdateStock();
+                    DialogResult dg = MessageBox.Show("New service added successfully!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if(dg == DialogResult.OK)
+                    {
+                        UC_ViewServices services = new UC_ViewServices(_vehicle);
+                        this.Controls.Clear();
+                        this.Controls.Add(services);
+
+                    }
                 }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Your current kilometres are invalid!");
+            }
 
-            
+
         }
 
-        private decimal FinalTotal(decimal total,decimal workpay,decimal vat)
+        private decimal FinalTotal(decimal total, decimal workpay, decimal vat)
         {
             decimal firstTotal = total + workpay;
             return firstTotal + (vat / 100 * firstTotal);
@@ -171,19 +195,20 @@ namespace EasyService.UI
         private bool IsValidKM(double km)
         {
             int numberOfServices = _vehicle.ServiceList.Count;
-            if (_vehicle.ServiceList.Count >= 1)
+            if (numberOfServices >= 1)
             {
                 if (_vehicle.ServiceList[numberOfServices - 1].ServicedKm > km)
                     return false;
                 else return true;
             }
-            throw new Exception("It has 0 services!");
+            throw new Exception("Not valid km!");
         }
 
         private void cmbEmployee_SelectedIndexChanged(object sender, EventArgs e)
         {
             var mechanic = blEmployees.GetAllMechanics()[cmbEmployee.SelectedIndex];
             servicedBy = mechanic;
+
         }
 
         private void txbWork_TextChanged(object sender, EventArgs e)
@@ -194,8 +219,7 @@ namespace EasyService.UI
             {
                 WorkPay = workpay;
             }
-            decimal total = FinalTotal((decimal)CalculateTotal(), WorkPay, VAT);
-            lblTotalPrice.Text = " " + total + " €";
+            UpdatePrice();
         }
 
         private void txbVAT_TextChanged(object sender, EventArgs e)
@@ -206,8 +230,7 @@ namespace EasyService.UI
             {
                 VAT = vat;
             }
-            decimal total = FinalTotal((decimal)CalculateTotal(), WorkPay, VAT);
-            lblTotalPrice.Text = " " + total + " €";
+            UpdatePrice();
         }
 
         private void txbCurrentKm_TextChanged(object sender, EventArgs e)
@@ -221,7 +244,29 @@ namespace EasyService.UI
                 CurrentKm = currentKm;
             }
 
-            
+
+        }
+
+        private void UpdateStock()
+        {
+            foreach (var item in allInspections)
+            {
+                var item2 = new Item();
+                item2 = blStock.GetItem(item.InspectionDetail.Item.ItemNumber);
+
+                if (item2 != null)
+                {
+                    item2.Quantiy = item2.Quantiy - item.InspectionDetail.Quantity;
+                    blStock.UpdateItem(item2);
+                }
+
+            }
+        }
+
+        private void UpdatePrice()
+        {
+            decimal total = FinalTotal((decimal)CalculateTotal(), WorkPay, VAT);
+            lblTotalPrice.Text = " " + total + " €";
         }
     }
 }

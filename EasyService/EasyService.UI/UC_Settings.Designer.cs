@@ -39,8 +39,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbPassword = new System.Windows.Forms.TextBox();
+            this.txbUsername = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txbSlot = new System.Windows.Forms.TextBox();
             this.btnWorkingHours = new System.Windows.Forms.Button();
@@ -160,8 +160,8 @@
             this.panel4.Controls.Add(this.btnCredentials);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.txbPassword);
+            this.panel4.Controls.Add(this.txbUsername);
             this.panel4.Location = new System.Drawing.Point(38, 303);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(601, 157);
@@ -189,23 +189,24 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Password:";
             // 
-            // textBox2
+            // txbPassword
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.textBox2.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(134, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 33);
-            this.textBox2.TabIndex = 4;
+            this.txbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.txbPassword.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPassword.Location = new System.Drawing.Point(134, 102);
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.Size = new System.Drawing.Size(275, 33);
+            this.txbPassword.TabIndex = 4;
+            this.txbPassword.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // txbUsername
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.textBox1.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(134, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 33);
-            this.textBox1.TabIndex = 4;
+            this.txbUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.txbUsername.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbUsername.Location = new System.Drawing.Point(134, 54);
+            this.txbUsername.Name = "txbUsername";
+            this.txbUsername.Size = new System.Drawing.Size(275, 33);
+            this.txbUsername.TabIndex = 4;
             // 
             // label5
             // 
@@ -240,6 +241,7 @@
             this.btnWorkingHours.TabIndex = 10;
             this.btnWorkingHours.Text = "UPDATE";
             this.btnWorkingHours.UseVisualStyleBackColor = false;
+            this.btnWorkingHours.Click += new System.EventHandler(this.btnWorkingHours_Click);
             // 
             // btnActiveSlots
             // 
@@ -253,6 +255,7 @@
             this.btnActiveSlots.TabIndex = 10;
             this.btnActiveSlots.Text = "UPDATE";
             this.btnActiveSlots.UseVisualStyleBackColor = false;
+            this.btnActiveSlots.Click += new System.EventHandler(this.btnActiveSlots_Click);
             // 
             // btnCredentials
             // 
@@ -266,6 +269,7 @@
             this.btnCredentials.TabIndex = 10;
             this.btnCredentials.Text = "UPDATE";
             this.btnCredentials.UseVisualStyleBackColor = false;
+            this.btnCredentials.Click += new System.EventHandler(this.btnCredentials_Click);
             // 
             // button4
             // 
@@ -315,8 +319,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbPassword;
+        private System.Windows.Forms.TextBox txbUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbSlot;
         private System.Windows.Forms.Button btnWorkingHours;

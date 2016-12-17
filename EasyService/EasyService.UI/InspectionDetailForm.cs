@@ -61,9 +61,14 @@ namespace EasyService.UI
             
             InspectionDetail.Quantity = quantity;
 
-            DialogResult = DialogResult.OK;
-            this.Close();
-            
+
+            Item item = blStock.GetAllByCategory(_serviceName.ItemCategory)[cmbItemsByCategory.SelectedIndex];
+            if ((item.Quantiy - quantity) >= 0)
+            {
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else MessageBox.Show("You dont have enough items in stock!");
         }
     }
 }
