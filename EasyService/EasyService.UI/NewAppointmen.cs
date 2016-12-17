@@ -64,29 +64,20 @@ namespace EasyService.UI
 
         }
 
-        private void txbSubject_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
         private void txbSubject_MouseClick(object sender, MouseEventArgs e)
         {
             txbSubject.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string hour = cmbHour.Text.Split(':')[0];
-            string minute = cmbHour.Text.Split(':')[1];
-        }
 
         private void cmbHour_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            cmbSlot.Enabled = true;
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
             var dtTime = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0,0,0);
             cmbSlot.DataSource = blAppointments.AvailableSlots(dtTime, typeOfService, slotNumber, 17, dalSlot.GetAllSlots());
+            
         }
 
         private void chb_Checked(object sender, EventArgs e)
@@ -97,6 +88,16 @@ namespace EasyService.UI
         private void cmbSlot_SelectedValueChanged(object sender, EventArgs e)
         {
             slotNumber = dalSlot.GetSlotId(cmbSlot.Text);
+        }
+
+        private void btnAddAppointment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbHour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

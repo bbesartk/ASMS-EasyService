@@ -41,7 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rbSmall = new System.Windows.Forms.RadioButton();
             this.rbMajor = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddAppointment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -84,8 +84,6 @@
             this.txbSubject.TabIndex = 17;
             this.txbSubject.TabStop = false;
             this.txbSubject.Text = " Appointment subject here";
-            this.txbSubject.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txbSubject_MouseClick);
-            this.txbSubject.MouseEnter += new System.EventHandler(this.txbSubject_MouseEnter);
             this.txbSubject.MouseLeave += new System.EventHandler(this.txbSubject_MouseLeave);
             this.txbSubject.MouseHover += new System.EventHandler(this.txbSubject_MouseHover);
             // 
@@ -96,20 +94,11 @@
             this.cmbHour.Font = new System.Drawing.Font("Glacial Indifference", 12F);
             this.cmbHour.ForeColor = System.Drawing.Color.White;
             this.cmbHour.FormattingEnabled = true;
-            this.cmbHour.Items.AddRange(new object[] {
-            "8:00   ",
-            "9:00   ",
-            "10:00 ",
-            "11:00 ",
-            "12:00 ",
-            "13:00 ",
-            "14:00",
-            "15:00",
-            "16:00"});
             this.cmbHour.Location = new System.Drawing.Point(312, 183);
             this.cmbHour.Name = "cmbHour";
             this.cmbHour.Size = new System.Drawing.Size(83, 27);
             this.cmbHour.TabIndex = 17;
+            this.cmbHour.SelectedIndexChanged += new System.EventHandler(this.cmbHour_SelectedIndexChanged);
             this.cmbHour.SelectedValueChanged += new System.EventHandler(this.cmbHour_SelectedValueChanged);
             // 
             // label3
@@ -172,16 +161,14 @@
             // 
             // cmbSlot
             // 
+            this.cmbSlot.AllowDrop = true;
             this.cmbSlot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmbSlot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSlot.Enabled = false;
             this.cmbSlot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSlot.Font = new System.Drawing.Font("Glacial Indifference", 12F);
             this.cmbSlot.ForeColor = System.Drawing.Color.White;
             this.cmbSlot.FormattingEnabled = true;
-            this.cmbSlot.Items.AddRange(new object[] {
-            "SLOT 1",
-            "SLOT 2",
-            "SLOT 3",
-            "SLOT 4"});
             this.cmbSlot.Location = new System.Drawing.Point(163, 12);
             this.cmbSlot.Name = "cmbSlot";
             this.cmbSlot.Size = new System.Drawing.Size(73, 27);
@@ -229,18 +216,18 @@
             this.rbMajor.UseVisualStyleBackColor = true;
             this.rbMajor.CheckedChanged += new System.EventHandler(this.chb_Checked);
             // 
-            // button1
+            // btnAddAppointment
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Metropolis Thin", 18F);
-            this.button1.Location = new System.Drawing.Point(0, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(398, 68);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "ADD THIS APPOINTMEN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddAppointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAppointment.Font = new System.Drawing.Font("Metropolis Thin", 18F);
+            this.btnAddAppointment.Location = new System.Drawing.Point(0, 266);
+            this.btnAddAppointment.Name = "btnAddAppointment";
+            this.btnAddAppointment.Size = new System.Drawing.Size(398, 68);
+            this.btnAddAppointment.TabIndex = 23;
+            this.btnAddAppointment.Text = "ADD THIS APPOINTMEN";
+            this.btnAddAppointment.UseVisualStyleBackColor = false;
+            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
             // 
             // panel1
             // 
@@ -284,7 +271,7 @@
             this.ClientSize = new System.Drawing.Size(397, 330);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddAppointment);
             this.Controls.Add(this.cmbHour);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel7);
@@ -327,7 +314,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rbSmall;
         private System.Windows.Forms.RadioButton rbMajor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddAppointment;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
