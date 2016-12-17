@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.BusinessLayer;
 using ES.EntityLayer.Vehicle;
+using ES.DataAccessLayer;
 
 namespace EasyService.UI
 {
@@ -107,8 +108,17 @@ namespace EasyService.UI
             }
             else
             {
-                NewAppointmen ny = new NewAppointmen(vehicle);
-                ny.ShowDialog();
+                using (NewAppointmen nyApp = new NewAppointmen(vehicle))
+                {
+                    //nese ka nevoj per ndrrim hapet forma i mbushim te dhanat edhe i ruajm ne listen siper 
+                    nyApp.ShowDialog();
+                    if (nyApp.DialogResult == DialogResult.OK)
+                    {
+                        dalAppointments.Insert(nyApp.NewAppointment);
+
+                    }
+                    
+                }
             }
         }
     }

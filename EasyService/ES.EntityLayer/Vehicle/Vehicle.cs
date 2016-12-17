@@ -128,7 +128,10 @@ namespace ES.EntityLayer.Vehicle
         #endregion
 
         #region Methods
-
+        public override string ToString()
+        {
+            return $"{Type} - [{Model}]";
+        }
         #endregion
     }
 }

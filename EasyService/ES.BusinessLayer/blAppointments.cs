@@ -45,6 +45,21 @@ namespace ES.BusinessLayer
             return dalAppointments.GetAll();
         }
 
+        public static List<Appointment> GetAllNotTreated()
+        {
+            List<Appointment> lista = new List<Appointment>();
+
+            foreach (var item in GetAllAppointment())
+            {
+
+                if(item.IsTreated==false)
+                {
+                    lista.Add(item);
+                }
+            }
+            return lista;
+        }
+
         public static bool HasValidTime(string serviceType, int meetingHour, int endTime)
         {
             if (serviceType == "Small Service")

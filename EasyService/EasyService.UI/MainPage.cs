@@ -83,5 +83,12 @@ namespace EasyService.UI
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(settings);
         }
+
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            UC_Appointments app = new UC_Appointments();
+            mainPanel.Controls.Add(app);
+        }
     }
 }

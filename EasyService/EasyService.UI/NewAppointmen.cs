@@ -17,10 +17,12 @@ namespace EasyService.UI
 {
     public partial class NewAppointmen : Form
     {
-        private readonly Vehicle _vehicle;
-        private static string typeOfService;
-        private static int slotNumber;
-        private DateTime date { get; set; }
+        readonly Vehicle _vehicle;
+        static string typeOfService;
+        static int slotNumber;
+        DateTime date { get; set; }
+
+        public Appointment NewAppointment { get; set; }
 
         ServiceType serviceType;
 
@@ -38,7 +40,7 @@ namespace EasyService.UI
 
             for (int i = 0; i < MainPage.ActiveSlots; i++)
             {
-                dalSlot.Insert(new Slot(i + 1, "Slot" + (i+1)));
+                dalSlot.Insert(new Slot(i + 1, "Slot" + (i + 1)));
             }
             cmbSlot.DataSource = dalSlot.GetAllSlots();
 
@@ -80,9 +82,9 @@ namespace EasyService.UI
             cmbSlot.Enabled = true;
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
-            date = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0,0,0);
+            date = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0, 0, 0);
             cmbSlot.DataSource = blAppointments.AvailableSlots(date, typeOfService, slotNumber, 17, dalSlot.GetAllSlots());
-            
+
         }
 
         private void chb_Checked(object sender, EventArgs e)
@@ -103,12 +105,12 @@ namespace EasyService.UI
                 if (blAppointments.IsValid(date, MainPage.StartTime, MainPage.EndTime))
                 {
 
-                    dalAppointments.Insert(new Appointment(txbSubject.Text, date, slotNumber, serviceType, _vehicle));
-                    DialogResult dg = MessageBox.Show("Appointment set scuccesfully!","New Appointment",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    if(dg==DialogResult.OK)
-                    {
-                        this.Dispose();
-                    }
+
+                    MessageBox.Show("Appointment successfully saved!", "New Appointment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    NewAppointment = new Appointment(txbSubject.Text, date, slotNumber, serviceType, _vehicle);
+                    this.Close();
+
                 }
             }
             catch (Exception)
@@ -119,7 +121,7 @@ namespace EasyService.UI
 
         private void cmbHour_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
     }
 }
