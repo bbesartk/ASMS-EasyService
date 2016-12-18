@@ -18,7 +18,7 @@ namespace EasyService.UI
         public UC_PrivateClient()
         {
             InitializeComponent();
-            blClients.LotOfClient();
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)

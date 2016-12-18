@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Reports));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -79,14 +80,14 @@
             this.lblAllIncomes = new System.Windows.Forms.Label();
             this.lblThisYearIncomes = new System.Windows.Forms.Label();
             this.lblTodayIncomes = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbService = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.rbClient = new System.Windows.Forms.RadioButton();
-            this.rbCompany = new System.Windows.Forms.RadioButton();
-            this.txbLicensePlate = new System.Windows.Forms.TextBox();
-            this.dgPrivateClients = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgServiced = new System.Windows.Forms.DataGridView();
+            this.vehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.licensePlateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productionYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -105,7 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPrivateClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgServiced)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -417,10 +419,11 @@
             this.lblTodayIncomes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.lblTodayIncomes.Name = "lblTodayIncomes";
             // 
-            // comboBox2
+            // cmbService
             // 
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.Name = "comboBox2";
+            resources.ApplyResources(this.cmbService, "cmbService");
+            this.cmbService.Name = "cmbService";
+            this.cmbService.SelectedIndexChanged += new System.EventHandler(this.cmbService_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -429,35 +432,12 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.label14.Name = "label14";
             // 
-            // rbClient
+            // dgServiced
             // 
-            resources.ApplyResources(this.rbClient, "rbClient");
-            this.rbClient.Checked = true;
-            this.rbClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.rbClient.Name = "rbClient";
-            this.rbClient.TabStop = true;
-            this.rbClient.UseVisualStyleBackColor = true;
-            // 
-            // rbCompany
-            // 
-            resources.ApplyResources(this.rbCompany, "rbCompany");
-            this.rbCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.rbCompany.Name = "rbCompany";
-            this.rbCompany.UseVisualStyleBackColor = true;
-            // 
-            // txbLicensePlate
-            // 
-            resources.ApplyResources(this.txbLicensePlate, "txbLicensePlate");
-            this.txbLicensePlate.ForeColor = System.Drawing.Color.Silver;
-            this.txbLicensePlate.Name = "txbLicensePlate";
-            this.txbLicensePlate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txb_MouseClick);
-            // 
-            // dgPrivateClients
-            // 
-            this.dgPrivateClients.AllowUserToAddRows = false;
-            this.dgPrivateClients.AllowUserToDeleteRows = false;
-            this.dgPrivateClients.AllowUserToResizeColumns = false;
-            this.dgPrivateClients.AllowUserToResizeRows = false;
+            this.dgServiced.AllowUserToAddRows = false;
+            this.dgServiced.AllowUserToDeleteRows = false;
+            this.dgServiced.AllowUserToResizeColumns = false;
+            this.dgServiced.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -465,12 +445,13 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPrivateClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgPrivateClients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.dgPrivateClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgPrivateClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgPrivateClients.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.dgPrivateClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgServiced.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgServiced.AutoGenerateColumns = false;
+            this.dgServiced.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.dgServiced.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgServiced.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgServiced.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dgServiced.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -478,9 +459,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPrivateClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.dgPrivateClients, "dgPrivateClients");
-            this.dgPrivateClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgServiced.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.dgServiced, "dgServiced");
+            this.dgServiced.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgServiced.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.licensePlateDataGridViewTextBoxColumn,
+            this.productionYearDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.modelDataGridViewTextBoxColumn});
+            this.dgServiced.DataSource = this.vehicleBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -488,11 +475,11 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgPrivateClients.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgPrivateClients.EnableHeadersVisualStyles = false;
-            this.dgPrivateClients.MultiSelect = false;
-            this.dgPrivateClients.Name = "dgPrivateClients";
-            this.dgPrivateClients.ReadOnly = true;
+            this.dgServiced.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgServiced.EnableHeadersVisualStyles = false;
+            this.dgServiced.MultiSelect = false;
+            this.dgServiced.Name = "dgServiced";
+            this.dgServiced.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -500,7 +487,7 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPrivateClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgServiced.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -508,32 +495,49 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPrivateClients.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgPrivateClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPrivateClients.TabStop = false;
+            this.dgServiced.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgServiced.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgServiced.TabStop = false;
             // 
-            // label12
+            // vehicleBindingSource
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.label12.Name = "label12";
+            this.vehicleBindingSource.DataSource = typeof(ES.EntityLayer.Vehicle.Vehicle);
             // 
-            // comboBox1
+            // licensePlateDataGridViewTextBoxColumn
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
+            this.licensePlateDataGridViewTextBoxColumn.DataPropertyName = "LicensePlate";
+            resources.ApplyResources(this.licensePlateDataGridViewTextBoxColumn, "licensePlateDataGridViewTextBoxColumn");
+            this.licensePlateDataGridViewTextBoxColumn.Name = "licensePlateDataGridViewTextBoxColumn";
+            this.licensePlateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productionYearDataGridViewTextBoxColumn
+            // 
+            this.productionYearDataGridViewTextBoxColumn.DataPropertyName = "ProductionYear";
+            resources.ApplyResources(this.productionYearDataGridViewTextBoxColumn, "productionYearDataGridViewTextBoxColumn");
+            this.productionYearDataGridViewTextBoxColumn.Name = "productionYearDataGridViewTextBoxColumn";
+            this.productionYearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            resources.ApplyResources(this.typeDataGridViewTextBoxColumn, "typeDataGridViewTextBoxColumn");
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "Model";
+            resources.ApplyResources(this.modelDataGridViewTextBoxColumn, "modelDataGridViewTextBoxColumn");
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // UC_Reports
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.Controls.Add(this.dgPrivateClients);
-            this.Controls.Add(this.rbClient);
-            this.Controls.Add(this.rbCompany);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.dgServiced);
+            this.Controls.Add(this.cmbService);
             this.Controls.Add(this.lblItems);
             this.Controls.Add(this.lblClients);
             this.Controls.Add(this.lblServices);
@@ -546,13 +550,11 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblVehicles);
-            this.Controls.Add(this.txbLicensePlate);
             this.Controls.Add(this.lblTodayIncomes);
             this.Controls.Add(this.lblThisYearIncomes);
             this.Controls.Add(this.lblAllIncomes);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.lblNotificiations);
             this.Controls.Add(this.panel1);
@@ -593,7 +595,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPrivateClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgServiced)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,13 +649,13 @@
         private System.Windows.Forms.Label lblAllIncomes;
         private System.Windows.Forms.Label lblThisYearIncomes;
         private System.Windows.Forms.Label lblTodayIncomes;
-        protected System.Windows.Forms.ComboBox comboBox2;
+        protected System.Windows.Forms.ComboBox cmbService;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RadioButton rbClient;
-        private System.Windows.Forms.RadioButton rbCompany;
-        private System.Windows.Forms.TextBox txbLicensePlate;
-        private System.Windows.Forms.DataGridView dgPrivateClients;
-        private System.Windows.Forms.Label label12;
-        protected System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgServiced;
+        private System.Windows.Forms.DataGridViewTextBoxColumn licensePlateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productionYearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource vehicleBindingSource;
     }
 }

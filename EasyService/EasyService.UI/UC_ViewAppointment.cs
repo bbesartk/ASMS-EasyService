@@ -25,9 +25,9 @@ namespace EasyService.UI
         {
             txbDate.Text = _appointment.TimeOfMeeting.ToShortDateString();
             txbHour.Text = _appointment.TimeOfMeeting.Hour.ToString();
-            txbLicensePlate.Text = _appointment.Vehicle.LicensePlate;
-            txbModel.Text = _appointment.Vehicle.Model;
-            txbType.Text = _appointment.Vehicle.Type;
+            txbLicensePlate.Text = _appointment.Vehicle.LicensePlate.ToString();
+            txbModel.Text = _appointment.Vehicle.Model.ToString();
+            txbType.Text = _appointment.Vehicle.Type.ToString();
 
             if(_appointment.Vehicle.Company==null)
             {

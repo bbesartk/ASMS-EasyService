@@ -25,6 +25,12 @@ namespace EasyService.UI
         {
             InitializeComponent();
             lblTime.Text += (DateTime.Now.Date).ToShortDateString();
+
+            DataTest.InitialiseEmployee();
+            //DataTest.InitialiseItems();
+            //DataTest.InitialiseClients();
+            //DataTest.InitialiseCompany();
+            DataTest.Insert();
         }
 
         private void btnHome_Click(object sender, EventArgs e)

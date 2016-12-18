@@ -25,8 +25,7 @@ namespace EasyService.UI
         private void UC_ViewVehicle_Load(object sender, EventArgs e)
         {
 
-            pBsmallService.Value = blVehicle.CalculateSmallService(_vehicle)+1;
-            pBmajorService.Value = 78;
+            pBsmallService.Value = blVehicle.CalculateSmallService(_vehicle)%100;
         }
 
 

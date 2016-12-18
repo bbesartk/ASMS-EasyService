@@ -53,7 +53,6 @@ namespace EasyService.UI
             txbVAT.Text = 15.ToString();
             txbWork.Text = 20.ToString();
 
-            lista.Add(new ServiceName("Fuel", true, true, true, Category.CoolAndHeat));
             foreach (var item in lista)
             {
                 listBoxServices.Items.Add(item);

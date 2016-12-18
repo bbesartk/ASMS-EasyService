@@ -17,6 +17,8 @@ namespace EasyService.UI
         public UC_Reports()
         {
             InitializeComponent();
+
+            cmbService.DataSource = blEmployees.GetAllMechanics();
         }
 
         private void txb_MouseClick(object sender, MouseEventArgs e)
@@ -36,6 +38,13 @@ namespace EasyService.UI
             lblThisYearIncomes.Text = blInvoice.GetThisYearIncomes().ToString();
             lblTodayIncomes.Text = blInvoice.GetTodayIncomes().ToString();
             lblVehicles.Text = blVehicle.GetAll().Count.ToString();
+        }
+
+        private void cmbService_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var emp = blEmployees.GetAllMechanics()[cmbService.SelectedIndex];
+            dgServiced.DataSource = blVehicle.ServicedBy(emp.Id);
+            
         }
     }
 }

@@ -94,7 +94,7 @@ namespace ES.BusinessLayer
                     if (daysSinceLastService.TotalDays >= 100)
                         readyForService.Add(vh);
                 }
-                
+
             }
 
             return readyForService;
@@ -102,13 +102,15 @@ namespace ES.BusinessLayer
 
         public static int CalculateSmallService(Vehicle vehicle)
         {
-            if(blServices.GetLastService(vehicle) != null)
+            if (blServices.GetLastService(vehicle) != null)
             {
                 TimeSpan daysSinceLastService = DateTime.Now.Date - blServices.GetLastService(vehicle).DateOfService.Date;
                 return int.Parse(daysSinceLastService.TotalDays.ToString());
             }
             return 0;
         }
+
+       
 
 
 

@@ -21,6 +21,7 @@ namespace EasyService.UI
         static string typeOfService;
         static int slotNumber;
         DateTime date { get; set; }
+        private List<Slot> ListOfAllSlots = new List<Slot>();
 
         public Appointment NewAppointment { get; set; }
 
@@ -30,7 +31,12 @@ namespace EasyService.UI
         {
             InitializeComponent();
             _vehicle = vehicle;
-            blAppointments.ListaApointment();
+
+            for (int i = 0; i < MainPage.ActiveSlots; i++)
+            {
+                ListOfAllSlots.Add(new Slot(i + 1, "Slot" + (i + 1)));
+            }
+            cmbSlot.DataSource = ListOfAllSlots;
         }
 
         private void NewAppointmen_Load(object sender, EventArgs e)
@@ -38,11 +44,7 @@ namespace EasyService.UI
             mcDate.MinDate = DateTime.Now.Date;
             typeOfService = rbSmall.Checked ? rbSmall.Text : rbMajor.Text;
 
-            for (int i = 0; i < MainPage.ActiveSlots; i++)
-            {
-                dalSlot.Insert(new Slot(i + 1, "Slot" + (i + 1)));
-            }
-            cmbSlot.DataSource = dalSlot.GetAllSlots();
+          
 
 
             for (int i = MainPage.StartTime; i <= MainPage.EndTime; i++)
@@ -83,7 +85,9 @@ namespace EasyService.UI
             string hour = cmbHour.Text.Split(':')[0];
             string minute = cmbHour.Text.Split(':')[1];
             date = new DateTime(mcDate.SelectionRange.Start.Year, mcDate.SelectionRange.Start.Month, mcDate.SelectionRange.Start.Day, int.Parse(hour), int.Parse(minute), 0, 0, 0);
-            cmbSlot.DataSource = blAppointments.AvailableSlots(date, typeOfService, slotNumber, 17, dalSlot.GetAllSlots());
+
+           
+            cmbSlot.DataSource = blAppointments.AvailableSlots(date, typeOfService, slotNumber, 17, ListOfAllSlots);
 
         }
 
@@ -95,7 +99,7 @@ namespace EasyService.UI
 
         private void cmbSlot_SelectedValueChanged(object sender, EventArgs e)
         {
-            slotNumber = dalSlot.GetSlotId(cmbSlot.Text);
+            slotNumber = dalSlot.GetSlotNumber(ListOfAllSlots, cmbSlot.SelectedItem.ToString());
         }
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
@@ -107,8 +111,9 @@ namespace EasyService.UI
 
 
                     MessageBox.Show("Appointment successfully saved!", "New Appointment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
+                    DialogResult = DialogResult.OK;
                     NewAppointment = new Appointment(txbSubject.Text, date, slotNumber, serviceType, _vehicle);
+                    ListOfAllSlots.Clear();
                     this.Close();
 
                 }

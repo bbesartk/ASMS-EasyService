@@ -46,6 +46,16 @@ namespace ES.DataAccessLayer
             return null;
         }
 
+        public static int GetSlotNumber(List<Slot> lista, string name)
+        {
+            foreach (var item in lista)
+            {
+                if (item.Description == name)
+                    return item.RowNumber;
+            }
+            return 0;
+        }
+
         public static int GetSlotId(string name)
         {
             foreach (var item in SlotList())

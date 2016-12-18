@@ -106,13 +106,6 @@ namespace ES.BusinessLayer
 
         static DateTime d1 = new DateTime(2016, 12, 17, 11, 0, 0,0,0);
 
-        public static void ListaApointment()
-        {
-
-            dalAppointments.Insert(new Appointment("dsadas", d1, 1, ServiceType.SmallService, null));
-            dalAppointments.Insert(new Appointment("dsadas", d1, 2, ServiceType.SmallService, null));
-        }
-
 
 
         public static bool IsValid(DateTime appointment,int startHour, int endHour)

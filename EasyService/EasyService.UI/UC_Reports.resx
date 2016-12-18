@@ -138,7 +138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>38</value>
   </data>
   <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>246, 35</value>
@@ -159,7 +159,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel3.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>25</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 11</value>
@@ -205,7 +205,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>24</value>
   </data>
   <data name="flowLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>468, 35</value>
@@ -226,7 +226,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel4.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>23</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 10</value>
@@ -271,7 +271,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>22</value>
   </data>
   <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 134</value>
@@ -292,7 +292,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>37</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 9</value>
@@ -337,7 +337,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>36</value>
   </data>
   <data name="flowLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>246, 134</value>
@@ -358,7 +358,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel5.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>33</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 9</value>
@@ -403,7 +403,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>32</value>
   </data>
   <data name="flowLayoutPanel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>469, 134</value>
@@ -424,7 +424,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel6.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>29</value>
   </data>
   <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 9</value>
@@ -469,7 +469,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>28</value>
   </data>
   <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -514,7 +514,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel7.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>35</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 298</value>
@@ -535,7 +535,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>34</value>
   </data>
   <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -580,7 +580,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel8.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>31</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
     <value>247, 298</value>
@@ -601,7 +601,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>30</value>
   </data>
   <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -646,7 +646,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel9.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>27</value>
   </data>
   <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>469, 298</value>
@@ -667,7 +667,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>26</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 11</value>
@@ -712,7 +712,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>21</value>
   </data>
   <data name="lblNotificiations.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -742,7 +742,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblNotificiations.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>20</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -772,7 +772,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>8</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -802,7 +802,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -832,7 +832,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>18</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -862,7 +862,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>12</value>
   </data>
   <data name="lblEmp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -895,7 +895,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblEmp.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>6</value>
   </data>
   <data name="lblComp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -928,7 +928,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblComp.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="lblClients.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -961,7 +961,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblClients.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -991,7 +991,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>10</value>
   </data>
   <data name="lblVehicles.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1021,7 +1021,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblVehicles.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>13</value>
   </data>
   <data name="lblServices.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1054,7 +1054,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblServices.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="lblItems.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1087,7 +1087,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblItems.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1117,7 +1117,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>17</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1147,7 +1147,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>11</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1177,7 +1177,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>9</value>
   </data>
   <data name="lblAllIncomes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1207,7 +1207,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblAllIncomes.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>16</value>
   </data>
   <data name="lblThisYearIncomes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1237,7 +1237,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblThisYearIncomes.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>15</value>
   </data>
   <data name="lblTodayIncomes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1267,31 +1267,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblTodayIncomes.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>14</value>
   </data>
-  <data name="comboBox2.IntegralHeight" type="System.Boolean, mscorlib">
+  <data name="cmbService.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 364</value>
+  <data name="cmbService.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 364</value>
   </data>
-  <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="cmbService.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 21</value>
   </data>
-  <data name="comboBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="cmbService.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="&gt;&gt;comboBox2.Name" xml:space="preserve">
-    <value>comboBox2</value>
+  <data name="&gt;&gt;cmbService.Name" xml:space="preserve">
+    <value>cmbService</value>
   </data>
-  <data name="&gt;&gt;comboBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;cmbService.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbService.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboBox2.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;cmbService.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1306,13 +1306,13 @@
     <value>14, 364</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 18</value>
+    <value>87, 18</value>
   </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>Report for:</value>
+    <value>Serviced by:</value>
   </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
@@ -1324,181 +1324,52 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>19</value>
   </data>
-  <data name="rbClient.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbClient.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="rbClient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 407</value>
-  </data>
-  <data name="rbClient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 24</value>
-  </data>
-  <data name="rbClient.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="rbClient.Text" xml:space="preserve">
-    <value>ALL</value>
-  </data>
-  <data name="&gt;&gt;rbClient.Name" xml:space="preserve">
-    <value>rbClient</value>
-  </data>
-  <data name="&gt;&gt;rbClient.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbClient.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;rbClient.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="rbCompany.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbCompany.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="rbCompany.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 407</value>
-  </data>
-  <data name="rbCompany.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 24</value>
-  </data>
-  <data name="rbCompany.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="rbCompany.Text" xml:space="preserve">
-    <value>SPECIAL</value>
-  </data>
-  <data name="&gt;&gt;rbCompany.Name" xml:space="preserve">
-    <value>rbCompany</value>
-  </data>
-  <data name="&gt;&gt;rbCompany.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbCompany.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;rbCompany.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="txbLicensePlate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Glacial Indifference, 15.75pt</value>
-  </data>
-  <data name="txbLicensePlate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 437</value>
-  </data>
-  <data name="txbLicensePlate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 33</value>
-  </data>
-  <data name="txbLicensePlate.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txbLicensePlate.Text" xml:space="preserve">
-    <value>write...</value>
-  </data>
-  <data name="&gt;&gt;txbLicensePlate.Name" xml:space="preserve">
-    <value>txbLicensePlate</value>
-  </data>
-  <data name="&gt;&gt;txbLicensePlate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txbLicensePlate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txbLicensePlate.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="dgPrivateClients.ColumnHeadersHeight" type="System.Int32, mscorlib">
+  <data name="dgServiced.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="dgPrivateClients.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="licensePlateDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>LicensePlate</value>
+  </data>
+  <data name="productionYearDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ProductionYear</value>
+  </data>
+  <data name="typeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="modelDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <metadata name="vehicleBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="dgServiced.Location" type="System.Drawing.Point, System.Drawing">
     <value>245, 364</value>
   </data>
-  <data name="dgPrivateClients.RowHeadersWidth" type="System.Int32, mscorlib">
+  <data name="dgServiced.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
-  <data name="dgPrivateClients.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="dgServiced.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
-  <data name="dgPrivateClients.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dgServiced.Size" type="System.Drawing.Size, System.Drawing">
     <value>409, 183</value>
   </data>
-  <data name="dgPrivateClients.TabIndex" type="System.Int32, mscorlib">
+  <data name="dgServiced.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="&gt;&gt;dgPrivateClients.Name" xml:space="preserve">
-    <value>dgPrivateClients</value>
+  <data name="&gt;&gt;dgServiced.Name" xml:space="preserve">
+    <value>dgServiced</value>
   </data>
-  <data name="&gt;&gt;dgPrivateClients.Type" xml:space="preserve">
+  <data name="&gt;&gt;dgServiced.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dgPrivateClients.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dgServiced.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dgPrivateClients.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dgServiced.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Glacial Indifference, 11.25pt</value>
-  </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 498</value>
-  </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 18</value>
-  </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>Query:</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="comboBox1.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 498</value>
-  </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 21</value>
-  </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1508,6 +1379,36 @@
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>675, 595</value>
+  </data>
+  <data name="&gt;&gt;vehicleBindingSource.Name" xml:space="preserve">
+    <value>vehicleBindingSource</value>
+  </data>
+  <data name="&gt;&gt;vehicleBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;licensePlateDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>licensePlateDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;licensePlateDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;productionYearDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>productionYearDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;productionYearDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;typeDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>typeDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;typeDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modelDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>modelDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;modelDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UC_Reports</value>

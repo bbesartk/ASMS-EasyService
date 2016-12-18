@@ -23,7 +23,7 @@ namespace EasyService.UI
 
         private void UC_Appointments_Load(object sender, EventArgs e)
         {
-            dgAppointment.DataSource = blAppointments.GetAllAppointment();
+            dgAppointment.DataSource = blAppointments.GetAllNotTreated();
         }
 
         private void dgAppointment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
