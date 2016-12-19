@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.cmbEnd = new System.Windows.Forms.ComboBox();
             this.cmbStart = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.txbSlot = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnCredentials = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.txbUsername = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbSlot = new System.Windows.Forms.TextBox();
-            this.btnWorkingHours = new System.Windows.Forms.Button();
-            this.btnActiveSlots = new System.Windows.Forms.Button();
-            this.btnCredentials = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnActiveSlots = new System.Windows.Forms.Button();
+            this.btnWorkingHours = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -66,6 +66,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(601, 179);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "WORKING HOURS: ";
             // 
             // cmbEnd
             // 
@@ -121,16 +131,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Start:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "WORKING HOURS: ";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
@@ -153,6 +153,15 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "ACTIVE SLOTS";
             // 
+            // txbSlot
+            // 
+            this.txbSlot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.txbSlot.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSlot.Location = new System.Drawing.Point(174, 23);
+            this.txbSlot.Name = "txbSlot";
+            this.txbSlot.Size = new System.Drawing.Size(146, 33);
+            this.txbSlot.TabIndex = 4;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
@@ -166,6 +175,32 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(601, 157);
             this.panel4.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.label5.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.label5.Location = new System.Drawing.Point(17, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 25);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "CREDENTIALS:";
+            // 
+            // btnCredentials
+            // 
+            this.btnCredentials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnCredentials.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCredentials.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCredentials.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.btnCredentials.Location = new System.Drawing.Point(441, 88);
+            this.btnCredentials.Name = "btnCredentials";
+            this.btnCredentials.Size = new System.Drawing.Size(114, 44);
+            this.btnCredentials.TabIndex = 10;
+            this.btnCredentials.Text = "UPDATE";
+            this.btnCredentials.UseVisualStyleBackColor = false;
+            this.btnCredentials.Click += new System.EventHandler(this.btnCredentials_Click);
             // 
             // label7
             // 
@@ -208,40 +243,19 @@
             this.txbUsername.Size = new System.Drawing.Size(275, 33);
             this.txbUsername.TabIndex = 4;
             // 
-            // label5
+            // button4
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.label5.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.label5.Location = new System.Drawing.Point(17, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 25);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "CREDENTIALS:";
-            // 
-            // txbSlot
-            // 
-            this.txbSlot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.txbSlot.Font = new System.Drawing.Font("Glacial Indifference", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSlot.Location = new System.Drawing.Point(174, 23);
-            this.txbSlot.Name = "txbSlot";
-            this.txbSlot.Size = new System.Drawing.Size(146, 33);
-            this.txbSlot.TabIndex = 4;
-            // 
-            // btnWorkingHours
-            // 
-            this.btnWorkingHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.btnWorkingHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWorkingHours.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWorkingHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.btnWorkingHours.Location = new System.Drawing.Point(441, 112);
-            this.btnWorkingHours.Name = "btnWorkingHours";
-            this.btnWorkingHours.Size = new System.Drawing.Size(114, 44);
-            this.btnWorkingHours.TabIndex = 10;
-            this.btnWorkingHours.Text = "UPDATE";
-            this.btnWorkingHours.UseVisualStyleBackColor = false;
-            this.btnWorkingHours.Click += new System.EventHandler(this.btnWorkingHours_Click);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.button4.Location = new System.Drawing.Point(38, 493);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(218, 51);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "ADD EXTRA SERVICES";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnActiveSlots
             // 
@@ -257,33 +271,19 @@
             this.btnActiveSlots.UseVisualStyleBackColor = false;
             this.btnActiveSlots.Click += new System.EventHandler(this.btnActiveSlots_Click);
             // 
-            // btnCredentials
+            // btnWorkingHours
             // 
-            this.btnCredentials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.btnCredentials.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCredentials.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCredentials.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.btnCredentials.Location = new System.Drawing.Point(441, 88);
-            this.btnCredentials.Name = "btnCredentials";
-            this.btnCredentials.Size = new System.Drawing.Size(114, 44);
-            this.btnCredentials.TabIndex = 10;
-            this.btnCredentials.Text = "UPDATE";
-            this.btnCredentials.UseVisualStyleBackColor = false;
-            this.btnCredentials.Click += new System.EventHandler(this.btnCredentials_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.button4.Location = new System.Drawing.Point(38, 493);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(218, 51);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "ADD EXTRA SERVICES";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnWorkingHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.btnWorkingHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWorkingHours.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWorkingHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.btnWorkingHours.Location = new System.Drawing.Point(441, 112);
+            this.btnWorkingHours.Name = "btnWorkingHours";
+            this.btnWorkingHours.Size = new System.Drawing.Size(114, 44);
+            this.btnWorkingHours.TabIndex = 10;
+            this.btnWorkingHours.Text = "UPDATE";
+            this.btnWorkingHours.UseVisualStyleBackColor = false;
+            this.btnWorkingHours.Click += new System.EventHandler(this.btnWorkingHours_Click);
             // 
             // UC_Settings
             // 
@@ -323,9 +323,9 @@
         private System.Windows.Forms.TextBox txbUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbSlot;
-        private System.Windows.Forms.Button btnWorkingHours;
-        private System.Windows.Forms.Button btnActiveSlots;
         private System.Windows.Forms.Button btnCredentials;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnWorkingHours;
+        private System.Windows.Forms.Button btnActiveSlots;
     }
 }
