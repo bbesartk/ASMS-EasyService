@@ -74,3 +74,4 @@ C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debu
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.pdb
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ViewAppointment.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.AddAppointments.resources

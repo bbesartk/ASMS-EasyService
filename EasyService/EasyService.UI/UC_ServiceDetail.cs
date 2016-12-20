@@ -158,12 +158,12 @@ namespace EasyService.UI
                     _vehicle.ServiceList.Add(sv);
                     if (_client != null)
                     {
-                        blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT));
+                        blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT,(FinalTotal((decimal)CalculateTotal(),WorkPay,VAT))));
                     }
                     else if (_company != null)
                     {
 
-                        blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT));
+                        blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT, (FinalTotal((decimal)CalculateTotal(), WorkPay, VAT))));
                     }
 
                     UpdateStock();

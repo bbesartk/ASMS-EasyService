@@ -51,6 +51,12 @@
     <Reference Include="TelerikCommon, Version=2016.3.1024.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAppointments.Designer.cs">
+      <DependentUpon>AddAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="InspectionDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     <Compile Include="UC_Settings.Designer.cs">
       <DependentUpon>UC_Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAppointments.resx">
+      <DependentUpon>AddAppointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InspectionDetailForm.resx">
       <DependentUpon>InspectionDetailForm.cs</DependentUpon>
     </EmbeddedResource>

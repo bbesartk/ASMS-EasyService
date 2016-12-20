@@ -42,22 +42,24 @@ namespace ES.EntityLayer.Finance
         #endregion
 
         #region Constructors
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, decimal vat)
+        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, decimal vat, decimal total)
         {
             ServicedVehicle = servicedVehicle;
             Service = service;
             Client = client;
             ServicedBy = servicedBy;
             Vat = vat;
+            Total = total;
         }
 
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, decimal vat)
+        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, decimal vat, decimal total)
         {
             ServicedVehicle = servicedVehicle;
             Service = service;
             Company = company; ;
             ServicedBy = servicedBy;
             Vat = vat;
+            Total = total;
         }
         #endregion
 
