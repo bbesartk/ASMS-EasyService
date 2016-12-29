@@ -16,5 +16,17 @@ namespace EasyService.UI
         {
             InitializeComponent();
         }
+
+        private void txtSubject_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtSubject.Text == "Appointment Subject...")
+                txtSubject.Clear();
+        }
+
+        private void AddAppointments_Load(object sender, EventArgs e)
+        {
+            dtpMeeting.MinDate = DateTime.Now;
+        }
+
     }
 }

@@ -98,6 +98,14 @@ namespace ES.BusinessLayer
 
         }
 
+        private static void SundayValidation()
+        {
+            //if(sunday==false)
+            //{
+                
+            //}
+        }
+
         public static void MakeTreated(Appointment appointment)
         {
             appointment.IsTreated = true;

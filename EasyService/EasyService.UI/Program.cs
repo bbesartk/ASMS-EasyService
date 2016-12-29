@@ -16,7 +16,7 @@ namespace EasyService.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddAppointments());
+            Application.Run(new MainPage());
         }
     }
 }

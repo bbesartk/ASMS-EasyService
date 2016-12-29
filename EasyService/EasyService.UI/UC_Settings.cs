@@ -27,16 +27,16 @@ namespace EasyService.UI
 
         private void btnWorkingHours_Click(object sender, EventArgs e)
         {
-            int start = int.Parse(cmbStart.Text.Split(':')[0].ToString());
-            int end = int.Parse(cmbEnd.Text.Split(':')[0].ToString());
-            if (start != 0 && end != 0)
-            {
-                MainPage.StartTime = start;
-                MainPage.EndTime = end;
+            //int start = int.Parse(cmbStart.Text.Split(':')[0].ToString());
+            //int end = int.Parse(cmbEnd.Text.Split(':')[0].ToString());
+            //if (start != 0 && end != 0)
+            //{
+            //    MainPage.StartTime = start;
+            //    MainPage.EndTime = end;
 
-                MessageBox.Show("Working hours are successfully updated!");
-            }
-            else MessageBox.Show("Invalid Time!");
+            //    MessageBox.Show("Working hours are successfully updated!");
+            //}
+            //else MessageBox.Show("Invalid Time!");
 
             
         }
@@ -45,13 +45,13 @@ namespace EasyService.UI
         {
             int numberOfSlots = 0;
 
-            int.TryParse(txbSlot.Text, out numberOfSlots);
-            if(numberOfSlots!=0)
-            {
-                MainPage.ActiveSlots = numberOfSlots;
-                MessageBox.Show("Active Slots are successfully updated!");
-            }
-            else MessageBox.Show("Invalid Number!");
+            //int.TryParse(txbSlot.Text, out numberOfSlots);
+            //if(numberOfSlots!=0)
+            //{
+            //    MainPage.ActiveSlots = numberOfSlots;
+            //    MessageBox.Show("Active Slots are successfully updated!");
+            //}
+            //else MessageBox.Show("Invalid Number!");
         }
 
         private void btnCredentials_Click(object sender, EventArgs e)

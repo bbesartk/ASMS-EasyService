@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpMeeting = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rbExistingClient = new System.Windows.Forms.RadioButton();
             this.rbNewClient = new System.Windows.Forms.RadioButton();
@@ -45,23 +45,25 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtpMeeting
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtpMeeting.AllowDrop = true;
+            this.dtpMeeting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Coral;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.AliceBlue;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Red;
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Glacial Indifference", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(-4, 82);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(492, 40);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtpMeeting.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpMeeting.CalendarForeColor = System.Drawing.Color.Coral;
+            this.dtpMeeting.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dtpMeeting.CalendarTitleBackColor = System.Drawing.Color.AliceBlue;
+            this.dtpMeeting.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
+            this.dtpMeeting.CalendarTrailingForeColor = System.Drawing.Color.Red;
+            this.dtpMeeting.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpMeeting.Font = new System.Drawing.Font("Glacial Indifference", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpMeeting.Location = new System.Drawing.Point(7, 82);
+            this.dtpMeeting.MinDate = new System.DateTime(2016, 12, 23, 0, 0, 0, 0);
+            this.dtpMeeting.Name = "dtpMeeting";
+            this.dtpMeeting.Size = new System.Drawing.Size(472, 40);
+            this.dtpMeeting.TabIndex = 0;
             // 
             // panel1
             // 
@@ -200,18 +202,19 @@
             this.txtSubject.Size = new System.Drawing.Size(489, 40);
             this.txtSubject.TabIndex = 22;
             this.txtSubject.Text = "Appointment Subject...";
+            this.txtSubject.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSubject_MouseClick);
             // 
             // btnAddAppointment
             // 
             this.btnAddAppointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Font = new System.Drawing.Font("Glacial Indifference", 20.25F);
+            this.btnAddAppointment.Font = new System.Drawing.Font("Glacial Indifference", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAppointment.ForeColor = System.Drawing.Color.White;
             this.btnAddAppointment.Location = new System.Drawing.Point(-13, 217);
             this.btnAddAppointment.Name = "btnAddAppointment";
             this.btnAddAppointment.Size = new System.Drawing.Size(501, 92);
             this.btnAddAppointment.TabIndex = 24;
-            this.btnAddAppointment.Text = "ADD THIS APPOINTMEN";
+            this.btnAddAppointment.Text = "ADD THIS APPOINTMENT";
             this.btnAddAppointment.UseVisualStyleBackColor = false;
             // 
             // AddAppointments
@@ -226,11 +229,12 @@
             this.Controls.Add(this.rbNewClient);
             this.Controls.Add(this.rbExistingClient);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpMeeting);
             this.Controls.Add(this.panel1);
             this.Name = "AddAppointments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add new Appointmnet";
+            this.Load += new System.EventHandler(this.AddAppointments_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -240,7 +244,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpMeeting;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rbExistingClient;
         private System.Windows.Forms.RadioButton rbNewClient;
