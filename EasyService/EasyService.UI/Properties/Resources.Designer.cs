@@ -283,6 +283,26 @@ namespace EasyService.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconic_1_1_1_account_login_256_0_32c2dd_none {
+            get {
+                object obj = ResourceManager.GetObject("iconic_1-1-1_account-login_256_0_32c2dd_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconic_1_1_1_hard_drive_256_0_32c2dd_none {
+            get {
+                object obj = ResourceManager.GetObject("iconic_1-1-1_hard-drive_256_0_32c2dd_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ionicons_2_0_1_settings_256_0_263135_none {
             get {
                 object obj = ResourceManager.GetObject("ionicons_2-0-1_settings_256_0_263135_none", resourceCulture);
@@ -336,6 +356,16 @@ namespace EasyService.UI.Properties {
         internal static System.Drawing.Bitmap material_icons_3_0_1_business_256_0_32c2dd_none {
             get {
                 object obj = ResourceManager.GetObject("material-icons_3-0-1_business_256_0_32c2dd_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_icons_3_0_1_date_range_256_0_32c2dd_none {
+            get {
+                object obj = ResourceManager.GetObject("material-icons_3-0-1_date-range_256_0_32c2dd_none", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

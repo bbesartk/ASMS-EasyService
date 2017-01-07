@@ -18,8 +18,9 @@ namespace EasyService.UI
         public static int EndTime { get; set; } = 16;
         public static string Username { get; set; } = "easyservice";
         public static string Password { get; set; } = "password";
-
         public static int ActiveSlots { get; set; } = 4;
+        public static bool SundayActivated { get; set; } = false;
+        public static bool SaturdayActivated { get; set; } = false;
 
         public MainPage()
         {

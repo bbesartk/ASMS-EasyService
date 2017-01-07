@@ -107,7 +107,7 @@ namespace EasyService.UI
             }
             else
             {
-                using (NewAppointmen nyApp = new NewAppointmen(vehicle))
+                using (AddAppointments nyApp = new AddAppointments(vehicle))
                 {
                     //nese ka nevoj per ndrrim hapet forma i mbushim te dhanat edhe i ruajm ne listen siper 
                     nyApp.ShowDialog();

@@ -23,8 +23,8 @@ namespace EasyService.UI
 
         private void UC_ViewAppointment_Load(object sender, EventArgs e)
         {
-            txbDate.Text = _appointment.TimeOfMeeting.ToShortDateString();
-            txbHour.Text = _appointment.TimeOfMeeting.Hour.ToString();
+            txbDate.Text = _appointment.AppointmentDate.ToShortDateString();
+            txbHour.Text = _appointment.StartTime.ToString();
             txbLicensePlate.Text = _appointment.Vehicle.LicensePlate.ToString();
             txbModel.Text = _appointment.Vehicle.Model.ToString();
             txbType.Text = _appointment.Vehicle.Type.ToString();
@@ -38,7 +38,7 @@ namespace EasyService.UI
                 txbOwner.Text = _appointment.Vehicle.Company.CompanyName;
             }
 
-            txbSlot.Text = _appointment.SlotRowNumber.ToString();
+            txbSlot.Text = _appointment.SlotNumber.ToString();
 
             txbSubject.Text = _appointment.Subject;
         }

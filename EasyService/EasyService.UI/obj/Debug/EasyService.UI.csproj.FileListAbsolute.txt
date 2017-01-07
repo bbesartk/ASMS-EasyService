@@ -47,7 +47,6 @@ C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debu
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csprojResolveAssemblyReference.cache
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.InspectionDetailForm.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.MainPage.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.NewAppointmen.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.Properties.Resources.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_AddNewItem.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Appointments.resources
@@ -75,3 +74,4 @@ C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debu
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.pdb
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ViewAppointment.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.AddAppointments.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_AppointmentValidation.resources
