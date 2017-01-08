@@ -60,6 +60,7 @@ namespace EasyService.UI
             _slotRowNumber = dalSlot.GetSlotNumber(_allSlots, _allSlots[0].Description);
             cmbServiceType.DataSource = serviceType;
             _serviceType = serviceType[0];
+            _date = DateTime.Now.Date;
         }
 
         private void txtSubject_MouseClick(object sender, MouseEventArgs e)

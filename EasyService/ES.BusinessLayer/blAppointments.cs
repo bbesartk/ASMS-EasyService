@@ -163,7 +163,7 @@ namespace ES.BusinessLayer
                     for (int i = 0; i < item.HoursOfAppointment.Length; i++)
                     {
                         string ora = item.HoursOfAppointment[i].ToString()+":00";
-                        foreach (var hour in availableTime)
+                        foreach (var hour in freeTimes)
                         {
                             if (ora == hour)
                                 availableTime.Remove(hour);
@@ -195,9 +195,9 @@ namespace ES.BusinessLayer
 
         public static void FillList(List<string> arrayToFill, List<string> source)
         {
-            for (int i = 0; i < source.Count; i++)
+            foreach (var item in source)
             {
-                arrayToFill.Add(source[i]);
+                arrayToFill.Add(item);
             }
         }
 
