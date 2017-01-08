@@ -35,13 +35,13 @@
             this.cmbServiceType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblKoha = new System.Windows.Forms.Label();
+            this.cmbKoha = new System.Windows.Forms.ComboBox();
             this.cmbAvailableSlot = new System.Windows.Forms.ComboBox();
             this.lblSlot = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtSubject = new System.Windows.Forms.TextBox();
             this.btnAddAppointment = new System.Windows.Forms.Button();
-            this.cmbKoha = new System.Windows.Forms.ComboBox();
-            this.lblKoha = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,18 +87,20 @@
             this.rbExistingClient.TabStop = true;
             this.rbExistingClient.Text = "Existing Client";
             this.rbExistingClient.UseVisualStyleBackColor = true;
+            this.rbExistingClient.Visible = false;
             // 
             // rbNewClient
             // 
             this.rbNewClient.AutoSize = true;
             this.rbNewClient.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNewClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rbNewClient.Location = new System.Drawing.Point(179, 49);
+            this.rbNewClient.Location = new System.Drawing.Point(9, 49);
             this.rbNewClient.Name = "rbNewClient";
             this.rbNewClient.Size = new System.Drawing.Size(123, 27);
             this.rbNewClient.TabIndex = 21;
             this.rbNewClient.Text = "New Client";
             this.rbNewClient.UseVisualStyleBackColor = true;
+            this.rbNewClient.Visible = false;
             // 
             // cmbServiceType
             // 
@@ -142,6 +144,31 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(498, 97);
             this.panel3.TabIndex = 20;
+            // 
+            // lblKoha
+            // 
+            this.lblKoha.AutoSize = true;
+            this.lblKoha.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKoha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.lblKoha.Location = new System.Drawing.Point(348, 11);
+            this.lblKoha.Name = "lblKoha";
+            this.lblKoha.Size = new System.Drawing.Size(106, 19);
+            this.lblKoha.TabIndex = 26;
+            this.lblKoha.Text = "Prefered time:";
+            // 
+            // cmbKoha
+            // 
+            this.cmbKoha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.cmbKoha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKoha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbKoha.Font = new System.Drawing.Font("Glacial Indifference", 12F);
+            this.cmbKoha.ForeColor = System.Drawing.Color.White;
+            this.cmbKoha.FormattingEnabled = true;
+            this.cmbKoha.Location = new System.Drawing.Point(352, 39);
+            this.cmbKoha.Name = "cmbKoha";
+            this.cmbKoha.Size = new System.Drawing.Size(121, 27);
+            this.cmbKoha.TabIndex = 25;
+            this.cmbKoha.SelectedIndexChanged += new System.EventHandler(this.cmbKoha_SelectedIndexChanged);
             // 
             // cmbAvailableSlot
             // 
@@ -207,31 +234,6 @@
             this.btnAddAppointment.UseVisualStyleBackColor = false;
             this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
             // 
-            // cmbKoha
-            // 
-            this.cmbKoha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.cmbKoha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKoha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbKoha.Font = new System.Drawing.Font("Glacial Indifference", 12F);
-            this.cmbKoha.ForeColor = System.Drawing.Color.White;
-            this.cmbKoha.FormattingEnabled = true;
-            this.cmbKoha.Location = new System.Drawing.Point(352, 39);
-            this.cmbKoha.Name = "cmbKoha";
-            this.cmbKoha.Size = new System.Drawing.Size(121, 27);
-            this.cmbKoha.TabIndex = 25;
-            this.cmbKoha.SelectedIndexChanged += new System.EventHandler(this.cmbKoha_SelectedIndexChanged);
-            // 
-            // lblKoha
-            // 
-            this.lblKoha.AutoSize = true;
-            this.lblKoha.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKoha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.lblKoha.Location = new System.Drawing.Point(348, 11);
-            this.lblKoha.Name = "lblKoha";
-            this.lblKoha.Size = new System.Drawing.Size(106, 19);
-            this.lblKoha.TabIndex = 26;
-            this.lblKoha.Text = "Prefered time:";
-            // 
             // AddAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,7 +250,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddAppointments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add new Appointmnet";
+            this.Text = "REGISTER NEW APPOINTMENT";
             this.Load += new System.EventHandler(this.AddAppointments_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

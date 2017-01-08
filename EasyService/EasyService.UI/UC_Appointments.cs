@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.BusinessLayer;
 using ES.EntityLayer.Appointments;
+using ES.DataAccessLayer;
 
 namespace EasyService.UI
 {
@@ -33,6 +34,21 @@ namespace EasyService.UI
 
             this.Controls.Clear();
             this.Controls.Add(appointment);
+        }
+
+        private void immediateMediate_Click(object sender, EventArgs e)
+        {
+            using (AddAppointments nyApp = new AddAppointments())
+            {
+                //nese ka nevoj per ndrrim hapet forma i mbushim te dhanat edhe i ruajm ne listen siper 
+                nyApp.ShowDialog();
+                if (nyApp.DialogResult == DialogResult.OK)
+                {
+                    dalAppointments.Insert(nyApp.NewAppointment);
+
+                }
+
+            }
         }
     }
 }

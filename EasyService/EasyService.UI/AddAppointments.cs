@@ -34,33 +34,24 @@ namespace EasyService.UI
         public AddAppointments()
         {
             InitializeComponent();
+            FillControls();
+            rbNewClient.Visible = true;
+            rbNewClient.Checked = true;
+
+            rbExistingClient.Checked = false;
+            rbExistingClient.Visible = false;
         }
 
         public AddAppointments(Vehicle vehicle)
         {
             InitializeComponent();
             _vehivle = vehicle;
+            FillControls();
+            rbNewClient.Visible = false;
+            rbNewClient.Checked = false;
 
-            for (int i = 0; i < MainPage.ActiveSlots; i++)
-            {
-                _allSlots.Add(new Slot(i + 1, "Slot" + (i + 1)));
-            }
-            
-            for (int i = MainPage.StartTime; i < MainPage.EndTime; i++)
-            {
-                _availableTime.Add(i + ":00");
-            }
-
-            string[] serviceType = { "Small Service", "Major Service" };
-
-            cmbAvailableSlot.DataSource = _allSlots;
-
-            cmbKoha.DataSource = _availableTime;
-            _startTime = int.Parse(_availableTime[0].Split(':')[0]);
-            _slotRowNumber = dalSlot.GetSlotNumber(_allSlots, _allSlots[0].Description);
-            cmbServiceType.DataSource = serviceType;
-            _serviceType = serviceType[0];
-            _date = DateTime.Now.Date;
+            rbExistingClient.Checked = true;
+            rbExistingClient.Visible = true;
         }
 
         private void txtSubject_MouseClick(object sender, MouseEventArgs e)
@@ -141,6 +132,30 @@ namespace EasyService.UI
                 _endTime = startTime + 3;
 
             return _endTime;
+        }
+
+        private void FillControls()
+        {
+            for (int i = 0; i < MainPage.ActiveSlots; i++)
+            {
+                _allSlots.Add(new Slot(i + 1, "Slot" + (i + 1)));
+            }
+
+            for (int i = MainPage.StartTime; i < MainPage.EndTime; i++)
+            {
+                _availableTime.Add(i + ":00");
+            }
+
+            string[] serviceType = { "Small Service", "Major Service" };
+
+            cmbAvailableSlot.DataSource = _allSlots;
+
+            cmbKoha.DataSource = _availableTime;
+            _startTime = int.Parse(_availableTime[0].Split(':')[0]);
+            _slotRowNumber = dalSlot.GetSlotNumber(_allSlots, _allSlots[0].Description);
+            cmbServiceType.DataSource = serviceType;
+            _serviceType = serviceType[0];
+            _date = DateTime.Now.Date;
         }
     }
 }
