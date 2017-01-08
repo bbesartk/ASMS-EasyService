@@ -15,16 +15,23 @@ namespace EasyService.UI
 {
     public partial class UC_Dashboard : UserControl
     {
-        private readonly bool _getAll;
+        private readonly bool? _getAll = false;
+        
         public UC_Dashboard()
         {
             InitializeComponent();
+
         }
 
-        public UC_Dashboard(bool getAll)
+        public UC_Dashboard(bool? getAll)
         {
             InitializeComponent();
             _getAll = getAll;
+            if(_getAll==null)
+            {
+                lblNotificiations.Visible = false;
+                dgNotifications.Visible = false;
+            }
         }
         private void txbKerko_MouseClick(object sender, MouseEventArgs e)
         {
@@ -37,15 +44,20 @@ namespace EasyService.UI
 
         private void UC_Dashboard_Load(object sender, EventArgs e)
         {
-            if (_getAll)
+            if (_getAll==true)
             {
                 lblNotificiations.Text = "LIST OF ALL VEHICLES!";
                 dgNotifications.DataSource = blVehicle.GetAll();
             }
-            else
+            else if(_getAll==false)
             {
                 lblNotificiations.Text = "NOTIFICATIONS!";
                 dgNotifications.DataSource = blVehicle.GeAllReadyForService();
+            }
+            else
+            {
+                lblNotificiations.Visible = false;
+                dgNotifications.Visible = false;
             }
         }
 
@@ -101,7 +113,7 @@ namespace EasyService.UI
         private void dgNotifications_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Vehicle vehicle = (Vehicle)dgNotifications.Rows[e.RowIndex].DataBoundItem;
-            if(_getAll)
+            if(_getAll==true)
             {
                 ViewVehicle(vehicle);
             }

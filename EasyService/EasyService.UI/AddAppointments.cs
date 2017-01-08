@@ -35,6 +35,7 @@ namespace EasyService.UI
         {
             InitializeComponent();
             FillControls();
+            _vehivle = null;
             rbNewClient.Visible = true;
             rbNewClient.Checked = true;
 
@@ -92,6 +93,13 @@ namespace EasyService.UI
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
+            if(_vehivle == null)
+            {
+                using (MainPage mp = new MainPage(null))
+                {
+                    mp.ShowDialog();
+                }
+            }
             DateTime dt = new DateTime(_date.Year, _date.Month,_date.Day, _startTime, 0, 0);
             try
             {

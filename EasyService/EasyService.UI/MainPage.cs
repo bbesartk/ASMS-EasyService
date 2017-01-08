@@ -22,6 +22,8 @@ namespace EasyService.UI
         public static bool SundayActivated { get; set; } = false;
         public static bool SaturdayActivated { get; set; } = false;
 
+
+        private readonly bool? _appRegister = false;
         public MainPage()
         {
             InitializeComponent();
@@ -34,6 +36,19 @@ namespace EasyService.UI
             DataTest.Insert();
         }
 
+        public MainPage(bool? appRegister)
+        {
+            InitializeComponent();
+            _appRegister = appRegister;
+            if (appRegister==null)
+            {
+                mainPanel.Controls.Clear();
+                UC_Dashboard db = new UC_Dashboard(appRegister);
+                mainPanel.Controls.Add(db);
+
+            }
+        }
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             UC_Dashboard dashboard = new UC_Dashboard();
@@ -43,9 +58,12 @@ namespace EasyService.UI
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-            UC_Dashboard dashboard = new UC_Dashboard();
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(dashboard);
+            if (_appRegister != null)
+            {
+                UC_Dashboard dashboard = new UC_Dashboard();
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(dashboard);
+            }
         }
 
         private void btnStock_Click(object sender, EventArgs e)
