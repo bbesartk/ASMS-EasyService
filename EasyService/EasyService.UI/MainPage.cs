@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.BusinessLayer;
 using ES.EntityLayer.General;
+using ES.EntityLayer.Vehicle;
 
 namespace EasyService.UI
 {
@@ -21,9 +22,8 @@ namespace EasyService.UI
         public static int ActiveSlots { get; set; } = 4;
         public static bool SundayActivated { get; set; } = false;
         public static bool SaturdayActivated { get; set; } = false;
-
-
         private readonly bool? _appRegister = false;
+        public Vehicle Vehicle;
         public MainPage()
         {
             InitializeComponent();
@@ -34,19 +34,6 @@ namespace EasyService.UI
             //DataTest.InitialiseClients();
             //DataTest.InitialiseCompany();
             DataTest.Insert();
-        }
-
-        public MainPage(bool? appRegister)
-        {
-            InitializeComponent();
-            _appRegister = appRegister;
-            if (appRegister==null)
-            {
-                mainPanel.Controls.Clear();
-                UC_Dashboard db = new UC_Dashboard(appRegister);
-                mainPanel.Controls.Add(db);
-
-            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)

@@ -57,7 +57,6 @@ namespace EasyService.UI
                         blCompany.InserCompany(c1);
                         _vehicle.Company = c1;
                         blVehicle.InsertVehicle(_vehicle);
-
                     }
                     DialogResult dg = MessageBox.Show("This car has successfully registred!", "Car Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dg == DialogResult.OK)

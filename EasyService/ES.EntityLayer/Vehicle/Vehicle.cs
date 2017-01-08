@@ -137,6 +137,11 @@ namespace ES.EntityLayer.Vehicle
         }
 
 
+        public Vehicle()
+        {
+
+        }
+
         public Vehicle(string licensePlate, string vin, int productionYear, string type, string model, int cubicCm, Company company)
         {
             LicensePlate = licensePlate;

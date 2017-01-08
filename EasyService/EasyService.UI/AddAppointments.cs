@@ -17,7 +17,7 @@ namespace EasyService.UI
 {
     public partial class AddAppointments : Form
     {
-        public readonly Vehicle _vehivle;
+        public Vehicle _vehicle;
         public string _serviceType;
         public int _slotRowNumber;
         public int _workStartTime = MainPage.StartTime;
@@ -35,7 +35,7 @@ namespace EasyService.UI
         {
             InitializeComponent();
             FillControls();
-            _vehivle = null;
+            _vehicle = null;
             rbNewClient.Visible = true;
             rbNewClient.Checked = true;
 
@@ -46,7 +46,7 @@ namespace EasyService.UI
         public AddAppointments(Vehicle vehicle)
         {
             InitializeComponent();
-            _vehivle = vehicle;
+            _vehicle = vehicle;
             FillControls();
             rbNewClient.Visible = false;
             rbNewClient.Checked = false;
@@ -93,21 +93,30 @@ namespace EasyService.UI
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
-            if(_vehivle == null)
+            if(_vehicle == null)
             {
-                using (MainPage mp = new MainPage(null))
+                this.Hide();
+                using (NewClient nc = new NewClient())
                 {
-                    mp.ShowDialog();
+
+                    nc.ShowDialog();
+                    if (nc.DialogResult==DialogResult.OK)
+                    {
+                        _vehicle = nc.Vehicle;
+                        this.Close();
+                    }
                 }
+                this.Show();
             }
             DateTime dt = new DateTime(_date.Year, _date.Month,_date.Day, _startTime, 0, 0);
             try
             {
                 if (blAppointments.IsValid(dt,_workStartTime,_workEndTime,_saturday,_sunday))
                 {
+                    bool newClient = rbNewClient.Checked;
+                    NewAppointment = new Appointment(txtSubject.Text,dt,_serviceType,_startTime,GetEndTime(_startTime,cmbServiceType.SelectedValue.ToString()),_slotRowNumber,_vehicle,newClient);
                     MessageBox.Show("Appointment successfully saved!", "New Appointment", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     DialogResult = DialogResult.OK;
-                    NewAppointment = new Appointment(txtSubject.Text,dt,_serviceType,_startTime,GetEndTime(_startTime,cmbServiceType.SelectedValue.ToString()),_slotRowNumber,_vehivle);
                     _allSlots.Clear();
                     this.Close();
                 }

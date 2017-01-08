@@ -24,10 +24,12 @@ namespace ES.EntityLayer.Appointments
         public bool IsCanceled { get; set; }
 
         public int[] HoursOfAppointment { get { return AllHours(StartTime, EndtTime); } }
-        
+
+        public bool IsNewClient { get; set; }
 
 
-        public Appointment(string subject, DateTime appointmentDate, string serviceType, int startTime, int endTime, int slotNumber, Vehicle.Vehicle vehicle)
+
+        public Appointment(string subject, DateTime appointmentDate, string serviceType, int startTime, int endTime, int slotNumber, Vehicle.Vehicle vehicle, bool isNewClient)
         {
             Subject = subject;
             AppointmentDate = appointmentDate;
@@ -38,6 +40,8 @@ namespace ES.EntityLayer.Appointments
             Vehicle = vehicle;
             IsTreated = false;
             IsCanceled = false;
+            IsNewClient = isNewClient;
+            
         }
 
         public int[] AllHours(int start, int end)

@@ -97,6 +97,31 @@ namespace ES.BusinessLayer
             return lista;
         }
 
+        public static List<Appointment> GetAllAppointmentByExistedClient()
+        {
+            List<Appointment> lista = new List<Appointment>();
+
+            foreach (var item in GetAllAppointment())
+            {
+                if(item.IsNewClient==false)
+                {
+                    lista.Add(item);
+                }
+            }
+            return lista;
+        }
+
+        public static List<Appointment> GetAllAppointmentByNewClients()
+        {
+            List<Appointment> lista = new List<Appointment>();
+            foreach (var item in GetAllNotTreated())
+            {
+                if (item.IsNewClient == true)
+                    lista.Add(item);
+            }
+            return lista;
+        }
+
         public static bool HasValidTime(string serviceType, int meetingHour, int endWorkingTime)
         {
             if (serviceType == "Small Service")

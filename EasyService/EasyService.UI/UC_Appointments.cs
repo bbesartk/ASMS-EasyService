@@ -14,26 +14,37 @@ using ES.DataAccessLayer;
 namespace EasyService.UI
 {
     public partial class UC_Appointments : UserControl
-    {
-        
-
+    {    
         public UC_Appointments()
         {
             InitializeComponent();
+            RefreshList();
         }
 
         private void UC_Appointments_Load(object sender, EventArgs e)
         {
-            dgAppointment.DataSource = blAppointments.GetAllNotTreated();
+            rbExistingClient.Checked = true;
+            if (rbExistingClient.Checked == true)
+            dgAppointment.DataSource = blAppointments.GetAllAppointmentByExistedClient();
         }
 
         private void dgAppointment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Appointment app = (Appointment)dgAppointment.Rows[e.RowIndex].DataBoundItem;
-            UC_ViewAppointment appointment = new UC_ViewAppointment(app);
+            if (rbExistingClient.Checked)
+            {
+                Appointment app = (Appointment)dgAppointment.Rows[e.RowIndex].DataBoundItem;
+                UC_ViewAppointment appointment = new UC_ViewAppointment(app);
 
-            this.Controls.Clear();
-            this.Controls.Add(appointment);
+                this.Controls.Clear();
+                this.Controls.Add(appointment);
+            }
+            else if(rbExistingClient.Checked==false)
+            {
+                Appointment app = (Appointment)dgAppointment.Rows[e.RowIndex].DataBoundItem;
+                this.Controls.Clear();
+                UC_Dashboard db = new UC_Dashboard(null, app.Vehicle.LicensePlate);
+                this.Controls.Add(db);
+            }
         }
 
         private void immediateMediate_Click(object sender, EventArgs e)
@@ -50,5 +61,24 @@ namespace EasyService.UI
 
             }
         }
+
+        private void rbExistingClient_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbNewClient.Checked)
+            {
+                RefreshList();
+                dgAppointment.DataSource = blAppointments.GetAllAppointmentByNewClients();
+            }
+            else if(rbExistingClient.Checked)
+            {
+                RefreshList();
+                dgAppointment.DataSource = blAppointments.GetAllAppointmentByExistedClient();
+            }
+        }
+        private void RefreshList()
+        {
+            dgAppointment.DataSource = null;
+        }
     }
+
 }

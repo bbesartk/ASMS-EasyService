@@ -22,6 +22,10 @@ namespace ES.EntityLayer.Clients
             Id = id;
             ContactInfo = contactInfo;
         }
+        public Client()
+        {
+
+        }
 
         #endregion
 

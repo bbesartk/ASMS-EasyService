@@ -35,11 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgAppointment = new System.Windows.Forms.DataGridView();
+            this.lblNotificiations = new System.Windows.Forms.Label();
+            this.immediateMediate = new System.Windows.Forms.Button();
+            this.rbNewClient = new System.Windows.Forms.RadioButton();
+            this.rbExistingClient = new System.Windows.Forms.RadioButton();
             this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vehicleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.appointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblNotificiations = new System.Windows.Forms.Label();
-            this.immediateMediate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgAppointment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -115,6 +117,58 @@
             this.dgAppointment.TabStop = false;
             this.dgAppointment.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAppointment_CellContentDoubleClick);
             // 
+            // lblNotificiations
+            // 
+            this.lblNotificiations.AutoSize = true;
+            this.lblNotificiations.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotificiations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.lblNotificiations.Location = new System.Drawing.Point(10, 99);
+            this.lblNotificiations.Name = "lblNotificiations";
+            this.lblNotificiations.Size = new System.Drawing.Size(330, 23);
+            this.lblNotificiations.TabIndex = 17;
+            this.lblNotificiations.Text = "LIST OF APPOINTMENTS TO BE TREATED";
+            // 
+            // immediateMediate
+            // 
+            this.immediateMediate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.immediateMediate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.immediateMediate.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
+            this.immediateMediate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.immediateMediate.Location = new System.Drawing.Point(395, 60);
+            this.immediateMediate.Name = "immediateMediate";
+            this.immediateMediate.Size = new System.Drawing.Size(264, 62);
+            this.immediateMediate.TabIndex = 19;
+            this.immediateMediate.Text = "IMMEDIATE APPOINTMENT";
+            this.immediateMediate.UseVisualStyleBackColor = false;
+            this.immediateMediate.Click += new System.EventHandler(this.immediateMediate_Click);
+            // 
+            // rbNewClient
+            // 
+            this.rbNewClient.AutoSize = true;
+            this.rbNewClient.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNewClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.rbNewClient.Location = new System.Drawing.Point(224, 60);
+            this.rbNewClient.Name = "rbNewClient";
+            this.rbNewClient.Size = new System.Drawing.Size(116, 27);
+            this.rbNewClient.TabIndex = 22;
+            this.rbNewClient.Text = "New Client";
+            this.rbNewClient.UseVisualStyleBackColor = true;
+            // 
+            // rbExistingClient
+            // 
+            this.rbExistingClient.AutoSize = true;
+            this.rbExistingClient.Checked = true;
+            this.rbExistingClient.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbExistingClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.rbExistingClient.Location = new System.Drawing.Point(14, 60);
+            this.rbExistingClient.Name = "rbExistingClient";
+            this.rbExistingClient.Size = new System.Drawing.Size(144, 27);
+            this.rbExistingClient.TabIndex = 23;
+            this.rbExistingClient.TabStop = true;
+            this.rbExistingClient.Text = "Existing Client";
+            this.rbExistingClient.UseVisualStyleBackColor = true;
+            this.rbExistingClient.CheckedChanged += new System.EventHandler(this.rbExistingClient_CheckedChanged);
+            // 
             // subjectDataGridViewTextBoxColumn
             // 
             this.subjectDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -134,36 +188,13 @@
             // 
             this.appointmentBindingSource.DataSource = typeof(ES.EntityLayer.Appointments.Appointment);
             // 
-            // lblNotificiations
-            // 
-            this.lblNotificiations.AutoSize = true;
-            this.lblNotificiations.Font = new System.Drawing.Font("Glacial Indifference", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotificiations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.lblNotificiations.Location = new System.Drawing.Point(10, 99);
-            this.lblNotificiations.Name = "lblNotificiations";
-            this.lblNotificiations.Size = new System.Drawing.Size(330, 23);
-            this.lblNotificiations.TabIndex = 17;
-            this.lblNotificiations.Text = "LIST OF APPOINTMENTS TO BE TREATED";
-            // 
-            // immediateMediate
-            // 
-            this.immediateMediate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.immediateMediate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.immediateMediate.Font = new System.Drawing.Font("Glacial Indifference", 15.75F);
-            this.immediateMediate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
-            this.immediateMediate.Location = new System.Drawing.Point(395, 77);
-            this.immediateMediate.Name = "immediateMediate";
-            this.immediateMediate.Size = new System.Drawing.Size(264, 45);
-            this.immediateMediate.TabIndex = 19;
-            this.immediateMediate.Text = "IMMEDIATE APPOINTMENT";
-            this.immediateMediate.UseVisualStyleBackColor = false;
-            this.immediateMediate.Click += new System.EventHandler(this.immediateMediate_Click);
-            // 
             // UC_Appointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
+            this.Controls.Add(this.rbNewClient);
+            this.Controls.Add(this.rbExistingClient);
             this.Controls.Add(this.immediateMediate);
             this.Controls.Add(this.dgAppointment);
             this.Controls.Add(this.lblNotificiations);
@@ -187,5 +218,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vehicleDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource appointmentBindingSource;
         private System.Windows.Forms.Button immediateMediate;
+        private System.Windows.Forms.RadioButton rbNewClient;
+        private System.Windows.Forms.RadioButton rbExistingClient;
     }
 }

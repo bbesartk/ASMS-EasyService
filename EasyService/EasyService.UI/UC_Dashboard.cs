@@ -16,18 +16,28 @@ namespace EasyService.UI
     public partial class UC_Dashboard : UserControl
     {
         private readonly bool? _getAll = false;
-        
         public UC_Dashboard()
         {
             InitializeComponent();
 
         }
 
-        public UC_Dashboard(bool? getAll)
+        public UC_Dashboard(bool? getAll, string licensePlate)
         {
             InitializeComponent();
             _getAll = getAll;
             if(_getAll==null)
+            {
+                lblNotificiations.Visible = false;
+                dgNotifications.Visible = false;
+                txbKerko.Text = licensePlate;
+            }
+        }
+
+        public UC_Dashboard(bool? getAll)
+        {
+            _getAll = getAll;
+            if (_getAll == null)
             {
                 lblNotificiations.Visible = false;
                 dgNotifications.Visible = false;
