@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using ES.EntityLayer.Employees;
 
 namespace ES.EntityLayer.Services
 {
-    public class Service
+    public class Service:IEnumerable<Inspection>
     {
         #region PrivateMembers
         private DateTime _dateOfService;
@@ -83,11 +84,21 @@ namespace ES.EntityLayer.Services
             ServicedBy = servicedBy;
             Total = total;
         }
+
+        public IEnumerator<Inspection> GetEnumerator()
+        {
+            return ListInspection.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ListInspection.GetEnumerator();
+        }
         #endregion
 
         #region Methods
         //Calculate total for all serviced Inspections
-        
+
         #endregion
     }
 }

@@ -1,5 +1,6 @@
 ﻿using ES.BusinessLayer;
 using ES.EntityLayer.Finance;
+using ES.EntityLayer.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,14 @@ namespace EasyService.UI
 
         private void ViewInvoice_Load(object sender, EventArgs e)
         {
-            dgItems.DataSource = _invoice.Service.ListInspection[0].InspectionDetail;
+            List<InspectionDetail> all = new List<InspectionDetail>();
+            foreach (var item in _invoice.Service.ListInspection)
+            {
+                all.Add(item.InspectionDetail);
+            }
+
+            dgItems.DataSource = all;
+
         }
 
         private void btnBillAndSave_Click(object sender, EventArgs e)

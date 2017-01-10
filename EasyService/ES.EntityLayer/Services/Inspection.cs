@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,7 @@ namespace ES.EntityLayer.Services
         {
             return $"{InspectionDetail.Item.Name} | {InspectionDetail.Item.Price} x {InspectionDetail.Quantity}";
         }
+
         #endregion
 
         #region Methods

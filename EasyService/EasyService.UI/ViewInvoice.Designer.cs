@@ -44,12 +44,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dgItems = new System.Windows.Forms.DataGridView();
+            this.inspectionDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBillAndSave = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblFinalTotal = new System.Windows.Forms.Label();
             this.lblVAT = new System.Windows.Forms.Label();
-            this.inspectionDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
@@ -220,6 +220,10 @@
             this.dgItems.Size = new System.Drawing.Size(635, 306);
             this.dgItems.TabIndex = 22;
             // 
+            // inspectionDetailBindingSource
+            // 
+            this.inspectionDetailBindingSource.DataSource = typeof(ES.EntityLayer.Services.InspectionDetail);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(49)))), ((int)(((byte)(53)))));
@@ -273,25 +277,21 @@
             this.lblVAT.TabIndex = 21;
             this.lblVAT.Text = "VAT: ";
             // 
-            // inspectionDetailBindingSource
-            // 
-            this.inspectionDetailBindingSource.DataSource = typeof(ES.EntityLayer.Services.InspectionDetail);
-            // 
             // itemDataGridViewTextBoxColumn
             // 
+            this.itemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.itemDataGridViewTextBoxColumn.DataPropertyName = "Item";
             this.itemDataGridViewTextBoxColumn.HeaderText = "Item";
             this.itemDataGridViewTextBoxColumn.Name = "itemDataGridViewTextBoxColumn";
             this.itemDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemDataGridViewTextBoxColumn.Width = 52;
             // 
             // quantityDataGridViewTextBoxColumn
             // 
+            this.quantityDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
             this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
             this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
             this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantityDataGridViewTextBoxColumn.Width = 71;
             // 
             // ViewInvoice
             // 
@@ -351,8 +351,8 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblFinalTotal;
         private System.Windows.Forms.Label lblVAT;
+        private System.Windows.Forms.BindingSource inspectionDetailBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource inspectionDetailBindingSource;
     }
 }
