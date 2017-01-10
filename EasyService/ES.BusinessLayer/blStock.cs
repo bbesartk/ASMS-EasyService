@@ -141,8 +141,22 @@ namespace ES.BusinessLayer
         public static void AllItemsInserted()
         {
             ///*/http://www.eurocarparts.com/car-parts*/   qitu i merr listen e Itemav- shti sa tmujsh
-            ///
-            AddItems(new Item("242334243", "sasadsda", 2423, 234, Category.CoolAndHeat));
+            //
+
+            AddItems(new Item("123456789", "Instruments/warning lamps", 2.1, 12, Category.ServiceParts));
+            AddItems(new Item("124578962", "Switches/controls", 1.5, 5, Category.ServiceParts));
+            AddItems(new Item("123612345", "Engine oil leaks", 8, 21, Category.EngineParts));
+            AddItems(new Item("123745854", "Engine oil", 12, 45, Category.EngineParts));
+            AddItems(new Item("123678478", "Engine oil filter", 1.8, 7, Category.EngineParts));
+            AddItems(new Item("145678455", "Manual transminsson oil leaks", 4.5, 8, Category.Transmission));
+            AddItems(new Item("124897678", "Manual transmission oil", 9.4, 26, Category.Transmission));
+            AddItems(new Item("123479655", "Fuel tank leakage", 24, 12, Category.Lubrificants));
+            AddItems(new Item("123987546", "Fuel system leakage", 20.4, 12, Category.Lubrificants));
+            AddItems(new Item("321456712", "Air Filte", 2.5, 36, Category.CoolAndHeat));
+            AddItems(new Item("456114311", "Air conditioning", 7, 16, Category.CoolAndHeat));
+            AddItems(new Item("231444567", "Brakes", 15, 31, Category.Brakes));
+            AddItems(new Item("456799631", "ABS Function", 25, 12, Category.Brakes));
+
         }
     }
     #endregion
