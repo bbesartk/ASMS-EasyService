@@ -30,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="POO16F3">
+      <HintPath>..\POO16F3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,12 +47,15 @@
     <Compile Include="Appointments\Appointment.cs" />
     <Compile Include="Clients\Client.cs" />
     <Compile Include="Clients\Company.cs" />
+    <Compile Include="Employees\Boss.cs" />
     <Compile Include="Employees\Employee.cs" />
     <Compile Include="Employees\Mechanic.cs" />
     <Compile Include="Finance\Invoice.cs" />
+    <Compile Include="General\Access.cs" />
     <Compile Include="General\Admin.cs" />
     <Compile Include="General\Car.cs" />
     <Compile Include="General\ContactInfo.cs" />
+    <Compile Include="General\IAccess.cs" />
     <Compile Include="General\Person.cs" />
     <Compile Include="General\Slot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

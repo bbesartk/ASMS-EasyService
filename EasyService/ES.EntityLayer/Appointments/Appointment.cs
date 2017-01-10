@@ -1,13 +1,14 @@
 ﻿using System;
+using POO16F3;
 
 
 namespace ES.EntityLayer.Appointments
 {
-    public class Appointment
+    public class Appointment:Rezervim
     {
-        public string Subject { get; set; }
+        private static int _appointmentId = 0;
 
-        public DateTime AppointmentDate { get; set; }
+        public string Subject { get; set; }
 
         public int StartTime { get; set; }
 
@@ -28,11 +29,11 @@ namespace ES.EntityLayer.Appointments
         public bool IsNewClient { get; set; }
 
 
-
         public Appointment(string subject, DateTime appointmentDate, string serviceType, int startTime, int endTime, int slotNumber, Vehicle.Vehicle vehicle, bool isNewClient)
         {
+            RezervimID=++_appointmentId;
             Subject = subject;
-            AppointmentDate = appointmentDate;
+            Data = appointmentDate;
             ServiceType = serviceType;
             StartTime = startTime;
             EndtTime = endTime;

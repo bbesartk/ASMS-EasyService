@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using ES.BusinessLayer;
 using ES.EntityLayer.Appointments;
 using ES.DataAccessLayer;
+using POO16F3;
 
 namespace EasyService.UI
 {
-    public partial class UC_Appointments : UserControl
-    {    
+    public partial class UC_Appointments : UserControl,IParaqit
+    {
+        Appointment app2;
         public UC_Appointments()
         {
             InitializeComponent();
@@ -34,16 +36,13 @@ namespace EasyService.UI
             {
                 Appointment app = (Appointment)dgAppointment.Rows[e.RowIndex].DataBoundItem;
                 UC_ViewAppointment appointment = new UC_ViewAppointment(app);
-
                 this.Controls.Clear();
                 this.Controls.Add(appointment);
             }
             else if(rbExistingClient.Checked==false)
             {
-                Appointment app = (Appointment)dgAppointment.Rows[e.RowIndex].DataBoundItem;
-                this.Controls.Clear();
-                UC_Dashboard db = new UC_Dashboard(null, app.Vehicle.LicensePlate);
-                this.Controls.Add(db);
+                app2 = (Appointment)dgAppointment.Rows[e.RowIndex].DataBoundItem;
+                Paraqit();
             }
         }
 
@@ -78,6 +77,17 @@ namespace EasyService.UI
         private void RefreshList()
         {
             dgAppointment.DataSource = null;
+        }
+
+        public void Paraqit()
+        {
+            DialogResult dr = MessageBox.Show($"Vehicle type: {app2.Vehicle.Type}\r\nVehicle Plate: {app2.Vehicle.LicensePlate}\r\nOwner: {app2.Vehicle.Client.Name}","Appointment info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            if(dr == DialogResult.OK)
+            {
+                this.Controls.Clear();
+                UC_Dashboard db = new UC_Dashboard(null, app2.Vehicle.LicensePlate);
+                this.Controls.Add(db);
+            }
         }
     }
 

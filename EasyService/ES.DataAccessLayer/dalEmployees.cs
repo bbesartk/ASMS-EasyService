@@ -11,6 +11,10 @@ namespace ES.DataAccessLayer
       {
         private static List<Mechanic> _listOfMechanic = new List<Mechanic>();
 
+        private static List<Employee> _listOfEmployees = new List<Employee>();
+
+        private static List<Boss> _listOfAdmin = new List<Boss>();
+
         public static void Insert(Mechanic mechanic)
         {
             _listOfMechanic.Add(mechanic);
@@ -27,6 +31,7 @@ namespace ES.DataAccessLayer
                     oldMechanic.Username = mechanic.Password;
                     oldMechanic.Password = mechanic.Password;
                 }
+               
             }
         }
 
@@ -40,12 +45,43 @@ namespace ES.DataAccessLayer
             return null;
         }
 
+        public static void InsertAdmin(Boss boss)
+        {
+            _listOfAdmin.Add(boss);
+        }
+
+        public static List<Boss> GetAllAdmin()
+        {
+            return _listOfAdmin;
+        }
+
+
         public static void Remove(string id)
         {
             Mechanic mechanic = GetSingelMechanic(id);
             _listOfMechanic.Remove(mechanic);
         }
-        public static List<Mechanic> GetAll()
+        public static List<Employee> GetAll()
+        {
+            List<Employee> emp = new List<Employee>();
+            foreach (var item in _listOfMechanic)
+            {
+                emp.Add((Employee)item);
+            }
+            foreach (var item in _listOfAdmin)
+            {
+                emp.Add((Employee)item);
+            }
+            return emp;
+
+        }
+
+        private static int CountEmployees()
+        {
+            return _listOfAdmin.Count + _listOfMechanic.Count;
+        }
+
+        public static List<Mechanic> GetAllMechanics()
         {
             return _listOfMechanic;
         }

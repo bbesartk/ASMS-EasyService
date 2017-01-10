@@ -51,6 +51,10 @@ namespace ES.EntityLayer.Employees
             Password = password;
         }
 
+        public Employee()
+        {
+
+        }
         public Employee(string name, string lastname, bool isMale, string username, string password, ContactInfo contactInfo) : base(name, lastname, isMale)
         {
             Username = username;
@@ -61,6 +65,7 @@ namespace ES.EntityLayer.Employees
 
         #region Methods
         abstract public string GenerateId();
+
         #endregion
     }
 }

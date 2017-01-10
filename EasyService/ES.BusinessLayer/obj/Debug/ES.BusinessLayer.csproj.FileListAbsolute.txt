@@ -16,3 +16,4 @@ C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\De
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.dll
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\POO16F3.dll

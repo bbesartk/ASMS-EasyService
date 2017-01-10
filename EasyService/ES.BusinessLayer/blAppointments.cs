@@ -54,7 +54,7 @@ namespace ES.BusinessLayer
             List<Appointment> lista = new List<Appointment>();
             foreach (var item in GetAllAppointment())
             {
-                if(item.AppointmentDate==dt.Date)
+                if(item.Data==dt.Date)
                 {
                     lista.Add(item);
                 }
@@ -156,7 +156,7 @@ namespace ES.BusinessLayer
             {
                 foreach (var item in GetAllAppointment())
                 {
-                    if (DateTime.Equals(item.AppointmentDate, timeOfAppointment))
+                    if (DateTime.Equals(item.Data, timeOfAppointment))
                     {
                         array[item.SlotNumber - 1] = true;
                     }
@@ -206,7 +206,7 @@ namespace ES.BusinessLayer
             List<Appointment> lista = new List<Appointment>();
             foreach (var item in GetAllAppointment())
             {
-                if((DateTime.Equals(date.Date,item.AppointmentDate.Date) && item.SlotNumber==slotNumber))
+                if((DateTime.Equals(date.Date,item.Data.Date) && item.SlotNumber==slotNumber))
                 {
                     lista.Add(item);
                 }

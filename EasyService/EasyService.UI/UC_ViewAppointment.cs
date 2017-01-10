@@ -23,7 +23,7 @@ namespace EasyService.UI
 
         private void UC_ViewAppointment_Load(object sender, EventArgs e)
         {
-            txbDate.Text = _appointment.AppointmentDate.ToShortDateString();
+            txbDate.Text = _appointment.Data.ToShortDateString();
             txbHour.Text = _appointment.StartTime.ToString();
             txbLicensePlate.Text = _appointment.Vehicle.LicensePlate.ToString();
             txbModel.Text = _appointment.Vehicle.Model.ToString();

@@ -15,10 +15,13 @@ namespace EasyService.UI
 {
     public partial class UC_Dashboard : UserControl
     {
-        private readonly bool? _getAll = false;
+        public bool? _getAll = false;
         public UC_Dashboard()
         {
             InitializeComponent();
+            lblNotificiations.Visible = true;
+            dgNotifications.Visible = true;
+            ChangeScreenByInput(_getAll);
 
         }
 
@@ -26,22 +29,16 @@ namespace EasyService.UI
         {
             InitializeComponent();
             _getAll = getAll;
-            if(_getAll==null)
-            {
-                lblNotificiations.Visible = false;
-                dgNotifications.Visible = false;
-                txbKerko.Text = licensePlate;
-            }
+            txbKerko.Text = licensePlate;
+            ChangeScreenByInput(getAll);
+
         }
 
         public UC_Dashboard(bool? getAll)
         {
+            InitializeComponent();
             _getAll = getAll;
-            if (_getAll == null)
-            {
-                lblNotificiations.Visible = false;
-                dgNotifications.Visible = false;
-            }
+            ChangeScreenByInput(getAll);
         }
         private void txbKerko_MouseClick(object sender, MouseEventArgs e)
         {
@@ -54,33 +51,19 @@ namespace EasyService.UI
 
         private void UC_Dashboard_Load(object sender, EventArgs e)
         {
-            if (_getAll==true)
-            {
-                lblNotificiations.Text = "LIST OF ALL VEHICLES!";
-                dgNotifications.DataSource = blVehicle.GetAll();
-            }
-            else if(_getAll==false)
-            {
-                lblNotificiations.Text = "NOTIFICATIONS!";
-                dgNotifications.DataSource = blVehicle.GeAllReadyForService();
-            }
-            else
-            {
-                lblNotificiations.Visible = false;
-                dgNotifications.Visible = false;
-            }
+            ChangeScreenByInput(_getAll);
         }
 
         private void btnKerko_Click(object sender, EventArgs e)
         {
             bool hasCarOnIt = false;
             bool isTable = false;
-           if(rbLicensePlate.Checked==true)
+            if (rbLicensePlate.Checked == true)
             {
                 isTable = true;
                 foreach (var item in blVehicle.GetAll())
                 {
-                    if(item.LicensePlate==txbKerko.Text)
+                    if (item.LicensePlate == txbKerko.Text)
                     {
                         hasCarOnIt = true;
 
@@ -88,7 +71,7 @@ namespace EasyService.UI
                     }
                 }
             }
-           else if(rbVIN.Checked==true)
+            else if (rbVIN.Checked == true)
             {
                 isTable = false;
                 foreach (var item in blVehicle.GetAll())
@@ -106,7 +89,7 @@ namespace EasyService.UI
                 DialogResult dr = MessageBox.Show("Vehicle not found! - do you want to register as new one?", "Vehicle not found!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    UC_RegVehicle car = new UC_RegVehicle(txbKerko.Text,isTable);
+                    UC_RegVehicle car = new UC_RegVehicle(txbKerko.Text, isTable);
                     this.Controls.Clear();
                     this.Controls.Add(car);
                 }
@@ -123,7 +106,7 @@ namespace EasyService.UI
         private void dgNotifications_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Vehicle vehicle = (Vehicle)dgNotifications.Rows[e.RowIndex].DataBoundItem;
-            if(_getAll==true)
+            if (_getAll == true)
             {
                 ViewVehicle(vehicle);
             }
@@ -138,8 +121,27 @@ namespace EasyService.UI
                         dalAppointments.Insert(nyApp.NewAppointment);
 
                     }
-                    
+
                 }
+            }
+        }
+
+        private void ChangeScreenByInput(bool? _getAll)
+        {
+            if (_getAll == true)
+            {
+                lblNotificiations.Text = "LIST OF ALL VEHICLES!";
+                dgNotifications.DataSource = blVehicle.GetAll();
+            }
+            if (_getAll == false)
+            {
+                lblNotificiations.Text = "NOTIFICATIONS!";
+                dgNotifications.DataSource = blVehicle.GeAllReadyForService();
+            }
+            if (_getAll == null)
+            {
+                lblNotificiations.Visible = false;
+                dgNotifications.Visible = false;
             }
         }
     }

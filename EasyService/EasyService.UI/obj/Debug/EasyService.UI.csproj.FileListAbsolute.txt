@@ -76,3 +76,5 @@ C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debu
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.AddAppointments.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_AppointmentValidation.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.NewClient.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\POO16F3.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.LogIn.resources

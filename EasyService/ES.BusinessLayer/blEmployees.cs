@@ -19,6 +19,11 @@ namespace ES.BusinessLayer
             else throw new Exception("Invalid Employees");
         }
 
+        public static void InsertEmployees(Boss boss)
+        {
+            dalEmployees.InsertAdmin(boss);
+        }
+
         public static void UpdateEmployees(Mechanic mechanic)
         {
             if (mechanic != null)
@@ -38,11 +43,26 @@ namespace ES.BusinessLayer
             return dalEmployees.GetSingelMechanic(id);
         }
 
+        public static Boss GetAdmin(string id)
+        {
+            foreach (var item in dalEmployees.GetAllAdmin())
+            {
+                if (item.Id == id)
+                    return item;
+
+            }
+            return null;
+        }
 
         #endregion
 
         #region Query
         public static List<Mechanic> GetAllMechanics()
+        {
+            return dalEmployees.GetAllMechanics();
+        }
+
+        public static List<Employee> GetAllEmployees()
         {
             return dalEmployees.GetAll();
         }
