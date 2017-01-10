@@ -24,10 +24,10 @@ namespace EasyService.UI
 
         private void ViewInvoice_Load(object sender, EventArgs e)
         {
-            List<InspectionDetail> all = new List<InspectionDetail>();
+            List<DisplayItem> all = new List<DisplayItem>();
             foreach (var item in _invoice.Service.ListInspection)
             {
-                all.Add(item.InspectionDetail);
+                all.Add(new DisplayItem(item.InspectionDetail.Item.ItemNumber,item.InspectionDetail.Item.Name,item.InspectionDetail.Quantity, item.InspectionDetail.Item.Price));
             }
 
             dgItems.DataSource = all;

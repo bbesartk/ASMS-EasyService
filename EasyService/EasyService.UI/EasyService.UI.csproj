@@ -329,6 +329,7 @@
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Company.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Employees.Mechanic.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Finance.Invoice.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Services.DisplayItem.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Services.Inspection.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Services.InspectionDetail.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Services.Service.datasource" />

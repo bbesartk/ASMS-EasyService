@@ -59,6 +59,7 @@
     <Compile Include="General\Person.cs" />
     <Compile Include="General\Slot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DisplayItem.cs" />
     <Compile Include="Services\Inspection.cs" />
     <Compile Include="Services\Service.cs" />
     <Compile Include="Services\InspectionDetail.cs" />

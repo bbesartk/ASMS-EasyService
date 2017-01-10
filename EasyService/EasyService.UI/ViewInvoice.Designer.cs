@@ -44,16 +44,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dgItems = new System.Windows.Forms.DataGridView();
-            this.inspectionDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBillAndSave = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblFinalTotal = new System.Windows.Forms.Label();
             this.lblVAT = new System.Windows.Forms.Label();
-            this.itemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.displayItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inspectionDetailBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.displayItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -210,19 +212,17 @@
             this.dgItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgItems.ColumnHeadersHeight = 30;
             this.dgItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.itemDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn});
-            this.dgItems.DataSource = this.inspectionDetailBindingSource;
+            this.itemNumberDataGridViewTextBoxColumn,
+            this.itemNameDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn});
+            this.dgItems.DataSource = this.displayItemBindingSource;
             this.dgItems.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgItems.Location = new System.Drawing.Point(12, 274);
             this.dgItems.Name = "dgItems";
             this.dgItems.ReadOnly = true;
             this.dgItems.Size = new System.Drawing.Size(635, 306);
             this.dgItems.TabIndex = 22;
-            // 
-            // inspectionDetailBindingSource
-            // 
-            this.inspectionDetailBindingSource.DataSource = typeof(ES.EntityLayer.Services.InspectionDetail);
             // 
             // panel1
             // 
@@ -277,13 +277,25 @@
             this.lblVAT.TabIndex = 21;
             this.lblVAT.Text = "VAT: ";
             // 
-            // itemDataGridViewTextBoxColumn
+            // displayItemBindingSource
             // 
-            this.itemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itemDataGridViewTextBoxColumn.DataPropertyName = "Item";
-            this.itemDataGridViewTextBoxColumn.HeaderText = "Item";
-            this.itemDataGridViewTextBoxColumn.Name = "itemDataGridViewTextBoxColumn";
-            this.itemDataGridViewTextBoxColumn.ReadOnly = true;
+            this.displayItemBindingSource.DataSource = typeof(ES.EntityLayer.Services.DisplayItem);
+            // 
+            // itemNumberDataGridViewTextBoxColumn
+            // 
+            this.itemNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemNumberDataGridViewTextBoxColumn.DataPropertyName = "ItemNumber";
+            this.itemNumberDataGridViewTextBoxColumn.HeaderText = "ItemNumber";
+            this.itemNumberDataGridViewTextBoxColumn.Name = "itemNumberDataGridViewTextBoxColumn";
+            this.itemNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // quantityDataGridViewTextBoxColumn
             // 
@@ -292,6 +304,14 @@
             this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
             this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
             this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ViewInvoice
             // 
@@ -323,7 +343,7 @@
             this.Text = "ViewInvoice";
             this.Load += new System.EventHandler(this.ViewInvoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inspectionDetailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.displayItemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,8 +371,10 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblFinalTotal;
         private System.Windows.Forms.Label lblVAT;
-        private System.Windows.Forms.BindingSource inspectionDetailBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource displayItemBindingSource;
     }
 }
