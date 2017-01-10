@@ -136,6 +136,15 @@ namespace ES.BusinessLayer
             }
             return total;
         }
+
+
+        public static void AllItemsInserted()
+        {
+            ///*/http://www.eurocarparts.com/car-parts*/   qitu i merr listen e Itemav- shti sa tmujsh
+            ///
+            AddItems(new Item("242334243", "sasadsda", 2423, 234, Category.CoolAndHeat));
+        }
     }
     #endregion
+
 }

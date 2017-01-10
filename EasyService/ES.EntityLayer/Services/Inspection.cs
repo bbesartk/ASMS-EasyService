@@ -42,10 +42,15 @@ namespace ES.EntityLayer.Services
             Name = name;
             InspectionDetail = servicedInspection;
         }
+
+        public override string ToString()
+        {
+            return $"{InspectionDetail.Item.Name} | {InspectionDetail.Item.Price} x {InspectionDetail.Quantity}";
+        }
         #endregion
 
         #region Methods
-       
+
         #endregion
     }
 }

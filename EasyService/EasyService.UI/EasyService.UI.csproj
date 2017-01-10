@@ -221,6 +221,12 @@
     <Compile Include="UC_Settings.Designer.cs">
       <DependentUpon>UC_Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewInvoice.Designer.cs">
+      <DependentUpon>ViewInvoice.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAppointments.resx">
       <DependentUpon>AddAppointments.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +319,9 @@
     <EmbeddedResource Include="UC_Settings.resx">
       <DependentUpon>UC_Settings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewInvoice.resx">
+      <DependentUpon>ViewInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bin\Debug\EasyService.UI.exe.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\ES.EntityLayer.Appointments.Appointment.datasource" />
@@ -320,6 +329,8 @@
     <None Include="Properties\DataSources\ES.EntityLayer.Clients.Company.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Employees.Mechanic.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Finance.Invoice.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Services.Inspection.datasource" />
+    <None Include="Properties\DataSources\ES.EntityLayer.Services.InspectionDetail.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Services.Service.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Services.ServiceType.datasource" />
     <None Include="Properties\DataSources\ES.EntityLayer.Stock.Item.datasource" />

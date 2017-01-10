@@ -155,15 +155,19 @@ namespace EasyService.UI
                 if (IsValidKM(CurrentKm) && WorkPay > 0)
                 {
                     Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy, FinalTotal((decimal)CalculateTotal(), WorkPay, VAT));
-                    _vehicle.ServiceList.Add(sv);
                     if (_client != null)
                     {
-                        blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT,(FinalTotal((decimal)CalculateTotal(),WorkPay,VAT))));
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT, (FinalTotal((decimal)CalculateTotal(), WorkPay, VAT)))))
+                        {
+                            vI.ShowDialog();
+                        }
                     }
                     else if (_company != null)
                     {
-
-                        blInvoice.InsertInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT, (FinalTotal((decimal)CalculateTotal(), WorkPay, VAT))));
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT, (FinalTotal((decimal)CalculateTotal(), WorkPay, VAT)))))
+                        {
+                            vI.ShowDialog();
+                        }
                     }
 
                     UpdateStock();
@@ -200,7 +204,7 @@ namespace EasyService.UI
                     return false;
                 else return true;
             }
-            throw new Exception("Not valid km!");
+            return true; ;
         }
 
         private void cmbEmployee_SelectedIndexChanged(object sender, EventArgs e)

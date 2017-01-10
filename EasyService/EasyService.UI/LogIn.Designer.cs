@@ -46,7 +46,7 @@
             this.lblUser.Location = new System.Drawing.Point(141, 63);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(103, 23);
-            this.lblUser.TabIndex = 51;
+            this.lblUser.TabIndex = 0;
             this.lblUser.Text = "USERNAME";
             // 
             // txbPw
@@ -58,7 +58,7 @@
             this.txbPw.Location = new System.Drawing.Point(250, 121);
             this.txbPw.Name = "txbPw";
             this.txbPw.Size = new System.Drawing.Size(228, 33);
-            this.txbPw.TabIndex = 50;
+            this.txbPw.TabIndex = 3;
             this.txbPw.TabStop = false;
             this.txbPw.UseSystemPasswordChar = true;
             // 
@@ -71,7 +71,7 @@
             this.txbUsername.Location = new System.Drawing.Point(250, 59);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Size = new System.Drawing.Size(228, 33);
-            this.txbUsername.TabIndex = 49;
+            this.txbUsername.TabIndex = 1;
             this.txbUsername.TabStop = false;
             // 
             // label2
@@ -82,7 +82,7 @@
             this.label2.Location = new System.Drawing.Point(141, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 23);
-            this.label2.TabIndex = 51;
+            this.label2.TabIndex = 2;
             this.label2.Text = "PASSWORD";
             // 
             // btnLogIn
@@ -95,7 +95,7 @@
             this.btnLogIn.Location = new System.Drawing.Point(355, 184);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(123, 42);
-            this.btnLogIn.TabIndex = 52;
+            this.btnLogIn.TabIndex = 4;
             this.btnLogIn.Text = "LOG IN";
             this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
@@ -106,7 +106,7 @@
             this.panel2.Location = new System.Drawing.Point(-1, 267);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(655, 41);
-            this.panel2.TabIndex = 54;
+            this.panel2.TabIndex = 7;
             // 
             // label4
             // 
@@ -116,7 +116,7 @@
             this.label4.Location = new System.Drawing.Point(9, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 29);
-            this.label4.TabIndex = 7;
+            this.label4.TabIndex = 5;
             this.label4.Text = "easy";
             // 
             // label5
@@ -128,7 +128,7 @@
             this.label5.Location = new System.Drawing.Point(61, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 29);
-            this.label5.TabIndex = 8;
+            this.label5.TabIndex = 6;
             this.label5.Text = "Service.";
             // 
             // LogIn
