@@ -26,8 +26,10 @@ namespace EasyService.UI
             b.Id = "111A";
             blEmployees.InsertEmployees(b);
             blStock.AllItemsInserted();
-            
-            
+            blServices.AllServices();
+
+
+
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
