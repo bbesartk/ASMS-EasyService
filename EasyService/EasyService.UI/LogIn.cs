@@ -25,6 +25,8 @@ namespace EasyService.UI
             Boss b = new Boss("admin", "password");
             b.Id = "111A";
             blEmployees.InsertEmployees(b);
+            blStock.AllItemsInserted();
+            
             
         }
 
@@ -67,6 +69,11 @@ namespace EasyService.UI
                     MainPage.Access = blEmployees.GetMechanic(id).Access;
                     break;
             }
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

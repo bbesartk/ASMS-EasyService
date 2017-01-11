@@ -47,11 +47,11 @@ namespace ES.EntityLayer.Stock
             {
                 if (value < 0)
                 {
-                    throw new Exception("Price must be positive number!");
+                    _price = 0;
                 }
                 else _price = value;
             }
-        }
+        } 
         public int Quantiy
         {
             get { return _quantity; }
@@ -59,7 +59,7 @@ namespace ES.EntityLayer.Stock
             {
                 if (value < 0)
                 {
-                    throw new Exception("Quantity must be positive");
+                    _quantity = 0;
                 }
                 else _quantity = value;
             }

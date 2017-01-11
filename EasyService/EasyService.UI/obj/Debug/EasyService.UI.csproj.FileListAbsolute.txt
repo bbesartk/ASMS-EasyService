@@ -35,50 +35,6 @@ C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\EasyService.UI\obj\Debu
 C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Settings.resources
 C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csproj.GenerateResource.Cache
 C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe.licenses
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe.config
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.BusinessLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.DataAccessLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.EntityLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.BusinessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.DataAccessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.EntityLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csprojResolveAssemblyReference.cache
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.InspectionDetailForm.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.MainPage.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.Properties.Resources.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_AddNewItem.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Appointments.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Clients.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Company.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_EditCompany.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Dashboard.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_EditClient.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_EditMechanic.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Item.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Mechanic.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_PrivateClient.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_RegisterServiceName.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_RegVehicle.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Reports.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ServiceDetail.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Staff.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Stock.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ViewServices.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ViewVehicle.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Settings.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csproj.GenerateResource.Cache
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe.licenses
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ViewAppointment.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.AddAppointments.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_AppointmentValidation.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.NewClient.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\POO16F3.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.LogIn.resources
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.ViewInvoice.resources
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe.config
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\obj\Debug\EasyService.UI.pdb
@@ -123,3 +79,47 @@ C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\obj\Debug\EasyService.UI.ViewInvoice.resources
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csproj.GenerateResource.Cache
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe.licenses
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe.config
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.BusinessLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.DataAccessLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.EntityLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\POO16F3.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.BusinessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.DataAccessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.EntityLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csprojResolveAssemblyReference.cache
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.AddAppointments.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.InspectionDetailForm.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.LogIn.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.MainPage.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.NewClient.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.Properties.Resources.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_AddNewItem.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Appointments.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_AppointmentValidation.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Clients.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Company.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_EditCompany.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Dashboard.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_EditClient.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_EditMechanic.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Item.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Mechanic.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_PrivateClient.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_RegisterServiceName.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_RegVehicle.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Reports.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ServiceDetail.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Staff.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Stock.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ViewAppointment.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ViewServices.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_ViewVehicle.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.UC_Settings.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.ViewInvoice.resources
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csproj.GenerateResource.Cache
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe.licenses
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.pdb

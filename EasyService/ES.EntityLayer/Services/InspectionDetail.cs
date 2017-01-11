@@ -21,6 +21,8 @@ namespace ES.EntityLayer.Services
             Item = item;
             Quantity = quantity;
         }
+
+        
         #endregion
     }
 }

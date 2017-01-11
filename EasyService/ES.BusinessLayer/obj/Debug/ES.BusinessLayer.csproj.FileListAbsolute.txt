@@ -7,16 +7,6 @@ C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\ES.BusinessLayer\bin\De
 C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.dll
 C:\Users\Endrit Vitija\Desktop\Repos\NewRepo\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.BusinessLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.BusinessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.DataAccessLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.EntityLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.DataAccessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.EntityLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.csprojResolveAssemblyReference.cache
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\POO16F3.dll
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.BusinessLayer\bin\Debug\ES.BusinessLayer.dll
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.BusinessLayer\bin\Debug\ES.BusinessLayer.pdb
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.BusinessLayer\bin\Debug\ES.DataAccessLayer.dll
@@ -27,3 +17,13 @@ C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.BusinessLay
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.dll
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.BusinessLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.BusinessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.DataAccessLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.EntityLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\POO16F3.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.DataAccessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\bin\Debug\ES.EntityLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.BusinessLayer\obj\Debug\ES.BusinessLayer.pdb

@@ -183,7 +183,7 @@ namespace EasyService.UI
             }
             catch (Exception)
             {
-                MessageBox.Show("Your current kilometres are invalid!");
+                //MessageBox.Show("Your current kilometres are invalid!");
             }
 
 

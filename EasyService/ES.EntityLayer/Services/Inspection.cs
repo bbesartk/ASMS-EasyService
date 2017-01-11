@@ -46,7 +46,7 @@ namespace ES.EntityLayer.Services
 
         public override string ToString()
         {
-            return $"{InspectionDetail.Item.Name} | {InspectionDetail.Item.Price} x {InspectionDetail.Quantity}";
+            return Name;
         }
 
         #endregion

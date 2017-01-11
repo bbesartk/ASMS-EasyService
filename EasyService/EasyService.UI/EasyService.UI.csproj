@@ -351,11 +351,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ES.BusinessLayer\ES.BusinessLayer.csproj">
-      <Project>{f3f26b29-d503-45af-bafa-457b5acf7d53}</Project>
+      <Project>{F3F26B29-D503-45AF-BAFA-457B5ACF7D53}</Project>
       <Name>ES.BusinessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\ES.DataAccessLayer\ES.DataAccessLayer.csproj">
-      <Project>{cc599fc5-37d4-4f87-bcfb-86a4274d9e55}</Project>
+      <Project>{CC599FC5-37D4-4F87-BCFB-86A4274D9E55}</Project>
       <Name>ES.DataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\ES.EntityLayer\ES.EntityLayer.csproj">
