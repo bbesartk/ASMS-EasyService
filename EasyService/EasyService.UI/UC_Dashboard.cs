@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using ES.BusinessLayer;
 using ES.EntityLayer.Vehicle;
 using ES.DataAccessLayer;
+using System.Text.RegularExpressions;
 
 namespace EasyService.UI
 {
     public partial class UC_Dashboard : UserControl
     {
         public bool? _getAll = false;
+        public bool _valid = false;
         public UC_Dashboard()
         {
             InitializeComponent();
@@ -60,31 +62,50 @@ namespace EasyService.UI
             bool isTable = false;
             if (rbLicensePlate.Checked == true)
             {
-                isTable = true;
-                foreach (var item in blVehicle.GetAll())
+                if (IsValidPlate(txbKerko.Text))
                 {
-                    if (item.LicensePlate == txbKerko.Text)
+                    isTable = true;
+                    _valid = true;
+                    foreach (var item in blVehicle.GetAll())
                     {
-                        hasCarOnIt = true;
+                        if (item.LicensePlate == txbKerko.Text)
+                        {
+                            
+                            hasCarOnIt = true;
 
-                        ViewVehicle(item);
+                            ViewVehicle(item);
+                        }
                     }
+                }
+                else
+                {
+                    _valid = false;
+                    MessageBox.Show("Invalid Plate!", "Invalid Plate", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else if (rbVIN.Checked == true)
             {
+                _valid = true;
                 isTable = false;
-                foreach (var item in blVehicle.GetAll())
+                if (IsValidVin(txbKerko.Text))
                 {
-                    if (item.Vin == txbKerko.Text)
+                    foreach (var item in blVehicle.GetAll())
                     {
-                        hasCarOnIt = true;
+                        if (item.Vin == txbKerko.Text)
+                        {
+                            hasCarOnIt = true;
 
-                        ViewVehicle(item);
+                            ViewVehicle(item);
+                        }
                     }
                 }
+                else
+                {
+                    _valid = false;
+                    MessageBox.Show("Invalid VIN!", "Invalid VIN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
-            if (hasCarOnIt == false)
+            if (hasCarOnIt == false && _valid==true)
             {
                 DialogResult dr = MessageBox.Show("Vehicle not found! - do you want to register as new one?", "Vehicle not found!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
@@ -144,5 +165,24 @@ namespace EasyService.UI
                 dgNotifications.Visible = false;
             }
         }
+
+        public bool IsValidVin(string vin)
+        {
+            Regex vini = new Regex("^[0-9]{1}[A-Z]{4}[0-9]{2}[A-Z]{4}[0-9]{6}$");
+            if (!vini.IsMatch(vin))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool IsValidPlate(string plate)
+        {
+            Regex pl = new Regex("^[0]{1}[1-7]{1}-[1-9]{3}-[A-Z]{2}$");
+            if (pl.IsMatch(plate))
+                return true;
+            else return false;
+        }
     }
+    
 }

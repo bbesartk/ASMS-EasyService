@@ -121,6 +121,8 @@ namespace EasyService.UI
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             MainPage.Access = new Access();
+            DialogResult dg = MessageBox.Show("Do you really want to LOG OUT", "LOG OUT", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dg==DialogResult.Yes)
             this.Close();
         }
     }

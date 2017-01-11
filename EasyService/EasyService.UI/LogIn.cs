@@ -55,6 +55,7 @@ namespace EasyService.UI
                         mp.ShowDialog();
 
                     }
+                    txbPw.Clear();
                     this.Show();
                 }
             }
