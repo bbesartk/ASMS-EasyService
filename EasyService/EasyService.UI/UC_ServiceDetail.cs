@@ -164,7 +164,7 @@ namespace EasyService.UI
                     }
                     else if (_company != null)
                     {
-                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT, (FinalTotal((double)CalculateTotal(), WorkPay, VAT)))))
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT,CalculateTotal())))
                         {
                             vI.ShowDialog();
                         }
@@ -216,8 +216,8 @@ namespace EasyService.UI
 
         private void txbWork_TextChanged(object sender, EventArgs e)
         {
-            decimal workpay = 0;
-            decimal.TryParse(txbWork.Text, out workpay);
+            double workpay = 0;
+            double.TryParse(txbWork.Text, out workpay);
             if (workpay > 0)
             {
                 WorkPay = workpay;
@@ -227,8 +227,8 @@ namespace EasyService.UI
 
         private void txbVAT_TextChanged(object sender, EventArgs e)
         {
-            decimal vat = 0;
-            decimal.TryParse(txbVAT.Text, out vat);
+            double vat = 0;
+            double.TryParse(txbVAT.Text, out vat);
             if (vat > 0)
             {
                 VAT = vat;
@@ -268,7 +268,7 @@ namespace EasyService.UI
 
         private void UpdatePrice()
         {
-            decimal total = FinalTotal((decimal)CalculateTotal(), WorkPay, VAT);
+            double total = FinalTotal(CalculateTotal(), WorkPay, VAT);
             lblTotalPrice.Text = " " + total + " €";
         }
     }
