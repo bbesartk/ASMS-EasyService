@@ -32,7 +32,7 @@ namespace EasyService.UI
         {
             this.Controls.Clear();
             UC_ViewVehicle vehicle = new UC_ViewVehicle(_vehicle);
-            this.Controls.Add(vehicle);
+            this.Controls.Add(vehicle); 
         }
 
         public void Paraqit()
