@@ -39,10 +39,12 @@ namespace ES.EntityLayer.Finance
         {
             get;set;
         }
+
+        public double FinalTotal { get; set; }
         #endregion
 
         #region Constructors
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, double vat, double total)
+        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, double vat, double total,double finalTotal)
         {
             ServicedVehicle = servicedVehicle;
             Service = service;
@@ -50,9 +52,10 @@ namespace ES.EntityLayer.Finance
             ServicedBy = servicedBy;
             Vat = vat;
             Total = total;
+            FinalTotal = finalTotal;
         }
 
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, double vat, double total)
+        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, double vat, double total, double finalTotal)
         {
             ServicedVehicle = servicedVehicle;
             Service = service;
@@ -60,6 +63,7 @@ namespace ES.EntityLayer.Finance
             ServicedBy = servicedBy;
             Vat = vat;
             Total = total;
+            FinalTotal = finalTotal;
         }
         #endregion
 

@@ -25,10 +25,10 @@ namespace EasyService.UI
 
         List<Inspection> allInspections = new List<Inspection>();
         Mechanic servicedBy { get; set; }
-        double WorkPay { get; set; }
-        double VAT { get; set; }
+        double WorkPay { get; set; } = 20;
+        double VAT { get; set; } = 15;
         double CurrentKm { get; set; }
-
+        double LastTotal { get; set; }
 
         private readonly Vehicle _vehicle;
         private readonly Client _client;
@@ -50,8 +50,8 @@ namespace EasyService.UI
                 _company = _vehicle.Company;
             }
 
-            txbVAT.Text = 15.ToString();
-            txbWork.Text = 20.ToString();
+            txbVAT.Text = VAT.ToString();
+            txbWork.Text = WorkPay.ToString();
 
             foreach (var item in lista)
             {
@@ -88,7 +88,7 @@ namespace EasyService.UI
             //nese ka diqka gabim qet njoftim
             else MessageBox.Show("This item is not well validated!");
 
-            UpdatePrice();
+            UpdateTotal();
 
         }
 
@@ -96,6 +96,7 @@ namespace EasyService.UI
         {
             lblDateOfService.Text += DateTime.Now.Date.ToShortDateString();
             cmbEmployee.DataSource = dalEmployees.GetAll();
+            lblTotalPrice.Text = LastTotal.ToString();
         }
 
         private void rbMajorService_CheckedChanged(object sender, EventArgs e)
@@ -121,7 +122,6 @@ namespace EasyService.UI
                 }
             }
 
-            UpdatePrice();
         }
 
         private double CalculateTotal()
@@ -154,23 +154,33 @@ namespace EasyService.UI
             {
                 if (IsValidKM(CurrentKm) && WorkPay > 0)
                 {
-                    Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy, FinalTotal((double)CalculateTotal(), WorkPay, VAT));
+                    Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy,LastTotal);
                     if (_client != null)
                     {
-                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT, (FinalTotal((double)CalculateTotal(), WorkPay, VAT)))))
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT,(CalculateTotal()+WorkPay),LastTotal)))
                         {
                             vI.ShowDialog();
+                            if (vI.DialogResult == DialogResult.OK)
+                            {
+                                UpdateStock();
+                                _vehicle.ServiceList.Add(sv);
+                            }
                         }
                     }
                     else if (_company != null)
                     {
-                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT,CalculateTotal())))
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT, (CalculateTotal() + WorkPay), LastTotal)))
                         {
                             vI.ShowDialog();
+                            if (vI.DialogResult == DialogResult.OK)
+                            {
+                                UpdateStock();
+                                _vehicle.ServiceList.Add(sv);
+                            }
                         }
                     }
 
-                    UpdateStock();
+                    
                     DialogResult dg = MessageBox.Show("New service added successfully!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if(dg == DialogResult.OK)
                     {
@@ -191,8 +201,13 @@ namespace EasyService.UI
 
         private double FinalTotal(double total, double workpay, double vat)
         {
-            double firstTotal = total + workpay;
-            return firstTotal + (vat / 100 * firstTotal);
+            double totalWork = total + workpay;
+            return totalWork+(totalWork*(vat/100));
+        }
+
+        private double TotalPaTvsh(double total,double workpay)
+        {
+            return total + workpay;
         }
 
         private bool IsValidKM(double km)
@@ -222,7 +237,7 @@ namespace EasyService.UI
             {
                 WorkPay = workpay;
             }
-            UpdatePrice();
+            UpdateTotal();
         }
 
         private void txbVAT_TextChanged(object sender, EventArgs e)
@@ -233,7 +248,7 @@ namespace EasyService.UI
             {
                 VAT = vat;
             }
-            UpdatePrice();
+            UpdateTotal();
         }
 
         private void txbCurrentKm_TextChanged(object sender, EventArgs e)
@@ -266,10 +281,10 @@ namespace EasyService.UI
             }
         }
 
-        private void UpdatePrice()
+        private void UpdateTotal()
         {
-            double total = FinalTotal(CalculateTotal(), WorkPay, VAT);
-            lblTotalPrice.Text = " " + total + " €";
+            LastTotal = FinalTotal(CalculateTotal(), WorkPay, VAT);
+            lblTotalPrice.Text = " " + LastTotal + " €";
         }
     }
 }

@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ES.EntityLayer.Employees;
+using POO16F3;
 
 namespace ES.EntityLayer.Services
 {
-    public class Service:IEnumerable<Inspection>
+    public class Service:IEnumerable<Inspection>,IParaqit
     {
         #region PrivateMembers
         private DateTime _dateOfService;
@@ -93,6 +94,11 @@ namespace ES.EntityLayer.Services
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ListInspection.GetEnumerator();
+        }
+
+        public void Paraqit()
+        {
+            
         }
         #endregion
 

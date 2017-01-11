@@ -54,24 +54,30 @@ namespace EasyService.UI
                 lblEmail.Text = _invoice.Client.ContactInfo.Email;
             }
 
-            lblFinalTotal.Text += _invoice.Total.ToString();
+            lblFinalTotal.Text += _invoice.FinalTotal.ToString();
             lblVAT.Text += _invoice.Vat.ToString();
-            lblTotal.Text += getTotal(_invoice.Vat, _invoice.Total);
+            lblTotal.Text += _invoice.Total.ToString();
             lblInvoiceDate.Text = _invoice.DateOfBill.ToShortDateString();
+            invoiceNr.Text += _invoice.Id.ToString("000");
+            lblVehicle.Text = _invoice.ServicedVehicle.Type + " - " + _invoice.ServicedVehicle.Model;
+            lblVehiclePlate.Text = _invoice.ServicedVehicle.LicensePlate.ToString();
+            lblServicedBy.Text ="Serviced by: "+ _invoice.ServicedBy.Name + " " + _invoice.ServicedBy.Lastname;
+            lblKm.Text = _invoice.Service.ServicedKm.ToString() + "/ km";
             
 
         }
 
-        private string getTotal(double vat, double total)
+        private string getTotal()
         {
-            var x = total - ((total * vat) / 100);
+            double x = _invoice.Total - (_invoice.Vat/100 *_invoice.Total);
             return x.ToString();
         }
 
         private void btnBillAndSave_Click(object sender, EventArgs e)
         {
-            _invoice.ServicedVehicle.ServiceList.Add(_invoice.Service);
             blInvoice.InsertInvoice(_invoice);
+            DialogResult = DialogResult.OK;
+            this.Close();
 
         }
     }

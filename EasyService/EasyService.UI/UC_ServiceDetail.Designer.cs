@@ -32,7 +32,7 @@
             this.rbSmallService = new System.Windows.Forms.RadioButton();
             this.rbMajorService = new System.Windows.Forms.RadioButton();
             this.btnBillAndSave = new System.Windows.Forms.Button();
-            this.lbl = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txbCurrentKm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -114,16 +114,16 @@
             this.btnBillAndSave.UseVisualStyleBackColor = false;
             this.btnBillAndSave.Click += new System.EventHandler(this.btnBillAndSave_Click);
             // 
-            // lbl
+            // lblPrice
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
-            this.lbl.Location = new System.Drawing.Point(47, 502);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(102, 19);
-            this.lbl.TabIndex = 34;
-            this.lbl.Text = "TOTAL PRICE:";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Glacial Indifference", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
+            this.lblPrice.Location = new System.Drawing.Point(47, 502);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(102, 19);
+            this.lblPrice.TabIndex = 34;
+            this.lblPrice.Text = "TOTAL PRICE:";
             // 
             // panel1
             // 
@@ -286,7 +286,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTotalPrice);
-            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.btnBillAndSave);
             this.Controls.Add(this.listBoxServices);
             this.Name = "UC_ServiceDetail";
@@ -305,7 +305,7 @@
         private System.Windows.Forms.RadioButton rbSmallService;
         private System.Windows.Forms.RadioButton rbMajorService;
         private System.Windows.Forms.Button btnBillAndSave;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txbCurrentKm;
         private System.Windows.Forms.Label label1;

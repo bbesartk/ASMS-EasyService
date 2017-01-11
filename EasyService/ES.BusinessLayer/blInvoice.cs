@@ -52,7 +52,7 @@ namespace ES.BusinessLayer
             double total = 0;
             foreach (var item in GetAllInvoice())
             {
-                total += item.Total;
+                total += item.FinalTotal;
             }
             return total;
         }
@@ -64,7 +64,7 @@ namespace ES.BusinessLayer
             {
                 if(item.DateOfBill.Year==DateTime.Now.Year)
                 {
-                    total += item.Total;
+                    total += item.FinalTotal;
                 }
             }
             return total;
@@ -77,7 +77,7 @@ namespace ES.BusinessLayer
             {
                 if(item.DateOfBill.Date==DateTime.Now.Date)
                 {
-                    total += item.Total;
+                    total += item.FinalTotal;
                 }
             }
             return total;

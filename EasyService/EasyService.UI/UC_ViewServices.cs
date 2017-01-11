@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ES.EntityLayer.Vehicle;
+using POO16F3;
+using ES.EntityLayer.Finance;
 
 namespace EasyService.UI
 {
-    public partial class UC_ViewServices : UserControl
+    public partial class UC_ViewServices : UserControl,IParaqit
     {
         private readonly Vehicle _vehicle;
         public UC_ViewServices(Vehicle vehicle)
@@ -31,6 +33,15 @@ namespace EasyService.UI
             this.Controls.Clear();
             UC_ViewVehicle vehicle = new UC_ViewVehicle(_vehicle);
             this.Controls.Add(vehicle);
+        }
+
+        public void Paraqit()
+        {
+            DialogResult dg = MessageBox.Show($"Service for vehicle with plate number: {_vehicle.LicensePlate}\r\nDO YOU WANT TO SEE DETAILS?");
+            if(dg == DialogResult.Yes)
+            {
+                
+            }
         }
     }
 }

@@ -40,9 +40,9 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.invoiceNr = new System.Windows.Forms.Label();
             this.lblInvoiceDate = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblServicedBy = new System.Windows.Forms.Label();
+            this.lblVehicle = new System.Windows.Forms.Label();
+            this.lblVehiclePlate = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBillAndSave = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.displayItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblKm = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.displayItemBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -146,7 +147,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(59, 210);
+            this.lblEmail.Location = new System.Drawing.Point(59, 213);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(117, 19);
             this.lblEmail.TabIndex = 21;
@@ -172,35 +173,35 @@
             this.lblInvoiceDate.TabIndex = 21;
             this.lblInvoiceDate.Text = "Date";
             // 
-            // label7
+            // lblServicedBy
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(446, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 19);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "City:";
+            this.lblServicedBy.AutoSize = true;
+            this.lblServicedBy.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServicedBy.Location = new System.Drawing.Point(20, 681);
+            this.lblServicedBy.Name = "lblServicedBy";
+            this.lblServicedBy.Size = new System.Drawing.Size(54, 19);
+            this.lblServicedBy.TabIndex = 21;
+            this.lblServicedBy.Text = "City:";
             // 
-            // label8
+            // lblVehicle
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(446, 189);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 19);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Phone Number";
+            this.lblVehicle.AutoSize = true;
+            this.lblVehicle.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicle.Location = new System.Drawing.Point(446, 168);
+            this.lblVehicle.Name = "lblVehicle";
+            this.lblVehicle.Size = new System.Drawing.Size(117, 19);
+            this.lblVehicle.TabIndex = 21;
+            this.lblVehicle.Text = "Phone Number";
             // 
-            // label9
+            // lblVehiclePlate
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(446, 210);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 19);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "EmailAddress";
+            this.lblVehiclePlate.AutoSize = true;
+            this.lblVehiclePlate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehiclePlate.Location = new System.Drawing.Point(446, 191);
+            this.lblVehiclePlate.Name = "lblVehiclePlate";
+            this.lblVehiclePlate.Size = new System.Drawing.Size(117, 19);
+            this.lblVehiclePlate.TabIndex = 21;
+            this.lblVehiclePlate.Text = "EmailAddress";
             // 
             // panel1
             // 
@@ -275,10 +276,10 @@
             this.totalDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.displayItemBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 208);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 235);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(635, 306);
+            this.dataGridView1.Size = new System.Drawing.Size(635, 360);
             this.dataGridView1.TabIndex = 34;
             // 
             // dataGridViewTextBoxColumn4
@@ -333,6 +334,16 @@
             // 
             this.displayItemBindingSource.DataSource = typeof(ES.EntityLayer.Services.DisplayItem);
             // 
+            // lblKm
+            // 
+            this.lblKm.AutoSize = true;
+            this.lblKm.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKm.Location = new System.Drawing.Point(446, 213);
+            this.lblKm.Name = "lblKm";
+            this.lblKm.Size = new System.Drawing.Size(117, 19);
+            this.lblKm.TabIndex = 21;
+            this.lblKm.Text = "EmailAddress";
+            // 
             // ViewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,13 +356,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblKm);
+            this.Controls.Add(this.lblVehiclePlate);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblVehicle);
             this.Controls.Add(this.lblVAT);
             this.Controls.Add(this.lblClientPhoneNumber);
             this.Controls.Add(this.lblFinalTotal);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblServicedBy);
             this.Controls.Add(this.lblClientCity);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblInvoiceDate);
@@ -383,9 +395,9 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label invoiceNr;
         private System.Windows.Forms.Label lblInvoiceDate;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblServicedBy;
+        private System.Windows.Forms.Label lblVehicle;
+        private System.Windows.Forms.Label lblVehiclePlate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBillAndSave;
         private System.Windows.Forms.Label lblTotal;
@@ -405,5 +417,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblKm;
     }
 }
