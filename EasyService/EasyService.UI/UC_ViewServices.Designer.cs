@@ -38,10 +38,10 @@
             this.lblNotificiations = new System.Windows.Forms.Label();
             this.btnAddService = new System.Windows.Forms.Button();
             this.lblTotalS = new System.Windows.Forms.Label();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.servicedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfServiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.servicedKmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfServiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgServices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
@@ -61,7 +61,6 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(194)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgServices.AutoGenerateColumns = false;
             this.dgServices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             this.dgServices.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgServices.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -82,7 +81,6 @@
             this.servicedByDataGridViewTextBoxColumn,
             this.dateOfServiceDataGridViewTextBoxColumn,
             this.servicedKmDataGridViewTextBoxColumn});
-            this.dgServices.DataSource = this.serviceBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,6 +117,7 @@
             this.dgServices.Size = new System.Drawing.Size(645, 383);
             this.dgServices.TabIndex = 18;
             this.dgServices.TabStop = false;
+            this.dgServices.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgServices_CellContentDoubleClick);
             // 
             // lblNotificiations
             // 
@@ -157,21 +156,14 @@
             this.lblTotalS.TabIndex = 17;
             this.lblTotalS.Text = "TOTAL SERVICES: ";
             // 
-            // totalDataGridViewTextBoxColumn
+            // servicedKmDataGridViewTextBoxColumn
             // 
-            this.totalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total Price";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // servicedByDataGridViewTextBoxColumn
-            // 
-            this.servicedByDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.servicedByDataGridViewTextBoxColumn.DataPropertyName = "ServicedBy";
-            this.servicedByDataGridViewTextBoxColumn.HeaderText = "Serviced By";
-            this.servicedByDataGridViewTextBoxColumn.Name = "servicedByDataGridViewTextBoxColumn";
-            this.servicedByDataGridViewTextBoxColumn.ReadOnly = true;
+            this.servicedKmDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.servicedKmDataGridViewTextBoxColumn.DataPropertyName = "ServicedKm";
+            this.servicedKmDataGridViewTextBoxColumn.HeaderText = "Serviced Kilometres";
+            this.servicedKmDataGridViewTextBoxColumn.Name = "servicedKmDataGridViewTextBoxColumn";
+            this.servicedKmDataGridViewTextBoxColumn.ReadOnly = true;
+            this.servicedKmDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dateOfServiceDataGridViewTextBoxColumn
             // 
@@ -181,14 +173,21 @@
             this.dateOfServiceDataGridViewTextBoxColumn.Name = "dateOfServiceDataGridViewTextBoxColumn";
             this.dateOfServiceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // servicedKmDataGridViewTextBoxColumn
+            // servicedByDataGridViewTextBoxColumn
             // 
-            this.servicedKmDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.servicedKmDataGridViewTextBoxColumn.DataPropertyName = "ServicedKm";
-            this.servicedKmDataGridViewTextBoxColumn.HeaderText = "Serviced Kilometres";
-            this.servicedKmDataGridViewTextBoxColumn.Name = "servicedKmDataGridViewTextBoxColumn";
-            this.servicedKmDataGridViewTextBoxColumn.ReadOnly = true;
-            this.servicedKmDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.servicedByDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.servicedByDataGridViewTextBoxColumn.DataPropertyName = "ServicedBy";
+            this.servicedByDataGridViewTextBoxColumn.HeaderText = "Serviced By";
+            this.servicedByDataGridViewTextBoxColumn.Name = "servicedByDataGridViewTextBoxColumn";
+            this.servicedByDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total Price";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // serviceBindingSource
             // 
@@ -217,12 +216,12 @@
 
         private System.Windows.Forms.DataGridView dgServices;
         private System.Windows.Forms.Label lblNotificiations;
+        private System.Windows.Forms.Button btnAddService;
+        private System.Windows.Forms.Label lblTotalS;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn servicedByDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfServiceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn servicedKmDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource serviceBindingSource;
-        private System.Windows.Forms.Button btnAddService;
-        private System.Windows.Forms.Label lblTotalS;
     }
 }

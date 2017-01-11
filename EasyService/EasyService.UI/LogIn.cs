@@ -48,12 +48,14 @@ namespace EasyService.UI
                 {
                     string logintype = emp.Id.Substring(emp.Id.Length - 1);
                     GrantAccess(logintype, emp.Id);
+                    this.Hide();
                     using (MainPage mp = new MainPage())
                     {
-                        
+                       
                         mp.ShowDialog();
 
                     }
+                    this.Show();
                 }
             }
 

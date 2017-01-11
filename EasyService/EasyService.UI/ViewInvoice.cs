@@ -18,10 +18,16 @@ namespace EasyService.UI
     {
         public List<DisplayItem> all = new List<DisplayItem>();
         public Invoice _invoice;
-        public ViewInvoice(Invoice invoice)
+        public bool _read;
+        public ViewInvoice(Invoice invoice,bool read)
         {
             InitializeComponent();
             _invoice = invoice;
+            _read = read;
+            if(_read==true)
+            {
+                btnBillAndSave.Text = "CLOSE INFO!";
+            }
             foreach (var item in _invoice.Service.ListInspection)
             {
                 if(item.InspectionDetail!=null)
@@ -75,9 +81,16 @@ namespace EasyService.UI
 
         private void btnBillAndSave_Click(object sender, EventArgs e)
         {
-            blInvoice.InsertInvoice(_invoice);
-            DialogResult = DialogResult.OK;
-            this.Close();
+            if (_read == true)
+            {
+                this.Close();
+            }
+            else if(_read==false)
+            {
+                DialogResult = DialogResult.Yes;
+                blInvoice.InsertInvoice(_invoice);
+                this.Close();
+            }
 
         }
     }

@@ -157,7 +157,7 @@ namespace EasyService.UI
                     Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy,LastTotal);
                     if (_client != null)
                     {
-                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT,(CalculateTotal()+WorkPay),LastTotal)))
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(sv.ServiceId,_vehicle, sv, _client, servicedBy, VAT,(CalculateTotal()+WorkPay),LastTotal),false))
                         {
                             vI.ShowDialog();
                             if (vI.DialogResult == DialogResult.OK)
@@ -169,26 +169,32 @@ namespace EasyService.UI
                     }
                     else if (_company != null)
                     {
-                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT, (CalculateTotal() + WorkPay), LastTotal)))
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(sv.ServiceId,_vehicle, sv, _company, servicedBy, VAT, (CalculateTotal() + WorkPay), LastTotal),false))
                         {
                             vI.ShowDialog();
-                            if (vI.DialogResult == DialogResult.OK)
+                            if (vI.DialogResult == DialogResult.Yes)
                             {
                                 UpdateStock();
                                 _vehicle.ServiceList.Add(sv);
+                                DialogResult dg = MessageBox.Show("New service added successfully!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (dg == DialogResult.OK)
+                                {
+                                    UC_ViewServices services = new UC_ViewServices(_vehicle);
+                                    this.Controls.Clear();
+                                    this.Controls.Add(services);
+                                }
+                                
+                            }
+                            else
+                            {
+                                DialogResult dg = MessageBox.Show("Service Aborted!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
 
                     
-                    DialogResult dg = MessageBox.Show("New service added successfully!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if(dg == DialogResult.OK)
-                    {
-                        UC_ViewServices services = new UC_ViewServices(_vehicle);
-                        this.Controls.Clear();
-                        this.Controls.Add(services);
-
-                    }
+                   
+                   
                 }
             }
             catch (Exception)

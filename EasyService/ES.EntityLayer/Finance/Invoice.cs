@@ -44,8 +44,9 @@ namespace ES.EntityLayer.Finance
         #endregion
 
         #region Constructors
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, double vat, double total,double finalTotal)
+        public Invoice(int id,Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, double vat, double total,double finalTotal)
         {
+            Id = id;
             ServicedVehicle = servicedVehicle;
             Service = service;
             Client = client;
@@ -55,8 +56,9 @@ namespace ES.EntityLayer.Finance
             FinalTotal = finalTotal;
         }
 
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, double vat, double total, double finalTotal)
+        public Invoice(int id,Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, double vat, double total, double finalTotal)
         {
+            Id = id;
             ServicedVehicle = servicedVehicle;
             Service = service;
             Company = company; ;

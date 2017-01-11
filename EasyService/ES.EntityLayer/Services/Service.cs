@@ -16,6 +16,7 @@ namespace ES.EntityLayer.Services
         private double _servicedKm;
         private List<Inspection> _listInspection;
         private double _technicalWork;
+        private static int id = 0;
         #endregion
 
         #region Properties
@@ -48,6 +49,8 @@ namespace ES.EntityLayer.Services
 
         }
 
+        public int ServiceId { get; set; }
+
         public double TechnicalWorkPay
         {
             get { return _technicalWork; }
@@ -78,6 +81,7 @@ namespace ES.EntityLayer.Services
         #region Constructors
         public Service(DateTime dateOfService, double servicedKm, double technicalWork, List<Inspection> listOfInspection, Employee servicedBy, double total)
         {
+            ServiceId = ++id;
             DateOfService = dateOfService;
             ServicedKm = servicedKm;
             TechnicalWorkPay = technicalWork;
