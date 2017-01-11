@@ -27,6 +27,7 @@ namespace EasyService.UI
         public List<Slot> _allSlots = new List<Slot>();
         public List<string> _availableTime = new List<string>();
         public DateTime _date { get; set; }
+        public DateTime dt { get; set; }
         public Appointment NewAppointment { get; set; }
         public bool _sunday = MainPage.SundayActivated;
         public bool _saturday = MainPage.SaturdayActivated;
@@ -108,7 +109,6 @@ namespace EasyService.UI
                 }
                 this.Show();
             }
-            DateTime dt = new DateTime(_date.Year, _date.Month,_date.Day, _startTime, 0, 0);
             try
             {
                 if (blAppointments.IsValid(dt,_workStartTime,_workEndTime,_saturday,_sunday))
@@ -129,8 +129,9 @@ namespace EasyService.UI
 
         private void cmbAvailableSlot_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dt = new DateTime(_date.Year, _date.Month, _date.Day, _startTime, 0, 0);
             _slotRowNumber = dalSlot.GetSlotNumber(_allSlots, cmbAvailableSlot.SelectedItem.ToString());
-            cmbKoha.DataSource = blAppointments.AvailableTime(_date, _serviceType, _slotRowNumber, _workEndTime, _availableTime);
+            cmbKoha.DataSource = blAppointments.AvailableTime(dt, _serviceType, _slotRowNumber, _workEndTime, _availableTime);
             lblKoha.Visible = true;
             cmbKoha.Visible = true;
         }

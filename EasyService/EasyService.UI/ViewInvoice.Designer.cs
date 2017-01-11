@@ -371,7 +371,11 @@
             this.Controls.Add(this.invoiceNr);
             this.Controls.Add(this.lblClientName);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ViewInvoice";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewInvoice";
             this.Load += new System.EventHandler(this.ViewInvoice_Load);

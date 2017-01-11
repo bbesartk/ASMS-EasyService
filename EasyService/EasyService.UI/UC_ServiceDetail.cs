@@ -175,26 +175,22 @@ namespace EasyService.UI
                             if (vI.DialogResult == DialogResult.Yes)
                             {
                                 UpdateStock();
-                                _vehicle.ServiceList.Add(sv);
-                                DialogResult dg = MessageBox.Show("New service added successfully!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                if (dg == DialogResult.OK)
-                                {
-                                    UC_ViewServices services = new UC_ViewServices(_vehicle);
-                                    this.Controls.Clear();
-                                    this.Controls.Add(services);
-                                }
-                                
+                                _vehicle.ServiceList.Add(sv);                                
                             }
                             else
                             {
-                                DialogResult dg = MessageBox.Show("Service Aborted!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Service Aborted!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
+
                         }
                     }
-
-                    
-                   
-                   
+                    DialogResult dg = MessageBox.Show("New service added successfully!", "New service", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dg == DialogResult.OK)
+                    {
+                        UC_ViewServices services = new UC_ViewServices(_vehicle);
+                        this.Controls.Clear();
+                        this.Controls.Add(services);
+                    }
                 }
             }
             catch (Exception)

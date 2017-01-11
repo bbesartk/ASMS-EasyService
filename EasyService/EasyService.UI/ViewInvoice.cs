@@ -88,6 +88,7 @@ namespace EasyService.UI
             else if(_read==false)
             {
                 DialogResult = DialogResult.Yes;
+                _invoice.ServicedVehicle.ServiceList.Add(_invoice.Service);
                 blInvoice.InsertInvoice(_invoice);
                 this.Close();
             }
