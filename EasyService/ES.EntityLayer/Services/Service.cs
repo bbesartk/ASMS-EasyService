@@ -14,7 +14,7 @@ namespace ES.EntityLayer.Services
         private DateTime _dateOfService;
         private double _servicedKm;
         private List<Inspection> _listInspection;
-        private decimal _technicalWork;
+        private double _technicalWork;
         #endregion
 
         #region Properties
@@ -41,13 +41,13 @@ namespace ES.EntityLayer.Services
             }
         }
 
-        public decimal Total
+        public double Total
         {
             get;set;
 
         }
 
-        public decimal TechnicalWorkPay
+        public double TechnicalWorkPay
         {
             get { return _technicalWork; }
 
@@ -75,7 +75,7 @@ namespace ES.EntityLayer.Services
         #endregion
 
         #region Constructors
-        public Service(DateTime dateOfService, double servicedKm, decimal technicalWork, List<Inspection> listOfInspection, Employee servicedBy, decimal total)
+        public Service(DateTime dateOfService, double servicedKm, double technicalWork, List<Inspection> listOfInspection, Employee servicedBy, double total)
         {
             DateOfService = dateOfService;
             ServicedKm = servicedKm;

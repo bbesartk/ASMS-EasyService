@@ -47,9 +47,9 @@ namespace ES.BusinessLayer
             return dalInvoice.GetAll();
         }
 
-        public static decimal GetAllIncomes()
+        public static double GetAllIncomes()
         {
-            decimal total = 0;
+            double total = 0;
             foreach (var item in GetAllInvoice())
             {
                 total += item.Total;
@@ -57,9 +57,9 @@ namespace ES.BusinessLayer
             return total;
         }
 
-        public static decimal GetThisYearIncomes()
+        public static double GetThisYearIncomes()
         {
-            decimal total = 0;
+            double total = 0;
             foreach (var item in GetAllInvoice())
             {
                 if(item.DateOfBill.Year==DateTime.Now.Year)
@@ -70,9 +70,9 @@ namespace ES.BusinessLayer
             return total;
         }
 
-        public static decimal GetTodayIncomes()
+        public static double GetTodayIncomes()
         {
-            decimal total = 0;
+            double total = 0;
             foreach (var item in GetAllInvoice())
             {
                 if(item.DateOfBill.Date==DateTime.Now.Date)

@@ -39,7 +39,7 @@
             this.lblClientPhoneNumber = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.invoiceNr = new System.Windows.Forms.Label();
-            this.invoiceDate = new System.Windows.Forms.Label();
+            this.lblInvoiceDate = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,13 +49,13 @@
             this.lblFinalTotal = new System.Windows.Forms.Label();
             this.lblVAT = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.displayItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.displayItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.displayItemBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -162,15 +162,15 @@
             this.invoiceNr.TabIndex = 21;
             this.invoiceNr.Text = "Invoice No: #";
             // 
-            // invoiceDate
+            // lblInvoiceDate
             // 
-            this.invoiceDate.AutoSize = true;
-            this.invoiceDate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.invoiceDate.Location = new System.Drawing.Point(446, 145);
-            this.invoiceDate.Name = "invoiceDate";
-            this.invoiceDate.Size = new System.Drawing.Size(45, 19);
-            this.invoiceDate.TabIndex = 21;
-            this.invoiceDate.Text = "Date";
+            this.lblInvoiceDate.AutoSize = true;
+            this.lblInvoiceDate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvoiceDate.Location = new System.Drawing.Point(446, 145);
+            this.lblInvoiceDate.Name = "lblInvoiceDate";
+            this.lblInvoiceDate.Size = new System.Drawing.Size(45, 19);
+            this.lblInvoiceDate.TabIndex = 21;
+            this.lblInvoiceDate.Text = "Date";
             // 
             // label7
             // 
@@ -281,10 +281,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(635, 306);
             this.dataGridView1.TabIndex = 34;
             // 
-            // displayItemBindingSource
-            // 
-            this.displayItemBindingSource.DataSource = typeof(ES.EntityLayer.Services.DisplayItem);
-            // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -333,6 +329,10 @@
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // displayItemBindingSource
+            // 
+            this.displayItemBindingSource.DataSource = typeof(ES.EntityLayer.Services.DisplayItem);
+            // 
             // ViewInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,7 +354,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblClientCity);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.invoiceDate);
+            this.Controls.Add(this.lblInvoiceDate);
             this.Controls.Add(this.lblClientAddress);
             this.Controls.Add(this.invoiceNr);
             this.Controls.Add(this.lblClientName);
@@ -382,7 +382,7 @@
         private System.Windows.Forms.Label lblClientPhoneNumber;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label invoiceNr;
-        private System.Windows.Forms.Label invoiceDate;
+        private System.Windows.Forms.Label lblInvoiceDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

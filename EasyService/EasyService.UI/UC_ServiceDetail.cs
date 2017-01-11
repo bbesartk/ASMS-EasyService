@@ -25,8 +25,8 @@ namespace EasyService.UI
 
         List<Inspection> allInspections = new List<Inspection>();
         Mechanic servicedBy { get; set; }
-        decimal WorkPay { get; set; }
-        decimal VAT { get; set; }
+        double WorkPay { get; set; }
+        double VAT { get; set; }
         double CurrentKm { get; set; }
 
 
@@ -154,17 +154,17 @@ namespace EasyService.UI
             {
                 if (IsValidKM(CurrentKm) && WorkPay > 0)
                 {
-                    Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy, FinalTotal((decimal)CalculateTotal(), WorkPay, VAT));
+                    Service sv = new Service(DateTime.Now, CurrentKm, WorkPay, allInspections, servicedBy, FinalTotal((double)CalculateTotal(), WorkPay, VAT));
                     if (_client != null)
                     {
-                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT, (FinalTotal((decimal)CalculateTotal(), WorkPay, VAT)))))
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _client, servicedBy, VAT, (FinalTotal((double)CalculateTotal(), WorkPay, VAT)))))
                         {
                             vI.ShowDialog();
                         }
                     }
                     else if (_company != null)
                     {
-                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT, (FinalTotal((decimal)CalculateTotal(), WorkPay, VAT)))))
+                        using (ViewInvoice vI = new ViewInvoice(new Invoice(_vehicle, sv, _company, servicedBy, VAT, (FinalTotal((double)CalculateTotal(), WorkPay, VAT)))))
                         {
                             vI.ShowDialog();
                         }
@@ -189,9 +189,9 @@ namespace EasyService.UI
 
         }
 
-        private decimal FinalTotal(decimal total, decimal workpay, decimal vat)
+        private double FinalTotal(double total, double workpay, double vat)
         {
-            decimal firstTotal = total + workpay;
+            double firstTotal = total + workpay;
             return firstTotal + (vat / 100 * firstTotal);
         }
 

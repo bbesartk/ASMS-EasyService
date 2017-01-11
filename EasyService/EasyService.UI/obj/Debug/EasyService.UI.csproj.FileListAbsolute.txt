@@ -79,16 +79,6 @@ C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\obj\Debug\EasyService.UI.ViewInvoice.resources
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csproj.GenerateResource.Cache
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe.licenses
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe.config
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.BusinessLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.DataAccessLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.EntityLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\POO16F3.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.BusinessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.DataAccessLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.EntityLayer.pdb
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csprojResolveAssemblyReference.cache
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.AddAppointments.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.InspectionDetailForm.resources
@@ -121,5 +111,15 @@ C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debu
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.ViewInvoice.resources
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.csproj.GenerateResource.Cache
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe.licenses
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe.config
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.exe
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\EasyService.UI.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.BusinessLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.DataAccessLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.EntityLayer.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\POO16F3.dll
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.BusinessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.DataAccessLayer.pdb
+C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\bin\Debug\ES.EntityLayer.pdb
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.exe
 C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\EasyService.UI\obj\Debug\EasyService.UI.pdb

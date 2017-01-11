@@ -37,7 +37,35 @@ namespace EasyService.UI
 
         private void ViewInvoice_Load(object sender, EventArgs e)
         {
+            if(_invoice.Client==null)
+            {
+                lblClientAddress.Text = _invoice.Company.ContactInfo.Address;
+                lblClientCity.Text = _invoice.Company.ContactInfo.City;
+                lblClientName.Text = _invoice.Company.CompanyName;
+                lblClientPhoneNumber.Text = _invoice.Company.ContactInfo.PhoneNumber;
+                lblEmail.Text = _invoice.Company.ContactInfo.Email;
+            }
+            else if(_invoice.Company==null)
+            {
+                lblClientAddress.Text = _invoice.Client.ContactInfo.Address;
+                lblClientCity.Text = _invoice.Client.ContactInfo.City;
+                lblClientName.Text = _invoice.Client.Name + "  " + _invoice.Client.Lastname;
+                lblClientPhoneNumber.Text = _invoice.Client.ContactInfo.PhoneNumber;
+                lblEmail.Text = _invoice.Client.ContactInfo.Email;
+            }
+
+            lblFinalTotal.Text += _invoice.Total.ToString();
+            lblVAT.Text += _invoice.Vat.ToString();
+            lblTotal.Text += getTotal(_invoice.Vat, _invoice.Total);
+            lblInvoiceDate.Text = _invoice.DateOfBill.ToShortDateString();
             
+
+        }
+
+        private string getTotal(double vat, double total)
+        {
+            var x = total - ((total * vat) / 100);
+            return x.ToString();
         }
 
         private void btnBillAndSave_Click(object sender, EventArgs e)

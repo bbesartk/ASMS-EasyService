@@ -14,7 +14,7 @@ namespace ES.EntityLayer.Finance
     public class Invoice
     {
         #region StaticMembers
-        public readonly decimal Vat;
+        public readonly double Vat;
         #endregion
 
         #region Properties
@@ -35,14 +35,14 @@ namespace ES.EntityLayer.Finance
 
         public Company Company { get; }
 
-        public decimal Total
+        public double Total
         {
             get;set;
         }
         #endregion
 
         #region Constructors
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, decimal vat, decimal total)
+        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Client client, Employee servicedBy, double vat, double total)
         {
             ServicedVehicle = servicedVehicle;
             Service = service;
@@ -52,7 +52,7 @@ namespace ES.EntityLayer.Finance
             Total = total;
         }
 
-        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, decimal vat, decimal total)
+        public Invoice(Vehicle.Vehicle servicedVehicle, Service service, Company company, Employee servicedBy, double vat, double total)
         {
             ServicedVehicle = servicedVehicle;
             Service = service;
