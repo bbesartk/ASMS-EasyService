@@ -52,7 +52,6 @@
     <Compile Include="Employees\Mechanic.cs" />
     <Compile Include="Finance\Invoice.cs" />
     <Compile Include="General\Access.cs" />
-    <Compile Include="General\Admin.cs" />
     <Compile Include="General\Car.cs" />
     <Compile Include="General\ContactInfo.cs" />
     <Compile Include="General\IAccess.cs" />
