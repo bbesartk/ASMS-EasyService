@@ -9,9 +9,3 @@ C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.EntityLayer
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.EntityLayer\obj\Debug\ES.EntityLayer.csprojResolveAssemblyReference.cache
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.EntityLayer\obj\Debug\ES.EntityLayer.dll
 C:\Users\Endrit Vitija\Source\Repos\ASMS-EasyService3\EasyService\ES.EntityLayer\obj\Debug\ES.EntityLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.EntityLayer\bin\Debug\ES.EntityLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.EntityLayer\bin\Debug\ES.EntityLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.EntityLayer\bin\Debug\POO16F3.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.EntityLayer\obj\Debug\ES.EntityLayer.dll
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.EntityLayer\obj\Debug\ES.EntityLayer.pdb
-C:\Users\bbesa\Source\Repos\ASMS-EasyService\EasyService\ES.EntityLayer\obj\Debug\ES.EntityLayer.csprojResolveAssemblyReference.cache
